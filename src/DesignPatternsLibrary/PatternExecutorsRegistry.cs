@@ -1,5 +1,5 @@
 ﻿using DesignPatternsLibrary.PatternExecutors;
-using SingletonLibrary;
+using Greeter;
 using System.Collections.Generic;
 
 namespace DesignPatternsLibrary

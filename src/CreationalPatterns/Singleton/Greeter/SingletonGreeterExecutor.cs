@@ -1,8 +1,8 @@
 ﻿using DesignPatternsLibrary.PatternExecutors;
-using SingletonLibrary.Implementations;
+using Greeter.Implementations;
 using System;
 
-namespace SingletonLibrary
+namespace Greeter
 {
     public class SingletonGreeterExecutor : PatternExecutor
     {
@@ -23,7 +23,12 @@ namespace SingletonLibrary
 
         private void Greet()
         {
-            SingletonGreeter.Instance.Greet();
+            SimpleGreeter.Instance.Greet();
+            SimpleThreadSafetyGreeter.Instance.Greet();
+            DoubleCheckGreeter.Instance.Greet();
+            LocklessGreeter.Instance.Greet();
+            LocklessFullyLazyGreeter.Instance.Greet();
+            DotNetLazyGreeter.Instance.Greet();
         }
     }
 }

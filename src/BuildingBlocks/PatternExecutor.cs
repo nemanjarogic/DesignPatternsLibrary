@@ -2,9 +2,9 @@
 {
 	public abstract class PatternExecutor
 	{
-		public PatternExecutor()
+		public PatternExecutor(string name = "")
 		{
-			Name = GetType().Name;
+			Name = string.IsNullOrWhiteSpace(name) ? GetType().Name : name;
 		}
 
 		public string Name { get; init; }

@@ -4,8 +4,13 @@ using System;
 
 namespace Greeter
 {
-    public class SingletonGreeterExecutor : PatternExecutor
+    public class Executor : PatternExecutor
     {
+        public Executor()
+            : base("Singleton Pattern - Greeter")
+        {
+        }
+
         public override void Execute()
         {
             Console.WriteLine("--------------------------");

@@ -1,5 +1,4 @@
 ﻿using DesignPatternsLibrary.PatternExecutors;
-using Greeter;
 using System.Collections.Generic;
 
 namespace DesignPatternsLibrary
@@ -14,7 +13,8 @@ namespace DesignPatternsLibrary
         {
             _executors = new SortedDictionary<int, PatternExecutor>
             {
-                { 1, new SingletonGreeterExecutor() }
+                { 1, new Greeter.Executor() },
+                { 2, new RestaurantManagement.Executor() },
             };
         }
 

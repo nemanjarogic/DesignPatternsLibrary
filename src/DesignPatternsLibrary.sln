@@ -33,6 +33,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Builder", "Builder", "{5952
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomSandwichBuilder", "CreationalPatterns\Builder\CustomSandwichBuilder\CustomSandwichBuilder.csproj", "{5AE4C09C-330B-4E56-B242-AB0BC984F7C8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prototype", "Prototype", "{52FEA7DF-C5F1-4E13-80C4-C76331D1BD7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypeLibrary", "CreationalPatterns\Prototype\PrototypeLibrary\PrototypeLibrary.csproj", "{D563A36B-CBE9-4974-AF41-3867E124F8A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +71,10 @@ Global
 		{5AE4C09C-330B-4E56-B242-AB0BC984F7C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AE4C09C-330B-4E56-B242-AB0BC984F7C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AE4C09C-330B-4E56-B242-AB0BC984F7C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D563A36B-CBE9-4974-AF41-3867E124F8A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D563A36B-CBE9-4974-AF41-3867E124F8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D563A36B-CBE9-4974-AF41-3867E124F8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D563A36B-CBE9-4974-AF41-3867E124F8A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +89,8 @@ Global
 		{4E1ACF2C-FC7B-44A3-B235-C688B88DF2BB} = {9CDB7827-42C4-4139-8354-8C54C2667928}
 		{5952D57F-EC87-4585-B470-B07111636080} = {C37279A6-C320-46CF-9DAD-BA14DCB91705}
 		{5AE4C09C-330B-4E56-B242-AB0BC984F7C8} = {5952D57F-EC87-4585-B470-B07111636080}
+		{52FEA7DF-C5F1-4E13-80C4-C76331D1BD7F} = {C37279A6-C320-46CF-9DAD-BA14DCB91705}
+		{D563A36B-CBE9-4974-AF41-3867E124F8A0} = {52FEA7DF-C5F1-4E13-80C4-C76331D1BD7F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9238CD9-9068-4B63-8D9E-53684BA60A21}

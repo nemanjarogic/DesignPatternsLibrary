@@ -1,6 +1,7 @@
 ﻿using System;
+using Greeter.Types.Common;
 
-namespace Greeter.Implementations
+namespace Greeter.Types
 {
     /// <summary>
     /// Simple singleton that is not thread-safe.

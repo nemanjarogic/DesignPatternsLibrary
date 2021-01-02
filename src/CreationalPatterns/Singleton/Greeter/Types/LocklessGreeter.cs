@@ -1,4 +1,6 @@
-﻿namespace Greeter.Implementations
+﻿using Greeter.Types.Common;
+
+namespace Greeter.Types
 {
     /// <summary>
     /// Why is it thread-safe? Well, static constructors in C# are specified to execute only when an instance of the class

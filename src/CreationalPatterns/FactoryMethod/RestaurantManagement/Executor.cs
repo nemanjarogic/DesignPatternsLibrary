@@ -1,24 +1,19 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using System.Reflection;
+using DesignPatternsLibrary.PatternExecutors;
 using RestaurantManagement.Restaurants;
 using RestaurantManagement.Restaurants.Common;
-using System.Reflection;
 
 namespace RestaurantManagement
 {
     public class Executor : PatternExecutor
     {
-        public Executor()
-            : base("Factory Method Pattern - Restaurant Management")
-        {
-        }
+        public override string Name => "Factory Method Pattern - Restaurant Management";
 
         public override void Execute()
         {
             var restaurant = InitializeRestaurant();
-
-            restaurant.ShowBasicInformation();
+            restaurant.OrderDailySpecial();
         }
-
 
         private Restaurant InitializeRestaurant()
         {

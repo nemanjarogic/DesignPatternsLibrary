@@ -1,4 +1,6 @@
-﻿namespace Greeter.Implementations
+﻿using Greeter.Types.Common;
+
+namespace Greeter.Types
 {
     /// <summary>
     /// This implementation is thread-safe.

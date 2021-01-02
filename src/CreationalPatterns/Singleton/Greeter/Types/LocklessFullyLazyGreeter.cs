@@ -1,4 +1,6 @@
-﻿namespace Greeter.Implementations
+﻿using Greeter.Types.Common;
+
+namespace Greeter.Types
 {
     /// <summary>
     /// Instantiation is triggered by the first reference to the static member of the nested class, which only occurs in Instance.

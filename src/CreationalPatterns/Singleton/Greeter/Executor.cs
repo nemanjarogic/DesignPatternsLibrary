@@ -1,15 +1,12 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
-using Greeter.Implementations;
-using System;
+﻿using System;
+using DesignPatternsLibrary.PatternExecutors;
+using Greeter.Types;
 
 namespace Greeter
 {
     public class Executor : PatternExecutor
     {
-        public Executor()
-            : base("Singleton Pattern - Greeter")
-        {
-        }
+        public override string Name => "Singleton Pattern - Greeter";
 
         public override void Execute()
         {

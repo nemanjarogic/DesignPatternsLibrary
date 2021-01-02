@@ -3,9 +3,12 @@ using System;
 
 namespace RestaurantManagement.Meals
 {
+    /// <summary>
+    /// Concrete products are different implementations of the product interface <see cref="IMeal"/>.
+    /// </summary>
     public class Hamburger : IMeal
     {
-        public void ShowIngredients()
+        public void ShowDescription()
         {
             Console.WriteLine("Hamburger: beef meat, Worcestershire sauce and cheese.");
         }

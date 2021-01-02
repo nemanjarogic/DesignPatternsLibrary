@@ -1,5 +1,5 @@
-﻿using BuildingBlocks;
-using System;
+﻿using System;
+using BuildingBlocks;
 
 namespace PrototypeLibrary.LogicPuzzleExample
 {
@@ -21,7 +21,6 @@ namespace PrototypeLibrary.LogicPuzzleExample
 
             // What if we need copy of the object now? We don't want to call all methods again.
             // Object had complex state, and prototype pattern can be really useful.
-
             var puzzle2 = puzzle.Clone() as LogicPuzzle;
 
             Console.WriteLine("\nCopy puzzle");

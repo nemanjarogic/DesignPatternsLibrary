@@ -16,7 +16,7 @@ namespace PrototypeLibrary.DeepCloneExample
                 {
                     Name = "Project 1",
                     Description = "Simple project",
-                }
+                },
             };
 
             var developerWithSameName = developer.Clone();
@@ -25,7 +25,6 @@ namespace PrototypeLibrary.DeepCloneExample
 
             developer.PrintDetails();
             developerWithSameName.PrintDetails();
-
         }
     }
 }

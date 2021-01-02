@@ -12,7 +12,6 @@ namespace PrototypeLibrary.WebPageScraperExample
         {
             // var client = new WebClient();
             // var page = client.DownloadString(url);
-
             Scrape("Fake page");
         }
 

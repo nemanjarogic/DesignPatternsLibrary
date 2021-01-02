@@ -19,7 +19,6 @@ namespace PrototypeLibrary.WebPageScraperExample
             // This is basically prototype pattern.
             var scraper3 = scraper.Clone() as WebPageScraper;
             scraper3.PrintPageContent();
-            
         }
     }
 }

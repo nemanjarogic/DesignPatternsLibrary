@@ -23,7 +23,6 @@ namespace PrototypeLibrary.ColorRegistryExample
 
             // Clone custom color
             var secondClonedColor = registry["custom"].Clone() as Color;
-
         }
     }
 }

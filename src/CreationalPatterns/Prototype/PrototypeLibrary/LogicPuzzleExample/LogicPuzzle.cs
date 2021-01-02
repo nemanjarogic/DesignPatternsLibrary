@@ -63,7 +63,6 @@ namespace PrototypeLibrary.LogicPuzzleExample
             _moveCount++;
         }
 
-
         public void PrintState()
         {
             Console.WriteLine($"Blue switch charge: {_blueSwitchCharge}");

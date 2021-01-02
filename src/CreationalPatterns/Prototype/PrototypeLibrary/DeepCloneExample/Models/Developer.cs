@@ -1,5 +1,5 @@
-﻿using PrototypeLibrary.DeepCloneExample.Extensions;
-using System;
+﻿using System;
+using PrototypeLibrary.DeepCloneExample.Extensions;
 
 namespace PrototypeLibrary.DeepCloneExample.Models
 {

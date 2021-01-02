@@ -7,7 +7,7 @@ namespace MealSimpleFactory
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Simple Factory Pattern - Meal Simple Factory";
+        public override string Name => "Simple Factory - Meal Simple Factory - Creational Pattern";
 
         public override void Execute()
         {

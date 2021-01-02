@@ -7,7 +7,7 @@ namespace RestaurantManagement
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Factory Method Pattern - Restaurant Management";
+        public override string Name => "Factory Method - Restaurant Management - Creational Pattern";
 
         public override void Execute()
         {

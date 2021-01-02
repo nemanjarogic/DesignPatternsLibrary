@@ -25,9 +25,9 @@ namespace CustomSandwichBuilder
         private void MakeAndDisplaySandwich(SandwichDirector director)
         {
             director.MakeSandwich();
-            var premiumSandwich = director.GetSandwhich();
+            var sandwich = director.GetSandwhich();
 
-            premiumSandwich.Display();
+            sandwich.Display();
         }
     }
 }

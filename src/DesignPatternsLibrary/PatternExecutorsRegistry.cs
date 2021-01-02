@@ -17,6 +17,7 @@ namespace DesignPatternsLibrary
                 { 2, new RestaurantManagement.Executor() },
                 { 3, new MealSimpleFactory.Executor() },
                 { 4, new RestaurantAbstractFactory.Executor() },
+                { 5, new CustomSandwichBuilder.Executor() },
             };
         }
 

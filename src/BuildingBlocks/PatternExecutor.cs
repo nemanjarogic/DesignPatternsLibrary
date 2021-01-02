@@ -1,7 +1,8 @@
 ﻿namespace DesignPatternsLibrary.PatternExecutors
 {
     /// <summary>
-    /// Every design pattern example should have an executor class that inherits from <see cref="PatternExecutor"/>.
+    /// Every design pattern example should have an executor class
+    /// that inherits from <see cref="PatternExecutor"/>.
     /// </summary>
     public abstract class PatternExecutor
     {

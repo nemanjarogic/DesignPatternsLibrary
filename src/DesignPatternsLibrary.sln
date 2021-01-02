@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomSandwichBuilder", "Cr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prototype", "Prototype", "{52FEA7DF-C5F1-4E13-80C4-C76331D1BD7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypeLibrary", "CreationalPatterns\Prototype\PrototypeLibrary\PrototypeLibrary.csproj", "{D563A36B-CBE9-4974-AF41-3867E124F8A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrototypeLibrary", "CreationalPatterns\Prototype\PrototypeLibrary\PrototypeLibrary.csproj", "{D563A36B-CBE9-4974-AF41-3867E124F8A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapter", "Adapter", "{5064A5A9-6116-4112-A88F-BB1FEAB14FAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,7 @@ Global
 		{5AE4C09C-330B-4E56-B242-AB0BC984F7C8} = {5952D57F-EC87-4585-B470-B07111636080}
 		{52FEA7DF-C5F1-4E13-80C4-C76331D1BD7F} = {C37279A6-C320-46CF-9DAD-BA14DCB91705}
 		{D563A36B-CBE9-4974-AF41-3867E124F8A0} = {52FEA7DF-C5F1-4E13-80C4-C76331D1BD7F}
+		{5064A5A9-6116-4112-A88F-BB1FEAB14FAE} = {1781BBBF-5241-451D-8170-93B0C3EFD8D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9238CD9-9068-4B63-8D9E-53684BA60A21}

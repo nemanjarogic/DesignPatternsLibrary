@@ -14,17 +14,16 @@ namespace PrototypeLibrary.DeepCloneExample
                 Name = "John Doe",
                 Project = new Project
                 {
-                    Name = "Project 1",
-                    Description = "Simple project",
+                    Name = "File storage service",
+                    Description = "Complex project",
                 },
             };
 
-            var developerWithSameName = developer.Clone();
-            developerWithSameName.Project.Name = "Project 2";
-            developerWithSameName.Project.Description = "Complex project";
+            var clonedDeveloper = developer.Clone();
+            clonedDeveloper.Project.Name = "Web crawler";
 
             developer.PrintDetails();
-            developerWithSameName.PrintDetails();
+            clonedDeveloper.PrintDetails();
         }
     }
 }

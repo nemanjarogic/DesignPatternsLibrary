@@ -3,6 +3,10 @@ using CustomSandwichBuilder.Products;
 
 namespace CustomSandwichBuilder.Directors
 {
+    /// <summary>
+    /// The Director class defines the order in which to call construction steps,
+    /// so you can create and reuse specific configurations of products.
+    /// </summary>
     public class SandwichDirector
     {
         private SandwichBuilder _builder;

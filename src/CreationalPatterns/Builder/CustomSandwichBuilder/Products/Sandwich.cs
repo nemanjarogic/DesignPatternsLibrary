@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 namespace CustomSandwichBuilder.Products
 {
+    /// <summary>
+    /// Products are resulting objects. 
+    /// Products constructed by different builders don’t have to belong to the same class hierarchy or interface.
+    /// </summary>
     public class Sandwich
     {
         public Sandwich(string name)

@@ -4,6 +4,14 @@ using DesignPatternsLibrary.PatternExecutors;
 
 namespace CustomSandwichBuilder
 {
+    /// <summary>
+    /// The Client must associate one of the builder objects with the director.
+    /// Usually, it’s done just once, via parameters of the director’s constructor.
+    /// Then the director uses that builder object for all further construction.
+    /// However, there’s an alternative approach for when the client passes the builder object
+    /// to the production method of the director.
+    /// In this case, you can use a different builder each time you produce something with the director.
+    /// </summary>
     public class Executor : PatternExecutor
     {
         public override string Name => "Builder - Custom Sandwich Builder - Creational Pattern";
@@ -17,6 +25,7 @@ namespace CustomSandwichBuilder
 
             MakeAndDisplaySandwich(director);
 
+            // This is not common to see, but it is possible to change builder if necessary.
             director.ChangeBuilder(premiumSandwichBuilder);
 
             MakeAndDisplaySandwich(director);

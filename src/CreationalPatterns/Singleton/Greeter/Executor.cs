@@ -10,13 +10,12 @@ namespace Greeter
 
         public override void Execute()
         {
-            Console.WriteLine("--------------------------");
             Console.WriteLine("Initial greetings...");
             Console.WriteLine();
 
             Greet();
+            Console.WriteLine();
 
-            Console.WriteLine("--------------------------");
             Console.WriteLine("Goodbye greetings...");
             Console.WriteLine();
 

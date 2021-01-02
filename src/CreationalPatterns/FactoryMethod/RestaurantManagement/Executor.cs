@@ -11,7 +11,8 @@ namespace RestaurantManagement
 
         public override void Execute()
         {
-            var restaurant = InitializeRestaurant();
+            Restaurant restaurant = InitializeRestaurant();
+
             restaurant.OrderDailySpecial();
         }
 

@@ -1,6 +1,7 @@
 ﻿using DesignPatternsLibrary.PatternExecutors;
 using RestaurantAbstractFactory.Factories;
 using RestaurantAbstractFactory.Factories.Common;
+using RestaurantAbstractFactory.Meals.Common;
 
 namespace RestaurantAbstractFactory
 {
@@ -12,13 +13,13 @@ namespace RestaurantAbstractFactory
         {
             IRestaurantFactory factory = LoadFactory();
 
-            var appetizer = factory.PrepareAppetizer();
+            IAppetizer appetizer = factory.PrepareAppetizer();
             appetizer.ShowDescription();
 
-            var mainCourse = factory.PrepareMainCourse();
+            IMainCourse mainCourse = factory.PrepareMainCourse();
             mainCourse.ShowDescription();
 
-            var dessert = factory.PrepareDessert();
+            IDessert dessert = factory.PrepareDessert();
             dessert.ShowDescription();
             dessert.ShowSugarAmount();
         }

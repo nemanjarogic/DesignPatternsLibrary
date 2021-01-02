@@ -18,7 +18,7 @@ namespace RestaurantManagement
         private Restaurant InitializeRestaurant()
         {
             // This is usually stored within some configuration
-            var choosenType = typeof(BarbequeRestaurant).FullName;
+            var choosenType = typeof(FastFoodRestaurant).FullName;
 
             return Assembly.GetExecutingAssembly().CreateInstance(choosenType) as Restaurant;
         }

@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CreationalPatterns\AbstractFactory\MealSimpleFactory\MealSimpleFactory.csproj" />
+    <ProjectReference Include="..\CreationalPatterns\AbstractFactory\RestaurantAbstractFactory\RestaurantAbstractFactory.csproj" />
     <ProjectReference Include="..\CreationalPatterns\FactoryMethod\RestaurantManagement\RestaurantManagement.csproj" />
     <ProjectReference Include="..\CreationalPatterns\Singleton\Greeter\Greeter.csproj" />
   </ItemGroup>

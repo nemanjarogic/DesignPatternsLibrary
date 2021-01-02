@@ -7,7 +7,7 @@ namespace RestaurantManagement.Restaurants
     /// <summary>
     /// Concrete creators override the base factory method so it returns a different type of product.
     /// </summary>
-    public class BarbequeRestaurant : Restaurant
+    public class FastFoodRestaurant : Restaurant
     {
         public override IMeal PrepareMainCourse()
         {

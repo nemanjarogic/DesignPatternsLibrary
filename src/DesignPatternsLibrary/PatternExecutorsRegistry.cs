@@ -1,5 +1,5 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using DesignPatternsLibrary.PatternExecutors;
 
 namespace DesignPatternsLibrary
 {
@@ -15,6 +15,8 @@ namespace DesignPatternsLibrary
             {
                 { 1, new Greeter.Executor() },
                 { 2, new RestaurantManagement.Executor() },
+                { 3, new MealSimpleFactory.Executor() },
+                { 4, new RestaurantAbstractFactory.Executor() },
             };
         }
 

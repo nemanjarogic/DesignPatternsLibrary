@@ -10,7 +10,7 @@ namespace RestaurantManagement.Meals
     {
         public void ShowDescription()
         {
-            Console.WriteLine("Green salad: lettuce, cucumber and green olives");
+            Console.WriteLine("Green salad - with lettuce, cucumber and green olives");
         }
     }
 }

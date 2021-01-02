@@ -10,7 +10,7 @@ namespace RestaurantManagement.Meals
     {
         public void ShowDescription()
         {
-            Console.WriteLine("Hamburger: beef meat, Worcestershire sauce and cheese.");
+            Console.WriteLine("Hamburger - with beef meat, Worcestershire sauce and cheese.");
         }
     }
 }

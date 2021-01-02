@@ -1,18 +1,18 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using DesignPatternsLibrary.PatternExecutors;
 
 namespace DesignPatternsLibrary
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-			string choice;
-			var executors = PatternExecutorsRegistry.Instance.GetAll();
+            string choice;
+            var executors = PatternExecutorsRegistry.Instance.GetAll();
 
-			while (!(choice = SelectFromMenu(executors)).Equals("q"))
-			{
+            while (!(choice = SelectFromMenu(executors)).Equals("q"))
+            {
                 if (!int.TryParse(choice, out int translatedChoice))
                 {
                     Console.WriteLine("Please choose one of the following!");
@@ -20,50 +20,47 @@ namespace DesignPatternsLibrary
                 }
 
                 if (!executors.ContainsKey(translatedChoice))
-				{
-					Console.WriteLine("Please choose one of the following!");
-					continue;
-				}
+                {
+                    Console.WriteLine("Please choose one of the following!");
+                    continue;
+                }
 
-				executors[translatedChoice].Execute();
-				
-			}
+                executors[translatedChoice].Execute();
+            }
 
-			Console.WriteLine("Thank you!");
-			Console.ReadLine();
-		}
+            Console.WriteLine("Thank you!");
+            Console.ReadLine();
+        }
 
-		static string SelectFromMenu(SortedDictionary<int, PatternExecutor> executors)
-		{
-			ListAvailableMenuOptions(executors);
-			var choice = ChooseOneOption();
-
-			Console.ResetColor();
-
-			return choice;
-		}
-
-		static void ListAvailableMenuOptions(SortedDictionary<int, PatternExecutor> executors)
+        private static string SelectFromMenu(SortedDictionary<int, PatternExecutor> executors)
         {
-			Console.ForegroundColor = ConsoleColor.DarkGreen;
-			Console.WriteLine(Environment.NewLine);
+            ListAvailableMenuOptions(executors);
+            var choice = ChooseOneOption();
 
-			foreach (var executor in executors)
-			{
-				Console.WriteLine($"{executor.Key}. {executor.Value.Name}");
-			}
+            Console.ResetColor();
 
-			Console.WriteLine("q. Quit");
-		}
+            return choice;
+        }
 
-		static string ChooseOneOption()
+        private static void ListAvailableMenuOptions(SortedDictionary<int, PatternExecutor> executors)
         {
-			Console.ForegroundColor = ConsoleColor.DarkGray;
-			Console.WriteLine($"\n Your choice: ");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine(Environment.NewLine);
 
-			return Console.ReadLine().ToLower();
-		}
+            foreach (var executor in executors)
+            {
+                Console.WriteLine($"{executor.Key}. {executor.Value.Name}");
+            }
 
+            Console.WriteLine("q. Quit");
+        }
 
-	}
+        private static string ChooseOneOption()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine($"\n Your choice: ");
+
+            return Console.ReadLine().ToLower();
+        }
+    }
 }

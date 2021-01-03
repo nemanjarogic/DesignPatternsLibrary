@@ -19,6 +19,7 @@ namespace DesignPatternsLibrary
                 { 4, new RestaurantAbstractFactory.Executor() },
                 { 5, new CustomSandwichBuilder.Executor() },
                 { 6, new PrototypeLibrary.Executor() },
+                { 7, new AdapterLibrary.Executor() },
             };
         }
 

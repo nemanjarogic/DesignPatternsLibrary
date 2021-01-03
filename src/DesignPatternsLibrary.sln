@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrototypeLibrary", "Creatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapter", "Adapter", "{5064A5A9-6116-4112-A88F-BB1FEAB14FAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterLibrary", "StructuralPatterns\Adapter\AdapterLibrary\AdapterLibrary.csproj", "{83360B88-2DA6-4A76-AF48-8CF15AF1AC6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{D563A36B-CBE9-4974-AF41-3867E124F8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D563A36B-CBE9-4974-AF41-3867E124F8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D563A36B-CBE9-4974-AF41-3867E124F8A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83360B88-2DA6-4A76-AF48-8CF15AF1AC6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83360B88-2DA6-4A76-AF48-8CF15AF1AC6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83360B88-2DA6-4A76-AF48-8CF15AF1AC6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83360B88-2DA6-4A76-AF48-8CF15AF1AC6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +100,7 @@ Global
 		{52FEA7DF-C5F1-4E13-80C4-C76331D1BD7F} = {C37279A6-C320-46CF-9DAD-BA14DCB91705}
 		{D563A36B-CBE9-4974-AF41-3867E124F8A0} = {52FEA7DF-C5F1-4E13-80C4-C76331D1BD7F}
 		{5064A5A9-6116-4112-A88F-BB1FEAB14FAE} = {1781BBBF-5241-451D-8170-93B0C3EFD8D5}
+		{83360B88-2DA6-4A76-AF48-8CF15AF1AC6B} = {5064A5A9-6116-4112-A88F-BB1FEAB14FAE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9238CD9-9068-4B63-8D9E-53684BA60A21}

@@ -12,6 +12,7 @@
     <ProjectReference Include="..\CreationalPatterns\FactoryMethod\RestaurantManagement\RestaurantManagement.csproj" />
     <ProjectReference Include="..\CreationalPatterns\Prototype\PrototypeLibrary\PrototypeLibrary.csproj" />
     <ProjectReference Include="..\CreationalPatterns\Singleton\Greeter\Greeter.csproj" />
+    <ProjectReference Include="..\StructuralPatterns\Adapter\AdapterLibrary\AdapterLibrary.csproj" />
   </ItemGroup>
 
 </Project>

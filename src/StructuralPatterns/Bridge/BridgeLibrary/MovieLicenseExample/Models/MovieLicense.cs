@@ -36,7 +36,7 @@ namespace BridgeLibrary.MovieLicenseExample.Models
         public decimal GetPrice()
         {
             int discount = GetDiscount();
-            decimal multiplier = 1 - discount / 100m;
+            decimal multiplier = 1 - (discount / 100m);
 
             return GetBasePrice() * multiplier;
         }
@@ -57,7 +57,7 @@ namespace BridgeLibrary.MovieLicenseExample.Models
                 Discount.EarlyPayment => 10,
                 Discount.Senior => 20,
 
-                _ => throw new ArgumentOutOfRangeException()
+                _ => throw new ArgumentOutOfRangeException(),
             };
         }
 
@@ -69,7 +69,7 @@ namespace BridgeLibrary.MovieLicenseExample.Models
                 LicenceType.SevenDays => 60,
                 LicenceType.LifeLong => 150,
 
-                _ => throw new ArgumentOutOfRangeException()
+                _ => throw new ArgumentOutOfRangeException(),
             };
         }
 
@@ -81,7 +81,7 @@ namespace BridgeLibrary.MovieLicenseExample.Models
                 SpecialOffer.OneDayExtension => TimeSpan.FromDays(1),
                 SpecialOffer.SevenDaysExtension => TimeSpan.FromDays(7),
 
-                _ => throw new ArgumentOutOfRangeException()
+                _ => throw new ArgumentOutOfRangeException(),
             };
         }
 
@@ -93,7 +93,7 @@ namespace BridgeLibrary.MovieLicenseExample.Models
                 LicenceType.SevenDays => PurchaseTime.AddDays(7) as DateTime?,
                 LicenceType.LifeLong => null,
 
-                _ => throw new ArgumentOutOfRangeException()
+                _ => throw new ArgumentOutOfRangeException(),
             };
         }
     }

@@ -47,9 +47,10 @@ namespace BridgeLibrary.MovieLicenseExample
         private static string GetValidFor(MovieLicense license)
         {
             DateTime? expirationDate = license.GetExpirationDate();
-
             if (expirationDate == null)
+            {
                 return "Forever";
+            }
 
             TimeSpan timeSpan = expirationDate.Value - DateTime.Now;
 

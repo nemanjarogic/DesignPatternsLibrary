@@ -20,6 +20,7 @@ namespace DesignPatternsLibrary
                 { 5, new CustomSandwichBuilder.Executor() },
                 { 6, new PrototypeLibrary.Executor() },
                 { 7, new AdapterLibrary.Executor() },
+                { 8, new BridgeLibrary.Executor() },
             };
         }
 

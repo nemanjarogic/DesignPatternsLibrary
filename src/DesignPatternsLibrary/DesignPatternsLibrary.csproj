@@ -13,6 +13,7 @@
     <ProjectReference Include="..\CreationalPatterns\Prototype\PrototypeLibrary\PrototypeLibrary.csproj" />
     <ProjectReference Include="..\CreationalPatterns\Singleton\Greeter\Greeter.csproj" />
     <ProjectReference Include="..\StructuralPatterns\Adapter\AdapterLibrary\AdapterLibrary.csproj" />
+    <ProjectReference Include="..\StructuralPatterns\Bridge\BridgeLibrary\BridgeLibrary.csproj" />
   </ItemGroup>
 
 </Project>

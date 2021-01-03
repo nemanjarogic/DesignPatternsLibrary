@@ -1,4 +1,5 @@
 ﻿using BridgeLibrary.DevicesAndRemotesExample;
+using BridgeLibrary.ManuscriptsAndFormattersExample;
 using DesignPatternsLibrary.PatternExecutors;
 
 namespace BridgeLibrary
@@ -10,6 +11,7 @@ namespace BridgeLibrary
         public override void Execute()
         {
             DevicesAndRemotesExecutor.Execute();
+            ManuscriptsAndFormattersExecutor.Execute();
         }
     }
 }

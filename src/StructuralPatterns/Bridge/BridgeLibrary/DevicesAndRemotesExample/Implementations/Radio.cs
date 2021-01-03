@@ -1,5 +1,5 @@
-﻿using BridgeLibrary.DevicesAndRemotesExample.Implementations.Common;
-using System;
+﻿using System;
+using BridgeLibrary.DevicesAndRemotesExample.Implementations.Common;
 
 namespace BridgeLibrary.DevicesAndRemotesExample.Implementations
 {

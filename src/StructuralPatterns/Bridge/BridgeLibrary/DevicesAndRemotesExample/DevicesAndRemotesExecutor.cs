@@ -1,6 +1,7 @@
-﻿using BridgeLibrary.DevicesAndRemotesExample.Abstractions;
+﻿using System;
+using BridgeLibrary.DevicesAndRemotesExample.Abstractions;
 using BridgeLibrary.DevicesAndRemotesExample.Implementations;
-using System;
+using BuildingBlocks;
 
 namespace BridgeLibrary.DevicesAndRemotesExample
 {
@@ -8,6 +9,8 @@ namespace BridgeLibrary.DevicesAndRemotesExample
     {
         public static void Execute()
         {
+            ConsoleExtension.WriteSeparator("Devices and remotes example");
+
             var radioRemote = new UniversalRemoteControl(new SmartTV());
             radioRemote.TogglePower();
             radioRemote.TogglePower();

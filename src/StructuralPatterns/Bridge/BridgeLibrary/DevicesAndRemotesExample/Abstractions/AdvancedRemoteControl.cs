@@ -1,6 +1,6 @@
-﻿using BridgeLibrary.DevicesAndRemotesExample.Abstractions.Common;
+﻿using System;
+using BridgeLibrary.DevicesAndRemotesExample.Abstractions.Common;
 using BridgeLibrary.DevicesAndRemotesExample.Implementations.Common;
-using System;
 
 namespace BridgeLibrary.DevicesAndRemotesExample.Abstractions
 {
@@ -16,7 +16,5 @@ namespace BridgeLibrary.DevicesAndRemotesExample.Abstractions
             Console.WriteLine("Mute smart TV Command is issued through advanced remote.");
             _device.Volume = 0;
         }
-
-        
     }
 }

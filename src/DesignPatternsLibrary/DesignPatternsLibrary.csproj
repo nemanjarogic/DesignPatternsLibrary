@@ -14,6 +14,7 @@
     <ProjectReference Include="..\CreationalPatterns\Singleton\Greeter\Greeter.csproj" />
     <ProjectReference Include="..\StructuralPatterns\Adapter\AdapterLibrary\AdapterLibrary.csproj" />
     <ProjectReference Include="..\StructuralPatterns\Bridge\BridgeLibrary\BridgeLibrary.csproj" />
+    <ProjectReference Include="..\StructuralPatterns\Composite\CompositeLibrary\CompositeLibrary.csproj" />
   </ItemGroup>
 
 </Project>

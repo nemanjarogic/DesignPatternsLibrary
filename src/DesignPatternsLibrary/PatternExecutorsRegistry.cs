@@ -21,6 +21,7 @@ namespace DesignPatternsLibrary
                 { 6, new PrototypeLibrary.Executor() },
                 { 7, new AdapterLibrary.Executor() },
                 { 8, new BridgeLibrary.Executor() },
+                { 9, new CompositeLibrary.Executor() },
             };
         }
 

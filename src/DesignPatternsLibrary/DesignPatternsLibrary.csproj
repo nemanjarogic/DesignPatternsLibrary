@@ -15,6 +15,9 @@
     <ProjectReference Include="..\StructuralPatterns\Adapter\AdapterLibrary\AdapterLibrary.csproj" />
     <ProjectReference Include="..\StructuralPatterns\Bridge\BridgeLibrary\BridgeLibrary.csproj" />
     <ProjectReference Include="..\StructuralPatterns\Composite\CompositeLibrary\CompositeLibrary.csproj" />
+    <ProjectReference Include="..\StructuralPatterns\Decorator\DecoratorLibrary\DecoratorLibrary.csproj" />
+    <ProjectReference Include="..\StructuralPatterns\Facade\FacadeLibrary\FacadeLibrary.csproj" />
+    <ProjectReference Include="..\StructuralPatterns\Flyweight\FlyweightLibrary\FlyweightLibrary.csproj" />
   </ItemGroup>
 
 </Project>

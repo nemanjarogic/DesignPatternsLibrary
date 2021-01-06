@@ -8,7 +8,7 @@ namespace BuildingBlocks
         {
             Console.WriteLine();
             Console.WriteLine(title);
-            Console.WriteLine("--------------------------");
+            Console.WriteLine("--------------------------------------------------");
         }
     }
 }

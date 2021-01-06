@@ -22,6 +22,9 @@ namespace DesignPatternsLibrary
                 { 7, new AdapterLibrary.Executor() },
                 { 8, new BridgeLibrary.Executor() },
                 { 9, new CompositeLibrary.Executor() },
+                { 10, new DecoratorLibrary.Executor() },
+                { 11, new FacadeLibrary.Executor() },
+                { 12, new FlyweightLibrary.Executor() },
             };
         }
 

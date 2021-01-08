@@ -10,8 +10,8 @@ namespace AdapterLibrary
 
         public override void Execute()
         {
-            MovieBroadcasterExecutor.Execute();
             BillingSystemExecutor.Execute();
+            MovieBroadcasterExecutor.Execute();
         }
     }
 }

@@ -11,8 +11,8 @@ namespace CompositeLibrary
 
         public override void Execute()
         {
-            GiftExecutor.Execute();
             FileSystemExecutor.Execute();
+            GiftExecutor.Execute();
             ShareholdersExecutor.Execute();
         }
     }

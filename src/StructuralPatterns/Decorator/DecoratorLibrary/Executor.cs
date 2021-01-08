@@ -10,8 +10,8 @@ namespace DecoratorLibrary
 
         public override void Execute()
         {
-            PancakeExecutor.Execute();
             DataStorageExecutor.Execute();
+            PancakeExecutor.Execute();
         }
     }
 }

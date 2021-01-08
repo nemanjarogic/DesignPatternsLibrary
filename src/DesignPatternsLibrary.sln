@@ -59,7 +59,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacadeLibrary", "Structural
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flyweight", "Flyweight", "{EB8B8272-9CEC-42FC-880B-E416198E5F83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyweightLibrary", "StructuralPatterns\Flyweight\FlyweightLibrary\FlyweightLibrary.csproj", "{892FB429-625A-4557-8AD1-6B37A4639775}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyweightLibrary", "StructuralPatterns\Flyweight\FlyweightLibrary\FlyweightLibrary.csproj", "{892FB429-625A-4557-8AD1-6B37A4639775}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Proxy", "Proxy", "{888AD61D-C4D3-4180-AE55-2B3B30BC02FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProxyLibrary", "StructuralPatterns\Proxy\ProxyLibrary\ProxyLibrary.csproj", "{8D1176DE-43B3-4213-A95D-645E5E65AD67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ChainOfResponsibility", "ChainOfResponsibility", "{F874C76F-ED2C-47A3-AFEC-DFE30619C179}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibilityLibrary", "BehavioralPatterns\ChainOfResponsibility\ChainOfResponsibilityLibrary\ChainOfResponsibilityLibrary.csproj", "{979B871F-9CF7-4576-B846-CD83FD9898F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +131,14 @@ Global
 		{892FB429-625A-4557-8AD1-6B37A4639775}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{892FB429-625A-4557-8AD1-6B37A4639775}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{892FB429-625A-4557-8AD1-6B37A4639775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1176DE-43B3-4213-A95D-645E5E65AD67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1176DE-43B3-4213-A95D-645E5E65AD67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1176DE-43B3-4213-A95D-645E5E65AD67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1176DE-43B3-4213-A95D-645E5E65AD67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{979B871F-9CF7-4576-B846-CD83FD9898F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{979B871F-9CF7-4576-B846-CD83FD9898F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{979B871F-9CF7-4576-B846-CD83FD9898F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{979B871F-9CF7-4576-B846-CD83FD9898F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,6 +167,10 @@ Global
 		{B6F005BF-6356-4209-933A-5D8E8A5FBBFF} = {B5FB2DC2-2237-4DA2-AC99-6F01414598F1}
 		{EB8B8272-9CEC-42FC-880B-E416198E5F83} = {1781BBBF-5241-451D-8170-93B0C3EFD8D5}
 		{892FB429-625A-4557-8AD1-6B37A4639775} = {EB8B8272-9CEC-42FC-880B-E416198E5F83}
+		{888AD61D-C4D3-4180-AE55-2B3B30BC02FC} = {1781BBBF-5241-451D-8170-93B0C3EFD8D5}
+		{8D1176DE-43B3-4213-A95D-645E5E65AD67} = {888AD61D-C4D3-4180-AE55-2B3B30BC02FC}
+		{F874C76F-ED2C-47A3-AFEC-DFE30619C179} = {3FE65E51-30B0-47A3-B4E7-F89721D5F8A2}
+		{979B871F-9CF7-4576-B846-CD83FD9898F2} = {F874C76F-ED2C-47A3-AFEC-DFE30619C179}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9238CD9-9068-4B63-8D9E-53684BA60A21}

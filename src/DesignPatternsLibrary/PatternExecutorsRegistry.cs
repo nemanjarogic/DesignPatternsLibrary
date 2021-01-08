@@ -25,6 +25,8 @@ namespace DesignPatternsLibrary
                 { 10, new DecoratorLibrary.Executor() },
                 { 11, new FacadeLibrary.Executor() },
                 { 12, new FlyweightLibrary.Executor() },
+                { 13, new ProxyLibrary.Executor() },
+                { 14, new ChainOfResponsibilityLibrary.Executor() },
             };
         }
 

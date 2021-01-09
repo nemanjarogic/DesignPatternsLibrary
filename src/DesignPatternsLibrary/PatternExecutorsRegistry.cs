@@ -27,6 +27,7 @@ namespace DesignPatternsLibrary
                 { 12, new FlyweightLibrary.Executor() },
                 { 13, new ProxyLibrary.Executor() },
                 { 14, new ChainOfResponsibilityLibrary.Executor() },
+                { 15, new CommandLibrary.Executor() },
             };
         }
 

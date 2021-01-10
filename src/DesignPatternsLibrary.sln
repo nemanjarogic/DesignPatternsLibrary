@@ -73,6 +73,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Command", "Command", "{A7BD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLibrary", "BehavioralPatterns\Command\CommandLibrary\CommandLibrary.csproj", "{0FBA758C-7E6A-4A9B-A81F-EBEA099FEB06}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Iterator", "Iterator", "{7D5342EA-71DC-4C61-B21B-6F709B3431FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorLibrary", "BehavioralPatterns\Iterator\IteratorLibrary\IteratorLibrary.csproj", "{601EF611-23D6-4348-A3CB-C745324FDD33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +151,10 @@ Global
 		{0FBA758C-7E6A-4A9B-A81F-EBEA099FEB06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FBA758C-7E6A-4A9B-A81F-EBEA099FEB06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FBA758C-7E6A-4A9B-A81F-EBEA099FEB06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{601EF611-23D6-4348-A3CB-C745324FDD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{601EF611-23D6-4348-A3CB-C745324FDD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{601EF611-23D6-4348-A3CB-C745324FDD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{601EF611-23D6-4348-A3CB-C745324FDD33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -181,6 +189,8 @@ Global
 		{979B871F-9CF7-4576-B846-CD83FD9898F2} = {F874C76F-ED2C-47A3-AFEC-DFE30619C179}
 		{A7BDA69B-B9EE-4D26-BF08-A13E178F9736} = {3FE65E51-30B0-47A3-B4E7-F89721D5F8A2}
 		{0FBA758C-7E6A-4A9B-A81F-EBEA099FEB06} = {A7BDA69B-B9EE-4D26-BF08-A13E178F9736}
+		{7D5342EA-71DC-4C61-B21B-6F709B3431FD} = {3FE65E51-30B0-47A3-B4E7-F89721D5F8A2}
+		{601EF611-23D6-4348-A3CB-C745324FDD33} = {7D5342EA-71DC-4C61-B21B-6F709B3431FD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9238CD9-9068-4B63-8D9E-53684BA60A21}

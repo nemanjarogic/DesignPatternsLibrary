@@ -28,6 +28,7 @@ namespace DesignPatternsLibrary
                 { 13, new ProxyLibrary.Executor() },
                 { 14, new ChainOfResponsibilityLibrary.Executor() },
                 { 15, new CommandLibrary.Executor() },
+                { 16, new IteratorLibrary.Executor() },
             };
         }
 

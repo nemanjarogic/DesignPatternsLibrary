@@ -79,7 +79,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IteratorLibrary", "Behavior
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mediator", "Mediator", "{45148103-5EF6-4BE1-B53F-BFE45774F1A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorLibrary", "BehavioralPatterns\Mediator\MediatorLibrary\MediatorLibrary.csproj", "{C46E63E8-E97A-4C4E-B84E-38C57401AD3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatorLibrary", "BehavioralPatterns\Mediator\MediatorLibrary\MediatorLibrary.csproj", "{C46E63E8-E97A-4C4E-B84E-38C57401AD3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Memento", "Memento", "{D0E59752-8E58-4446-8C43-A22D7F09C297}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -201,6 +203,7 @@ Global
 		{601EF611-23D6-4348-A3CB-C745324FDD33} = {7D5342EA-71DC-4C61-B21B-6F709B3431FD}
 		{45148103-5EF6-4BE1-B53F-BFE45774F1A9} = {3FE65E51-30B0-47A3-B4E7-F89721D5F8A2}
 		{C46E63E8-E97A-4C4E-B84E-38C57401AD3E} = {45148103-5EF6-4BE1-B53F-BFE45774F1A9}
+		{D0E59752-8E58-4446-8C43-A22D7F09C297} = {3FE65E51-30B0-47A3-B4E7-F89721D5F8A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9238CD9-9068-4B63-8D9E-53684BA60A21}

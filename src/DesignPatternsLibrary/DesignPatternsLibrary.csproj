@@ -11,6 +11,7 @@
     <ProjectReference Include="..\BehavioralPatterns\Iterator\IteratorLibrary\IteratorLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\Mediator\MediatorLibrary\MediatorLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\Memento\MementoLibrary\MementoLibrary.csproj" />
+    <ProjectReference Include="..\BehavioralPatterns\Observer\ObserverLibrary\ObserverLibrary.csproj" />
     <ProjectReference Include="..\CreationalPatterns\AbstractFactory\MealSimpleFactory\MealSimpleFactory.csproj" />
     <ProjectReference Include="..\CreationalPatterns\AbstractFactory\RestaurantAbstractFactory\RestaurantAbstractFactory.csproj" />
     <ProjectReference Include="..\CreationalPatterns\Builder\CustomSandwichBuilder\CustomSandwichBuilder.csproj" />

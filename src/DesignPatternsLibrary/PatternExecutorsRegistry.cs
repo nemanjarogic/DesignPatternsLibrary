@@ -31,6 +31,7 @@ namespace DesignPatternsLibrary
                 { 16, new IteratorLibrary.Executor() },
                 { 17, new MediatorLibrary.Executor() },
                 { 18, new MementoLibrary.Executor() },
+                { 19, new ObserverLibrary.Executor() },
             };
         }
 

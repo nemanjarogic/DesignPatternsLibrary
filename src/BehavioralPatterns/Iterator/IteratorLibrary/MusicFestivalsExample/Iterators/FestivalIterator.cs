@@ -5,7 +5,7 @@ namespace IteratorLibrary.MusicFestivalsExample.Iterators
 {
     public class FestivalIterator : IIterator
     {
-        private FestivalCollection _collection;
+        private readonly FestivalCollection _collection;
         private int _position;
         private int _step;
 

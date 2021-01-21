@@ -11,8 +11,8 @@ namespace MementoLibrary.ConceptualExample
     /// </summary>
     public class Caretaker
     {
-        private List<IMemento> _mementos;
-        private Originator _originator;
+        private readonly List<IMemento> _mementos;
+        private readonly Originator _originator;
 
         public Caretaker(Originator originator)
         {

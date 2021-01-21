@@ -7,7 +7,7 @@ namespace MediatorLibrary.GroupChatExample.Mediators
 {
     public class ViberGroupChatMediator : IGroupChatMediator
     {
-        private List<User> _chatParticipants = new List<User>();
+        private readonly List<User> _chatParticipants = new List<User>();
 
         public ViberGroupChatMediator(params User[] users)
         {

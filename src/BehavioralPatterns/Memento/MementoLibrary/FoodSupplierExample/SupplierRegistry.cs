@@ -6,9 +6,8 @@ namespace MementoLibrary.FoodSupplierExample
     public class SupplierRegistry
     {
         private readonly FoodSupplier _supplier;
-
-        private Stack<IMemento> _undoStack;
-        private Stack<IMemento> _redoStack;
+        private readonly Stack<IMemento> _undoStack;
+        private readonly Stack<IMemento> _redoStack;
 
         public SupplierRegistry(FoodSupplier supplier)
         {

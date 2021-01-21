@@ -6,7 +6,7 @@ namespace FlyweightLibrary.ForestExample
     public class Forest
     {
         private readonly TreeFactory _treeFactory;
-        private ICollection<Tree> _trees;
+        private readonly ICollection<Tree> _trees;
 
         public Forest(TreeFactory treeFactory)
         {

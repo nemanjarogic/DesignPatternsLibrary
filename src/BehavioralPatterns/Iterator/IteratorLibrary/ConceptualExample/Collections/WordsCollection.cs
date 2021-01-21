@@ -7,7 +7,7 @@ namespace IteratorLibrary.ConceptualExample.Collections
 {
     public class WordsCollection : IterableCollection
     {
-        private List<string> _collection = new List<string>();
+        private readonly List<string> _collection = new List<string>();
         private bool _isDirectionReversed = false;
 
         public int Count

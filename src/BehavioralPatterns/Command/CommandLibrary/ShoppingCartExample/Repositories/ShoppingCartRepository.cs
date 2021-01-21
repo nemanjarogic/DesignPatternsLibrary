@@ -6,7 +6,7 @@ namespace CommandLibrary.ShoppingCartExample.Repositories
 {
     public class ShoppingCartRepository : IShoppingCartRepository
     {
-        private Dictionary<string, (Product Product, int Quantity)> _lineItems;
+        private readonly Dictionary<string, (Product Product, int Quantity)> _lineItems;
 
         public ShoppingCartRepository()
         {

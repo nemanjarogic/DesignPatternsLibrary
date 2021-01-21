@@ -7,7 +7,7 @@ namespace IteratorLibrary.MusicFestivalsExample.Collections
 {
     public class FestivalCollection : IIterableCollection
     {
-        private List<MusicFestival> _festivals = new List<MusicFestival>();
+        private readonly List<MusicFestival> _festivals = new List<MusicFestival>();
 
         public int Count
         {

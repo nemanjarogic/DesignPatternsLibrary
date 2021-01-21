@@ -5,7 +5,7 @@ namespace CommandLibrary.ShoppingCartExample
 {
     public class CommandManager
     {
-        private Stack<ICommand> _commands = new Stack<ICommand>();
+        private readonly Stack<ICommand> _commands = new Stack<ICommand>();
 
         public void Invoke(ICommand command)
         {

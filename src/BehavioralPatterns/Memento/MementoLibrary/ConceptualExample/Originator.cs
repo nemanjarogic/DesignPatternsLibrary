@@ -15,7 +15,7 @@ namespace MementoLibrary.ConceptualExample
         /// </summary>
         private string _state;
 
-        private static Random random = new Random();
+        private static readonly Random random = new Random();
 
         public Originator(string state)
         {

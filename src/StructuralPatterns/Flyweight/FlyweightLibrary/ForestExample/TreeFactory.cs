@@ -9,7 +9,7 @@ namespace FlyweightLibrary.ForestExample
     /// </summary>
     public class TreeFactory
     {
-        private Dictionary<string, TreeType> _treeTypes;
+        private readonly Dictionary<string, TreeType> _treeTypes;
 
         public TreeFactory()
         {

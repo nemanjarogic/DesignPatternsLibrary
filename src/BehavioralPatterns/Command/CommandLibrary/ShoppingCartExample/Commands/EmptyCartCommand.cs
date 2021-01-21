@@ -26,10 +26,10 @@ namespace CommandLibrary.ShoppingCartExample.Commands
         {
             var items = _shoppingCartRepository.GetAll().ToArray();
 
-            foreach (var lineItem in items)
+            foreach (var (Product, Quantity) in items)
             {
-                _productRepository.IncreaseStock(lineItem.Product.ProductId, lineItem.Quantity);
-                _shoppingCartRepository.Remove(lineItem.Product.ProductId);
+                _productRepository.IncreaseStock(Product.ProductId, Quantity);
+                _shoppingCartRepository.Remove(Product.ProductId);
             }
         }
 

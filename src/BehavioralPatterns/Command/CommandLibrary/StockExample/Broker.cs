@@ -5,7 +5,7 @@ namespace CommandLibrary.StockExample
 {
     public class Broker
     {
-        private List<IOrderCommand> _orders = new List<IOrderCommand>();
+        private readonly List<IOrderCommand> _orders = new List<IOrderCommand>();
 
         public void TakeOrder(IOrderCommand order)
         {

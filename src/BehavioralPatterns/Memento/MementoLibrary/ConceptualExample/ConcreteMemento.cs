@@ -7,8 +7,8 @@ namespace MementoLibrary.ConceptualExample
     /// </summary>
     public class ConcreteMemento : IMemento
     {
-        private string _state;
-        private DateTime _creationDate;
+        private readonly string _state;
+        private readonly DateTime _creationDate;
 
         public ConcreteMemento(string state)
         {

@@ -15,8 +15,8 @@ namespace ProxyLibrary.CachingProxyExample.Proxy
     public class CachedYoutube : IYoutubeOperations
     {
         private readonly Youtube _youtubeService;
-        private Dictionary<int, Video> _contentCache;
-        private Dictionary<int, VideoMetadata> _metadataCache;
+        private readonly Dictionary<int, Video> _contentCache;
+        private readonly Dictionary<int, VideoMetadata> _metadataCache;
 
         public CachedYoutube(Youtube youtubeService)
         {

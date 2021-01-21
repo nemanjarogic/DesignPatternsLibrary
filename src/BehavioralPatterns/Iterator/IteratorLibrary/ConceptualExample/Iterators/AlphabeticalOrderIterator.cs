@@ -16,8 +16,8 @@ namespace IteratorLibrary.ConceptualExample.Iterators
         /// </summary>
         private int _position = -1;
 
-        private WordsCollection _collection;
-        private bool _isDirectionReversed = false;
+        private readonly WordsCollection _collection;
+        private readonly bool _isDirectionReversed = false;
 
         public AlphabeticalOrderIterator(WordsCollection collection, bool isDirectionReversed = false)
         {

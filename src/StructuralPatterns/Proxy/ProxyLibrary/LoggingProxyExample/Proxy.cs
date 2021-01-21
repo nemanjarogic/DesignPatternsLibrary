@@ -7,7 +7,7 @@ namespace ProxyLibrary.LoggingProxyExample
     /// </summary>
     public class Proxy : ISubject
     {
-        private RealSubject _realSubject;
+        private readonly RealSubject _realSubject;
 
         public Proxy(RealSubject realSubject)
         {

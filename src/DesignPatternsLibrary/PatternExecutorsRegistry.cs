@@ -33,6 +33,7 @@ namespace DesignPatternsLibrary
                 { 18, new MementoLibrary.Executor() },
                 { 19, new ObserverLibrary.Executor() },
                 { 20, new StateLibrary.Executor() },
+                { 21, new StrategyLibrary.Executor() },
             };
         }
 

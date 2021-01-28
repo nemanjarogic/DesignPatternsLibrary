@@ -34,6 +34,8 @@ namespace DesignPatternsLibrary
                 { 19, new ObserverLibrary.Executor() },
                 { 20, new StateLibrary.Executor() },
                 { 21, new StrategyLibrary.Executor() },
+                { 22, new TemplateMethodLibrary.Executor() },
+                { 23, new VisitorLibrary.Executor() },
             };
         }
 

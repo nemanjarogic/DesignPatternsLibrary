@@ -6,12 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AdditionalPatterns\EventAggregator\StoreManagement\StoreManagement.csproj" />
+    <ProjectReference Include="..\AdditionalPatterns\NullObject\NullObjectLibrary\NullObjectLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\ChainOfResponsibility\ChainOfResponsibilityLibrary\ChainOfResponsibilityLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\Command\CommandLibrary\CommandLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\Iterator\IteratorLibrary\IteratorLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\Mediator\MediatorLibrary\MediatorLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\Memento\MementoLibrary\MementoLibrary.csproj" />
-    <ProjectReference Include="..\BehavioralPatterns\NullObject\NullObjectLibrary\NullObjectLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\Observer\ObserverLibrary\ObserverLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\State\StateLibrary\StateLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\Strategy\StrategyLibrary\StrategyLibrary.csproj" />

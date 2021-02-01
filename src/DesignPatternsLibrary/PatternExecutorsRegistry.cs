@@ -31,12 +31,13 @@ namespace DesignPatternsLibrary
                 { 16, new IteratorLibrary.Executor() },
                 { 17, new MediatorLibrary.Executor() },
                 { 18, new MementoLibrary.Executor() },
-                { 19, new NullObjectLibrary.Executor() },
-                { 20, new ObserverLibrary.Executor() },
-                { 21, new StateLibrary.Executor() },
-                { 22, new StrategyLibrary.Executor() },
-                { 23, new TemplateMethodLibrary.Executor() },
-                { 24, new VisitorLibrary.Executor() },
+                { 19, new ObserverLibrary.Executor() },
+                { 20, new StateLibrary.Executor() },
+                { 21, new StrategyLibrary.Executor() },
+                { 22, new TemplateMethodLibrary.Executor() },
+                { 23, new VisitorLibrary.Executor() },
+                { 24, new EventAggregatorLibrary.Executor() },
+                { 25, new NullObjectLibrary.Executor() },
             };
         }
 

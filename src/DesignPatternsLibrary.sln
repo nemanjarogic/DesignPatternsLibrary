@@ -107,6 +107,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitorLibrary", "Behaviora
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NullObject", "NullObject", "{759D7A90-058F-48D7-A125-9DD477D25241}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullObjectLibrary", "BehavioralPatterns\NullObject\NullObjectLibrary\NullObjectLibrary.csproj", "{D29E7129-35A7-4C32-80C8-6012FBD44DEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -213,6 +215,10 @@ Global
 		{D2008DCA-6E2B-4B89-8910-CB7AC38D4A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2008DCA-6E2B-4B89-8910-CB7AC38D4A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2008DCA-6E2B-4B89-8910-CB7AC38D4A96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D29E7129-35A7-4C32-80C8-6012FBD44DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29E7129-35A7-4C32-80C8-6012FBD44DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29E7129-35A7-4C32-80C8-6012FBD44DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29E7129-35A7-4C32-80C8-6012FBD44DEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -264,6 +270,7 @@ Global
 		{3CF9AAAC-E9C1-46EF-9378-AB9381DAEF52} = {3FE65E51-30B0-47A3-B4E7-F89721D5F8A2}
 		{D2008DCA-6E2B-4B89-8910-CB7AC38D4A96} = {3CF9AAAC-E9C1-46EF-9378-AB9381DAEF52}
 		{759D7A90-058F-48D7-A125-9DD477D25241} = {3FE65E51-30B0-47A3-B4E7-F89721D5F8A2}
+		{D29E7129-35A7-4C32-80C8-6012FBD44DEE} = {759D7A90-058F-48D7-A125-9DD477D25241}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9238CD9-9068-4B63-8D9E-53684BA60A21}

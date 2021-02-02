@@ -113,6 +113,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NullObject", "NullObject", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NullObjectLibrary", "AdditionalPatterns\NullObject\NullObjectLibrary\NullObjectLibrary.csproj", "{A9981733-F59E-4275-8B4D-F194A0697600}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interpreter", "Interpreter", "{DCCE3FF3-64CF-4003-A440-A50E6901220E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterpreterLibrary", "AdditionalPatterns\Interpreter\InterpreterLibrary\InterpreterLibrary.csproj", "{ECD8B6B1-C93E-4690-9F6E-E8D7CFBF9DDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -227,6 +231,10 @@ Global
 		{A9981733-F59E-4275-8B4D-F194A0697600}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9981733-F59E-4275-8B4D-F194A0697600}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9981733-F59E-4275-8B4D-F194A0697600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECD8B6B1-C93E-4690-9F6E-E8D7CFBF9DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD8B6B1-C93E-4690-9F6E-E8D7CFBF9DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD8B6B1-C93E-4690-9F6E-E8D7CFBF9DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD8B6B1-C93E-4690-9F6E-E8D7CFBF9DDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -281,6 +289,8 @@ Global
 		{4EBE84AE-3D0E-48D1-9136-60F66C52BBD0} = {23923437-F620-41E7-B1F0-84B10849DDAF}
 		{AEB8B4A1-BEA4-4027-9463-039A79542F18} = {15B15698-CB27-4F30-884C-25C2C1D50202}
 		{A9981733-F59E-4275-8B4D-F194A0697600} = {AEB8B4A1-BEA4-4027-9463-039A79542F18}
+		{DCCE3FF3-64CF-4003-A440-A50E6901220E} = {15B15698-CB27-4F30-884C-25C2C1D50202}
+		{ECD8B6B1-C93E-4690-9F6E-E8D7CFBF9DDF} = {DCCE3FF3-64CF-4003-A440-A50E6901220E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9238CD9-9068-4B63-8D9E-53684BA60A21}

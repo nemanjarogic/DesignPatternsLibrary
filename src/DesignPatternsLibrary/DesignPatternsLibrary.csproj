@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AdditionalPatterns\EventAggregator\StoreManagement\StoreManagement.csproj" />
+    <ProjectReference Include="..\AdditionalPatterns\Interpreter\InterpreterLibrary\InterpreterLibrary.csproj" />
     <ProjectReference Include="..\AdditionalPatterns\NullObject\NullObjectLibrary\NullObjectLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\ChainOfResponsibility\ChainOfResponsibilityLibrary\ChainOfResponsibilityLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\Command\CommandLibrary\CommandLibrary.csproj" />

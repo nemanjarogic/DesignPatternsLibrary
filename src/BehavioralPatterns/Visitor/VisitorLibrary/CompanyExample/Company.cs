@@ -6,7 +6,7 @@ namespace VisitorLibrary.CompanyExample
 {
     public class Company
     {
-        private List<Employee> _employees = new List<Employee>();
+        private readonly List<Employee> _employees = new List<Employee>();
 
         public void Hire(Employee employee)
         {

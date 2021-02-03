@@ -38,7 +38,8 @@ namespace DesignPatternsLibrary
                 { 23, new VisitorLibrary.Executor() },
                 { 24, new EventAggregatorLibrary.Executor() },
                 { 25, new InterpreterLibrary.Executor() },
-                { 26, new NullObjectLibrary.Executor() },
+                { 26, new LazyLoadLibrary.Executor() },
+                { 27, new NullObjectLibrary.Executor() },
             };
         }
 

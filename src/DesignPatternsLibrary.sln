@@ -125,6 +125,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagement", "AdditionalPatterns\Repository\OrderManagement\OrderManagement.csproj", "{A845E3C0-3167-41ED-A175-E6F383A717DF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceLocator", "ServiceLocator", "{F5AFD64F-417A-486C-8638-43C83281B853}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing", "AdditionalPatterns\ServiceLocator\OrderProcessing\OrderProcessing.csproj", "{FA9F05B7-62B3-40A8-9075-03420751D07F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -251,6 +255,10 @@ Global
 		{A845E3C0-3167-41ED-A175-E6F383A717DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A845E3C0-3167-41ED-A175-E6F383A717DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A845E3C0-3167-41ED-A175-E6F383A717DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA9F05B7-62B3-40A8-9075-03420751D07F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9F05B7-62B3-40A8-9075-03420751D07F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9F05B7-62B3-40A8-9075-03420751D07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9F05B7-62B3-40A8-9075-03420751D07F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -311,6 +319,8 @@ Global
 		{110FA67C-35E1-4ADF-B971-A0A5C4E6AF2D} = {472CFB50-9F2A-4160-97CE-90910A22C501}
 		{2214698A-D5F7-4216-8512-B60888E4B8DD} = {15B15698-CB27-4F30-884C-25C2C1D50202}
 		{A845E3C0-3167-41ED-A175-E6F383A717DF} = {2214698A-D5F7-4216-8512-B60888E4B8DD}
+		{F5AFD64F-417A-486C-8638-43C83281B853} = {15B15698-CB27-4F30-884C-25C2C1D50202}
+		{FA9F05B7-62B3-40A8-9075-03420751D07F} = {F5AFD64F-417A-486C-8638-43C83281B853}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9238CD9-9068-4B63-8D9E-53684BA60A21}

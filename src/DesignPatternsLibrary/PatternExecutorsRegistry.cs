@@ -41,6 +41,7 @@ namespace DesignPatternsLibrary
                 { 26, new LazyLoadLibrary.Executor() },
                 { 27, new NullObjectLibrary.Executor() },
                 { 28, new OrderManagement.Executor() },
+                { 29, new OrderProcessing.Executor() },
             };
         }
 

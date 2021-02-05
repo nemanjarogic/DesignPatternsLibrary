@@ -123,15 +123,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyLoadLibrary", "Addition
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{2214698A-D5F7-4216-8512-B60888E4B8DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagement", "AdditionalPatterns\Repository\OrderManagement\OrderManagement.csproj", "{A845E3C0-3167-41ED-A175-E6F383A717DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderManagement", "AdditionalPatterns\Repository\OrderManagement\OrderManagement.csproj", "{A845E3C0-3167-41ED-A175-E6F383A717DF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceLocator", "ServiceLocator", "{F5AFD64F-417A-486C-8638-43C83281B853}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing", "AdditionalPatterns\ServiceLocator\OrderProcessing\OrderProcessing.csproj", "{FA9F05B7-62B3-40A8-9075-03420751D07F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderProcessing", "AdditionalPatterns\ServiceLocator\OrderProcessing\OrderProcessing.csproj", "{FA9F05B7-62B3-40A8-9075-03420751D07F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitOfWork", "UnitOfWork", "{327571FD-41B2-41E5-9D83-67EB4C614426}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWorkLibrary", "AdditionalPatterns\UnitOfWork\UnitOfWorkLibrary\UnitOfWorkLibrary.csproj", "{D521FC81-FA5C-4589-B06D-74220F663340}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitOfWorkLibrary", "AdditionalPatterns\UnitOfWork\UnitOfWorkLibrary\UnitOfWorkLibrary.csproj", "{D521FC81-FA5C-4589-B06D-74220F663340}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rules", "Rules", "{C8512694-34BF-4616-A82F-12D73DE8263A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RulesLibrary", "AdditionalPatterns\Rules\RulesLibrary\RulesLibrary.csproj", "{BBDF24BC-7D73-4A8F-B8B0-C649019E1B80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -267,6 +271,10 @@ Global
 		{D521FC81-FA5C-4589-B06D-74220F663340}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D521FC81-FA5C-4589-B06D-74220F663340}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D521FC81-FA5C-4589-B06D-74220F663340}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBDF24BC-7D73-4A8F-B8B0-C649019E1B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBDF24BC-7D73-4A8F-B8B0-C649019E1B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBDF24BC-7D73-4A8F-B8B0-C649019E1B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBDF24BC-7D73-4A8F-B8B0-C649019E1B80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -331,6 +339,8 @@ Global
 		{FA9F05B7-62B3-40A8-9075-03420751D07F} = {F5AFD64F-417A-486C-8638-43C83281B853}
 		{327571FD-41B2-41E5-9D83-67EB4C614426} = {15B15698-CB27-4F30-884C-25C2C1D50202}
 		{D521FC81-FA5C-4589-B06D-74220F663340} = {327571FD-41B2-41E5-9D83-67EB4C614426}
+		{C8512694-34BF-4616-A82F-12D73DE8263A} = {15B15698-CB27-4F30-884C-25C2C1D50202}
+		{BBDF24BC-7D73-4A8F-B8B0-C649019E1B80} = {C8512694-34BF-4616-A82F-12D73DE8263A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9238CD9-9068-4B63-8D9E-53684BA60A21}

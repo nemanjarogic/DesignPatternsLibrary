@@ -12,7 +12,7 @@ namespace UnitOfWorkLibrary.Example1.Infrastructure
     /// </summary>
     public class UnitOfWork1 : IUnitOfWork1
     {
-        private OrderManagementContext1 _context;
+        private readonly OrderManagementContext1 _context;
         private IRepository1<Customer> _customerRepository;
         private IRepository1<Order> _orderRepository;
 

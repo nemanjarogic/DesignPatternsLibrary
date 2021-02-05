@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using OrderManagement.Domain;
-using OrderManagement.Infrastructure.Repositories.Contracts;
+using UnitOfWorkLibrary.Domain;
+using UnitOfWorkLibrary.Example1.Infrastructure.Repositories.Contracts;
 
-namespace OrderManagement.Infrastructure.Repositories
+namespace UnitOfWorkLibrary.Example1.Infrastructure
 {
     /// <summary>
     /// Repositories completely encapsulates all the minutiae of data access.
@@ -16,12 +16,12 @@ namespace OrderManagement.Infrastructure.Repositories
     /// the special algorithms that are crucial to the business.
     /// </summary>
     /// <typeparam name="T">Entity type.</typeparam>
-    public abstract class Repository<T> : IRepository<T>
+    public class Repository1<T> : IRepository1<T>
         where T : Entity
     {
-        protected OrderManagementContext _context;
+        protected OrderManagementContext1 _context;
 
-        public Repository(OrderManagementContext context)
+        public Repository1(OrderManagementContext1 context)
         {
             _context = context;
         }
@@ -54,16 +54,6 @@ namespace OrderManagement.Infrastructure.Repositories
         public virtual void Delete(T entity)
         {
             _context.Remove(entity);
-        }
-
-        /// <summary>
-        /// Save all changes to the database.
-        /// Additionaly, we can implement UnitOfWork design pattern
-        /// to enhance this example and coordinate database changes from one place.
-        /// </summary>
-        public void SaveChanges()
-        {
-            _context.SaveChanges();
         }
     }
 }

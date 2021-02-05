@@ -42,6 +42,7 @@ namespace DesignPatternsLibrary
                 { 27, new NullObjectLibrary.Executor() },
                 { 28, new OrderManagement.Executor() },
                 { 29, new OrderProcessing.Executor() },
+                { 30, new UnitOfWorkLibrary.Executor() },
             };
         }
 

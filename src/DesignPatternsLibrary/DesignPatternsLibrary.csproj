@@ -12,6 +12,7 @@
     <ProjectReference Include="..\AdditionalPatterns\NullObject\NullObjectLibrary\NullObjectLibrary.csproj" />
     <ProjectReference Include="..\AdditionalPatterns\Repository\OrderManagement\OrderManagement.csproj" />
     <ProjectReference Include="..\AdditionalPatterns\ServiceLocator\OrderProcessing\OrderProcessing.csproj" />
+    <ProjectReference Include="..\AdditionalPatterns\UnitOfWork\UnitOfWorkLibrary\UnitOfWorkLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\ChainOfResponsibility\ChainOfResponsibilityLibrary\ChainOfResponsibilityLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\Command\CommandLibrary\CommandLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\Iterator\IteratorLibrary\IteratorLibrary.csproj" />

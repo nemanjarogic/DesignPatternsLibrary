@@ -1,30 +1,37 @@
 ﻿using System;
-using DesignPatternsLibrary.PatternExecutors;
-using OrderManagement.Controllers;
-using OrderManagement.Domain;
-using OrderManagement.Infrastructure;
-using OrderManagement.Infrastructure.Repositories;
+using System.Threading.Tasks;
+using BuildingBlocks;
+using UnitOfWorkLibrary.Domain;
+using UnitOfWorkLibrary.Example2.Controllers;
+using UnitOfWorkLibrary.Example2.Infrastructure;
+using UnitOfWorkLibrary.Example2.Infrastructure.Repositories;
 
-namespace OrderManagement
+namespace UnitOfWorkLibrary.Example2
 {
-    public class Executor : PatternExecutor
+    public static class Example2Executor
     {
-        public override string Name => "Repository - Order Management - Additional Pattern";
-
-        public override void Execute()
+        /// <summary>
+        /// In this example, UnitOfWork is accessed through repositories.
+        /// The example is extended with concrete repositories.
+        /// If necessary, these repositories could be used in example 1 as well.
+        /// This example is inspired by eShopOnContainers (https://github.com/dotnet-architecture/eShopOnContainers).
+        /// </summary>
+        public static async Task ExecuteAsync()
         {
-            InitializeDatabase();
+            ConsoleExtension.WriteSeparator("Example 2");
 
-            using var context = new OrderManagementContext();
+            await InitializeDatabaseAsync();
+
+            using var context = new OrderManagementContext2();
             var customerRepository = new CustomerRepository(context);
             var orderRepository = new OrderRepository(context);
 
-            var customerController = new CustomerController(customerRepository);
-            var orderController = new OrderController(orderRepository);
+            var customerController = new CustomerController2(customerRepository);
+            var orderController = new OrderController2(orderRepository);
 
             ShowAllCustomers();
             ShowAllOrders();
-            CreateNewOrder();
+            await CreateNewOrderAsync();
             ShowAllOrders();
 
             void ShowAllCustomers()
@@ -45,16 +52,16 @@ namespace OrderManagement
                 }
             }
 
-            void CreateNewOrder()
+            async Task CreateNewOrderAsync()
             {
                 Console.WriteLine("\nCreating new order...");
-                orderController.Create(3, "PlayStation 5", "Address 3", 600);
+                await orderController.CreateAsync(3, "PlayStation 5", "Address 3", 600);
             }
         }
 
-        private void InitializeDatabase()
+        private static async Task InitializeDatabaseAsync()
         {
-            using (var context = new OrderManagementContext())
+            using (var context = new OrderManagementContext2())
             {
                 context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
@@ -66,14 +73,14 @@ namespace OrderManagement
                 var wallet = new Order { Id = 2, Description = "Wallet", DeliveryAddress = "Address 2", Price = 10 };
 
                 var customerRepository = new CustomerRepository(context);
+                var orderRepository = new OrderRepository(context);
+
                 customerRepository.Add(emma);
                 customerRepository.Add(marc);
-                customerRepository.SaveChanges();
-
-                var orderRepository = new OrderRepository(context);
                 orderRepository.Add(camera);
                 orderRepository.Add(wallet);
-                orderRepository.SaveChanges();
+
+                await orderRepository.UnitOfWork.SaveChangesAndDispatchDomainEventsAsync();
             }
         }
     }

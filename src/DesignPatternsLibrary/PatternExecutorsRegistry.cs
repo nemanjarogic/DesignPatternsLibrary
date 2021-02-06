@@ -43,7 +43,8 @@ namespace DesignPatternsLibrary
                 { 28, new OrderManagement.Executor() },
                 { 29, new RulesLibrary.Executor() },
                 { 30, new OrderProcessing.Executor() },
-                { 31, new UnitOfWorkLibrary.Executor() },
+                { 31, new ProductSpecification.Executor() },
+                { 32, new UnitOfWorkLibrary.Executor() },
             };
         }
 

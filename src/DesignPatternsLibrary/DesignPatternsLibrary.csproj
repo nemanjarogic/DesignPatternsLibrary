@@ -13,6 +13,7 @@
     <ProjectReference Include="..\AdditionalPatterns\Repository\OrderManagement\OrderManagement.csproj" />
     <ProjectReference Include="..\AdditionalPatterns\Rules\RulesLibrary\RulesLibrary.csproj" />
     <ProjectReference Include="..\AdditionalPatterns\ServiceLocator\OrderProcessing\OrderProcessing.csproj" />
+    <ProjectReference Include="..\AdditionalPatterns\Specification\ProductSpecification\ProductSpecification.csproj" />
     <ProjectReference Include="..\AdditionalPatterns\UnitOfWork\UnitOfWorkLibrary\UnitOfWorkLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\ChainOfResponsibility\ChainOfResponsibilityLibrary\ChainOfResponsibilityLibrary.csproj" />
     <ProjectReference Include="..\BehavioralPatterns\Command\CommandLibrary\CommandLibrary.csproj" />

@@ -12,10 +12,6 @@ In addition, design patterns allow developers to communicate using well-known, w
 Know when to use a certain design pattern, and when not to.
 No design pattern is a 42 – the answer to life, the universe and everything. There are situations in which every design pattern easily becomes an antipattern.
 
-
-## What this repository contains?
-This repository contains a comprehensive design patterns library implemented in C#, which covers various design patterns from the most commonly used ones to the lesser-known ones. It enables you to get familiar with and learn design patterns through moderately realistic examples.
-
 ## Design Pattern Types
 Design patterns can be separatated into three main categories:
 * Creational
@@ -26,5 +22,16 @@ Design patterns can be separatated into three main categories:
 
 * Behavioral
 > Behavioral patterns are concerted with algorithms and the assignment of responsibilities between objects. Behavioral patterns describe not just the patterns of objects or classes but also the patterns of communication between them.
+
+## What this repository contains?
+This repository contains a comprehensive design patterns library implemented in C#, which covers various design patterns from the most commonly used ones to the lesser-known ones. It enables you to get familiar with and learn design patterns through moderately realistic examples.
+
+| Design Pattern        | Type           | Description  |
+| ------------- |:-------------:| -----|
+| [Abstract Factory](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/CreationalPatterns/AbstractFactory) | Creational | Provides an interface for creating families of related or dependent objects without specifying their concrete classes.|
+| [Builder](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/CreationalPatterns/Builder/CustomSandwichBuilder) | Creational | Lets you construct complex objects step by step. The pattern allows you to produce different types and representations of an object using the same construction code.|
+| [Factory Method](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/CreationalPatterns/FactoryMethod/RestaurantManagement) | Creational | Provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.|
+| [Prototype](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/CreationalPatterns/Prototype/PrototypeLibrary) | Creational | Lets you copy existing objects without making your code dependent on their classes.|
+| [Singleton](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/CreationalPatterns/Singleton/Greeter) | Creational | Ensures that a class has only one instance, while providing a global access point to this instance.|
 
 ![alt text](https://github.com/nemanjarogic/DesignPatternsLibrary/blob/main/assets/images/design-patterns-types.png "Design Patterns")

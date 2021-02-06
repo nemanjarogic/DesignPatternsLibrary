@@ -52,4 +52,20 @@ This repository contains a comprehensive design patterns library implemented in 
 | [Visitor](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/BehavioralPatterns/Visitor/VisitorLibrary) | Behavioral | A way of separating an algorithm from an object structure on which it operates. A practical result of this separation is the ability to add new operations to existing object structures without modifying the structures.|
 
 
+### Extra content
+
+| Design Pattern        | Type           | Description  |
+| ------------- |:-------------:| -----|
+| [Event Aggregator](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/EventAggregator/StoreManagement) | Behavioral | Channel events from multiple objects into a single object to simplify registration for clients.|
+| [Interpreter](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/Interpreter/InterpreterLibrary) | Behavioral | Defines a grammatical representation for a language and provides an interpreter to evaluate sentences in a language.|
+| [Lazy Load](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/LazyLoad/LazyLoadLibrary) | Data Access | Defers initialization of an object until the point at which it is needed. It can contribute to efficiency in the program's operation if properly and appropriately used.|
+| [Null Object](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/NullObject/NullObjectLibrary) | Behavioral | Encapsulates the absence of an object by providing a substitutable alternative that offers suitable default do nothing behavior.|
+| [Repository](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/Repository/OrderManagement) | Data Access  | Encapsulates all the minutiae of data access. Mediates between the domain and data mapping layers using a collection-like interface for accessing domain objects.|
+| [Rules](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/Rules/RulesLibrary) | Behavioral | Separates the logic of each individual rule and its effects into its own class. Separates the selection and processing of rules into a separate Evaluator class.|
+| [Service Locator](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/ServiceLocator/OrderProcessing) | Architectural | Improves the modularity of your application by removing the dependency between the client and the implementation of an interface. Encapsulates the processes involved in obtaining a service with a strong abstraction layer. This pattern uses a central registry known as the service locator which on request returns the information necessary to perform a certain task.|
+| [Specification](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/Specification/ProductSpecification) | Architectural | Separates the statement of how to match a candidate, from the candidate object that it is matched against. Specification design pattern allows us to check whether our objects meet certain requirements. Through this design pattern, we can reuse expression specifications and combine those specifications to easily question whether more complex requirements are satisfied or not.|
+| [Unit Of Work](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/UnitOfWork/UnitOfWorkLibrary) | Data Access | Maintains a list of objects affected by a business transaction and coordinates the writing out of changes.|
+
 ![alt text](https://github.com/nemanjarogic/DesignPatternsLibrary/blob/main/assets/images/design-patterns-types.png "Design Patterns")
+
+I want to give credit to [Refactoring.Guru](https://refactoring.guru/) for amazing content about design patterns. I highly recommend checking it for more details on design patterns theory.

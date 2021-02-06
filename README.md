@@ -1,6 +1,6 @@
 <h1 align="center">Design Patterns Library</h1>
 <p align="center">
- 32 Design Patterns + 65 moderately realistic examples
+ 32 Design Patterns • 65 moderately realistic examples
 </p>
 
 ## What are Design Patterns?

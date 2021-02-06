@@ -10,7 +10,7 @@ It is a description or template for how to solve a problem that can be used in m
 In addition, design patterns allow developers to communicate using well-known, well understood names for software interactions.
 
 Know when to use a certain design pattern, and when not to.
-No design pattern is a 42 – the answer to life, the universe and everything. There are situations in which every design pattern easily becomes an antipattern.
+No design pattern is a 42 - the answer to life, the universe and everything. There are situations in which every design pattern easily becomes an antipattern.
 
 ## Design Pattern Types
 Design patterns can be separatated into three main categories:

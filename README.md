@@ -66,4 +66,8 @@ This repository contains a comprehensive design patterns library implemented in 
 | [Specification](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/Specification/ProductSpecification) | Architectural | Separates the statement of how to match a candidate, from the candidate object that it is matched against. Specification design pattern allows us to check whether our objects meet certain requirements. Through this design pattern, we can reuse expression specifications and combine those specifications to easily question whether more complex requirements are satisfied or not.|
 | [Unit Of Work](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/UnitOfWork/UnitOfWorkLibrary) | Data Access | Maintains a list of objects affected by a business transaction and coordinates the writing out of changes.|
 
-I want to give credit to [Refactoring.Guru](https://refactoring.guru/) for amazing content about design patterns. I highly recommend checking it for more details on design patterns theory.
+I want to give credit to [Refactoring.Guru](https://refactoring.guru/) for amazing content about design patterns.
+I highly recommend checking it for more details on design patterns theory.
+
+The examples that are used to demonstrate design patterns usage are a mix of my own ideas and ideas adapted from various resources.
+If you prefer learning by watching courses great content can be found at Pluralsight.

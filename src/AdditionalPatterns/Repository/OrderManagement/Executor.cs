@@ -9,7 +9,7 @@ namespace OrderManagement
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Repository - Order Management - Additional Pattern";
+        public override string Name => "Repository - Data Access Pattern";
 
         public override void Execute()
         {

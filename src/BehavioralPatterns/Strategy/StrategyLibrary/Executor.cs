@@ -6,7 +6,7 @@ namespace StrategyLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Strategy - Strategy Library - Behavioral Pattern";
+        public override string Name => "Strategy - Behavioral Pattern";
 
         public override void Execute()
         {

@@ -6,7 +6,7 @@ namespace AdapterLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Adapter - Adapter Library - Structural Pattern";
+        public override string Name => "Adapter - Structural Pattern";
 
         public override void Execute()
         {

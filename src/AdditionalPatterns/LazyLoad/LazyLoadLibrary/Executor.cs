@@ -8,7 +8,7 @@ namespace LazyLoadLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Lazy Load - Lazy Load Library - Additional Pattern";
+        public override string Name => "Lazy Load - Data Access Pattern";
 
         public override void Execute()
         {

@@ -7,7 +7,7 @@ namespace ProxyLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Proxy - Proxy Library - Structural Pattern";
+        public override string Name => "Proxy - Structural Pattern";
 
         public override void Execute()
         {

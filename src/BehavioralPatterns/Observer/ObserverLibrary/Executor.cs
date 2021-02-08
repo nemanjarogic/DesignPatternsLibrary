@@ -6,7 +6,7 @@ namespace ObserverLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Observer - Observer Library - Behavioral Pattern";
+        public override string Name => "Observer - Behavioral Pattern";
 
         public override void Execute()
         {

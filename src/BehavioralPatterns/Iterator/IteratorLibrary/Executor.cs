@@ -6,7 +6,7 @@ namespace IteratorLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Iterator - Iterator Library - Behavioral Pattern";
+        public override string Name => "Iterator - Behavioral Pattern";
 
         public override void Execute()
         {

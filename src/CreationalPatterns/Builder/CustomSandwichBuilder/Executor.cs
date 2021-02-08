@@ -14,7 +14,7 @@ namespace CustomSandwichBuilder
     /// </summary>
     public class Executor : PatternExecutor
     {
-        public override string Name => "Builder - Custom Sandwich Builder - Creational Pattern";
+        public override string Name => "Builder - Creational Pattern";
 
         public override void Execute()
         {

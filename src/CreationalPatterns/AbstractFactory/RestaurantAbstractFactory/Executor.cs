@@ -7,7 +7,7 @@ namespace RestaurantAbstractFactory
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Abstract Factory - Restaurant Abstract Factory - Creational Pattern";
+        public override string Name => "Abstract Factory - Creational Pattern";
 
         public override void Execute()
         {

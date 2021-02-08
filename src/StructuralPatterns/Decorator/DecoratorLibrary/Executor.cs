@@ -6,7 +6,7 @@ namespace DecoratorLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Decorator - Decorator Library - Structural Pattern";
+        public override string Name => "Decorator - Structural Pattern";
 
         public override void Execute()
         {

@@ -6,7 +6,7 @@ namespace RulesLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Rules - Rules Library - Additional Pattern";
+        public override string Name => "Rules - Behavioral Pattern";
 
         public override void Execute()
         {

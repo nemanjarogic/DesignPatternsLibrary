@@ -7,7 +7,7 @@ namespace ChainOfResponsibilityLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Chain Of Responsibility - Chain Of Responsibility Library - Behavioral Pattern";
+        public override string Name => "Chain Of Responsibility - Behavioral Pattern";
 
         public override void Execute()
         {

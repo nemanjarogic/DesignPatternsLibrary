@@ -1,51 +1,59 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using DesignPatternsLibrary.PatternExecutors;
 
 namespace DesignPatternsLibrary
 {
     public class PatternExecutorsRegistry
     {
-        private static PatternExecutorsRegistry _instance = null;
-
+        private static PatternExecutorsRegistry _instance;
         private readonly SortedDictionary<int, PatternExecutor> _executors;
 
         private PatternExecutorsRegistry()
         {
-            _executors = new SortedDictionary<int, PatternExecutor>
+            var patternExecutors = new List<PatternExecutor>
             {
-                { 1, new Greeter.Executor() },
-                { 2, new RestaurantManagement.Executor() },
-                { 3, new MealSimpleFactory.Executor() },
-                { 4, new RestaurantAbstractFactory.Executor() },
-                { 5, new CustomSandwichBuilder.Executor() },
-                { 6, new PrototypeLibrary.Executor() },
-                { 7, new AdapterLibrary.Executor() },
-                { 8, new BridgeLibrary.Executor() },
-                { 9, new CompositeLibrary.Executor() },
-                { 10, new DecoratorLibrary.Executor() },
-                { 11, new FacadeLibrary.Executor() },
-                { 12, new FlyweightLibrary.Executor() },
-                { 13, new ProxyLibrary.Executor() },
-                { 14, new ChainOfResponsibilityLibrary.Executor() },
-                { 15, new CommandLibrary.Executor() },
-                { 16, new IteratorLibrary.Executor() },
-                { 17, new MediatorLibrary.Executor() },
-                { 18, new MementoLibrary.Executor() },
-                { 19, new ObserverLibrary.Executor() },
-                { 20, new StateLibrary.Executor() },
-                { 21, new StrategyLibrary.Executor() },
-                { 22, new TemplateMethodLibrary.Executor() },
-                { 23, new VisitorLibrary.Executor() },
-                { 24, new EventAggregatorLibrary.Executor() },
-                { 25, new InterpreterLibrary.Executor() },
-                { 26, new LazyLoadLibrary.Executor() },
-                { 27, new NullObjectLibrary.Executor() },
-                { 28, new OrderManagement.Executor() },
-                { 29, new RulesLibrary.Executor() },
-                { 30, new OrderProcessing.Executor() },
-                { 31, new ProductSpecification.Executor() },
-                { 32, new UnitOfWorkLibrary.Executor() },
+                new Greeter.Executor(),
+                new RestaurantManagement.Executor(),
+                new MealSimpleFactory.Executor(),
+                new RestaurantAbstractFactory.Executor(),
+                new CustomSandwichBuilder.Executor(),
+                new PrototypeLibrary.Executor(),
+                new AdapterLibrary.Executor(),
+                new BridgeLibrary.Executor(),
+                new CompositeLibrary.Executor(),
+                new DecoratorLibrary.Executor(),
+                new FacadeLibrary.Executor(),
+                new FlyweightLibrary.Executor(),
+                new ProxyLibrary.Executor(),
+                new ChainOfResponsibilityLibrary.Executor(),
+                new CommandLibrary.Executor(),
+                new IteratorLibrary.Executor(),
+                new MediatorLibrary.Executor(),
+                new MementoLibrary.Executor(),
+                new ObserverLibrary.Executor(),
+                new StateLibrary.Executor(),
+                new StrategyLibrary.Executor(),
+                new TemplateMethodLibrary.Executor(),
+                new VisitorLibrary.Executor(),
+                new EventAggregatorLibrary.Executor(),
+                new InterpreterLibrary.Executor(),
+                new LazyLoadLibrary.Executor(),
+                new NullObjectLibrary.Executor(),
+                new OrderManagement.Executor(),
+                new RulesLibrary.Executor(),
+                new OrderProcessing.Executor(),
+                new ProductSpecification.Executor(),
+                new UnitOfWorkLibrary.Executor(),
             };
+
+            var serialNumber = 1;
+            _executors = new SortedDictionary<int, PatternExecutor>();
+
+            foreach (var executor in patternExecutors.OrderBy(pattern => pattern.Name))
+            {
+                _executors.Add(serialNumber++, executor);
+            }
         }
 
         public static PatternExecutorsRegistry Instance

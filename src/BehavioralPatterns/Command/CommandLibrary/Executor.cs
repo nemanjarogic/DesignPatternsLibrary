@@ -7,7 +7,7 @@ namespace CommandLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Command - Command Library - Behavioral Pattern";
+        public override string Name => "Command - Behavioral Pattern";
 
         public override void Execute()
         {

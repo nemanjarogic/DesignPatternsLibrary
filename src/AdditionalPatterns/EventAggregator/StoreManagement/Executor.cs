@@ -8,7 +8,7 @@ namespace EventAggregatorLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Event Aggregator - Store Management - Additional Pattern";
+        public override string Name => "Event Aggregator - Behavioral Pattern";
 
         public override void Execute()
         {

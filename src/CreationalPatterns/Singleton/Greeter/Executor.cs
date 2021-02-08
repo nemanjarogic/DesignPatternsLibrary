@@ -6,7 +6,7 @@ namespace Greeter
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Singleton - Greeter - Creational Pattern";
+        public override string Name => "Singleton - Creational Pattern";
 
         public override void Execute()
         {

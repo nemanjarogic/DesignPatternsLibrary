@@ -7,7 +7,7 @@ namespace StateLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "State - State Library - Behavioral Pattern";
+        public override string Name => "State - Behavioral Pattern";
 
         public override void Execute()
         {

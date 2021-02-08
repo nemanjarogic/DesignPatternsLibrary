@@ -7,7 +7,7 @@ namespace ProductSpecification
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Specification - Product Specification - Additional Pattern";
+        public override string Name => "Specification - Architectural Pattern";
 
         public override void Execute()
         {

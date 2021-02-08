@@ -6,7 +6,7 @@ namespace MediatorLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Mediator - Mediator Library - Behavioral Pattern";
+        public override string Name => "Mediator - Behavioral Pattern";
 
         public override void Execute()
         {

@@ -9,7 +9,7 @@ namespace PrototypeLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Prototype - Prototype Library - Creational Pattern";
+        public override string Name => "Prototype - Creational Pattern";
 
         public override void Execute()
         {

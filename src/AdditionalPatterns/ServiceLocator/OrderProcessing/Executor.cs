@@ -5,7 +5,7 @@ namespace OrderProcessing
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Service Locator - Order Processing - Additional Pattern";
+        public override string Name => "Service Locator - Architectural Pattern";
 
         public override void Execute()
         {

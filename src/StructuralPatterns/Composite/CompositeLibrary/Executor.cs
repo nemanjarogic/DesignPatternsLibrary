@@ -7,7 +7,7 @@ namespace CompositeLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Composite - Composite Library - Structural Pattern";
+        public override string Name => "Composite - Structural Pattern";
 
         public override void Execute()
         {

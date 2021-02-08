@@ -6,7 +6,7 @@ namespace InterpreterLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Interpreter - Interpreter Library - Additional Pattern";
+        public override string Name => "Interpreter - Behavioral Pattern";
 
         public override void Execute()
         {

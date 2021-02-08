@@ -6,7 +6,7 @@ namespace UnitOfWorkLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Unit of Work - Unit of Work Library - Additional Pattern";
+        public override string Name => "Unit of Work - Data Access Pattern";
 
         public override void Execute()
         {

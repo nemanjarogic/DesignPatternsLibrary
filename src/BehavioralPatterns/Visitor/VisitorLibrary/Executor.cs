@@ -6,7 +6,7 @@ namespace VisitorLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Visitor - Visitor Library - Behavioral Pattern";
+        public override string Name => "Visitor - Behavioral Pattern";
 
         public override void Execute()
         {

@@ -6,7 +6,7 @@ namespace FacadeLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Facade - Facade Library - Structural Pattern";
+        public override string Name => "Facade - Structural Pattern";
 
         public override void Execute()
         {

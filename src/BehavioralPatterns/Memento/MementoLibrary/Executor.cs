@@ -6,7 +6,7 @@ namespace MementoLibrary
 {
     public class Executor : PatternExecutor
     {
-        public override string Name => "Memento - Memento Library - Behavioral Pattern";
+        public override string Name => "Memento - Behavioral Pattern";
 
         public override void Execute()
         {

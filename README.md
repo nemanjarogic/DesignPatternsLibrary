@@ -13,7 +13,7 @@ Know when to use a certain design pattern, and when not to.
 No design pattern is a 42 - the answer to life, the universe and everything. There are situations in which every design pattern easily becomes an antipattern.
 
 ## Design Pattern Types
-Design patterns can be separatated into three main categories:
+Design patterns can be separated into three main categories:
 * Creational
 > Creational design patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form of object creation could result in design problems or added complexity to the design. Creational design patterns solve this problem by somehow controlling this object creation.
 
@@ -21,7 +21,7 @@ Design patterns can be separatated into three main categories:
 > Structural design patterns are design patterns that ease the design by identifying a simple way to realize relationships among entities. Structural patterns are concerned with how classes and objects are composed to form larger structures.
 
 * Behavioral
-> Behavioral patterns are concerted with algorithms and the assignment of responsibilities between objects. Behavioral patterns describe not just the patterns of objects or classes but also the patterns of communication between them.
+> Behavioral patterns are concerned with algorithms and the assignment of responsibilities between objects. Behavioral patterns describe not just the patterns of objects or classes but also the patterns of communication between them.
 
 ## What this repository contains?
 This repository contains a comprehensive design patterns library implemented in C#, which covers various design patterns from the most commonly used ones (Gang of Four) to the lesser-known ones. It enables you to get familiar with and learn design patterns through moderately realistic examples.

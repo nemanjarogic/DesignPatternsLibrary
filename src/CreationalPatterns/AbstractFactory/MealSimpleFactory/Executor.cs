@@ -11,7 +11,7 @@ namespace MealSimpleFactory
 
         public override void Execute()
         {
-            Console.WriteLine("Please enter desired meal name name (green salad/hamburger): ");
+            Console.WriteLine("Please enter desired meal name (green salad/hamburger): ");
             string mealName = Console.ReadLine();
 
             MealFactory factory = new MealFactory();

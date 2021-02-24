@@ -26,9 +26,9 @@ Design patterns can be separated into three main categories:
 ## What this repository contains?
 This repository contains a comprehensive design patterns library implemented in C#, which covers various design patterns from the most commonly used ones (Gang of Four) to the lesser-known ones. It enables you to get familiar with and learn design patterns through moderately realistic examples.
 
-| Design Pattern        | Type           | Description  |
-| ------------- |:-------------:| -----|
-| [Abstract Factory](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/CreationalPatterns/AbstractFactory) | Creational | Provides an interface for creating families of related or dependent objects without specifying their concrete classes.|
+| Design Pattern        | Type           | Description  | Introduction  |
+| ------------- |:-------------:| -----|:-------------:|
+| [Abstract Factory](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/CreationalPatterns/AbstractFactory) | Creational | Provides an interface for creating families of related or dependent objects without specifying their concrete classes.| [<img src="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-2-1.png">](http://google.com.au/) |
 | [Adapter](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/StructuralPatterns/Adapter/AdapterLibrary) | Structural | Allows objects with incompatible interfaces to collaborate.|
 | [Bridge](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/StructuralPatterns/Bridge/BridgeLibrary) | Structural | Lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other.|
 | [Builder](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/CreationalPatterns/Builder/CustomSandwichBuilder) | Creational | Lets you construct complex objects step by step. The pattern allows you to produce different types and representations of an object using the same construction code.|

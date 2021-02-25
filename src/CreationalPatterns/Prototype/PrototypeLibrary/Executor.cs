@@ -13,8 +13,8 @@ namespace PrototypeLibrary
 
         public override void Execute()
         {
-            ComplexUnstableObjectExecutor.Execute();
             ColorRegistryExecutor.Execute();
+            ComplexUnstableObjectExecutor.Execute();
             DeepCloneExecutor.Execute();
             LogicPuzzleExecutor.Execute();
             WebPageScraperExecutor.Execute();

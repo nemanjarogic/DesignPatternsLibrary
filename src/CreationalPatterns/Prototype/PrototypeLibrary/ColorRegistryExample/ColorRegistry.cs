@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using PrototypeLibrary.ColorRegistryExample.Common;
 
 namespace PrototypeLibrary.ColorRegistryExample
@@ -11,7 +10,7 @@ namespace PrototypeLibrary.ColorRegistryExample
         public IColorPrototype this[string key]
         {
             get { return _colors[key]; }
-            set { _colors.Add(key, value); }
+            set { _colors[key] = value; }
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using BridgeLibrary.ManuscriptsAndFormattersExample.Formatters.Common;
+﻿using BridgeLibrary.DocumentsAndFormattersExample.Formatters.Common;
 
-namespace BridgeLibrary.ManuscriptsAndFormattersExample.Formatters
+namespace BridgeLibrary.DocumentsAndFormattersExample.Formatters
 {
     public class StandardFormatter : IFormatter
     {

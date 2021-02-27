@@ -1,5 +1,5 @@
 ﻿using BridgeLibrary.DevicesAndRemotesExample;
-using BridgeLibrary.ManuscriptsAndFormattersExample;
+using BridgeLibrary.DocumentsAndFormattersExample;
 using BridgeLibrary.MovieLicenseExample;
 using DesignPatternsLibrary.PatternExecutors;
 
@@ -12,7 +12,7 @@ namespace BridgeLibrary
         public override void Execute()
         {
             DevicesAndRemotesExecutor.Execute();
-            ManuscriptsAndFormattersExecutor.Execute();
+            DocumentsAndFormattersExecutor.Execute();
             MovieLicenseExecutor.Execute();
         }
     }

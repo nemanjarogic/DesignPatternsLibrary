@@ -1,18 +1,18 @@
 ﻿using System.Collections.Generic;
-using BridgeLibrary.ManuscriptsAndFormattersExample.Formatters;
-using BridgeLibrary.ManuscriptsAndFormattersExample.Manuscripts;
-using BridgeLibrary.ManuscriptsAndFormattersExample.Manuscripts.Common;
+using BridgeLibrary.DocumentsAndFormattersExample.Formatters;
+using BridgeLibrary.DocumentsAndFormattersExample.Documents;
+using BridgeLibrary.DocumentsAndFormattersExample.Documents.Common;
 using BuildingBlocks;
 
-namespace BridgeLibrary.ManuscriptsAndFormattersExample
+namespace BridgeLibrary.DocumentsAndFormattersExample
 {
-    public static class ManuscriptsAndFormattersExecutor
+    public static class DocumentsAndFormattersExecutor
     {
         public static void Execute()
         {
-            ConsoleExtension.WriteSeparator("Manuscripts and formatters example");
+            ConsoleExtension.WriteSeparator("Documents and formatters example");
 
-            var documents = new List<Manuscript>();
+            var documents = new List<Document>();
             var formatter = new FancyFormatter();
 
             var faq = new FAQ(formatter);

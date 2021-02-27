@@ -1,4 +1,4 @@
-﻿namespace BridgeLibrary.ManuscriptsAndFormattersExample.Formatters.Common
+﻿namespace BridgeLibrary.DocumentsAndFormattersExample.Formatters.Common
 {
     public interface IFormatter
     {

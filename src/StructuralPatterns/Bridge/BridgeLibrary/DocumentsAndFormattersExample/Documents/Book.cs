@@ -1,10 +1,10 @@
 ﻿using System;
-using BridgeLibrary.ManuscriptsAndFormattersExample.Formatters.Common;
-using BridgeLibrary.ManuscriptsAndFormattersExample.Manuscripts.Common;
+using BridgeLibrary.DocumentsAndFormattersExample.Formatters.Common;
+using BridgeLibrary.DocumentsAndFormattersExample.Documents.Common;
 
-namespace BridgeLibrary.ManuscriptsAndFormattersExample.Manuscripts
+namespace BridgeLibrary.DocumentsAndFormattersExample.Documents
 {
-    public class Book : Manuscript
+    public class Book : Document
     {
         public Book(IFormatter formatter)
             : base(formatter)

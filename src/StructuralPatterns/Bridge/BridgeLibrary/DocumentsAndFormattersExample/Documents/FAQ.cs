@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using BridgeLibrary.ManuscriptsAndFormattersExample.Formatters.Common;
-using BridgeLibrary.ManuscriptsAndFormattersExample.Manuscripts.Common;
+using BridgeLibrary.DocumentsAndFormattersExample.Formatters.Common;
+using BridgeLibrary.DocumentsAndFormattersExample.Documents.Common;
 
-namespace BridgeLibrary.ManuscriptsAndFormattersExample.Manuscripts
+namespace BridgeLibrary.DocumentsAndFormattersExample.Documents
 {
-    public class FAQ : Manuscript
+    public class FAQ : Document
     {
         public FAQ(IFormatter formatter)
             : base(formatter)

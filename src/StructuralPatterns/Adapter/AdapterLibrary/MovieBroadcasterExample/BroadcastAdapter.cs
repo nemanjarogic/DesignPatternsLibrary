@@ -7,8 +7,8 @@ using Newtonsoft.Json;
 namespace AdapterLibrary.MovieBroadcasterExample
 {
     /// <summary>
-    /// There is no way to pass an xDocument from registry to the thrid party broadcaster,
-    /// so we need to create the adapter class which will make these two parties work together.
+    /// There is no way to pass an xDocument from registry to the third party broadcaster,
+    /// so we need to create the adapter, which will make these two parties work together.
     /// </summary>
     public class BroadcastAdapter : IBroadcaster
     {

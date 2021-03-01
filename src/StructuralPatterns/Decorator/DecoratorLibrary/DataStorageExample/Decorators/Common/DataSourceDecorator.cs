@@ -8,7 +8,7 @@ namespace DecoratorLibrary.DataStorageExample.Decorators.Common
     /// The default implementation of the wrapping code might include a field for storing
     /// a wrapped component and the means to initialize it.
     /// </summary>
-    public class DataSourceDecorator : IDataSource
+    public abstract class DataSourceDecorator : IDataSource
     {
         private readonly IDataSource _wrapee;
 

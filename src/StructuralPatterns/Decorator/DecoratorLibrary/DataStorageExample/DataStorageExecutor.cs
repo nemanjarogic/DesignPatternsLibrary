@@ -17,7 +17,7 @@ namespace DecoratorLibrary.DataStorageExample
             ProcessFileWithCompressedAndEncryptedData();
         }
 
-        public static void ProcessFileWithPlainData()
+        private static void ProcessFileWithPlainData()
         {
             IDataSource source = new File("file.dat");
 
@@ -25,7 +25,7 @@ namespace DecoratorLibrary.DataStorageExample
             Console.WriteLine($"Read: {source.Read()}\n");
         }
 
-        public static void ProcessFileWithCompressedData()
+        private static void ProcessFileWithCompressedData()
         {
             IDataSource source = new File("file.dat");
             source = new CompressionDecorator(source);
@@ -34,7 +34,7 @@ namespace DecoratorLibrary.DataStorageExample
             Console.WriteLine($"Read: {source.Read()}\n");
         }
 
-        public static void ProcessFileWithCompressedAndEncryptedData()
+        private static void ProcessFileWithCompressedAndEncryptedData()
         {
             IDataSource source = new File("file.dat");
             source = new EncryptionDecorator(source);

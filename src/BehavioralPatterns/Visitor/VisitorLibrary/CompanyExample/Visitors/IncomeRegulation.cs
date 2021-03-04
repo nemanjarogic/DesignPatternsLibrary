@@ -15,7 +15,11 @@ namespace VisitorLibrary.CompanyExample.Visitors
             // in order to define multiple methods that accept concrete employees (Developer, ProductOwner and ProjectManager).
             employee.AnnualSalary *= 1.10;
 
-            Console.WriteLine("{0} {1}'s new income: {2:C}", employee.GetType().Name, employee.Name, employee.AnnualSalary);
+            Console.WriteLine(
+                "{0} {1}'s new income: {2:C}",
+                employee.GetType().Name,
+                employee.Name,
+                employee.AnnualSalary);
         }
     }
 }

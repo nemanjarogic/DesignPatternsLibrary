@@ -14,7 +14,11 @@ namespace VisitorLibrary.CompanyExample.Visitors
             // all my employees get three extra paid time off days each!
             employee.VacationDays += 3;
 
-            Console.WriteLine("{0} {1}'s new vacation days: {2}", employee.GetType().Name, employee.Name, employee.VacationDays);
+            Console.WriteLine(
+                "{0} {1}'s new vacation days: {2}",
+                employee.GetType().Name,
+                employee.Name,
+                employee.VacationDays);
         }
     }
 }

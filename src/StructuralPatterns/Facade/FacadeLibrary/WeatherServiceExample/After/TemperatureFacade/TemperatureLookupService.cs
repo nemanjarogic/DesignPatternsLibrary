@@ -30,12 +30,12 @@ namespace FacadeLibrary.WeatherServiceExample.After.TemperatureFacade
             var coords = _geoLookupService.FindCoordinates(zipCode);
 
             var fahrenheitDegrees = _weatherService.GetTemperatureFahrenheit(coords.Latitude, coords.Longitude);
-            var celciusDegrees = _temperatureConverter.ConvertFahrenheitToCelsius(fahrenheitDegrees);
+            var celsiusDegrees = _temperatureConverter.ConvertFahrenheitToCelsius(fahrenheitDegrees);
 
             return new LocalTemperature()
             {
                 Fahrenheit = fahrenheitDegrees,
-                Celsius = celciusDegrees,
+                Celsius = celsiusDegrees,
                 City = city,
                 State = state,
             };

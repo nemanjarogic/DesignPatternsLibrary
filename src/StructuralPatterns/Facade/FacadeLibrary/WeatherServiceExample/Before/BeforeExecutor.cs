@@ -21,12 +21,12 @@ namespace FacadeLibrary.WeatherServiceExample.Before
             var fahrenheitDegrees = weatherService.GetTemperatureFahrenheit(coords.Latitude, coords.Longitude);
 
             var temperatureConverter = new TemperatureConverter();
-            var celciusDegrees = temperatureConverter.ConvertFahrenheitToCelsius(fahrenheitDegrees);
+            var celsiusDegrees = temperatureConverter.ConvertFahrenheitToCelsius(fahrenheitDegrees);
 
             Console.WriteLine(
                 "The current temperature is {0}F/{1}C in {2}, {3}",
                 fahrenheitDegrees.ToString("F1"),
-                celciusDegrees.ToString("F1"),
+                celsiusDegrees.ToString("F1"),
                 city,
                 state);
         }

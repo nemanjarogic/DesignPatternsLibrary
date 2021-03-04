@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProxyLibrary.LoggingProxyExample
+﻿namespace ProxyLibrary.LoggingProxyExample
 {
     /// <summary>
     /// The Subject interface declares common operations for both

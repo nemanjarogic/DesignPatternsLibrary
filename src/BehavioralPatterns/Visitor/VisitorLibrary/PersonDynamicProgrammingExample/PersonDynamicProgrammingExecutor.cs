@@ -1,15 +1,15 @@
 ﻿using System;
 using BuildingBlocks;
-using VisitorLibrary.PersonExample.Elements;
-using VisitorLibrary.PersonExample.Visitors;
+using VisitorLibrary.PersonDynamicProgrammingExample.Elements;
+using VisitorLibrary.PersonDynamicProgrammingExample.Visitors;
 
-namespace VisitorLibrary.PersonExample
+namespace VisitorLibrary.PersonDynamicProgrammingExample
 {
-    public static class PersonExecutor
+    public static class PersonDynamicProgrammingExecutor
     {
         public static void Execute()
         {
-            ConsoleExtension.WriteSeparator("Person example");
+            ConsoleExtension.WriteSeparator("Person dynamic programming example");
 
             var person = new Person();
             person.Assets.Add(new BankAccount { Amount = 1000, MonthlyInterest = 0.01 });

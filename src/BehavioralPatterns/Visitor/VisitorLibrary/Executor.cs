@@ -1,5 +1,6 @@
 ﻿using DesignPatternsLibrary.PatternExecutors;
 using VisitorLibrary.CompanyExample;
+using VisitorLibrary.PersonDynamicProgrammingExample;
 using VisitorLibrary.PersonExample;
 
 namespace VisitorLibrary
@@ -11,6 +12,7 @@ namespace VisitorLibrary
         public override void Execute()
         {
             CompanyExecutor.Execute();
+            PersonDynamicProgrammingExecutor.Execute();
             PersonExecutor.Execute();
         }
     }

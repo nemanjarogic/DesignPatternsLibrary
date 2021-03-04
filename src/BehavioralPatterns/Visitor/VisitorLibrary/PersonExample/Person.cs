@@ -8,7 +8,7 @@ namespace VisitorLibrary.PersonExample
     {
         public List<IAsset> Assets { get; set; } = new List<IAsset>();
 
-        public void Accept(IVisitor visitor)
+        public void InspectAssets(IVisitor visitor)
         {
             foreach (var asset in Assets)
             {

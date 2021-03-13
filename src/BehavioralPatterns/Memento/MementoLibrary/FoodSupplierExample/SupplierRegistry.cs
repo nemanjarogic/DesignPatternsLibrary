@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace MementoLibrary.FoodSupplierExample
 {
+    /// <summary>
+    /// A caretaker can keep track of the originator’s history by storing a stack of mementos.
+    /// </summary>
     public class SupplierRegistry
     {
         private readonly FoodSupplier _supplier;

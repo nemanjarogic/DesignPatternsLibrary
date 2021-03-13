@@ -19,9 +19,9 @@ namespace MementoLibrary.ConceptualExample
             originator.DoSomething();
             caretaker.Backup();
 
-            originator.DoSomething();
-
             caretaker.ShowHistory();
+
+            originator.DoSomething();
 
             Console.WriteLine("\nClient: Now, let's rollback!\n");
             caretaker.Undo();

@@ -30,7 +30,7 @@ namespace MementoLibrary.ConceptualExample
         /// </summary>
         public void DoSomething()
         {
-            Console.WriteLine("Originator: I'm doing something important.");
+            Console.WriteLine("\nOriginator: I'm doing something important.");
 
             _state = GenerateRandomString(30);
 

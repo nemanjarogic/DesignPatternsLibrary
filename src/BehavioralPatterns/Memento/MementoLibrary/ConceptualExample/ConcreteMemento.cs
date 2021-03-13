@@ -4,6 +4,9 @@ namespace MementoLibrary.ConceptualExample
 {
     /// <summary>
     /// The Concrete Memento contains the infrastructure for storing the Originator's state.
+    /// The Memento object acts as a snapshot of the originator’s state.
+    /// It’s a common practice to make the memento immutable and
+    /// pass it the data only once, via the constructor.
     /// </summary>
     public class ConcreteMemento : IMemento
     {
@@ -31,7 +34,7 @@ namespace MementoLibrary.ConceptualExample
         /// <returns>Name.</returns>
         public string GetName()
         {
-            return $"{_creationDate} / ({_state.Substring(0, 9)})...";
+            return $"{_creationDate.ToString("MM/dd/yyyy hh:mm:ss.fff tt")} / ({_state.Substring(0, 9)})...";
         }
 
         /// <summary>

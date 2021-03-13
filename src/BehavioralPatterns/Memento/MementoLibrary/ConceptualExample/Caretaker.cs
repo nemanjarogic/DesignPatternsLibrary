@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace MementoLibrary.ConceptualExample
 {
@@ -11,20 +10,20 @@ namespace MementoLibrary.ConceptualExample
     /// </summary>
     public class Caretaker
     {
-        private readonly List<IMemento> _mementos;
+        private readonly Stack<IMemento> _mementos;
         private readonly Originator _originator;
 
         public Caretaker(Originator originator)
         {
             _originator = originator;
-            _mementos = new List<IMemento>();
+            _mementos = new Stack<IMemento>();
         }
 
         public void Backup()
         {
-            Console.WriteLine("\nCaretaker: Saving Originator's state...");
+            Console.WriteLine("Caretaker: Saving Originator's state...");
 
-            _mementos.Add(_originator.Save());
+            _mementos.Push(_originator.Save());
         }
 
         public void Undo()
@@ -34,9 +33,7 @@ namespace MementoLibrary.ConceptualExample
                 return;
             }
 
-            var memento = _mementos.Last();
-            _mementos.Remove(memento);
-
+            var memento = _mementos.Pop();
             Console.WriteLine($"Caretaker: Restoring state to: {memento.GetName()}");
 
             try

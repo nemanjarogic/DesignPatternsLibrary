@@ -12,13 +12,7 @@ namespace MediatorLibrary.GroupChatExample.Components.Common
             _name = name;
         }
 
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-        }
+        public string Name => _name;
 
         public void SetMediator(IGroupChatMediator mediator)
         {

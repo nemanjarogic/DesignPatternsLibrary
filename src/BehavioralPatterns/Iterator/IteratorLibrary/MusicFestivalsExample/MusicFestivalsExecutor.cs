@@ -1,7 +1,6 @@
 ﻿using System;
 using BuildingBlocks;
 using IteratorLibrary.MusicFestivalsExample.Collections;
-using IteratorLibrary.MusicFestivalsExample.Collections.Common;
 using IteratorLibrary.MusicFestivalsExample.Iterators.Common;
 
 namespace IteratorLibrary.MusicFestivalsExample
@@ -32,7 +31,7 @@ namespace IteratorLibrary.MusicFestivalsExample
             Traverse(iterator);
         }
 
-        public static void Traverse(IIterator iterator)
+        private static void Traverse(IIterator iterator)
         {
             while (iterator.MoveNext())
             {

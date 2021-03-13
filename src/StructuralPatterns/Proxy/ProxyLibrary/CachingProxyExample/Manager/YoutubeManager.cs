@@ -5,7 +5,7 @@ namespace ProxyLibrary.CachingProxyExample
 {
     /// <summary>
     /// The client class, which used to work directly with a service object,
-    /// stays unchanged as long as it works with the service  object through an interface.
+    /// stays unchanged as long as it works with the service object through an interface.
     /// We can safely pass a proxy object instead of a real service object since
     /// they both implement the same interface.
     /// </summary>

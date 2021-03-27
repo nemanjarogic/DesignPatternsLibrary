@@ -14,11 +14,11 @@ namespace TemplateMethodLibrary.BreadExample
             Slice();
         }
 
-        public abstract void MixIngredients();
+        protected abstract void MixIngredients();
 
-        public abstract void Bake();
+        protected abstract void Bake();
 
-        public virtual void Slice()
+        protected virtual void Slice()
         {
             Console.WriteLine($"Slicing the {GetType().Name}!");
         }

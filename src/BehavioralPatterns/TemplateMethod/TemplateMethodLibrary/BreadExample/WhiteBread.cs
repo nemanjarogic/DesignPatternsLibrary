@@ -4,12 +4,12 @@ namespace TemplateMethodLibrary.BreadExample
 {
     public class WhiteBread : Bread
     {
-        public override void MixIngredients()
+        protected override void MixIngredients()
         {
             Console.WriteLine("Gathering ingredients for white bread.");
         }
 
-        public override void Bake()
+        protected override void Bake()
         {
             Console.WriteLine("Baking the white bread for 15 minutes.");
         }

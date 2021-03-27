@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// Doneness is a gauge of how thoroughly cooked a cut of meat is based on
-    /// itscolour, juiciness, and internal temperature when cooked.
+    /// its color, juiciness, and internal temperature when cooked.
     /// In this example we use celsisus degree as a unit of temperature measurment.
     /// </summary>
     public abstract class Doneness
@@ -15,7 +15,7 @@
         protected int _temperatureChangeStep;
 
         protected Doneness(Doneness state)
-            : base()
+            : this()
         {
             _steak = state.Steak;
             _currentTemperature = state.CurrentTemperature;

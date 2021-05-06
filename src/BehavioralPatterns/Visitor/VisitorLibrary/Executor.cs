@@ -2,6 +2,7 @@
 using VisitorLibrary.CompanyExample;
 using VisitorLibrary.PersonDynamicProgrammingExample;
 using VisitorLibrary.PersonExample;
+using VisitorLibrary.CompilerExample;
 
 namespace VisitorLibrary
 {
@@ -14,6 +15,7 @@ namespace VisitorLibrary
             CompanyExecutor.Execute();
             PersonDynamicProgrammingExecutor.Execute();
             PersonExecutor.Execute();
+            CompilerExecutor.Execute();
         }
     }
 }

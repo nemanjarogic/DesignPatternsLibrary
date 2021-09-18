@@ -6,7 +6,7 @@ namespace Greeter.Types
     /// This implementation attempts to be thread-safe without the necessity of taking out a lock every time.
     /// However, it's easy to get wrong. The pattern needs to be pretty much exactly as above - any significant changes
     /// are likely to impact either performance or correctness.
-    /// It doesn't perform as well as the <see cref="LocklessGreeter"/> or <see cref="LocklessFullyLazyGreeter"/> Types.
+    /// It doesn't perform as well as the <see cref="LocklessGreeter"/> or <see cref="LocklessFullyLazyGreeter"/>.
     /// </summary>
     public class DoubleCheckGreeter : BaseGreeter
     {

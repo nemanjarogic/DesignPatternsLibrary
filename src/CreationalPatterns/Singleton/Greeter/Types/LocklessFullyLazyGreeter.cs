@@ -3,8 +3,8 @@
 namespace Greeter.Types
 {
     /// <summary>
-    /// Instantiation is triggered by the first reference to the static member of the nested class, which only occurs in Instance.
-    /// This means the implementation is fully lazy.
+    /// Instantiation is triggered by the first reference to the static member of the nested class,
+    /// which only occurs in Instance property. This means the implementation is fully lazy.
     /// </summary>
     public class LocklessFullyLazyGreeter : BaseGreeter
     {

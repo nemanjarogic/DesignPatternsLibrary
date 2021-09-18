@@ -32,15 +32,12 @@ namespace MealSimpleFactory.Factories
 
         private Type GetTypeToCreate(string mealName)
         {
-            foreach (var meal in _meals)
+            if (!_meals.TryGetValue(mealName, out Type type))
             {
-                if (meal.Key.Contains(mealName))
-                {
-                    return _meals[meal.Key];
-                }
+                return null;
             }
 
-            return null;
+            return type;
         }
 
         /// <summary>

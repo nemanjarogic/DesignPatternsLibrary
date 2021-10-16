@@ -6,61 +6,69 @@ namespace DesignPatternsLibrary
 {
     public class Program
     {
+        private static readonly string ExitCode = "q";
+        private static readonly SortedDictionary<int, PatternExecutor> Executors = PatternExecutorsRegistry.Instance.GetAll();
+
         private static void Main(string[] args)
         {
-            string choice;
-            var executors = PatternExecutorsRegistry.Instance.GetAll();
-
-            while (!(choice = SelectFromMenu(executors)).Equals("q"))
+            while (IsChoiceDifferentFromExitCode(out string choice))
             {
-                if (!int.TryParse(choice, out int translatedChoice))
+                if (IsChoiceUnsupported(choice, out int choiceKey))
                 {
-                    Console.WriteLine("Please choose one of the following!");
+                    Console.WriteLine("Please choose one of the following options!");
                     continue;
                 }
 
-                if (!executors.ContainsKey(translatedChoice))
-                {
-                    Console.WriteLine("Please choose one of the following!");
-                    continue;
-                }
-
-                executors[translatedChoice].Execute();
+                Executors[choiceKey].Execute();
             }
 
             Console.WriteLine("Thank you!");
             Console.ReadLine();
         }
 
-        private static string SelectFromMenu(SortedDictionary<int, PatternExecutor> executors)
+        private static bool IsChoiceDifferentFromExitCode(out string choice)
         {
-            ListAvailableMenuOptions(executors);
-            var choice = ChooseOneOption();
+            ShowAvailableMenuOptions();
+            choice = ChooseOneOptionFromMenu();
+
+            return !choice.Equals(ExitCode);
+        }
+
+        private static void ShowAvailableMenuOptions()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine(Environment.NewLine);
+
+            foreach (var executor in Executors)
+            {
+                Console.WriteLine($"{executor.Key}. {executor.Value.Name}");
+            }
+
+            Console.WriteLine($"{ExitCode}. Quit");
+        }
+
+        private static string ChooseOneOptionFromMenu()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("\nYour choice: ");
+
+            var choice = Console.ReadLine();
 
             Console.ResetColor();
 
             return choice;
         }
 
-        private static void ListAvailableMenuOptions(SortedDictionary<int, PatternExecutor> executors)
+        private static bool IsChoiceUnsupported(string choice, out int choiceKey)
         {
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine(Environment.NewLine);
-
-            foreach (var executor in executors)
+            if (!int.TryParse(choice, out int key) || !Executors.ContainsKey(key))
             {
-                Console.WriteLine($"{executor.Key}. {executor.Value.Name}");
+                choiceKey = -1;
+                return true;
             }
 
-            Console.WriteLine("q. Quit");
-        }
-
-        private static string ChooseOneOption()
-        {
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine($"\n Your choice: ");
-
-            return Console.ReadLine().ToLower();
+            choiceKey = key;
+            return false;
         }
     }
 }

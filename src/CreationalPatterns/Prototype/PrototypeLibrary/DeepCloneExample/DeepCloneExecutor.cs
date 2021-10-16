@@ -9,21 +9,23 @@ namespace PrototypeLibrary.DeepCloneExample
         {
             ConsoleExtension.WriteSeparator("Deep clone example");
 
-            var developer = new Developer
+            var phone = new MobilePhone
             {
-                Name = "John Doe",
-                Project = new Project
+                Manufacturer = "Xiaomi",
+                Model = "11T",
+                OperatingSystem = new OperatingSystem
                 {
-                    Name = "File storage service",
-                    Description = "Complex project",
+                    Name = "Android",
+                    Version = "11",
+                    Description = "Android is a mobile OS based on a modified version of the Linux kernel and other open source software, designed primarily for touchscreen mobile devices such as smartphones and tablets. ",
                 },
             };
 
-            var clonedDeveloper = developer.Clone();
-            clonedDeveloper.Project.Name = "Web crawler";
+            var clonedPhone = phone.Clone();
+            clonedPhone.Model = "11T Pro";
 
-            developer.PrintDetails();
-            clonedDeveloper.PrintDetails();
+            phone.PrintDetails();
+            clonedPhone.PrintDetails();
         }
     }
 }

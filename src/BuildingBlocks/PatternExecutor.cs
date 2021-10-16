@@ -13,7 +13,7 @@
 
         /// <summary>
         /// The Execute method is the entry point of an executable design pattern example.
-        /// When an arbitrary design pattern example is choosen from the command menu,
+        /// When an arbitrary design pattern example is chosen from the command menu,
         /// the Execute method is the first method that is invoked.
         /// </summary>
         public abstract void Execute();

@@ -12,13 +12,10 @@ namespace Greeter
         {
             Console.WriteLine("Initial greetings...");
             Console.WriteLine();
-
             Greet();
-            Console.WriteLine();
 
-            Console.WriteLine("Goodbye greetings...");
+            Console.WriteLine("\nGoodbye greetings...");
             Console.WriteLine();
-
             Greet();
         }
 

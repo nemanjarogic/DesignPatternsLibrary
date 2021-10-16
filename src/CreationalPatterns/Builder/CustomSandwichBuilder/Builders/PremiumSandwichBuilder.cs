@@ -7,7 +7,7 @@ namespace CustomSandwichBuilder.Builders
 {
     /// <summary>
     /// Concrete Builders provide different implementations of the construction steps.
-    /// Concrete builders may produce products that don't follow the common interface.
+    /// Note that concrete builders may produce products that don't follow the common interface.
     /// </summary>
     public class PremiumSandwichBuilder : SandwichBuilder
     {

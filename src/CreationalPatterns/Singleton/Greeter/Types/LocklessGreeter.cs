@@ -3,7 +3,8 @@
 namespace Greeter.Types
 {
     /// <summary>
-    /// Why is it thread-safe? Well, static constructors in C# are specified to execute only when an instance of the class
+    /// Why is it thread-safe?
+    /// Well, static constructors in C# are specified to execute only when an instance of the class
     /// is created or a static member is referenced, and to execute only once per AppDomain.
     /// Given that this check for the type being newly constructed needs to be executed whatever else happens,
     /// it will be faster than adding extra checking as in the DoubleCheckGreeter example.
@@ -15,7 +16,7 @@ namespace Greeter.Types
     {
         private static readonly LocklessGreeter InstanceValue = new LocklessGreeter();
 
-        // Explicit static constructor to tell C# compiler not to mark type as BeforeFieldInit
+        // Explicit static constructor to tell C# compiler not to mark type as BeforeFieldInit.
         static LocklessGreeter()
         {
         }

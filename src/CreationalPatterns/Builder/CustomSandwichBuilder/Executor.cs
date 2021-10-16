@@ -34,8 +34,8 @@ namespace CustomSandwichBuilder
         private void MakeAndDisplaySandwich(SandwichDirector director)
         {
             director.MakeSandwich();
-            var sandwich = director.GetSandwhich();
 
+            var sandwich = director.GetSandwhich();
             sandwich.Display();
         }
     }

@@ -21,7 +21,7 @@ namespace MealSimpleFactory.Factories
 
         public IMeal CreateMeal(string mealName)
         {
-            var type = GetTypeToCreate(mealName);
+            var type = GetTypeForCreation(mealName);
             if (type == null)
             {
                 return new NullMeal();
@@ -30,7 +30,7 @@ namespace MealSimpleFactory.Factories
             return Activator.CreateInstance(type) as IMeal;
         }
 
-        private Type GetTypeToCreate(string mealName)
+        private Type GetTypeForCreation(string mealName)
         {
             if (!_meals.TryGetValue(mealName, out Type type))
             {

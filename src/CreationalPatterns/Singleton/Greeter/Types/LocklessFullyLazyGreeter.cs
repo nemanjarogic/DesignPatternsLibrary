@@ -28,7 +28,7 @@ namespace Greeter.Types
             /// </summary>
             internal static readonly LocklessFullyLazyGreeter Instance = new LocklessFullyLazyGreeter();
 
-            // Explicit static constructor to tell C# compiler not to mark as BeforeFieldInit
+            // Explicit static constructor to tell C# compiler not to mark as BeforeFieldInit.
             // http://csharpindepth.com/Articles/General/Singleton.aspx
             static Nested()
             {

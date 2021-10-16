@@ -18,9 +18,9 @@ namespace FacadeLibrary.MortgageExample.Facade
             _customerService = new CustomerService();
         }
 
-        public bool IsEligible(string customerName, int loanAmount)
+        public bool IsEligible(string customerName, decimal loanAmount)
         {
-            Console.WriteLine($"Customer {customerName} applies for {loanAmount:C} loan.\n");
+            Console.WriteLine($"Customer {customerName} wants to apply for {loanAmount:C} loan.\n");
 
             var customer = _customerService.Find(customerName);
 

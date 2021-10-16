@@ -12,7 +12,7 @@ namespace CompositeLibrary.GiftExample
 
         public override decimal CalculatePrice()
         {
-            Console.WriteLine($"'{_description}' with the price {_price}");
+            Console.WriteLine($"'{_description}' with the price of {_price:C}");
 
             return _price;
         }

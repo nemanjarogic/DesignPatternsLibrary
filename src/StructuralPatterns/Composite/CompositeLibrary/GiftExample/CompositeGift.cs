@@ -24,7 +24,7 @@ namespace CompositeLibrary.GiftExample
 
         public void Remove(Gift gift)
         {
-            // Please think about using HashSet or Dictionary if you need remove item from a collection
+            // Consider using HashSet or Dictionary if you need remove item from a collection.
             _gifts.Remove(gift);
         }
 

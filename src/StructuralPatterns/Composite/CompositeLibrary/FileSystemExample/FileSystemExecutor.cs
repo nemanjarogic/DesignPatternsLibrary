@@ -11,7 +11,7 @@ namespace CompositeLibrary.FileSystemExample
 
             var booksFolder = new Folder("Books");
             var cSharpFolder = new Folder("C#");
-            var designPatternsFolder = new Folder("project2");
+            var designPatternsFolder = new Folder("Design patterns");
 
             booksFolder.Add(cSharpFolder);
             booksFolder.Add(designPatternsFolder);

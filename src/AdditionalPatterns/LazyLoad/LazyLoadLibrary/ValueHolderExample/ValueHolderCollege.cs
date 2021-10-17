@@ -13,7 +13,7 @@ namespace LazyLoadLibrary.ValueHolderExample
         {
             Id = id;
 
-            // Value holder is usually injected through the constructor
+            // Value holder is usually injected through the constructor.
             _library = new ValueHolder<Library>(new LibraryLoader());
 
             Console.WriteLine("College initialization completed.");

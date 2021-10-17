@@ -12,7 +12,7 @@ namespace LazyLoadLibrary.LazyInitializationExample
             {
                 if (_library == null)
                 {
-                    // This works, but it's not thread-safe
+                    // This works, but it's not thread-safe.
                     _library = new Library();
                 }
 

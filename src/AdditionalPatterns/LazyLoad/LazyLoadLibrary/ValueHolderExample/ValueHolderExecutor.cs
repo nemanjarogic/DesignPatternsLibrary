@@ -1,4 +1,5 @@
-﻿using BuildingBlocks;
+﻿using System;
+using BuildingBlocks;
 
 namespace LazyLoadLibrary.ValueHolderExample
 {
@@ -11,6 +12,7 @@ namespace LazyLoadLibrary.ValueHolderExample
             var collegeFactory = new CollegeFactory();
             var college = collegeFactory.CreateFromId(1);
 
+            Console.WriteLine("Give me more details about the college!");
             college.ShowDetails();
         }
     }

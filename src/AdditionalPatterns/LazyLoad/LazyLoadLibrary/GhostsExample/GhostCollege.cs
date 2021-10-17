@@ -3,10 +3,10 @@
 namespace LazyLoadLibrary.GhostsExample
 {
     /// <summary>
-    /// A ghost is the object that is to be loaded in a partial state.
+    /// A ghost is an object that is to be loaded in a partial state.
     /// It may only contain the object's identifier, but it loads its own data
     /// the first time one of its properties is accessed.
-    /// It is a fake object that looks exactly like an object that you want to interact with
+    /// It is a fake object that looks exactly like an object that you want to interact with,
     /// but is just an empty instance that gets all properties populated as soon as they are needed.
     /// Beware of ripple loading when using lazy load.
     /// </summary>
@@ -74,7 +74,7 @@ namespace LazyLoadLibrary.GhostsExample
         {
             return new object[3]
             {
-                "Learn, Discover, Heal, Create—and Make the World Ever Better",
+                "Learn, Discover, Heal, Create, and Make the World Ever Better",
                 850,
                 new Library(),
             };

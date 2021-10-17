@@ -16,7 +16,6 @@ namespace LazyLoadLibrary.VirtualProxyExample
             {
                 if (base.Library == null)
                 {
-                    Console.WriteLine("Loading library...");
                     base.Library = new Library();
                 }
 

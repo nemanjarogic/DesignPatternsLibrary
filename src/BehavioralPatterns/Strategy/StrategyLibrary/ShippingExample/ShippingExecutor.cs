@@ -1,6 +1,7 @@
 ﻿using System;
 using BuildingBlocks;
 using StrategyLibrary.ShippingExample.ShippingProviders;
+using StrategyLibrary.ShippingExample.ShippingProviders.Common;
 
 namespace StrategyLibrary.ShippingExample
 {
@@ -39,7 +40,7 @@ namespace StrategyLibrary.ShippingExample
                 Description = "Xiaomi Mi 10T Pro",
             };
 
-            var fedEx = new FedEx();
+            IShippingProvider fedEx = new FedEx();
             var shippingCostCalculationService = new ShippingCostCalculationService(fedEx);
 
             var price = shippingCostCalculationService.Calculate(order);

@@ -1,6 +1,7 @@
 ﻿using System;
 using BuildingBlocks;
 using StrategyLibrary.SortingExample.Strategies;
+using StrategyLibrary.SortingExample.Strategies.Common;
 
 namespace StrategyLibrary.SortingExample
 {
@@ -10,7 +11,7 @@ namespace StrategyLibrary.SortingExample
         {
             ConsoleExtension.WriteSeparator("Sorting example");
 
-            var sortStrategy = new SortByFirstName();
+            ISortStrategy sortStrategy = new SortByFirstName();
             var sortablePersons = new SortablePersons(sortStrategy);
 
             sortablePersons.Add(new Person("Dennis", "Ritchie", 1941));

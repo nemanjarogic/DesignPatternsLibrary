@@ -13,9 +13,9 @@ namespace ChainOfResponsibilityLibrary.LoggingExample
 
             Logger loggerChain = InitializeLoggerChain();
 
-            var infoMessage = "This is an information.";
-            var debugMessage = "This is an debug level information.";
-            var errorMessage = "This is an error information.";
+            var infoMessage = "This is information.";
+            var debugMessage = "This is debug level information.";
+            var errorMessage = "This is error information.";
 
             loggerChain.Log(LogLevel.Info, infoMessage);
             Console.WriteLine();

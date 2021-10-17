@@ -18,8 +18,8 @@ namespace NullObjectLibrary.SmartphoneApplicationExample
             gmail.Open();
             gmail.Close();
 
-            // Null exception will not be thrown if application is not found
-            // by specified process ID. We return default (NULL) object.
+            // Null exception won't be thrown if an application with the specified process ID can't be found.
+            // In that case, default (NULL) object will be returned.
             var youtube = applicationRepository.Find(invalidProcessId);
             youtube.Open();
             youtube.Close();

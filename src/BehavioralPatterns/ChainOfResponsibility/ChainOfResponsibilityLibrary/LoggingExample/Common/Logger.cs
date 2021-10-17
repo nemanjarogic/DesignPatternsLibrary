@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ChainOfResponsibilityLibrary.LoggingExample.Common
+﻿namespace ChainOfResponsibilityLibrary.LoggingExample.Common
 {
     public abstract class Logger
     {

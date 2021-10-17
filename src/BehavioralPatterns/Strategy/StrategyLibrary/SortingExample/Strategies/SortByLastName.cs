@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using StrategyLibrary.SortingExample.Strategies.Common;
 
 namespace StrategyLibrary.SortingExample.Strategies

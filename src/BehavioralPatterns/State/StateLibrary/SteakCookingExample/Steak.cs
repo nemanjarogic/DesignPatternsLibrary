@@ -29,7 +29,7 @@ namespace StateLibrary.SteakCookingExample
 
             Console.WriteLine($"Temperature is increased.");
             Console.WriteLine($"Current temperature is {_state.CurrentTemperature}°C");
-            Console.WriteLine($"Cooking on this temperature will made the steak: {_state.GetType().Name}");
+            Console.WriteLine($"Cooking at this temperature will make the steak: {_state.GetType().Name}");
             Console.WriteLine();
         }
 
@@ -39,7 +39,7 @@ namespace StateLibrary.SteakCookingExample
 
             Console.WriteLine($"Temperature is decreased.");
             Console.WriteLine($"Current temperature is {_state.CurrentTemperature}°C");
-            Console.WriteLine($"Cooking on this temperature will made the steak: {_state.GetType().Name}");
+            Console.WriteLine($"Cooking at this temperature will make the steak: {_state.GetType().Name}");
             Console.WriteLine();
         }
     }

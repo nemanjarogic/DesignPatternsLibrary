@@ -7,10 +7,12 @@ namespace OrderManagement.Controllers
     public class OrderController
     {
         private readonly IOrderRepository _orderRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public OrderController(IOrderRepository orderRepository)
+        public OrderController(IOrderRepository orderRepository, IUnitOfWork unitOfWork)
         {
             _orderRepository = orderRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public Order Create(int id, string description, string deliveryAddress, decimal price)
@@ -25,7 +27,7 @@ namespace OrderManagement.Controllers
             };
 
             newOrder = _orderRepository.Add(newOrder);
-            _orderRepository.SaveChanges();
+            _unitOfWork.Commit();
 
             return newOrder;
         }

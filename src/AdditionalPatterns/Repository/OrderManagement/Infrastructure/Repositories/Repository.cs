@@ -55,15 +55,5 @@ namespace OrderManagement.Infrastructure.Repositories
         {
             _context.Remove(entity);
         }
-
-        /// <summary>
-        /// Save all changes to the database.
-        /// Additionaly, we can implement UnitOfWork design pattern
-        /// to enhance this example and coordinate database changes from one place.
-        /// </summary>
-        public void SaveChanges()
-        {
-            _context.SaveChanges();
-        }
     }
 }

@@ -17,7 +17,5 @@ namespace OrderManagement.Infrastructure.Repositories.Contracts
         T GetById(int id);
 
         void Delete(T entity);
-
-        void SaveChanges();
     }
 }

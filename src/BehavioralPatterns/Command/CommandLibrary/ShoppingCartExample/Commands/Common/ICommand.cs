@@ -1,11 +1,10 @@
-﻿namespace CommandLibrary.ShoppingCartExample.Commands.Common
+﻿namespace CommandLibrary.ShoppingCartExample.Commands.Common;
+
+public interface ICommand
 {
-    public interface ICommand
-    {
-        bool CanExecute();
+    bool CanExecute();
 
-        void Execute();
+    void Execute();
 
-        void Undo();
-    }
+    void Undo();
 }

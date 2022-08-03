@@ -1,9 +1,8 @@
-﻿namespace MealSimpleFactory.Meals.Common
-{
-    public interface IMeal
-    {
-        void ShowAmountOfCalories();
+﻿namespace MealSimpleFactory.Meals.Common;
 
-        void ShowDescription();
-    }
+public interface IMeal
+{
+    void ShowAmountOfCalories();
+
+    void ShowDescription();
 }

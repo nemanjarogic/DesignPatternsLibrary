@@ -1,12 +1,11 @@
 ﻿using VisitorLibrary.CompanyExample.Elements.Common;
 
-namespace VisitorLibrary.CompanyExample.Elements
+namespace VisitorLibrary.CompanyExample.Elements;
+
+public class Developer : Employee
 {
-    public class Developer : Employee
+    public Developer()
+        : base("Marc Murray", 80000, 25)
     {
-        public Developer()
-            : base("Marc Murray", 80000, 25)
-        {
-        }
     }
 }

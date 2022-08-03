@@ -1,19 +1,18 @@
 ﻿using StrategyLibrary.ShippingExample.ShippingProviders.Common;
 
-namespace StrategyLibrary.ShippingExample
+namespace StrategyLibrary.ShippingExample;
+
+public class ShippingCostCalculationService
 {
-    public class ShippingCostCalculationService
+    private readonly IShippingProvider _shippingProvider;
+
+    public ShippingCostCalculationService(IShippingProvider shippingCostStrategy)
     {
-        private readonly IShippingProvider _shippingProvider;
+        _shippingProvider = shippingCostStrategy;
+    }
 
-        public ShippingCostCalculationService(IShippingProvider shippingCostStrategy)
-        {
-            _shippingProvider = shippingCostStrategy;
-        }
-
-        public decimal Calculate(Order order)
-        {
-            return _shippingProvider.CalculateCost(order);
-        }
+    public decimal Calculate(Order order)
+    {
+        return _shippingProvider.CalculateCost(order);
     }
 }

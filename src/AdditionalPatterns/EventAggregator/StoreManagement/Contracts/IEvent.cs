@@ -1,7 +1,6 @@
-﻿namespace EventAggregatorLibrary.Contracts
+﻿namespace EventAggregatorLibrary.Contracts;
+
+public interface IEvent
 {
-    public interface IEvent
-    {
-        public string Description { get; set; }
-    }
+    public string Description { get; set; }
 }

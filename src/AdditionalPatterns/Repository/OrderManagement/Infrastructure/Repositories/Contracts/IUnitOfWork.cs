@@ -1,7 +1,6 @@
-﻿namespace OrderManagement.Infrastructure.Repositories.Contracts
+﻿namespace OrderManagement.Infrastructure.Repositories.Contracts;
+
+public interface IUnitOfWork
 {
-    public interface IUnitOfWork
-    {
-        void Commit();
-    }
+    void Commit();
 }

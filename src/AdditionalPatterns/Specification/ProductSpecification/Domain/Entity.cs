@@ -1,61 +1,60 @@
 ﻿using System;
 
-namespace ProductSpecification.Domain
+namespace ProductSpecification.Domain;
+
+public abstract class Entity
 {
-    public abstract class Entity
+    public Entity()
     {
-        public Entity()
+        Id = Guid.NewGuid();
+    }
+
+    public Guid Id { get; protected set; }
+
+    public static bool operator ==(Entity a, Entity b)
+    {
+        if (a is null && b is null)
         {
-            Id = Guid.NewGuid();
+            return true;
         }
 
-        public Guid Id { get; protected set; }
-
-        public static bool operator ==(Entity a, Entity b)
+        if (a is null || b is null)
         {
-            if (a is null && b is null)
-            {
-                return true;
-            }
-
-            if (a is null || b is null)
-            {
-                return false;
-            }
-
-            return a.Equals(b);
+            return false;
         }
 
-        public static bool operator !=(Entity a, Entity b)
+        return a.Equals(b);
+    }
+
+    public static bool operator !=(Entity a, Entity b)
+    {
+        return !(a == b);
+    }
+
+    public override bool Equals(object obj)
+    {
+        var other = obj as Entity;
+
+        if (other is null)
         {
-            return !(a == b);
+            return false;
         }
 
-        public override bool Equals(object obj)
+        if (ReferenceEquals(this, other))
         {
-            var other = obj as Entity;
-
-            if (other is null)
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, other))
-            {
-                return true;
-            }
-
-            if (GetType() != other.GetType())
-            {
-                return false;
-            }
-
-            return Id == other.Id;
+            return true;
         }
 
-        public override int GetHashCode()
+        if (GetType() != other.GetType())
         {
-            return Id.GetHashCode() ^ 31;
+            return false;
         }
+
+        return Id == other.Id;
+    }
+
+    public override int GetHashCode()
+    {
+        return Id.GetHashCode() ^ 31;
     }
 }

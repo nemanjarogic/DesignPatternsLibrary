@@ -1,10 +1,9 @@
-﻿namespace LazyLoadLibrary.ValueHolderExample
+﻿namespace LazyLoadLibrary.ValueHolderExample;
+
+public class LibraryLoader : IValueLoader<Library>
 {
-    public class LibraryLoader : IValueLoader<Library>
+    public Library Load()
     {
-        public Library Load()
-        {
-            return new Library();
-        }
+        return new Library();
     }
 }

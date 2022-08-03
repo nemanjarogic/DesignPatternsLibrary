@@ -1,24 +1,23 @@
 ﻿using BuildingBlocks;
 using CommandLibrary.StockExample.Commands;
 
-namespace CommandLibrary.StockExample
+namespace CommandLibrary.StockExample;
+
+public static class StockExecutor
 {
-    public static class StockExecutor
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            ConsoleExtension.WriteSeparator("Stock example");
+        ConsoleExtension.WriteSeparator("Stock example");
 
-            var stock = new Stock("Tesla", 5);
+        var stock = new Stock("Tesla", 5);
 
-            var buyStock = new BuyStockCommand(stock);
-            var sellStock = new SellStockCommand(stock);
+        var buyStock = new BuyStockCommand(stock);
+        var sellStock = new SellStockCommand(stock);
 
-            var broker = new Broker();
-            broker.TakeOrder(buyStock);
-            broker.TakeOrder(sellStock);
+        var broker = new Broker();
+        broker.TakeOrder(buyStock);
+        broker.TakeOrder(sellStock);
 
-            broker.ProcessOrders();
-        }
+        broker.ProcessOrders();
     }
 }

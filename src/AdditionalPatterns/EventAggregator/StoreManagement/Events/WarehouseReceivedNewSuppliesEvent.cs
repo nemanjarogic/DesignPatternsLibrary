@@ -1,14 +1,13 @@
 ﻿using EventAggregatorLibrary.Contracts;
 
-namespace EventAggregatorLibrary.Events
-{
-    public class WarehouseReceivedNewSuppliesEvent : IEvent
-    {
-        public WarehouseReceivedNewSuppliesEvent(string description)
-        {
-            Description = description;
-        }
+namespace EventAggregatorLibrary.Events;
 
-        public string Description { get; set; }
+public class WarehouseReceivedNewSuppliesEvent : IEvent
+{
+    public WarehouseReceivedNewSuppliesEvent(string description)
+    {
+        Description = description;
     }
+
+    public string Description { get; set; }
 }

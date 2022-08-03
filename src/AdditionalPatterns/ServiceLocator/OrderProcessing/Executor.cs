@@ -1,26 +1,25 @@
 ﻿using System;
 using DesignPatternsLibrary.PatternExecutors;
 
-namespace OrderProcessing
+namespace OrderProcessing;
+
+public class Executor : PatternExecutor
 {
-    public class Executor : PatternExecutor
+    public override string Name => "Service Locator - Architectural Pattern";
+
+    public override void Execute()
     {
-        public override string Name => "Service Locator - Architectural Pattern";
+        IServiceLocator serviceLocator = new ServiceLocator();
+        serviceLocator.AddService(new Logger());
 
-        public override void Execute()
+        var order = new Order
         {
-            IServiceLocator serviceLocator = new ServiceLocator();
-            serviceLocator.AddService(new Logger());
+            ProductId = Guid.NewGuid(),
+            UnitPrice = 50,
+            Quantity = 2,
+        };
 
-            var order = new Order
-            {
-                ProductId = Guid.NewGuid(),
-                UnitPrice = 50,
-                Quantity = 2,
-            };
-
-            var orderManager = new OrderManager(serviceLocator);
-            orderManager.ProcessOrder(order);
-        }
+        var orderManager = new OrderManager(serviceLocator);
+        orderManager.ProcessOrder(order);
     }
 }

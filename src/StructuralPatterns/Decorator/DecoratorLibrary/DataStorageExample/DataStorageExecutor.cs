@@ -5,44 +5,43 @@ using DecoratorLibrary.DataStorageExample.Components.Common;
 using DecoratorLibrary.DataStorageExample.Decorators;
 using File = DecoratorLibrary.DataStorageExample.Components.File;
 
-namespace DecoratorLibrary.DataStorageExample
+namespace DecoratorLibrary.DataStorageExample;
+
+public static class DataStorageExecutor
 {
-    public static class DataStorageExecutor
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            ConsoleExtension.WriteSeparator("Data storage example");
+        ConsoleExtension.WriteSeparator("Data storage example");
 
-            ProcessFileWithPlainData();
-            ProcessFileWithCompressedData();
-            ProcessFileWithCompressedAndEncryptedData();
-        }
+        ProcessFileWithPlainData();
+        ProcessFileWithCompressedData();
+        ProcessFileWithCompressedAndEncryptedData();
+    }
 
-        private static void ProcessFileWithPlainData()
-        {
-            IDataSource source = new File("file.dat");
+    private static void ProcessFileWithPlainData()
+    {
+        IDataSource source = new File("file.dat");
 
-            source.Write("Hello world");
-            Console.WriteLine($"Read: {source.Read()}\n");
-        }
+        source.Write("Hello world");
+        Console.WriteLine($"Read: {source.Read()}\n");
+    }
 
-        private static void ProcessFileWithCompressedData()
-        {
-            IDataSource source = new File("file.dat");
-            source = new CompressionDecorator(source);
+    private static void ProcessFileWithCompressedData()
+    {
+        IDataSource source = new File("file.dat");
+        source = new CompressionDecorator(source);
 
-            source.Write("Hello world");
-            Console.WriteLine($"Read: {source.Read()}\n");
-        }
+        source.Write("Hello world");
+        Console.WriteLine($"Read: {source.Read()}\n");
+    }
 
-        private static void ProcessFileWithCompressedAndEncryptedData()
-        {
-            IDataSource source = new File("file.dat");
-            source = new EncryptionDecorator(source);
-            source = new CompressionDecorator(source);
+    private static void ProcessFileWithCompressedAndEncryptedData()
+    {
+        IDataSource source = new File("file.dat");
+        source = new EncryptionDecorator(source);
+        source = new CompressionDecorator(source);
 
-            source.Write("Hello world");
-            Console.WriteLine($"Read: {source.Read()}\n");
-        }
+        source.Write("Hello world");
+        Console.WriteLine($"Read: {source.Read()}\n");
     }
 }

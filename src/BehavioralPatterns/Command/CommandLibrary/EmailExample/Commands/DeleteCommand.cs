@@ -1,19 +1,18 @@
 ﻿using CommandLibrary.EmailExample.Commands.Common;
 
-namespace CommandLibrary.EmailExample.Commands
+namespace CommandLibrary.EmailExample.Commands;
+
+public class DeleteCommand : ICommand
 {
-    public class DeleteCommand : ICommand
+    private readonly Email _email;
+
+    public DeleteCommand(Email email)
     {
-        private readonly Email _email;
+        _email = email;
+    }
 
-        public DeleteCommand(Email email)
-        {
-            _email = email;
-        }
-
-        public void Execute()
-        {
-           _email.Delete();
-        }
+    public void Execute()
+    {
+        _email.Delete();
     }
 }

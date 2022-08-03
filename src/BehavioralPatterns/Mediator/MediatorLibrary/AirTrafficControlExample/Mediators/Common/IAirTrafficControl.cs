@@ -1,11 +1,10 @@
 ﻿using MediatorLibrary.AirTrafficControlExample.Components.Common;
 
-namespace MediatorLibrary.AirTrafficControlExample.Mediators.Common
-{
-    public interface IAirTrafficControl
-    {
-        void ReceiveAircraftLocation(Aircraft reportingAircraft);
+namespace MediatorLibrary.AirTrafficControlExample.Mediators.Common;
 
-        void RegisterAircraftUnderGuidance(Aircraft aircraft);
-    }
+public interface IAirTrafficControl
+{
+    void ReceiveAircraftLocation(Aircraft reportingAircraft);
+
+    void RegisterAircraftUnderGuidance(Aircraft aircraft);
 }

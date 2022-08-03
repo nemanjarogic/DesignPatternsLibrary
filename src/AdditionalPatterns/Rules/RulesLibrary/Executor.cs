@@ -2,16 +2,15 @@
 using RulesLibrary.MotivatingExample;
 using RulesLibrary.RulesExample;
 
-namespace RulesLibrary
-{
-    public class Executor : PatternExecutor
-    {
-        public override string Name => "Rules - Behavioral Pattern";
+namespace RulesLibrary;
 
-        public override void Execute()
-        {
-            MotivatingExecutor.Execute();
-            RulesExecutor.Execute();
-        }
+public class Executor : PatternExecutor
+{
+    public override string Name => "Rules - Behavioral Pattern";
+
+    public override void Execute()
+    {
+        MotivatingExecutor.Execute();
+        RulesExecutor.Execute();
     }
 }

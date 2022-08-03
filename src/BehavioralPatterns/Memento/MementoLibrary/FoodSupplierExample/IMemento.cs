@@ -1,6 +1,5 @@
-﻿namespace MementoLibrary.FoodSupplierExample
+﻿namespace MementoLibrary.FoodSupplierExample;
+
+public interface IMemento
 {
-    public interface IMemento
-    {
-    }
 }

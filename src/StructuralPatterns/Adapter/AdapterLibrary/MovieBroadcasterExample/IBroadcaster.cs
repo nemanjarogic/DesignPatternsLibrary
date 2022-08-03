@@ -1,7 +1,6 @@
-﻿namespace AdapterLibrary.MovieBroadcasterExample
+﻿namespace AdapterLibrary.MovieBroadcasterExample;
+
+public interface IBroadcaster
 {
-    public interface IBroadcaster
-    {
-        void BroadcastToExternalPartners();
-    }
+    void BroadcastToExternalPartners();
 }

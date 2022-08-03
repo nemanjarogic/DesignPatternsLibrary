@@ -1,26 +1,25 @@
 ﻿using System;
 
-namespace TemplateMethodLibrary.BreadExample
+namespace TemplateMethodLibrary.BreadExample;
+
+public abstract class Bread
 {
-    public abstract class Bread
+    /// <summary>
+    /// The template method.
+    /// </summary>
+    public void Make()
     {
-        /// <summary>
-        /// The template method.
-        /// </summary>
-        public void Make()
-        {
-            MixIngredients();
-            Bake();
-            Slice();
-        }
+        MixIngredients();
+        Bake();
+        Slice();
+    }
 
-        protected abstract void MixIngredients();
+    protected abstract void MixIngredients();
 
-        protected abstract void Bake();
+    protected abstract void Bake();
 
-        protected virtual void Slice()
-        {
-            Console.WriteLine($"Slicing the {GetType().Name}!");
-        }
+    protected virtual void Slice()
+    {
+        Console.WriteLine($"Slicing the {GetType().Name}!");
     }
 }

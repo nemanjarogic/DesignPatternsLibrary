@@ -1,39 +1,38 @@
-﻿namespace OrderProcessing
+﻿namespace OrderProcessing;
+
+public class OrderManager
 {
-    public class OrderManager
+    private readonly IServiceLocator _serviceLocator;
+    private readonly Logger _logger;
+
+    public OrderManager(IServiceLocator serviceLocator)
     {
-        private readonly IServiceLocator _serviceLocator;
-        private readonly Logger _logger;
+        _serviceLocator = serviceLocator;
+        _logger = _serviceLocator.GetService<Logger>();
+    }
 
-        public OrderManager(IServiceLocator serviceLocator)
+    public void ProcessOrder(Order order)
+    {
+        _logger.Log("Processing new order...");
+
+        decimal totalPrice = order.UnitPrice * order.Quantity;
+
+        var paymentProcessor = _serviceLocator.GetService<PaymentProcessor>();
+        bool isPaymentSuccessful = paymentProcessor.ProcessPayment(totalPrice);
+
+        NotifyCustomer(isPaymentSuccessful);
+    }
+
+    private void NotifyCustomer(bool isPaymentSuccessful)
+    {
+        var notifier = _serviceLocator.GetService<NotificationManager>();
+        if (isPaymentSuccessful)
         {
-            _serviceLocator = serviceLocator;
-            _logger = _serviceLocator.GetService<Logger>();
+            notifier.NotifyCustomer("Payment succeeded");
+            return;
         }
 
-        public void ProcessOrder(Order order)
-        {
-            _logger.Log("Processing new order...");
-
-            decimal totalPrice = order.UnitPrice * order.Quantity;
-
-            var paymentProcessor = _serviceLocator.GetService<PaymentProcessor>();
-            bool isPaymentSuccessful = paymentProcessor.ProcessPayment(totalPrice);
-
-            NotifyCustomer(isPaymentSuccessful);
-        }
-
-        private void NotifyCustomer(bool isPaymentSuccessful)
-        {
-            var notifier = _serviceLocator.GetService<NotificationManager>();
-            if (isPaymentSuccessful)
-            {
-                notifier.NotifyCustomer("Payment succeeded");
-                return;
-            }
-
-            notifier.NotifyCustomer("Payment failed");
-            _logger.Log("Payment failed");
-        }
+        notifier.NotifyCustomer("Payment failed");
+        _logger.Log("Payment failed");
     }
 }

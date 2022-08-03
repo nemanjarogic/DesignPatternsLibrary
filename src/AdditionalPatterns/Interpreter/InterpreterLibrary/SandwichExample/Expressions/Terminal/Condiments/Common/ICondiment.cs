@@ -1,8 +1,7 @@
 ﻿using InterpreterLibrary.SandwichExample.Expressions.Common;
 
-namespace InterpreterLibrary.SandwichExample.Expressions.Terminal.Condiments.Common
+namespace InterpreterLibrary.SandwichExample.Expressions.Terminal.Condiments.Common;
+
+public interface ICondiment : IExpression
 {
-    public interface ICondiment : IExpression
-    {
-    }
 }

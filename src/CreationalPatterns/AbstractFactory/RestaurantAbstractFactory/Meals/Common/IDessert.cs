@@ -1,7 +1,6 @@
-﻿namespace RestaurantAbstractFactory.Meals.Common
+﻿namespace RestaurantAbstractFactory.Meals.Common;
+
+public interface IDessert : IMeal
 {
-    public interface IDessert : IMeal
-    {
-        void ShowSugarAmount();
-    }
+    void ShowSugarAmount();
 }

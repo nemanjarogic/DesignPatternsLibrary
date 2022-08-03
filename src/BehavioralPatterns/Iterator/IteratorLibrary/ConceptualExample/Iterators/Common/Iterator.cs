@@ -1,15 +1,14 @@
 ﻿using System.Collections;
 
-namespace IteratorLibrary.ConceptualExample.Iterators.Common
+namespace IteratorLibrary.ConceptualExample.Iterators.Common;
+
+public abstract class Iterator : IEnumerator
 {
-    public abstract class Iterator : IEnumerator
-    {
-        object IEnumerator.Current => Current();
+    object IEnumerator.Current => Current();
 
-        public abstract object Current();
+    public abstract object Current();
 
-        public abstract bool MoveNext();
+    public abstract bool MoveNext();
 
-        public abstract void Reset();
-    }
+    public abstract void Reset();
 }

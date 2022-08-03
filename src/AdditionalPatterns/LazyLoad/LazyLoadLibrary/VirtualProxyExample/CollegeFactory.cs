@@ -1,10 +1,9 @@
-﻿namespace LazyLoadLibrary.VirtualProxyExample
+﻿namespace LazyLoadLibrary.VirtualProxyExample;
+
+public class CollegeFactory
 {
-    public class CollegeFactory
+    public College CreateFromId(int id)
     {
-        public College CreateFromId(int id)
-        {
-            return new ProxyCollege(id);
-        }
+        return new ProxyCollege(id);
     }
 }

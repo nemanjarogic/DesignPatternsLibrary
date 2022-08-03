@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace AdapterLibrary.MovieBroadcasterExample
+namespace AdapterLibrary.MovieBroadcasterExample;
+
+public class Movie
 {
-    public class Movie
-    {
-        public string Name { get; set; }
+    public string Name { get; set; }
 
-        public DateTime ReleaseDate { get; set; }
+    public DateTime ReleaseDate { get; set; }
 
-        public double Rating { get; set; }
-    }
+    public double Rating { get; set; }
 }

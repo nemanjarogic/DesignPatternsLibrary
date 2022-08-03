@@ -1,8 +1,7 @@
 ﻿using OrderManagement.Domain;
 
-namespace OrderManagement.Infrastructure.Repositories.Contracts
+namespace OrderManagement.Infrastructure.Repositories.Contracts;
+
+public interface ICustomerRepository : IRepository<Customer>
 {
-    public interface ICustomerRepository : IRepository<Customer>
-    {
-    }
 }

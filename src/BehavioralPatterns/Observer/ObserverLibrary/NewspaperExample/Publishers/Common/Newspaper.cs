@@ -3,59 +3,58 @@ using System.Collections.Generic;
 using System.Linq;
 using ObserverLibrary.NewspaperExample.Subscribers.Common;
 
-namespace ObserverLibrary.NewspaperExample.Publishers.Common
+namespace ObserverLibrary.NewspaperExample.Publishers.Common;
+
+public abstract class Newspaper
 {
-    public abstract class Newspaper
+    private readonly List<IUser> _subscribers;
+
+    private readonly string _name;
+    private decimal _monthlyPrice;
+
+    public Newspaper(string name, decimal monthlyPrice)
     {
-        private readonly List<IUser> _subscribers;
+        _subscribers = new List<IUser>();
 
-        private readonly string _name;
-        private decimal _monthlyPrice;
+        _name = name;
+        _monthlyPrice = monthlyPrice;
+    }
 
-        public Newspaper(string name, decimal monthlyPrice)
+    public decimal MonthlyPrice
+    {
+        get
         {
-            _subscribers = new List<IUser>();
-
-            _name = name;
-            _monthlyPrice = monthlyPrice;
+            return _monthlyPrice;
         }
-
-        public decimal MonthlyPrice
+        set
         {
-            get
+            if (_monthlyPrice != value)
             {
-                return _monthlyPrice;
-            }
-            set
-            {
-                if (_monthlyPrice != value)
-                {
-                    _monthlyPrice = value;
-                    Console.WriteLine($"Monthly price for {_name} newspaper is changed to {_monthlyPrice:C}.");
+                _monthlyPrice = value;
+                Console.WriteLine($"Monthly price for {_name} newspaper is changed to {_monthlyPrice:C}.");
 
-                    Notify();
-                }
+                Notify();
             }
         }
+    }
 
-        public void Subscribe(IUser user)
-        {
-            _subscribers.Add(user);
-            Console.WriteLine($"{user.Name} is subscribed to {_name} newspaper.");
-        }
+    public void Subscribe(IUser user)
+    {
+        _subscribers.Add(user);
+        Console.WriteLine($"{user.Name} is subscribed to {_name} newspaper.");
+    }
 
-        public void Unsubscribe(IUser user)
-        {
-            _subscribers.Remove(user);
-            Console.WriteLine($"{user.Name} is unsubscribed from {_name} newspaper.");
-        }
+    public void Unsubscribe(IUser user)
+    {
+        _subscribers.Remove(user);
+        Console.WriteLine($"{user.Name} is unsubscribed from {_name} newspaper.");
+    }
 
-        private void Notify()
+    private void Notify()
+    {
+        foreach (IUser user in _subscribers.ToList())
         {
-            foreach (IUser user in _subscribers.ToList())
-            {
-                user.ReportSubscriptionPriceChange(this);
-            }
+            user.ReportSubscriptionPriceChange(this);
         }
     }
 }

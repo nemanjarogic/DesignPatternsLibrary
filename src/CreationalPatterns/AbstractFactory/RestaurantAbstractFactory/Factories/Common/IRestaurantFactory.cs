@@ -1,16 +1,15 @@
 ﻿using RestaurantAbstractFactory.Meals.Common;
 
-namespace RestaurantAbstractFactory.Factories.Common
+namespace RestaurantAbstractFactory.Factories.Common;
+
+/// <summary>
+/// The Abstract Factory interface declares a set of methods for creating each of the abstract products.
+/// </summary>
+public interface IRestaurantFactory
 {
-    /// <summary>
-    /// The Abstract Factory interface declares a set of methods for creating each of the abstract products.
-    /// </summary>
-    public interface IRestaurantFactory
-    {
-        IAppetizer PrepareAppetizer();
+    IAppetizer PrepareAppetizer();
 
-        IMainCourse PrepareMainCourse();
+    IMainCourse PrepareMainCourse();
 
-        IDessert PrepareDessert();
-    }
+    IDessert PrepareDessert();
 }

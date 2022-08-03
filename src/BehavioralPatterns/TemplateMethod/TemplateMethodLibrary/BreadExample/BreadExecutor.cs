@@ -1,21 +1,20 @@
 ﻿using System;
 using BuildingBlocks;
 
-namespace TemplateMethodLibrary.BreadExample
+namespace TemplateMethodLibrary.BreadExample;
+
+public static class BreadExecutor
 {
-    public static class BreadExecutor
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            ConsoleExtension.WriteSeparator("Bread example");
+        ConsoleExtension.WriteSeparator("Bread example");
 
-            var whiteBread = new WhiteBread();
-            whiteBread.Make();
+        var whiteBread = new WhiteBread();
+        whiteBread.Make();
 
-            Console.WriteLine();
+        Console.WriteLine();
 
-            var wholeWheatBread = new WholeWheatBread();
-            wholeWheatBread.Make();
-        }
+        var wholeWheatBread = new WholeWheatBread();
+        wholeWheatBread.Make();
     }
 }

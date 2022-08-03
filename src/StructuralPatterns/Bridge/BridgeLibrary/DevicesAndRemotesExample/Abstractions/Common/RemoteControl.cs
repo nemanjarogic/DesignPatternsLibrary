@@ -1,76 +1,75 @@
 ﻿using BridgeLibrary.DevicesAndRemotesExample.Implementations.Common;
 
-namespace BridgeLibrary.DevicesAndRemotesExample.Abstractions.Common
+namespace BridgeLibrary.DevicesAndRemotesExample.Abstractions.Common;
+
+/// <summary>
+/// The "abstraction" defines the contract for the "control" part of the two class hierarchies.
+/// It maintains a reference to an object of the "implementation" hierarchy and delegates
+/// all of the real work to this object.
+/// </summary>
+public abstract class RemoteControl
 {
-    /// <summary>
-    /// The "abstraction" defines the contract for the "control" part of the two class hierarchies.
-    /// It maintains a reference to an object of the "implementation" hierarchy and delegates
-    /// all of the real work to this object.
-    /// </summary>
-    public abstract class RemoteControl
+    protected readonly Device _device;
+    protected readonly int _volumeChangeStep;
+
+    public RemoteControl(Device device)
     {
-        protected readonly Device _device;
-        protected readonly int _volumeChangeStep;
+        _device = device;
+        _volumeChangeStep = 5;
+    }
 
-        public RemoteControl(Device device)
+    public void TogglePower()
+    {
+        if (_device.IsTurnedOn)
         {
-            _device = device;
-            _volumeChangeStep = 5;
+            _device.TurnOff();
+            return;
         }
 
-        public void TogglePower()
-        {
-            if (_device.IsTurnedOn)
-            {
-                _device.TurnOff();
-                return;
-            }
+        _device.TurnOn();
+    }
 
-            _device.TurnOn();
+    public void VolumeUp()
+    {
+        var newVolume = _device.Volume + _volumeChangeStep;
+        if (newVolume > 100)
+        {
+            newVolume = 100;
         }
 
-        public void VolumeUp()
-        {
-            var newVolume = _device.Volume + _volumeChangeStep;
-            if (newVolume > 100)
-            {
-                newVolume = 100;
-            }
+        _device.Volume = newVolume;
+    }
 
-            _device.Volume = newVolume;
+    public void VolumeDown()
+    {
+        var newVolume = _device.Volume + _volumeChangeStep;
+        if (newVolume < 0)
+        {
+            newVolume = 0;
         }
 
-        public void VolumeDown()
-        {
-            var newVolume = _device.Volume + _volumeChangeStep;
-            if (newVolume < 0)
-            {
-                newVolume = 0;
-            }
+        _device.Volume = newVolume;
+    }
 
-            _device.Volume = newVolume;
+    public void ChannelUp()
+    {
+        var newChannel = _device.Channel + 1;
+        if (newChannel > _device.NumberOfChannels)
+        {
+            newChannel = 1;
         }
 
-        public void ChannelUp()
-        {
-            var newChannel = _device.Channel + 1;
-            if (newChannel > _device.NumberOfChannels)
-            {
-                newChannel = 1;
-            }
+        _device.Channel = newChannel;
+    }
 
-            _device.Channel = newChannel;
+    public void ChannelDown()
+    {
+        var newChannel = _device.Channel - 1;
+        if (newChannel < 0)
+        {
+            newChannel = _device.NumberOfChannels;
         }
 
-        public void ChannelDown()
-        {
-            var newChannel = _device.Channel - 1;
-            if (newChannel < 0)
-            {
-                newChannel = _device.NumberOfChannels;
-            }
-
-            _device.Channel = newChannel;
-        }
+        _device.Channel = newChannel;
     }
 }

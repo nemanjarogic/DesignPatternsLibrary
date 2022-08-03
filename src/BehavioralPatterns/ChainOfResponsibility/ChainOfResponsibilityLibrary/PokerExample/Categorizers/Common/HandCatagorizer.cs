@@ -3,75 +3,74 @@ using System.Linq;
 using ChainOfResponsibilityLibrary.PokerExample.Models;
 using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 
-namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers.Common
+namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers.Common;
+
+public abstract class HandCatagorizer
 {
-    public abstract class HandCatagorizer
+    protected HandCatagorizer Next { get; private set; }
+
+    public HandCatagorizer RegisterNext(HandCatagorizer next)
     {
-        protected HandCatagorizer Next { get; private set; }
+        Next = next;
+        return Next;
+    }
 
-        public HandCatagorizer RegisterNext(HandCatagorizer next)
+    public abstract HandRanking Catagorize(Hand hand);
+
+    protected static bool HasNOfKind(int n, Hand hand)
+    {
+        Dictionary<Value, int> seen = new Dictionary<Value, int>();
+
+        foreach (Card card in hand.Cards)
         {
-            Next = next;
-            return Next;
+            if (seen.ContainsKey(card.Value))
+            {
+                seen[card.Value]++;
+            }
+            else
+            {
+                seen[card.Value] = 1;
+            }
         }
 
-        public abstract HandRanking Catagorize(Hand hand);
-
-        protected static bool HasNOfKind(int n, Hand hand)
+        foreach (int count in seen.Values)
         {
-            Dictionary<Value, int> seen = new Dictionary<Value, int>();
-
-            foreach (Card card in hand.Cards)
+            if (count == n)
             {
-                if (seen.ContainsKey(card.Value))
-                {
-                    seen[card.Value]++;
-                }
-                else
-                {
-                    seen[card.Value] = 1;
-                }
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    protected static bool HasStraight(Hand hand)
+    {
+        List<Value> values = hand.Cards.Select(card => card.Value).ToList();
+        values.Sort();
+
+        var expectedValue = (int)values.First();
+
+        foreach (Value value in values)
+        {
+            if ((int)value != expectedValue)
+            {
+                return false;
             }
 
-            foreach (int count in seen.Values)
-            {
-                if (count == n)
-                {
-                    return true;
-                }
-            }
-
-            return false;
+            expectedValue++;
         }
 
-        protected static bool HasStraight(Hand hand)
-        {
-            List<Value> values = hand.Cards.Select(card => card.Value).ToList();
-            values.Sort();
+        return true;
+    }
 
-            var expectedValue = (int)values.First();
+    protected static bool HasFlush(Hand hand)
+    {
+        List<Suit> suits = hand.Cards.Select(card => card.Suit).ToList();
+        suits.Sort();
 
-            foreach (Value value in values)
-            {
-                if ((int)value != expectedValue)
-                {
-                    return false;
-                }
+        Suit expectedSuit = suits.First();
 
-                expectedValue++;
-            }
-
-            return true;
-        }
-
-        protected static bool HasFlush(Hand hand)
-        {
-            List<Suit> suits = hand.Cards.Select(card => card.Suit).ToList();
-            suits.Sort();
-
-            Suit expectedSuit = suits.First();
-
-            return suits.All(suit => suit == expectedSuit);
-        }
+        return suits.All(suit => suit == expectedSuit);
     }
 }

@@ -2,16 +2,15 @@
 using InterpreterLibrary.DateExample;
 using InterpreterLibrary.SandwichExample;
 
-namespace InterpreterLibrary
-{
-    public class Executor : PatternExecutor
-    {
-        public override string Name => "Interpreter - Behavioral Pattern";
+namespace InterpreterLibrary;
 
-        public override void Execute()
-        {
-            DateExecutor.Execute();
-            SandwichExecutor.Execute();
-        }
+public class Executor : PatternExecutor
+{
+    public override string Name => "Interpreter - Behavioral Pattern";
+
+    public override void Execute()
+    {
+        DateExecutor.Execute();
+        SandwichExecutor.Execute();
     }
 }

@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace OrderProcessing
+namespace OrderProcessing;
+
+public class PaymentProcessor
 {
-    public class PaymentProcessor
+    public bool ProcessPayment(decimal amount)
     {
-        public bool ProcessPayment(decimal amount)
-        {
-            Console.WriteLine($"Payment processor: Processing payment...");
-            return amount <= 100;
-        }
+        Console.WriteLine($"Payment processor: Processing payment...");
+        return amount <= 100;
     }
 }

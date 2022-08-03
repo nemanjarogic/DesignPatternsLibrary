@@ -1,10 +1,9 @@
-﻿namespace FacadeLibrary.WeatherServiceExample.Service
+﻿namespace FacadeLibrary.WeatherServiceExample.Service;
+
+public class WeatherService
 {
-    public class WeatherService
+    public double GetTemperatureFahrenheit(double latitude, double longitude)
     {
-        public double GetTemperatureFahrenheit(double latitude, double longitude)
-        {
-            return 86.5;
-        }
+        return 86.5;
     }
 }

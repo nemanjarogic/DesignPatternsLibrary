@@ -1,45 +1,44 @@
 ﻿using System;
 
-namespace LazyLoadLibrary.VirtualProxyExample
+namespace LazyLoadLibrary.VirtualProxyExample;
+
+public class ProxyCollege : College
 {
-    public class ProxyCollege : College
+    public ProxyCollege(int id)
     {
-        public ProxyCollege(int id)
-        {
-            Id = id;
-            Console.WriteLine("College initialization completed.");
-        }
+        Id = id;
+        Console.WriteLine("College initialization completed.");
+    }
 
-        public override Library Library
+    public override Library Library
+    {
+        get
         {
-            get
+            if (base.Library == null)
             {
-                if (base.Library == null)
-                {
-                    base.Library = new Library();
-                }
-
-                return base.Library;
-            }
-            set
-            {
-                base.Library = value;
-            }
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (obj is not College college)
-            {
-                return false;
+                base.Library = new Library();
             }
 
-            return college.Id == Id;
+            return base.Library;
+        }
+        set
+        {
+            base.Library = value;
+        }
+    }
+
+    public override bool Equals(object obj)
+    {
+        if (obj is not College college)
+        {
+            return false;
         }
 
-        public override int GetHashCode()
-        {
-            return Id.GetHashCode();
-        }
+        return college.Id == Id;
+    }
+
+    public override int GetHashCode()
+    {
+        return Id.GetHashCode();
     }
 }

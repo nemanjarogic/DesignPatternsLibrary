@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace RulesLibrary.Common
+namespace RulesLibrary.Common;
+
+public class Customer
 {
-    public class Customer
-    {
-        public DateTime? DateOfFirstPurchase { get; set; }
+    public DateTime? DateOfFirstPurchase { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+    public DateTime DateOfBirth { get; set; }
 
-        public bool IsVeteran { get; set; }
-    }
+    public bool IsVeteran { get; set; }
 }

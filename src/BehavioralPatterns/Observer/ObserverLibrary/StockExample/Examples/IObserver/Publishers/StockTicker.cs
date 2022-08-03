@@ -2,56 +2,55 @@
 using System.Collections.Generic;
 using ObserverLibrary.StockExample.Examples.IObserver.Subscribers;
 
-namespace ObserverLibrary.StockExample.Examples.IObserver.Publishers
+namespace ObserverLibrary.StockExample.Examples.IObserver.Publishers;
+
+public class StockTicker : IObservable<Stock>
 {
-    public class StockTicker : IObservable<Stock>
+    private readonly List<IObserver<Stock>> _subscribers = new List<IObserver<Stock>>();
+    private Stock _stock;
+
+    public Stock Stock
     {
-        private readonly List<IObserver<Stock>> _subscribers = new List<IObserver<Stock>>();
-        private Stock _stock;
-
-        public Stock Stock
+        get
         {
-            get
-            {
-                return _stock;
-            }
-            set
-            {
-                _stock = value;
-                Notify(_stock);
-            }
+            return _stock;
+        }
+        set
+        {
+            _stock = value;
+            Notify(_stock);
+        }
+    }
+
+    public IDisposable Subscribe(IObserver<Stock> subscriber)
+    {
+        if (!_subscribers.Contains(subscriber))
+        {
+            _subscribers.Add(subscriber);
         }
 
-        public IDisposable Subscribe(IObserver<Stock> subscriber)
+        return new DisposableSubscriber(_subscribers, subscriber);
+    }
+
+    private void Notify(Stock stock)
+    {
+        foreach (var subscriber in _subscribers)
         {
-            if (!_subscribers.Contains(subscriber))
+            if (stock.Symbol == null || stock.Price < 0)
             {
-                _subscribers.Add(subscriber);
+                subscriber.OnError(new Exception("Bad stock data"));
+                continue;
             }
 
-            return new DisposableSubscriber(_subscribers, subscriber);
+            subscriber.OnNext(stock);
         }
+    }
 
-        private void Notify(Stock stock)
+    private void ReportDailyReport()
+    {
+        foreach (var subscriber in _subscribers)
         {
-            foreach (var subscriber in _subscribers)
-            {
-                if (stock.Symbol == null || stock.Price < 0)
-                {
-                    subscriber.OnError(new Exception("Bad stock data"));
-                    continue;
-                }
-
-                subscriber.OnNext(stock);
-            }
-        }
-
-        private void ReportDailyReport()
-        {
-            foreach (var subscriber in _subscribers)
-            {
-                subscriber.OnCompleted();
-            }
+            subscriber.OnCompleted();
         }
     }
 }

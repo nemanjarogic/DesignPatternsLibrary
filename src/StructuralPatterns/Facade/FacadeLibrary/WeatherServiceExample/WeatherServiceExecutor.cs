@@ -1,14 +1,13 @@
 ﻿using FacadeLibrary.WeatherServiceExample.After;
 using FacadeLibrary.WeatherServiceExample.Before;
 
-namespace FacadeLibrary.WeatherServiceExample
+namespace FacadeLibrary.WeatherServiceExample;
+
+public static class WeatherServiceExecutor
 {
-    public static class WeatherServiceExecutor
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            BeforeExecutor.Execute();
-            AfterExecutor.Execute();
-        }
+        BeforeExecutor.Execute();
+        AfterExecutor.Execute();
     }
 }

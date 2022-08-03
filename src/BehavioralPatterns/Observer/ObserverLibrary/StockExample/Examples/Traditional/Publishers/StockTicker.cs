@@ -1,22 +1,21 @@
 ﻿using ObserverLibrary.StockExample.Examples.Traditional.Publishers.Common;
 
-namespace ObserverLibrary.StockExample.Examples.Traditional.Publishers
-{
-    public class StockTicker : Publisher
-    {
-        private Stock stock;
+namespace ObserverLibrary.StockExample.Examples.Traditional.Publishers;
 
-        public Stock Stock
+public class StockTicker : Publisher
+{
+    private Stock stock;
+
+    public Stock Stock
+    {
+        get
         {
-            get
-            {
-                return stock;
-            }
-            set
-            {
-                stock = value;
-                Notify();
-            }
+            return stock;
+        }
+        set
+        {
+            stock = value;
+            Notify();
         }
     }
 }

@@ -2,18 +2,17 @@
 using VisitorLibrary.PersonExample.Elements.Common;
 using VisitorLibrary.PersonExample.Visitors.Common;
 
-namespace VisitorLibrary.PersonExample
-{
-    public class Person
-    {
-        public List<IAsset> Assets { get; set; } = new List<IAsset>();
+namespace VisitorLibrary.PersonExample;
 
-        public void InspectAssets(IVisitor visitor)
+public class Person
+{
+    public List<IAsset> Assets { get; set; } = new List<IAsset>();
+
+    public void InspectAssets(IVisitor visitor)
+    {
+        foreach (var asset in Assets)
         {
-            foreach (var asset in Assets)
-            {
-                asset.Accept(visitor);
-            }
+            asset.Accept(visitor);
         }
     }
 }

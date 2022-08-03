@@ -1,10 +1,9 @@
-﻿namespace LazyLoadLibrary.GhostsExample
+﻿namespace LazyLoadLibrary.GhostsExample;
+
+public class CollegeFactory
 {
-    public class CollegeFactory
+    public GhostCollege CreateFromId(int id)
     {
-        public GhostCollege CreateFromId(int id)
-        {
-            return new GhostCollege(id);
-        }
+        return new GhostCollege(id);
     }
 }

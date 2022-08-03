@@ -1,10 +1,9 @@
-﻿namespace ChainOfResponsibilityLibrary.PokerExample.Models.Enums
+﻿namespace ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
+
+public enum Suit
 {
-    public enum Suit
-    {
-        Diamond,
-        Club,
-        Heart,
-        Spade,
-    }
+    Diamond,
+    Club,
+    Heart,
+    Spade,
 }

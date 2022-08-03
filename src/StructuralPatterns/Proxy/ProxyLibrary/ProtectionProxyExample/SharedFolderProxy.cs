@@ -1,27 +1,26 @@
 ﻿using System;
 
-namespace ProxyLibrary.ProtectionProxyExample
+namespace ProxyLibrary.ProtectionProxyExample;
+
+public class SharedFolderProxy : ISharedFolder
 {
-    public class SharedFolderProxy : ISharedFolder
+    private readonly Employee _employee;
+    private readonly SharedFolder _sharedFolder;
+
+    public SharedFolderProxy(Employee employee, SharedFolder sharedFolder)
     {
-        private readonly Employee _employee;
-        private readonly SharedFolder _sharedFolder;
+        _employee = employee;
+        _sharedFolder = sharedFolder;
+    }
 
-        public SharedFolderProxy(Employee employee, SharedFolder sharedFolder)
+    public void Access()
+    {
+        if (_employee.Role == Role.Manager || _employee.Role == Role.CEO)
         {
-            _employee = employee;
-            _sharedFolder = sharedFolder;
+            _sharedFolder.Access();
+            return;
         }
 
-        public void Access()
-        {
-            if (_employee.Role == Role.Manager || _employee.Role == Role.CEO)
-            {
-                _sharedFolder.Access();
-                return;
-            }
-
-            Console.WriteLine($"Employee with role: {_employee.Role} doesn't have access to the shared folder");
-        }
+        Console.WriteLine($"Employee with role: {_employee.Role} doesn't have access to the shared folder");
     }
 }

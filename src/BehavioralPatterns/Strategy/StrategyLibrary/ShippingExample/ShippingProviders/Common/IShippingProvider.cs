@@ -1,7 +1,6 @@
-﻿namespace StrategyLibrary.ShippingExample.ShippingProviders.Common
+﻿namespace StrategyLibrary.ShippingExample.ShippingProviders.Common;
+
+public interface IShippingProvider
 {
-    public interface IShippingProvider
-    {
-        decimal CalculateCost(Order order);
-    }
+    decimal CalculateCost(Order order);
 }

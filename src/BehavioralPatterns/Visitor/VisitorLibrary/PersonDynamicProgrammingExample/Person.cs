@@ -2,21 +2,20 @@
 using VisitorLibrary.PersonDynamicProgrammingExample.Elements.Common;
 using VisitorLibrary.PersonDynamicProgrammingExample.Visitors.Common;
 
-namespace VisitorLibrary.PersonDynamicProgrammingExample
+namespace VisitorLibrary.PersonDynamicProgrammingExample;
+
+public class Person
 {
-    public class Person
+    public List<IAsset> Assets { get; set; } = new List<IAsset>();
+
+    public void InspectAssets(AssetVisitor visitor)
     {
-        public List<IAsset> Assets { get; set; } = new List<IAsset>();
+        visitor.Visit(Assets);
 
-        public void InspectAssets(AssetVisitor visitor)
-        {
-            visitor.Visit(Assets);
-
-            // It is possible to use this approach too.
-            // foreach (var asset in Assets)
-            // {
-            //     visitor.DynamicVisit(asset);
-            // }
-        }
+        // It is possible to use this approach too.
+        // foreach (var asset in Assets)
+        // {
+        //     visitor.DynamicVisit(asset);
+        // }
     }
 }

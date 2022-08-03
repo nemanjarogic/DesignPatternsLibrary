@@ -2,44 +2,43 @@
 using OrderManagement.Domain;
 using OrderManagement.Infrastructure.Repositories.Contracts;
 
-namespace OrderManagement.Controllers
+namespace OrderManagement.Controllers;
+
+public class OrderController
 {
-    public class OrderController
+    private readonly IOrderRepository _orderRepository;
+    private readonly IUnitOfWork _unitOfWork;
+
+    public OrderController(IOrderRepository orderRepository, IUnitOfWork unitOfWork)
     {
-        private readonly IOrderRepository _orderRepository;
-        private readonly IUnitOfWork _unitOfWork;
+        _orderRepository = orderRepository;
+        _unitOfWork = unitOfWork;
+    }
 
-        public OrderController(IOrderRepository orderRepository, IUnitOfWork unitOfWork)
+    public Order Create(int id, string description, string deliveryAddress, decimal price)
+    {
+        // ID is usually auto-genereated by database.
+        var newOrder = new Order()
         {
-            _orderRepository = orderRepository;
-            _unitOfWork = unitOfWork;
-        }
+            Id = id,
+            Description = description,
+            DeliveryAddress = deliveryAddress,
+            Price = price,
+        };
 
-        public Order Create(int id, string description, string deliveryAddress, decimal price)
-        {
-            // ID is usually auto-genereated by database.
-            var newOrder = new Order()
-            {
-                Id = id,
-                Description = description,
-                DeliveryAddress = deliveryAddress,
-                Price = price,
-            };
+        newOrder = _orderRepository.Add(newOrder);
+        _unitOfWork.Commit();
 
-            newOrder = _orderRepository.Add(newOrder);
-            _unitOfWork.Commit();
+        return newOrder;
+    }
 
-            return newOrder;
-        }
+    public IEnumerable<Order> GetAll()
+    {
+        return _orderRepository.GetAll();
+    }
 
-        public IEnumerable<Order> GetAll()
-        {
-            return _orderRepository.GetAll();
-        }
-
-        public Order GetTheMostExpensive()
-        {
-            return _orderRepository.GetTheMostExpensive();
-        }
+    public Order GetTheMostExpensive()
+    {
+        return _orderRepository.GetTheMostExpensive();
     }
 }

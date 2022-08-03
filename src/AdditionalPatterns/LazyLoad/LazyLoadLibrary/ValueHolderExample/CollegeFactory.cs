@@ -1,10 +1,9 @@
-﻿namespace LazyLoadLibrary.ValueHolderExample
+﻿namespace LazyLoadLibrary.ValueHolderExample;
+
+public class CollegeFactory
 {
-    public class CollegeFactory
+    public ValueHolderCollege CreateFromId(int id)
     {
-        public ValueHolderCollege CreateFromId(int id)
-        {
-            return new ValueHolderCollege(id);
-        }
+        return new ValueHolderCollege(id);
     }
 }

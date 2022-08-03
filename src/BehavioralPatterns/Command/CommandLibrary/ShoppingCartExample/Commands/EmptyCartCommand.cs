@@ -2,40 +2,39 @@
 using CommandLibrary.ShoppingCartExample.Commands.Common;
 using CommandLibrary.ShoppingCartExample.Repositories.Common;
 
-namespace CommandLibrary.ShoppingCartExample.Commands
+namespace CommandLibrary.ShoppingCartExample.Commands;
+
+public class EmptyCartCommand : ICommand
 {
-    public class EmptyCartCommand : ICommand
+    private readonly IProductRepository _productRepository;
+    private readonly IShoppingCartRepository _shoppingCartRepository;
+
+    public EmptyCartCommand(
+        IProductRepository productRepository,
+        IShoppingCartRepository shoppingCartRepository)
     {
-        private readonly IProductRepository _productRepository;
-        private readonly IShoppingCartRepository _shoppingCartRepository;
+        _productRepository = productRepository;
+        _shoppingCartRepository = shoppingCartRepository;
+    }
 
-        public EmptyCartCommand(
-            IProductRepository productRepository,
-            IShoppingCartRepository shoppingCartRepository)
+    public bool CanExecute()
+    {
+        return !_shoppingCartRepository.IsEmpty();
+    }
+
+    public void Execute()
+    {
+        var items = _shoppingCartRepository.GetAll().ToArray();
+
+        foreach (var (Product, Quantity) in items)
         {
-            _productRepository = productRepository;
-            _shoppingCartRepository = shoppingCartRepository;
+            _productRepository.IncreaseStock(Product.ProductId, Quantity);
+            _shoppingCartRepository.Remove(Product.ProductId);
         }
+    }
 
-        public bool CanExecute()
-        {
-            return !_shoppingCartRepository.IsEmpty();
-        }
-
-        public void Execute()
-        {
-            var items = _shoppingCartRepository.GetAll().ToArray();
-
-            foreach (var (Product, Quantity) in items)
-            {
-                _productRepository.IncreaseStock(Product.ProductId, Quantity);
-                _shoppingCartRepository.Remove(Product.ProductId);
-            }
-        }
-
-        public void Undo()
-        {
-            // Not implemented
-        }
+    public void Undo()
+    {
+        // Not implemented
     }
 }

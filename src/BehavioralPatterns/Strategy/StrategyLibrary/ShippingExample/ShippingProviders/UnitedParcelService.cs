@@ -1,12 +1,11 @@
 ﻿using StrategyLibrary.ShippingExample.ShippingProviders.Common;
 
-namespace StrategyLibrary.ShippingExample.ShippingProviders
+namespace StrategyLibrary.ShippingExample.ShippingProviders;
+
+public class UnitedParcelService : IShippingProvider
 {
-    public class UnitedParcelService : IShippingProvider
+    public decimal CalculateCost(Order order)
     {
-        public decimal CalculateCost(Order order)
-        {
-            return 9;
-        }
+        return 9;
     }
 }

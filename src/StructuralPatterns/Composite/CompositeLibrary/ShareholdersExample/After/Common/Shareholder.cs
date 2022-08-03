@@ -1,11 +1,10 @@
-﻿namespace CompositeLibrary.ShareholdersExample.After.Common
+﻿namespace CompositeLibrary.ShareholdersExample.After.Common;
+
+public abstract class Shareholder
 {
-    public abstract class Shareholder
-    {
-        public string Name { get; set; }
+    public string Name { get; set; }
 
-        public virtual int NumberOfShares { get; set; }
+    public virtual int NumberOfShares { get; set; }
 
-        public abstract void PrintReport();
-    }
+    public abstract void PrintReport();
 }

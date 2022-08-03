@@ -1,7 +1,6 @@
-﻿namespace CommandLibrary.StockExample.Commands.Common
+﻿namespace CommandLibrary.StockExample.Commands.Common;
+
+public interface IOrderCommand
 {
-    public interface IOrderCommand
-    {
-        void Execute();
-    }
+    void Execute();
 }

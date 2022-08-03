@@ -1,20 +1,19 @@
 ﻿using EventAggregatorLibrary.Contracts;
 using EventAggregatorLibrary.Events;
 
-namespace EventAggregatorLibrary.Components.Publishers
+namespace EventAggregatorLibrary.Components.Publishers;
+
+public class OrderPublisher : IPublisher
 {
-    public class OrderPublisher : IPublisher
+    private readonly IEventAggregator _eventAggregator;
+
+    public OrderPublisher(IEventAggregator eventAggregator)
     {
-        private readonly IEventAggregator _eventAggregator;
+        _eventAggregator = eventAggregator;
+    }
 
-        public OrderPublisher(IEventAggregator eventAggregator)
-        {
-            _eventAggregator = eventAggregator;
-        }
-
-        public void Publish(string payload)
-        {
-            _eventAggregator.Publish(new OrderCreatedEvent(payload));
-        }
+    public void Publish(string payload)
+    {
+        _eventAggregator.Publish(new OrderCreatedEvent(payload));
     }
 }

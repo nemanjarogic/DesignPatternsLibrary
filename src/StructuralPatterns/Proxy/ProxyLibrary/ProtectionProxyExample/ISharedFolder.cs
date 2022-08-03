@@ -1,7 +1,6 @@
-﻿namespace ProxyLibrary.ProtectionProxyExample
+﻿namespace ProxyLibrary.ProtectionProxyExample;
+
+public interface ISharedFolder
 {
-    public interface ISharedFolder
-    {
-        void Access();
-    }
+    void Access();
 }

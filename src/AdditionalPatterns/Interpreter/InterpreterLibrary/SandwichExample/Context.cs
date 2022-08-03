@@ -1,7 +1,6 @@
-﻿namespace InterpreterLibrary.SandwichExample
+﻿namespace InterpreterLibrary.SandwichExample;
+
+public class Context
 {
-    public class Context
-    {
-        public string Output { get; set; }
-    }
+    public string Output { get; set; }
 }

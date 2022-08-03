@@ -1,7 +1,6 @@
-﻿namespace InterpreterLibrary.SandwichExample.Expressions.Common
+﻿namespace InterpreterLibrary.SandwichExample.Expressions.Common;
+
+public interface IExpression
 {
-    public interface IExpression
-    {
-        void Interpret(Context context);
-    }
+    void Interpret(Context context);
 }

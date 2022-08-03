@@ -1,18 +1,17 @@
 ﻿using System;
 using ChainOfResponsibilityLibrary.LoggingExample.Common;
 
-namespace ChainOfResponsibilityLibrary.LoggingExample.Loggers
-{
-    public class ConsoleLogger : Logger
-    {
-        public ConsoleLogger()
-            : base(LogLevel.Info)
-        {
-        }
+namespace ChainOfResponsibilityLibrary.LoggingExample.Loggers;
 
-        protected override void Write(string message)
-        {
-            Console.WriteLine($"Console:: {message}");
-        }
+public class ConsoleLogger : Logger
+{
+    public ConsoleLogger()
+        : base(LogLevel.Info)
+    {
+    }
+
+    protected override void Write(string message)
+    {
+        Console.WriteLine($"Console:: {message}");
     }
 }

@@ -1,11 +1,10 @@
-﻿namespace CustomSandwichBuilder.Products.Enums
+﻿namespace CustomSandwichBuilder.Products.Enums;
+
+public enum MeatType
 {
-    public enum MeatType
-    {
-        Beef,
-        Pork,
-        Chicken,
-        Turkey,
-        Salami,
-    }
+    Beef,
+    Pork,
+    Chicken,
+    Turkey,
+    Salami,
 }

@@ -1,15 +1,14 @@
 ﻿using System;
 using NullObjectLibrary.ApplicationExample.Applications.Common;
 
-namespace NullObjectLibrary.SmartphoneApplicationExample.Applications
-{
-    public class SubwaySurfers : Application
-    {
-        public SubwaySurfers(Guid processId)
-            : base(processId)
-        {
-        }
+namespace NullObjectLibrary.SmartphoneApplicationExample.Applications;
 
-        public override string Name => "Subway Surfers";
+public class SubwaySurfers : Application
+{
+    public SubwaySurfers(Guid processId)
+        : base(processId)
+    {
     }
+
+    public override string Name => "Subway Surfers";
 }

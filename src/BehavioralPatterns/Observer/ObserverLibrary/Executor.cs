@@ -2,16 +2,15 @@
 using ObserverLibrary.NewspaperExample;
 using ObserverLibrary.StockExample;
 
-namespace ObserverLibrary
-{
-    public class Executor : PatternExecutor
-    {
-        public override string Name => "Observer - Behavioral Pattern";
+namespace ObserverLibrary;
 
-        public override void Execute()
-        {
-            NewspaperExecutor.Execute();
-            StockExecutor.Execute();
-        }
+public class Executor : PatternExecutor
+{
+    public override string Name => "Observer - Behavioral Pattern";
+
+    public override void Execute()
+    {
+        NewspaperExecutor.Execute();
+        StockExecutor.Execute();
     }
 }

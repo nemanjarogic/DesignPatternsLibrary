@@ -2,18 +2,17 @@
 using ChainOfResponsibilityLibrary.PokerExample.Models;
 using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 
-namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers
-{
-    public class RoyalFlushCategorizer : HandCatagorizer
-    {
-        public override HandRanking Catagorize(Hand hand)
-        {
-            if (HasFlush(hand) && HasStraight(hand) && hand.HighCard.Value == Value.Ace)
-            {
-                return HandRanking.RoyalFlush;
-            }
+namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers;
 
-            return Next.Catagorize(hand);
+public class RoyalFlushCategorizer : HandCatagorizer
+{
+    public override HandRanking Catagorize(Hand hand)
+    {
+        if (HasFlush(hand) && HasStraight(hand) && hand.HighCard.Value == Value.Ace)
+        {
+            return HandRanking.RoyalFlush;
         }
+
+        return Next.Catagorize(hand);
     }
 }

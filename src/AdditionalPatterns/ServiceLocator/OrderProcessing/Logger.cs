@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace OrderProcessing
+namespace OrderProcessing;
+
+public class Logger
 {
-    public class Logger
+    public void Log(string message)
     {
-        public void Log(string message)
-        {
-            Console.WriteLine($"Logger: {message}");
-        }
+        Console.WriteLine($"Logger: {message}");
     }
 }

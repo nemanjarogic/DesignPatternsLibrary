@@ -1,17 +1,16 @@
 ﻿using BuildingBlocks;
 
-namespace AdapterLibrary.MovieBroadcasterExample
+namespace AdapterLibrary.MovieBroadcasterExample;
+
+public static class MovieBroadcasterExecutor
 {
-    public static class MovieBroadcasterExecutor
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            ConsoleExtension.WriteSeparator("Movie broadcaster example");
+        ConsoleExtension.WriteSeparator("Movie broadcaster example");
 
-            MovieRegistry registry = new MovieRegistry();
-            IBroadcaster adapter = new BroadcastAdapter(registry);
+        MovieRegistry registry = new MovieRegistry();
+        IBroadcaster adapter = new BroadcastAdapter(registry);
 
-            adapter.BroadcastToExternalPartners();
-        }
+        adapter.BroadcastToExternalPartners();
     }
 }

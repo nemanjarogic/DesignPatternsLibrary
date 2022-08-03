@@ -1,34 +1,33 @@
 ﻿using System.Collections.Generic;
 using StrategyLibrary.SortingExample.Strategies.Common;
 
-namespace StrategyLibrary.SortingExample
+namespace StrategyLibrary.SortingExample;
+
+public class SortablePersons
 {
-    public class SortablePersons
+    private readonly List<Person> _persons;
+
+    public SortablePersons(ISortStrategy sortStrategy)
     {
-        private readonly List<Person> _persons;
+        SortStrategy = sortStrategy;
+        _persons = new List<Person>();
+    }
 
-        public SortablePersons(ISortStrategy sortStrategy)
-        {
-            SortStrategy = sortStrategy;
-            _persons = new List<Person>();
-        }
+    public ISortStrategy SortStrategy { get; set; }
 
-        public ISortStrategy SortStrategy { get; set; }
+    public void Add(Person person)
+    {
+        _persons.Add(person);
+    }
 
-        public void Add(Person person)
-        {
-            _persons.Add(person);
-        }
+    public void Clear()
+    {
+        _persons.Clear();
+    }
 
-        public void Clear()
-        {
-            _persons.Clear();
-        }
-
-        public List<Person> Sort()
-        {
-            List<Person> sortedPersons = SortStrategy.Sort(_persons);
-            return sortedPersons;
-        }
+    public List<Person> Sort()
+    {
+        List<Person> sortedPersons = SortStrategy.Sort(_persons);
+        return sortedPersons;
     }
 }

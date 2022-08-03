@@ -1,15 +1,14 @@
-﻿namespace ChainOfResponsibilityLibrary.PurchaseApprovalExample.Common
+﻿namespace ChainOfResponsibilityLibrary.PurchaseApprovalExample.Common;
+
+public abstract class Approver
 {
-    public abstract class Approver
+    protected Approver Next { get; private set; }
+
+    public Approver RegisterNext(Approver next)
     {
-        protected Approver Next { get; private set; }
-
-        public Approver RegisterNext(Approver next)
-        {
-            Next = next;
-            return Next;
-        }
-
-        public abstract void Approve(Purchase purchase);
+        Next = next;
+        return Next;
     }
+
+    public abstract void Approve(Purchase purchase);
 }

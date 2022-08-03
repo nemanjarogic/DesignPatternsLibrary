@@ -1,10 +1,9 @@
-﻿namespace CustomSandwichBuilder.Products.Enums
+﻿namespace CustomSandwichBuilder.Products.Enums;
+
+public enum BreadType
 {
-    public enum BreadType
-    {
-        White,
-        Wheat,
-        WholeGrain,
-        Rye,
-    }
+    White,
+    Wheat,
+    WholeGrain,
+    Rye,
 }

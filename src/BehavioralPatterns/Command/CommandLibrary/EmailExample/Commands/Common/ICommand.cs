@@ -1,7 +1,6 @@
-﻿namespace CommandLibrary.EmailExample.Commands.Common
+﻿namespace CommandLibrary.EmailExample.Commands.Common;
+
+public interface ICommand
 {
-    public interface ICommand
-    {
-        void Execute();
-    }
+    void Execute();
 }

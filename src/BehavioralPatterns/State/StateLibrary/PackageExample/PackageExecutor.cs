@@ -1,24 +1,23 @@
 ﻿using BuildingBlocks;
 
-namespace StateLibrary.PackageExample
+namespace StateLibrary.PackageExample;
+
+public static class PackageExecutor
 {
-    public static class PackageExecutor
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            ConsoleExtension.WriteSeparator("Package example");
+        ConsoleExtension.WriteSeparator("Package example");
 
-            Package package = new Package();
-            package.PrintStatus();
+        Package package = new Package();
+        package.PrintStatus();
 
-            package.Proceed();
-            package.PrintStatus();
+        package.Proceed();
+        package.PrintStatus();
 
-            package.Proceed();
-            package.PrintStatus();
+        package.Proceed();
+        package.PrintStatus();
 
-            package.Proceed();
-            package.PrintStatus();
-        }
+        package.Proceed();
+        package.PrintStatus();
     }
 }

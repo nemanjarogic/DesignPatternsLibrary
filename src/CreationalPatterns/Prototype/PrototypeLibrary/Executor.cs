@@ -5,19 +5,18 @@ using PrototypeLibrary.DeepCloneExample;
 using PrototypeLibrary.LogicPuzzleExample;
 using PrototypeLibrary.WebPageScraperExample;
 
-namespace PrototypeLibrary
-{
-    public class Executor : PatternExecutor
-    {
-        public override string Name => "Prototype - Creational Pattern";
+namespace PrototypeLibrary;
 
-        public override void Execute()
-        {
-            ColorRegistryExecutor.Execute();
-            ComplexUnstableObjectExecutor.Execute();
-            DeepCloneExecutor.Execute();
-            LogicPuzzleExecutor.Execute();
-            WebPageScraperExecutor.Execute();
-        }
+public class Executor : PatternExecutor
+{
+    public override string Name => "Prototype - Creational Pattern";
+
+    public override void Execute()
+    {
+        ColorRegistryExecutor.Execute();
+        ComplexUnstableObjectExecutor.Execute();
+        DeepCloneExecutor.Execute();
+        LogicPuzzleExecutor.Execute();
+        WebPageScraperExecutor.Execute();
     }
 }

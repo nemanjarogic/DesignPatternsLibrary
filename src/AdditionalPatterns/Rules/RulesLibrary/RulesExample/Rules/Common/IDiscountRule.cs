@@ -1,9 +1,8 @@
 ﻿using RulesLibrary.Common;
 
-namespace RulesLibrary.RulesExample.Rules.Common
+namespace RulesLibrary.RulesExample.Rules.Common;
+
+public interface IDiscountRule
 {
-    public interface IDiscountRule
-    {
-        decimal CalculateDiscount(Customer customer);
-    }
+    decimal CalculateDiscount(Customer customer);
 }

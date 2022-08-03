@@ -3,17 +3,16 @@ using ObserverLibrary.StockExample;
 using StateLibrary.PackageExample;
 using StateLibrary.SteakCookingExample;
 
-namespace StateLibrary
-{
-    public class Executor : PatternExecutor
-    {
-        public override string Name => "State - Behavioral Pattern";
+namespace StateLibrary;
 
-        public override void Execute()
-        {
-            ConceptualExecutor.Execute();
-            PackageExecutor.Execute();
-            SteakCookingExecutor.Execute();
-        }
+public class Executor : PatternExecutor
+{
+    public override string Name => "State - Behavioral Pattern";
+
+    public override void Execute()
+    {
+        ConceptualExecutor.Execute();
+        PackageExecutor.Execute();
+        SteakCookingExecutor.Execute();
     }
 }

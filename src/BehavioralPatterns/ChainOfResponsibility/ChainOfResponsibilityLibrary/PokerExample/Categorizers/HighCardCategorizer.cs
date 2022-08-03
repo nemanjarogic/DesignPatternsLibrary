@@ -2,13 +2,12 @@
 using ChainOfResponsibilityLibrary.PokerExample.Models;
 using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 
-namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers
+namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers;
+
+public class HighCardCategorizer : HandCatagorizer
 {
-    public class HighCardCategorizer : HandCatagorizer
+    public override HandRanking Catagorize(Hand hand)
     {
-        public override HandRanking Catagorize(Hand hand)
-        {
-            return HandRanking.HighCard;
-        }
+        return HandRanking.HighCard;
     }
 }

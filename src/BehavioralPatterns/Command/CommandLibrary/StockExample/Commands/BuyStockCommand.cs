@@ -1,19 +1,18 @@
 ﻿using CommandLibrary.StockExample.Commands.Common;
 
-namespace CommandLibrary.StockExample.Commands
+namespace CommandLibrary.StockExample.Commands;
+
+public class BuyStockCommand : IOrderCommand
 {
-    public class BuyStockCommand : IOrderCommand
+    private readonly Stock _stock;
+
+    public BuyStockCommand(Stock stock)
     {
-        private readonly Stock _stock;
+        _stock = stock;
+    }
 
-        public BuyStockCommand(Stock stock)
-        {
-            _stock = stock;
-        }
-
-        public void Execute()
-        {
-            _stock.Buy();
-        }
+    public void Execute()
+    {
+        _stock.Buy();
     }
 }

@@ -1,31 +1,30 @@
 ﻿using System;
 
-namespace LazyLoadLibrary.LazyInitializationExample
+namespace LazyLoadLibrary.LazyInitializationExample;
+
+public class LazyCollege
 {
-    public class LazyCollege
+    private Library _library;
+
+    public Library Library
     {
-        private Library _library;
-
-        public Library Library
+        get
         {
-            get
+            if (_library == null)
             {
-                if (_library == null)
-                {
-                    // This works, but it's not thread-safe.
-                    _library = new Library();
-                }
-
-                return _library;
+                // This works, but it's not thread-safe.
+                _library = new Library();
             }
-        }
 
-        public void ShowDetails()
-        {
-            // We must access library via property.
-            Console.WriteLine(
-                $"College library with {Library.NumberOfBooks} books " +
-                $"was established on {Library.EstablishmentDate.ToShortDateString()}.");
+            return _library;
         }
+    }
+
+    public void ShowDetails()
+    {
+        // We must access library via property.
+        Console.WriteLine(
+            $"College library with {Library.NumberOfBooks} books " +
+            $"was established on {Library.EstablishmentDate.ToShortDateString()}.");
     }
 }

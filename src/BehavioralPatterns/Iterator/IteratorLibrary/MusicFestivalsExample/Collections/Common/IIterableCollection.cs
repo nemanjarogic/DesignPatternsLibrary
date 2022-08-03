@@ -1,9 +1,8 @@
 ﻿using IteratorLibrary.MusicFestivalsExample.Iterators.Common;
 
-namespace IteratorLibrary.MusicFestivalsExample.Collections.Common
+namespace IteratorLibrary.MusicFestivalsExample.Collections.Common;
+
+public interface IIterableCollection
 {
-    public interface IIterableCollection
-    {
-        IIterator CreateIterator();
-    }
+    IIterator CreateIterator();
 }

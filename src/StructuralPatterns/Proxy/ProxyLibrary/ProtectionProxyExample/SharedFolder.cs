@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace ProxyLibrary.ProtectionProxyExample
+namespace ProxyLibrary.ProtectionProxyExample;
+
+public class SharedFolder : ISharedFolder
 {
-    public class SharedFolder : ISharedFolder
+    public void Access()
     {
-        public void Access()
-        {
-            Console.WriteLine("Accessing to the shared folder...");
-        }
+        Console.WriteLine("Accessing to the shared folder...");
     }
 }

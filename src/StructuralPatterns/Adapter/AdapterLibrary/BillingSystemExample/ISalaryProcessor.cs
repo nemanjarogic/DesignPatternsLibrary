@@ -1,10 +1,9 @@
-﻿namespace AdapterLibrary.BillingSystemExample
+﻿namespace AdapterLibrary.BillingSystemExample;
+
+/// <summary>
+/// The Client Interface describes a protocol that other classes must follow to be able to collaborate with the client code.
+/// </summary>
+public interface ISalaryProcessor
 {
-    /// <summary>
-    /// The Client Interface describes a protocol that other classes must follow to be able to collaborate with the client code.
-    /// </summary>
-    public interface ISalaryProcessor
-    {
-        void ProcessSalaries(string[,] employees);
-    }
+    void ProcessSalaries(string[,] employees);
 }

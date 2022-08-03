@@ -1,25 +1,24 @@
 ﻿using System.Collections.Generic;
 using CommandLibrary.StockExample.Commands.Common;
 
-namespace CommandLibrary.StockExample
+namespace CommandLibrary.StockExample;
+
+public class Broker
 {
-    public class Broker
+    private readonly List<IOrderCommand> _orders = new List<IOrderCommand>();
+
+    public void TakeOrder(IOrderCommand order)
     {
-        private readonly List<IOrderCommand> _orders = new List<IOrderCommand>();
+        _orders.Add(order);
+    }
 
-        public void TakeOrder(IOrderCommand order)
+    public void ProcessOrders()
+    {
+        foreach (var order in _orders)
         {
-            _orders.Add(order);
+            order.Execute();
         }
 
-        public void ProcessOrders()
-        {
-            foreach (var order in _orders)
-            {
-                order.Execute();
-            }
-
-            _orders.Clear();
-        }
+        _orders.Clear();
     }
 }

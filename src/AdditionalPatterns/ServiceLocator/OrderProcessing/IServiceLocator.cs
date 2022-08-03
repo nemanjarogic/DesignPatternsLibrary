@@ -1,13 +1,12 @@
-﻿namespace OrderProcessing
+﻿namespace OrderProcessing;
+
+public interface IServiceLocator
 {
-    public interface IServiceLocator
-    {
-        void AddService<T>(T service);
+    void AddService<T>(T service);
 
-        void AddService<T>(string serviceName, T service);
+    void AddService<T>(string serviceName, T service);
 
-        T GetService<T>();
+    T GetService<T>();
 
-        object GetService<T>(string serviceName);
-    }
+    object GetService<T>(string serviceName);
 }

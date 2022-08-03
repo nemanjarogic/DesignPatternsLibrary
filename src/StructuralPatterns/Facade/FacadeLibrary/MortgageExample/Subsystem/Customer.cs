@@ -1,7 +1,6 @@
-﻿namespace FacadeLibrary.MortgageExample.Subsystem
+﻿namespace FacadeLibrary.MortgageExample.Subsystem;
+
+public class Customer
 {
-    public class Customer
-    {
-        public string Name { get; set; }
-    }
+    public string Name { get; set; }
 }

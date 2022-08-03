@@ -1,9 +1,8 @@
-﻿namespace BridgeLibrary.MovieLicenseExample.Models.Enums
+﻿namespace BridgeLibrary.MovieLicenseExample.Models.Enums;
+
+public enum Discount
 {
-    public enum Discount
-    {
-        None,
-        EarlyPayment,
-        Senior,
-    }
+    None,
+    EarlyPayment,
+    Senior,
 }

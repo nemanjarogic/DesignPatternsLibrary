@@ -1,25 +1,24 @@
 ﻿using BuildingBlocks;
 using CommandLibrary.EmailExample.Commands;
 
-namespace CommandLibrary.EmailExample
+namespace CommandLibrary.EmailExample;
+
+public static class EmailExecutor
 {
-    public static class EmailExecutor
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            ConsoleExtension.WriteSeparator("Email example");
+        ConsoleExtension.WriteSeparator("Email example");
 
-            var email = new Email();
+        var email = new Email();
 
-            var readCommand = new ReadCommand(email);
-            var forwardCommand = new ForwardCommand(email);
-            var deleteCommand = new DeleteCommand(email);
+        var readCommand = new ReadCommand(email);
+        var forwardCommand = new ForwardCommand(email);
+        var deleteCommand = new DeleteCommand(email);
 
-            var toolbar = new Toolbar(readCommand, forwardCommand, deleteCommand);
+        var toolbar = new Toolbar(readCommand, forwardCommand, deleteCommand);
 
-            toolbar.ReadEmail();
-            toolbar.ForwardEmail();
-            toolbar.DeleteEmail();
-        }
+        toolbar.ReadEmail();
+        toolbar.ForwardEmail();
+        toolbar.DeleteEmail();
     }
 }

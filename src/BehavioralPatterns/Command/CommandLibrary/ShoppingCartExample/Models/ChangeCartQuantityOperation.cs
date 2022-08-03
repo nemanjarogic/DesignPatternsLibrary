@@ -1,8 +1,7 @@
-﻿namespace CommandLibrary.ShoppingCartExample.Models
+﻿namespace CommandLibrary.ShoppingCartExample.Models;
+
+public enum ChangeCartQuantityOperation
 {
-    public enum ChangeCartQuantityOperation
-    {
-        Increase,
-        Decrease,
-    }
+    Increase,
+    Decrease,
 }

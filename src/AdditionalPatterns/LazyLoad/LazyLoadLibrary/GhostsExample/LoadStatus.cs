@@ -1,9 +1,8 @@
-﻿namespace LazyLoadLibrary.GhostsExample
+﻿namespace LazyLoadLibrary.GhostsExample;
+
+public enum LoadStatus
 {
-    public enum LoadStatus
-    {
-        Unloaded,
-        Loading,
-        Loaded,
-    }
+    Unloaded,
+    Loading,
+    Loaded,
 }

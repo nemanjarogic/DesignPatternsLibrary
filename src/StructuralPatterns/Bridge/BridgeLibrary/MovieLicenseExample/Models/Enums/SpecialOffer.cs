@@ -1,9 +1,8 @@
-﻿namespace BridgeLibrary.MovieLicenseExample.Models.Enums
+﻿namespace BridgeLibrary.MovieLicenseExample.Models.Enums;
+
+public enum SpecialOffer
 {
-    public enum SpecialOffer
-    {
-        None,
-        OneDayExtension,
-        SevenDaysExtension,
-    }
+    None,
+    OneDayExtension,
+    SevenDaysExtension,
 }

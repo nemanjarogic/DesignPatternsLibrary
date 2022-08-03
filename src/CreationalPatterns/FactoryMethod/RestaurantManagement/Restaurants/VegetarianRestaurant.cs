@@ -2,16 +2,15 @@
 using RestaurantManagement.Meals.Common;
 using RestaurantManagement.Restaurants.Common;
 
-namespace RestaurantManagement.Restaurants
+namespace RestaurantManagement.Restaurants;
+
+/// <summary>
+/// Concrete creators override the base factory method so it returns a different type of product.
+/// </summary>
+public class VegetarianRestaurant : Restaurant
 {
-    /// <summary>
-    /// Concrete creators override the base factory method so it returns a different type of product.
-    /// </summary>
-    public class VegetarianRestaurant : Restaurant
+    public override IMeal PrepareMainCourse()
     {
-        public override IMeal PrepareMainCourse()
-        {
-            return new GreenSalad();
-        }
+        return new GreenSalad();
     }
 }

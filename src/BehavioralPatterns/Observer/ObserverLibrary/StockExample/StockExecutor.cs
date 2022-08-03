@@ -3,16 +3,15 @@ using ObserverLibrary.StockExample.Examples.IObserver;
 using ObserverLibrary.StockExample.Examples.Motivating;
 using ObserverLibrary.StockExample.Examples.Traditional;
 
-namespace ObserverLibrary.StockExample
+namespace ObserverLibrary.StockExample;
+
+public static class StockExecutor
 {
-    public static class StockExecutor
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            MotivatingExecutor.Execute();
-            TraditionalExecutor.Execute();
-            EventAndDelegateExecutor.Execute();
-            ObserverExecutor.Execute();
-        }
+        MotivatingExecutor.Execute();
+        TraditionalExecutor.Execute();
+        EventAndDelegateExecutor.Execute();
+        ObserverExecutor.Execute();
     }
 }

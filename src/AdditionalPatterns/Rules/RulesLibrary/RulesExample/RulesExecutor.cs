@@ -2,25 +2,24 @@
 using BuildingBlocks;
 using RulesLibrary.Common;
 
-namespace RulesLibrary.RulesExample
+namespace RulesLibrary.RulesExample;
+
+public static class RulesExecutor
 {
-    public static class RulesExecutor
+    public static void Execute()
     {
-        public static void Execute()
+        ConsoleExtension.WriteSeparator("Rules example");
+
+        var customer = new Customer()
         {
-            ConsoleExtension.WriteSeparator("Rules example");
+            DateOfBirth = DateTime.Now.AddYears(-70),
+            DateOfFirstPurchase = DateTime.Today.AddYears(-6),
+            IsVeteran = false,
+        };
 
-            var customer = new Customer()
-            {
-                DateOfBirth = DateTime.Now.AddYears(-70),
-                DateOfFirstPurchase = DateTime.Today.AddYears(-6),
-                IsVeteran = false,
-            };
+        var discountCalculator = new DiscountCalculator();
+        var discountPercentage = discountCalculator.Calculate(customer);
 
-            var discountCalculator = new DiscountCalculator();
-            var discountPercentage = discountCalculator.Calculate(customer);
-
-            Console.WriteLine($"Customer can get a {discountPercentage:P2} discount on any product.");
-        }
+        Console.WriteLine($"Customer can get a {discountPercentage:P2} discount on any product.");
     }
 }

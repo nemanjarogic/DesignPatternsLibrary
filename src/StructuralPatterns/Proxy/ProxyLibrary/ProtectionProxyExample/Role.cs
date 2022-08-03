@@ -1,9 +1,8 @@
-﻿namespace ProxyLibrary.ProtectionProxyExample
+﻿namespace ProxyLibrary.ProtectionProxyExample;
+
+public enum Role
 {
-    public enum Role
-    {
-        Worker,
-        Manager,
-        CEO,
-    }
+    Worker,
+    Manager,
+    CEO,
 }

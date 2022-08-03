@@ -3,39 +3,38 @@ using System.Collections.Generic;
 using MediatorLibrary.GroupChatExample.Components.Common;
 using MediatorLibrary.GroupChatExample.Mediators.Common;
 
-namespace MediatorLibrary.GroupChatExample.Mediators
+namespace MediatorLibrary.GroupChatExample.Mediators;
+
+public class ViberGroupChatMediator : IGroupChatMediator
 {
-    public class ViberGroupChatMediator : IGroupChatMediator
+    private readonly List<User> _chatParticipants = new List<User>();
+
+    public ViberGroupChatMediator(params User[] users)
     {
-        private readonly List<User> _chatParticipants = new List<User>();
-
-        public ViberGroupChatMediator(params User[] users)
+        foreach (var user in users)
         {
-            foreach (var user in users)
-            {
-                AddParticipant(user);
-            }
-
-            Console.WriteLine();
+            AddParticipant(user);
         }
 
-        public void AddParticipant(User user)
-        {
-            Console.WriteLine($"{user.Name} is a new chat participant.");
+        Console.WriteLine();
+    }
 
-            _chatParticipants.Add(user);
-            user.SetMediator(this);
-        }
+    public void AddParticipant(User user)
+    {
+        Console.WriteLine($"{user.Name} is a new chat participant.");
 
-        public void SendMessage(string message, User sender)
+        _chatParticipants.Add(user);
+        user.SetMediator(this);
+    }
+
+    public void SendMessage(string message, User sender)
+    {
+        foreach (var user in _chatParticipants)
         {
-            foreach (var user in _chatParticipants)
+            // Message should not be received by the user sending it
+            if (user != sender)
             {
-                // Message should not be received by the user sending it
-                if (user != sender)
-                {
-                    user.Receive(message);
-                }
+                user.Receive(message);
             }
         }
     }

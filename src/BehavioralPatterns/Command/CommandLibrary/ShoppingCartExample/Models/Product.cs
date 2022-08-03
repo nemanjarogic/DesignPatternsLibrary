@@ -1,18 +1,17 @@
-﻿namespace CommandLibrary.ShoppingCartExample.Models
+﻿namespace CommandLibrary.ShoppingCartExample.Models;
+
+public class Product
 {
-    public class Product
+    public Product(string productId, string name, decimal price)
     {
-        public Product(string productId, string name, decimal price)
-        {
-            ProductId = productId;
-            Name = name;
-            Price = price;
-        }
-
-        public string ProductId { get; set; }
-
-        public string Name { get; set; }
-
-        public decimal Price { get; set; }
+        ProductId = productId;
+        Name = name;
+        Price = price;
     }
+
+    public string ProductId { get; set; }
+
+    public string Name { get; set; }
+
+    public decimal Price { get; set; }
 }

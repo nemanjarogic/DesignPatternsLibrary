@@ -1,7 +1,6 @@
-﻿namespace RestaurantAbstractFactory.Meals.Common
+﻿namespace RestaurantAbstractFactory.Meals.Common;
+
+public interface IMeal
 {
-    public interface IMeal
-    {
-        void ShowDescription();
-    }
+    void ShowDescription();
 }

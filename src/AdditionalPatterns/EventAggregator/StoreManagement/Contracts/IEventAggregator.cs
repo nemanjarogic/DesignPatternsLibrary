@@ -1,14 +1,13 @@
 ﻿using System;
 
-namespace EventAggregatorLibrary.Contracts
+namespace EventAggregatorLibrary.Contracts;
+
+public interface IEventAggregator : IObservable<IEvent>
 {
-    public interface IEventAggregator : IObservable<IEvent>
-    {
-        void Publish(IEvent message);
+    void Publish(IEvent message);
 
-        IDisposable Subscribe(ICustomObserver<IEvent> observer);
+    IDisposable Subscribe(ICustomObserver<IEvent> observer);
 
-        IDisposable Subscribe<T>(ICustomObserver<T> observer)
-            where T : IEvent;
-    }
+    IDisposable Subscribe<T>(ICustomObserver<T> observer)
+        where T : IEvent;
 }

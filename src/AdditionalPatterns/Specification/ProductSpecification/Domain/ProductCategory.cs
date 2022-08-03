@@ -1,12 +1,11 @@
-﻿namespace ProductSpecification.Domain
+﻿namespace ProductSpecification.Domain;
+
+public enum ProductCategory
 {
-    public enum ProductCategory
-    {
-        Books,
-        Electronics,
-        HomeAndKitchen,
-        Handmade,
-        SportsAndOutdoors,
-        ToysAndGames,
-    }
+    Books,
+    Electronics,
+    HomeAndKitchen,
+    Handmade,
+    SportsAndOutdoors,
+    ToysAndGames,
 }

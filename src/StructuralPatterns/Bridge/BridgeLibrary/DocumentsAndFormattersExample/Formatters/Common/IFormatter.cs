@@ -1,7 +1,6 @@
-﻿namespace BridgeLibrary.DocumentsAndFormattersExample.Formatters.Common
+﻿namespace BridgeLibrary.DocumentsAndFormattersExample.Formatters.Common;
+
+public interface IFormatter
 {
-    public interface IFormatter
-    {
-        string Format(string key, string value);
-    }
+    string Format(string key, string value);
 }

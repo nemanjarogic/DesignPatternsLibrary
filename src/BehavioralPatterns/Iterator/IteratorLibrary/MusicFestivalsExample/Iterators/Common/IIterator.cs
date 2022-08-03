@@ -1,15 +1,14 @@
-﻿namespace IteratorLibrary.MusicFestivalsExample.Iterators.Common
+﻿namespace IteratorLibrary.MusicFestivalsExample.Iterators.Common;
+
+public interface IIterator
 {
-    public interface IIterator
-    {
-        int Step { get; set; }
+    int Step { get; set; }
 
-        MusicFestival First();
+    MusicFestival First();
 
-        MusicFestival Current();
+    MusicFestival Current();
 
-        bool MoveNext();
+    bool MoveNext();
 
-        void Reset();
-    }
+    void Reset();
 }

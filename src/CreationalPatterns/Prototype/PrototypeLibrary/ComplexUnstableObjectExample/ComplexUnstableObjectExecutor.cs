@@ -1,18 +1,17 @@
 ﻿using BuildingBlocks;
 
-namespace PrototypeLibrary.ComplexUnstableObjectExample
+namespace PrototypeLibrary.ComplexUnstableObjectExample;
+
+public static class ComplexUnstableObjectExecutor
 {
-    public static class ComplexUnstableObjectExecutor
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            ConsoleExtension.WriteSeparator("Complex unstable object example");
+        ConsoleExtension.WriteSeparator("Complex unstable object example");
 
-            var complicatedObject = new ComplexUnstableObject("a", 'c', "e");
+        var complicatedObject = new ComplexUnstableObject("a", 'c', "e");
 
-            // Clients from different assembly can't call constructor
-            // because it's internal,but they can call Clone.
-            var complicatedObject2 = complicatedObject.Clone();
-        }
+        // Clients from different assembly can't call constructor
+        // because it's internal,but they can call Clone.
+        var complicatedObject2 = complicatedObject.Clone();
     }
 }

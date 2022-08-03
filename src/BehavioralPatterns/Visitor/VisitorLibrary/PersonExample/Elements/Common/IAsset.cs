@@ -1,9 +1,8 @@
 ﻿using VisitorLibrary.PersonExample.Visitors.Common;
 
-namespace VisitorLibrary.PersonExample.Elements.Common
+namespace VisitorLibrary.PersonExample.Elements.Common;
+
+public interface IAsset
 {
-    public interface IAsset
-    {
-        void Accept(IVisitor visitor);
-    }
+    void Accept(IVisitor visitor);
 }

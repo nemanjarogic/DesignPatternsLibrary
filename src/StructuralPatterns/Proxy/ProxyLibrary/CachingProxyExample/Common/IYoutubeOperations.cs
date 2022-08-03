@@ -1,16 +1,15 @@
 ﻿using System.Collections.Generic;
 
-namespace ProxyLibrary.CachingProxyExample.Common
+namespace ProxyLibrary.CachingProxyExample.Common;
+
+/// <summary>
+/// The interface of a remote service.
+/// </summary>
+public interface IYoutubeOperations
 {
-    /// <summary>
-    /// The interface of a remote service.
-    /// </summary>
-    public interface IYoutubeOperations
-    {
-        VideoMetadata GetVideoMetadata(int id);
+    VideoMetadata GetVideoMetadata(int id);
 
-        Video DownloadVideo(int id);
+    Video DownloadVideo(int id);
 
-        IEnumerable<VideoMetadata> ShowHomepage();
-    }
+    IEnumerable<VideoMetadata> ShowHomepage();
 }

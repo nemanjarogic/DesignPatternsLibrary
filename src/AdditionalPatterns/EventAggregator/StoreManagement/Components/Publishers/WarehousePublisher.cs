@@ -1,20 +1,19 @@
 ﻿using EventAggregatorLibrary.Contracts;
 using EventAggregatorLibrary.Events;
 
-namespace EventAggregatorLibrary.Components.Publishers
+namespace EventAggregatorLibrary.Components.Publishers;
+
+public class WarehousePublisher : IPublisher
 {
-    public class WarehousePublisher : IPublisher
+    private readonly IEventAggregator _eventAggregator;
+
+    public WarehousePublisher(IEventAggregator eventAggregator)
     {
-        private readonly IEventAggregator _eventAggregator;
+        _eventAggregator = eventAggregator;
+    }
 
-        public WarehousePublisher(IEventAggregator eventAggregator)
-        {
-            _eventAggregator = eventAggregator;
-        }
-
-        public void Publish(string payload)
-        {
-            _eventAggregator.Publish(new WarehouseReceivedNewSuppliesEvent(payload));
-        }
+    public void Publish(string payload)
+    {
+        _eventAggregator.Publish(new WarehouseReceivedNewSuppliesEvent(payload));
     }
 }

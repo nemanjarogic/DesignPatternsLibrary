@@ -1,7 +1,6 @@
-﻿namespace EventAggregatorLibrary.Contracts
+﻿namespace EventAggregatorLibrary.Contracts;
+
+public interface IPublisher
 {
-    public interface IPublisher
-    {
-        void Publish(string payload);
-    }
+    void Publish(string payload);
 }

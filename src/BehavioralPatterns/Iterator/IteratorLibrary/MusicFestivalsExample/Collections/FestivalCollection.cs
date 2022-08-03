@@ -3,30 +3,29 @@ using IteratorLibrary.MusicFestivalsExample.Collections.Common;
 using IteratorLibrary.MusicFestivalsExample.Iterators;
 using IteratorLibrary.MusicFestivalsExample.Iterators.Common;
 
-namespace IteratorLibrary.MusicFestivalsExample.Collections
+namespace IteratorLibrary.MusicFestivalsExample.Collections;
+
+public class FestivalCollection : IIterableCollection
 {
-    public class FestivalCollection : IIterableCollection
+    private readonly List<MusicFestival> _festivals = new List<MusicFestival>();
+
+    public int Count
     {
-        private readonly List<MusicFestival> _festivals = new List<MusicFestival>();
+        get { return _festivals.Count; }
+    }
 
-        public int Count
-        {
-            get { return _festivals.Count; }
-        }
+    public void Add(MusicFestival festival)
+    {
+        _festivals.Add(festival);
+    }
 
-        public void Add(MusicFestival festival)
-        {
-            _festivals.Add(festival);
-        }
+    public MusicFestival Get(int index)
+    {
+        return _festivals[index];
+    }
 
-        public MusicFestival Get(int index)
-        {
-            return _festivals[index];
-        }
-
-        public IIterator CreateIterator()
-        {
-            return new FestivalIterator(this);
-        }
+    public IIterator CreateIterator()
+    {
+        return new FestivalIterator(this);
     }
 }

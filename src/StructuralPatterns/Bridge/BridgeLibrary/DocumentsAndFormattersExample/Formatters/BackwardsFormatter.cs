@@ -2,13 +2,12 @@
 using System.Linq;
 using BridgeLibrary.DocumentsAndFormattersExample.Formatters.Common;
 
-namespace BridgeLibrary.DocumentsAndFormattersExample.Formatters
+namespace BridgeLibrary.DocumentsAndFormattersExample.Formatters;
+
+public class BackwardsFormatter : IFormatter
 {
-    public class BackwardsFormatter : IFormatter
+    public string Format(string key, string value)
     {
-        public string Format(string key, string value)
-        {
-            return string.Format("{0}: {1}", key, new string(value.Reverse().ToArray()));
-        }
+        return string.Format("{0}: {1}", key, new string(value.Reverse().ToArray()));
     }
 }

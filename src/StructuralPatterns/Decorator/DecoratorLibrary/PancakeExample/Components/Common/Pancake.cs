@@ -1,14 +1,13 @@
-﻿namespace DecoratorLibrary.PancakeExample.Components.Common
+﻿namespace DecoratorLibrary.PancakeExample.Components.Common;
+
+public abstract class Pancake
 {
-    public abstract class Pancake
+    public string Description { get; set; }
+
+    public abstract double CalculatePrice();
+
+    public virtual string GetDescriptionAndAddIns()
     {
-        public string Description { get; set; }
-
-        public abstract double CalculatePrice();
-
-        public virtual string GetDescriptionAndAddIns()
-        {
-            return Description;
-        }
+        return Description;
     }
 }

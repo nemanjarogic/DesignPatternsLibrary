@@ -1,7 +1,6 @@
-﻿namespace OrderManagement.Domain
+﻿namespace OrderManagement.Domain;
+
+public abstract class Entity
 {
-    public abstract class Entity
-    {
-        public int Id { get; set; }
-    }
+    public int Id { get; set; }
 }

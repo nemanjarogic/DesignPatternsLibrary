@@ -1,20 +1,19 @@
 ﻿using CompositeLibrary.FileSystemExample.Common;
 
-namespace CompositeLibrary.FileSystemExample
+namespace CompositeLibrary.FileSystemExample;
+
+public class File : FileSystemEntry
 {
-    public class File : FileSystemEntry
+    public File(string name, double size)
+        : base(name)
     {
-        public File(string name, double size)
-            : base(name)
-        {
-            Size = size;
-        }
+        Size = size;
+    }
 
-        public double Size { get; }
+    public double Size { get; }
 
-        public override double GetSizeInMB()
-        {
-            return Size;
-        }
+    public override double GetSizeInMB()
+    {
+        return Size;
     }
 }

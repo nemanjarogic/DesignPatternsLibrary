@@ -1,9 +1,8 @@
-﻿namespace BridgeLibrary.MovieLicenseExample.Models.Enums
+﻿namespace BridgeLibrary.MovieLicenseExample.Models.Enums;
+
+public enum LicenceType
 {
-    public enum LicenceType
-    {
-        OneDay,
-        SevenDays,
-        LifeLong,
-    }
+    OneDay,
+    SevenDays,
+    LifeLong,
 }

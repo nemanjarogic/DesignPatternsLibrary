@@ -1,9 +1,8 @@
-﻿namespace PrototypeLibrary.DeepCloneExample.Models
+﻿namespace PrototypeLibrary.DeepCloneExample.Models;
+
+public class OperatingSystem
 {
-    public class OperatingSystem
-    {
-        public string Name { get; set; }
-        public string Version { get; set; }
-        public string Description { get; set; }
-    }
+    public string Name { get; set; }
+    public string Version { get; set; }
+    public string Description { get; set; }
 }

@@ -1,7 +1,6 @@
-﻿namespace ObserverLibrary.StockExample.Examples.Traditional.Subscribers.Common
+﻿namespace ObserverLibrary.StockExample.Examples.Traditional.Subscribers.Common;
+
+public abstract class Subscriber
 {
-    public abstract class Subscriber
-    {
-        public abstract void Update();
-    }
+    public abstract void Update();
 }

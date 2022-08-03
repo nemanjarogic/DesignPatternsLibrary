@@ -1,20 +1,19 @@
 ﻿using System;
 using BuildingBlocks;
 
-namespace LazyLoadLibrary.VirtualProxyExample
+namespace LazyLoadLibrary.VirtualProxyExample;
+
+public static class VirtualProxyExecutor
 {
-    public static class VirtualProxyExecutor
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            ConsoleExtension.WriteSeparator("Virtual proxy example");
+        ConsoleExtension.WriteSeparator("Virtual proxy example");
 
-            var collegeFactory = new CollegeFactory();
-            var college = collegeFactory.CreateFromId(1);
+        var collegeFactory = new CollegeFactory();
+        var college = collegeFactory.CreateFromId(1);
 
-            // College library shouldn't have been constructed before calling ShowDetails method.
-            Console.WriteLine("Give me more details about the college!");
-            college.ShowDetails();
-        }
+        // College library shouldn't have been constructed before calling ShowDetails method.
+        Console.WriteLine("Give me more details about the college!");
+        college.ShowDetails();
     }
 }

@@ -1,92 +1,91 @@
 ﻿using System;
 
-namespace LazyLoadLibrary.GhostsExample
+namespace LazyLoadLibrary.GhostsExample;
+
+/// <summary>
+/// A ghost is an object that is to be loaded in a partial state.
+/// It may only contain the object's identifier, but it loads its own data
+/// the first time one of its properties is accessed.
+/// It is a fake object that looks exactly like an object that you want to interact with,
+/// but is just an empty instance that gets all properties populated as soon as they are needed.
+/// Beware of ripple loading when using lazy load.
+/// </summary>
+public class GhostCollege : DomainObject
 {
-    /// <summary>
-    /// A ghost is an object that is to be loaded in a partial state.
-    /// It may only contain the object's identifier, but it loads its own data
-    /// the first time one of its properties is accessed.
-    /// It is a fake object that looks exactly like an object that you want to interact with,
-    /// but is just an empty instance that gets all properties populated as soon as they are needed.
-    /// Beware of ripple loading when using lazy load.
-    /// </summary>
-    public class GhostCollege : DomainObject
+    private string _missionStatement;
+    private int _numberOfStudents;
+    private Library _library;
+
+    public GhostCollege(int id)
+        : base(id)
     {
-        private string _missionStatement;
-        private int _numberOfStudents;
-        private Library _library;
+        Id = id;
+        Console.WriteLine("College initialization completed.");
+    }
 
-        public GhostCollege(int id)
-            : base(id)
+    public string MissionStatement
+    {
+        get
         {
-            Id = id;
-            Console.WriteLine("College initialization completed.");
+            LoadIfNecessary();
+            return _missionStatement;
         }
-
-        public string MissionStatement
+        set
         {
-            get
-            {
-                LoadIfNecessary();
-                return _missionStatement;
-            }
-            set
-            {
-                _missionStatement = value;
-            }
+            _missionStatement = value;
         }
+    }
 
-        public int NumberOfStudents
+    public int NumberOfStudents
+    {
+        get
         {
-            get
-            {
-                LoadIfNecessary();
-                return _numberOfStudents;
-            }
-            set
-            {
-                _numberOfStudents = value;
-            }
+            LoadIfNecessary();
+            return _numberOfStudents;
         }
-
-        public Library Library
+        set
         {
-            get
-            {
-                LoadIfNecessary();
-                return _library;
-            }
-            set
-            {
-                _library = value;
-            }
+            _numberOfStudents = value;
         }
+    }
 
-        public void ShowDetails()
+    public Library Library
+    {
+        get
         {
-            Console.WriteLine(
-                $"College mission statement is: '{MissionStatement}'.\n" +
-                $"The college owns library with {Library.NumberOfBooks} books that " +
-                $"was established on {Library.EstablishmentDate.ToShortDateString()}.");
+            LoadIfNecessary();
+            return _library;
         }
-
-        protected override object[] FetchData()
+        set
         {
-            return new object[3]
-            {
-                "Learn, Discover, Heal, Create, and Make the World Ever Better",
-                850,
-                new Library(),
-            };
+            _library = value;
         }
+    }
 
-        protected override void ApplyLoadedData(object[] dataRow)
+    public void ShowDetails()
+    {
+        Console.WriteLine(
+            $"College mission statement is: '{MissionStatement}'.\n" +
+            $"The college owns library with {Library.NumberOfBooks} books that " +
+            $"was established on {Library.EstablishmentDate.ToShortDateString()}.");
+    }
+
+    protected override object[] FetchData()
+    {
+        return new object[3]
         {
-            Console.WriteLine("Loading data...");
+            "Learn, Discover, Heal, Create, and Make the World Ever Better",
+            850,
+            new Library(),
+        };
+    }
 
-            _missionStatement = (string)dataRow[0];
-            _numberOfStudents = (int)dataRow[1];
-            _library = (Library)dataRow[2];
-        }
+    protected override void ApplyLoadedData(object[] dataRow)
+    {
+        Console.WriteLine("Loading data...");
+
+        _missionStatement = (string)dataRow[0];
+        _numberOfStudents = (int)dataRow[1];
+        _library = (Library)dataRow[2];
     }
 }

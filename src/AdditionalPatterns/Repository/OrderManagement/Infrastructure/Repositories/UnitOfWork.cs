@@ -1,19 +1,18 @@
 ﻿using OrderManagement.Infrastructure.Repositories.Contracts;
 
-namespace OrderManagement.Infrastructure.Repositories
+namespace OrderManagement.Infrastructure.Repositories;
+
+public class UnitOfWork : IUnitOfWork
 {
-    public class UnitOfWork : IUnitOfWork
+    private readonly OrderManagementContext _context;
+
+    public UnitOfWork(OrderManagementContext context)
     {
-        private readonly OrderManagementContext _context;
+        _context = context;
+    }
 
-        public UnitOfWork(OrderManagementContext context)
-        {
-            _context = context;
-        }
-
-        public void Commit()
-        {
-            _context.SaveChanges();
-        }
+    public void Commit()
+    {
+        _context.SaveChanges();
     }
 }

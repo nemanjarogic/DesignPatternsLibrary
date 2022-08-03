@@ -4,36 +4,35 @@ using EventAggregatorLibrary.Components;
 using EventAggregatorLibrary.Components.Publishers;
 using EventAggregatorLibrary.Components.Subscribers;
 
-namespace EventAggregatorLibrary
+namespace EventAggregatorLibrary;
+
+public class Executor : PatternExecutor
 {
-    public class Executor : PatternExecutor
+    public override string Name => "Event Aggregator - Behavioral Pattern";
+
+    public override void Execute()
     {
-        public override string Name => "Event Aggregator - Behavioral Pattern";
+        var eventAggregator = new EventAggregator();
 
-        public override void Execute()
-        {
-            var eventAggregator = new EventAggregator();
+        var orderPublisher = new OrderPublisher(eventAggregator);
+        var warehousePublisher = new WarehousePublisher(eventAggregator);
 
-            var orderPublisher = new OrderPublisher(eventAggregator);
-            var warehousePublisher = new WarehousePublisher(eventAggregator);
+        var orderSubscriber = new OrderSubscriber(eventAggregator);
+        var businessTrackingSubscriber = new BusinessTrackingSubscriber(eventAggregator);
 
-            var orderSubscriber = new OrderSubscriber(eventAggregator);
-            var businessTrackingSubscriber = new BusinessTrackingSubscriber(eventAggregator);
+        Console.WriteLine("Preparing order 1...");
+        orderPublisher.Publish("Order 1");
 
-            Console.WriteLine("Preparing order 1...");
-            orderPublisher.Publish("Order 1");
+        Console.WriteLine("\nPreparing small delivery...");
+        warehousePublisher.Publish("Small delivery to the warehouse.");
 
-            Console.WriteLine("\nPreparing small delivery...");
-            warehousePublisher.Publish("Small delivery to the warehouse.");
+        Console.WriteLine("\nPreparing order 2...");
+        orderPublisher.Publish("Order 2");
 
-            Console.WriteLine("\nPreparing order 2...");
-            orderPublisher.Publish("Order 2");
+        Console.WriteLine("\nUnsubscribing order subscriber from further events...");
+        orderSubscriber.Unsubscribe();
 
-            Console.WriteLine("\nUnsubscribing order subscriber from further events...");
-            orderSubscriber.Unsubscribe();
-
-            Console.WriteLine("\nPreparing order 3...");
-            orderPublisher.Publish("Order 3");
-        }
+        Console.WriteLine("\nPreparing order 3...");
+        orderPublisher.Publish("Order 3");
     }
 }

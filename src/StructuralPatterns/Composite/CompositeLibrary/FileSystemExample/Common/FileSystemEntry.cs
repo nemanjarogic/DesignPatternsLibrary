@@ -1,14 +1,13 @@
-﻿namespace CompositeLibrary.FileSystemExample.Common
+﻿namespace CompositeLibrary.FileSystemExample.Common;
+
+public abstract class FileSystemEntry
 {
-    public abstract class FileSystemEntry
+    public FileSystemEntry(string name)
     {
-        public FileSystemEntry(string name)
-        {
-            Name = name;
-        }
-
-        public string Name { get; }
-
-        public abstract double GetSizeInMB();
+        Name = name;
     }
+
+    public string Name { get; }
+
+    public abstract double GetSizeInMB();
 }

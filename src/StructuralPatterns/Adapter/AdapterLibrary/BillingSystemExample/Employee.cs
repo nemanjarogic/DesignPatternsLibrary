@@ -1,11 +1,10 @@
-﻿namespace AdapterLibrary.BillingSystemExample
+﻿namespace AdapterLibrary.BillingSystemExample;
+
+public class Employee
 {
-    public class Employee
-    {
-        public int Id { get; set; }
+    public int Id { get; set; }
 
-        public string Name { get; set; }
+    public string Name { get; set; }
 
-        public decimal Salary { get; set; }
-    }
+    public decimal Salary { get; set; }
 }

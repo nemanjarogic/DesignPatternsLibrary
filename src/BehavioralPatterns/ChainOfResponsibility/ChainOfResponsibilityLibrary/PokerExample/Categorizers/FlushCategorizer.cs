@@ -2,18 +2,17 @@
 using ChainOfResponsibilityLibrary.PokerExample.Models;
 using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 
-namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers
-{
-    public class FlushCategorizer : HandCatagorizer
-    {
-        public override HandRanking Catagorize(Hand hand)
-        {
-            if (HasFlush(hand))
-            {
-                return HandRanking.Flush;
-            }
+namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers;
 
-            return Next.Catagorize(hand);
+public class FlushCategorizer : HandCatagorizer
+{
+    public override HandRanking Catagorize(Hand hand)
+    {
+        if (HasFlush(hand))
+        {
+            return HandRanking.Flush;
         }
+
+        return Next.Catagorize(hand);
     }
 }

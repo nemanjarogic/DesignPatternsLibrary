@@ -1,10 +1,9 @@
 ﻿using System;
 
-namespace EventAggregatorLibrary.Contracts
+namespace EventAggregatorLibrary.Contracts;
+
+public interface ICustomObserver<T> : IObserver<IEvent>
+    where T : IEvent
 {
-    public interface ICustomObserver<T> : IObserver<IEvent>
-        where T : IEvent
-    {
-        void Unsubscribe();
-    }
+    void Unsubscribe();
 }

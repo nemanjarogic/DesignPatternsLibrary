@@ -1,13 +1,12 @@
 ﻿using InterpreterLibrary.DateExample.Expressions.Common;
 
-namespace InterpreterLibrary.DateExample.Expressions.Terminal
+namespace InterpreterLibrary.DateExample.Expressions.Terminal;
+
+public class SeparatorExpression : IExpression
 {
-    public class SeparatorExpression : IExpression
+    public void Evaluate(Context context)
     {
-        public void Evaluate(Context context)
-        {
-            string expression = context.Expression;
-            context.Expression = expression.Replace(" ", "-");
-        }
+        string expression = context.Expression;
+        context.Expression = expression.Replace(" ", "-");
     }
 }

@@ -1,9 +1,8 @@
-﻿namespace UnitOfWorkLibrary.Domain
-{
-    public class Customer : Entity
-    {
-        public string FirstName { get; set; }
+﻿namespace UnitOfWorkLibrary.Domain;
 
-        public string LastName { get; set; }
-    }
+public class Customer : Entity
+{
+    public string FirstName { get; set; }
+
+    public string LastName { get; set; }
 }

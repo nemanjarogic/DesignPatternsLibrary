@@ -1,9 +1,8 @@
 ﻿using UnitOfWorkLibrary.Domain;
 
-namespace UnitOfWorkLibrary.Example2.Infrastructure.Repositories.Contracts
+namespace UnitOfWorkLibrary.Example2.Infrastructure.Repositories.Contracts;
+
+public interface IOrderRepository : IRepository2<Order>
 {
-    public interface IOrderRepository : IRepository2<Order>
-    {
-        Order GetTheMostExpensive();
-    }
+    Order GetTheMostExpensive();
 }

@@ -1,22 +1,21 @@
 ﻿using System.Collections.Generic;
 using CommandLibrary.ShoppingCartExample.Models;
 
-namespace CommandLibrary.ShoppingCartExample.Repositories.Common
+namespace CommandLibrary.ShoppingCartExample.Repositories.Common;
+
+public interface IShoppingCartRepository
 {
-    public interface IShoppingCartRepository
-    {
-        IEnumerable<(Product Product, int Quantity)> GetAll();
+    IEnumerable<(Product Product, int Quantity)> GetAll();
 
-        (Product Product, int Quantity) GetById(string productId);
+    (Product Product, int Quantity) GetById(string productId);
 
-        bool IsEmpty();
+    bool IsEmpty();
 
-        void Add(Product product);
+    void Add(Product product);
 
-        void Remove(string productId);
+    void Remove(string productId);
 
-        void IncreaseQuantity(string productId);
+    void IncreaseQuantity(string productId);
 
-        void DecraseQuantity(string productId);
-    }
+    void DecraseQuantity(string productId);
 }

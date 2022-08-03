@@ -1,7 +1,6 @@
-﻿namespace InterpreterLibrary.DateExample.Expressions.Common
+﻿namespace InterpreterLibrary.DateExample.Expressions.Common;
+
+public interface IExpression
 {
-    public interface IExpression
-    {
-        void Evaluate(Context context);
-    }
+    void Evaluate(Context context);
 }

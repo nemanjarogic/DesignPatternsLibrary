@@ -1,14 +1,13 @@
 ﻿using System;
 
-namespace BuildingBlocks
+namespace BuildingBlocks;
+
+public static class ConsoleExtension
 {
-    public static class ConsoleExtension
+    public static void WriteSeparator(string title)
     {
-        public static void WriteSeparator(string title)
-        {
-            Console.WriteLine();
-            Console.WriteLine(title);
-            Console.WriteLine("--------------------------------------------------");
-        }
+        Console.WriteLine();
+        Console.WriteLine(title);
+        Console.WriteLine("--------------------------------------------------");
     }
 }

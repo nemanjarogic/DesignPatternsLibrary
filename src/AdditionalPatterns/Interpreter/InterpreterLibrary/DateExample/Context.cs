@@ -1,17 +1,16 @@
 ﻿using System;
 
-namespace InterpreterLibrary.DateExample
+namespace InterpreterLibrary.DateExample;
+
+public class Context
 {
-    public class Context
+    public Context(DateTime date, string expression)
     {
-        public Context(DateTime date, string expression)
-        {
-            Date = date;
-            Expression = expression;
-        }
-
-        public DateTime Date { get; set; }
-
-        public string Expression { get; set; }
+        Date = date;
+        Expression = expression;
     }
+
+    public DateTime Date { get; set; }
+
+    public string Expression { get; set; }
 }

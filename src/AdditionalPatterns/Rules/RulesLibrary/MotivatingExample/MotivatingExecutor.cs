@@ -2,26 +2,25 @@
 using BuildingBlocks;
 using RulesLibrary.Common;
 
-namespace RulesLibrary.MotivatingExample
+namespace RulesLibrary.MotivatingExample;
+
+public static class MotivatingExecutor
 {
-    public static class MotivatingExecutor
+    public static void Execute()
     {
-        public static void Execute()
+        ConsoleExtension.WriteSeparator("Motivating example");
+
+        var customer = new Customer()
         {
-            ConsoleExtension.WriteSeparator("Motivating example");
+            DateOfBirth = DateTime.Now.AddYears(-70),
+            DateOfFirstPurchase = DateTime.Today.AddYears(-6),
+            IsVeteran = false,
+        };
 
-            var customer = new Customer()
-            {
-                DateOfBirth = DateTime.Now.AddYears(-70),
-                DateOfFirstPurchase = DateTime.Today.AddYears(-6),
-                IsVeteran = false,
-            };
+        var discountCalculator = new DiscountCalculator();
 
-            var discountCalculator = new DiscountCalculator();
+        var discountPercentage = discountCalculator.Calculate(customer);
 
-            var discountPercentage = discountCalculator.Calculate(customer);
-
-            Console.WriteLine($"Customer can get a {discountPercentage:P2} discount on any product.");
-        }
+        Console.WriteLine($"Customer can get a {discountPercentage:P2} discount on any product.");
     }
 }

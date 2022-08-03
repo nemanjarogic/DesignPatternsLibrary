@@ -2,16 +2,15 @@
 using FlyweightLibrary.DotNetStringExample;
 using FlyweightLibrary.ForestExample;
 
-namespace FlyweightLibrary
-{
-    public class Executor : PatternExecutor
-    {
-        public override string Name => "Flyweight - Structural Pattern";
+namespace FlyweightLibrary;
 
-        public override void Execute()
-        {
-            DotNetStringExecutor.Execute();
-            ForestExecutor.Execute();
-        }
+public class Executor : PatternExecutor
+{
+    public override string Name => "Flyweight - Structural Pattern";
+
+    public override void Execute()
+    {
+        DotNetStringExecutor.Execute();
+        ForestExecutor.Execute();
     }
 }

@@ -1,9 +1,8 @@
-﻿namespace ChainOfResponsibilityLibrary.LoggingExample.Common
+﻿namespace ChainOfResponsibilityLibrary.LoggingExample.Common;
+
+public enum LogLevel
 {
-    public enum LogLevel
-    {
-        Info,
-        Debug,
-        Error,
-    }
+    Info,
+    Debug,
+    Error,
 }

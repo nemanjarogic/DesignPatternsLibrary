@@ -3,25 +3,24 @@ using DesignPatternsLibrary.PatternExecutors;
 using RestaurantManagement.Restaurants;
 using RestaurantManagement.Restaurants.Common;
 
-namespace RestaurantManagement
+namespace RestaurantManagement;
+
+public class Executor : PatternExecutor
 {
-    public class Executor : PatternExecutor
+    public override string Name => "Factory Method - Creational Pattern";
+
+    public override void Execute()
     {
-        public override string Name => "Factory Method - Creational Pattern";
+        Restaurant restaurant = InitializeRestaurant();
 
-        public override void Execute()
-        {
-            Restaurant restaurant = InitializeRestaurant();
+        restaurant.OrderDailySpecial();
+    }
 
-            restaurant.OrderDailySpecial();
-        }
+    private Restaurant InitializeRestaurant()
+    {
+        // This is usually stored within some configuration
+        var choosenType = typeof(FastFoodRestaurant).FullName;
 
-        private Restaurant InitializeRestaurant()
-        {
-            // This is usually stored within some configuration
-            var choosenType = typeof(FastFoodRestaurant).FullName;
-
-            return Assembly.GetExecutingAssembly().CreateInstance(choosenType) as Restaurant;
-        }
+        return Assembly.GetExecutingAssembly().CreateInstance(choosenType) as Restaurant;
     }
 }

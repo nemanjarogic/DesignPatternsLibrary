@@ -1,19 +1,18 @@
-﻿namespace ChainOfResponsibilityLibrary.PokerExample.Models.Enums
+﻿namespace ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
+
+public enum Value
 {
-    public enum Value
-    {
-        Two,
-        Three,
-        Four,
-        Five,
-        Six,
-        Seven,
-        Eight,
-        Nine,
-        Ten,
-        Jack,
-        Queen,
-        King,
-        Ace,
-    }
+    Two,
+    Three,
+    Four,
+    Five,
+    Six,
+    Seven,
+    Eight,
+    Nine,
+    Ten,
+    Jack,
+    Queen,
+    King,
+    Ace,
 }

@@ -1,8 +1,7 @@
 ﻿using InterpreterLibrary.SandwichExample.Expressions.Common;
 
-namespace InterpreterLibrary.SandwichExample.Expressions.Terminal.Ingredients.Common
+namespace InterpreterLibrary.SandwichExample.Expressions.Terminal.Ingredients.Common;
+
+public interface IIngredient : IExpression
 {
-    public interface IIngredient : IExpression
-    {
-    }
 }

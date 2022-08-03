@@ -1,5 +1,6 @@
 ﻿using BuildingBlocks;
 using PrototypeLibrary.DeepCloneExample.Models;
+using OperatingSystem = PrototypeLibrary.DeepCloneExample.Models.OperatingSystem;
 
 namespace PrototypeLibrary.DeepCloneExample
 {

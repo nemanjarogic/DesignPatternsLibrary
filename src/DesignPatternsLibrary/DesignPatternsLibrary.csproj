@@ -1,43 +1,45 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\AdditionalPatterns\EventAggregator\StoreManagement\StoreManagement.csproj" />
-    <ProjectReference Include="..\AdditionalPatterns\Interpreter\InterpreterLibrary\InterpreterLibrary.csproj" />
-    <ProjectReference Include="..\AdditionalPatterns\LazyLoad\LazyLoadLibrary\LazyLoadLibrary.csproj" />
-    <ProjectReference Include="..\AdditionalPatterns\NullObject\NullObjectLibrary\NullObjectLibrary.csproj" />
-    <ProjectReference Include="..\AdditionalPatterns\Repository\OrderManagement\OrderManagement.csproj" />
-    <ProjectReference Include="..\AdditionalPatterns\Rules\RulesLibrary\RulesLibrary.csproj" />
-    <ProjectReference Include="..\AdditionalPatterns\ServiceLocator\OrderProcessing\OrderProcessing.csproj" />
-    <ProjectReference Include="..\AdditionalPatterns\Specification\ProductSpecification\ProductSpecification.csproj" />
-    <ProjectReference Include="..\AdditionalPatterns\UnitOfWork\UnitOfWorkLibrary\UnitOfWorkLibrary.csproj" />
-    <ProjectReference Include="..\BehavioralPatterns\ChainOfResponsibility\ChainOfResponsibilityLibrary\ChainOfResponsibilityLibrary.csproj" />
-    <ProjectReference Include="..\BehavioralPatterns\Command\CommandLibrary\CommandLibrary.csproj" />
-    <ProjectReference Include="..\BehavioralPatterns\Iterator\IteratorLibrary\IteratorLibrary.csproj" />
-    <ProjectReference Include="..\BehavioralPatterns\Mediator\MediatorLibrary\MediatorLibrary.csproj" />
-    <ProjectReference Include="..\BehavioralPatterns\Memento\MementoLibrary\MementoLibrary.csproj" />
-    <ProjectReference Include="..\BehavioralPatterns\Observer\ObserverLibrary\ObserverLibrary.csproj" />
-    <ProjectReference Include="..\BehavioralPatterns\State\StateLibrary\StateLibrary.csproj" />
-    <ProjectReference Include="..\BehavioralPatterns\Strategy\StrategyLibrary\StrategyLibrary.csproj" />
-    <ProjectReference Include="..\BehavioralPatterns\TemplateMethod\TemplateMethodLibrary\TemplateMethodLibrary.csproj" />
-    <ProjectReference Include="..\BehavioralPatterns\Visitor\VisitorLibrary\VisitorLibrary.csproj" />
-    <ProjectReference Include="..\CreationalPatterns\AbstractFactory\MealSimpleFactory\MealSimpleFactory.csproj" />
-    <ProjectReference Include="..\CreationalPatterns\AbstractFactory\RestaurantAbstractFactory\RestaurantAbstractFactory.csproj" />
-    <ProjectReference Include="..\CreationalPatterns\Builder\CustomSandwichBuilder\CustomSandwichBuilder.csproj" />
-    <ProjectReference Include="..\CreationalPatterns\FactoryMethod\RestaurantManagement\RestaurantManagement.csproj" />
-    <ProjectReference Include="..\CreationalPatterns\Prototype\PrototypeLibrary\PrototypeLibrary.csproj" />
-    <ProjectReference Include="..\CreationalPatterns\Singleton\Greeter\Greeter.csproj" />
-    <ProjectReference Include="..\StructuralPatterns\Adapter\AdapterLibrary\AdapterLibrary.csproj" />
-    <ProjectReference Include="..\StructuralPatterns\Bridge\BridgeLibrary\BridgeLibrary.csproj" />
-    <ProjectReference Include="..\StructuralPatterns\Composite\CompositeLibrary\CompositeLibrary.csproj" />
-    <ProjectReference Include="..\StructuralPatterns\Decorator\DecoratorLibrary\DecoratorLibrary.csproj" />
-    <ProjectReference Include="..\StructuralPatterns\Facade\FacadeLibrary\FacadeLibrary.csproj" />
-    <ProjectReference Include="..\StructuralPatterns\Flyweight\FlyweightLibrary\FlyweightLibrary.csproj" />
-    <ProjectReference Include="..\StructuralPatterns\Proxy\ProxyLibrary\ProxyLibrary.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\AdditionalPatterns\EventAggregator\StoreManagement\StoreManagement.csproj" />
+		<ProjectReference Include="..\AdditionalPatterns\Interpreter\InterpreterLibrary\InterpreterLibrary.csproj" />
+		<ProjectReference Include="..\AdditionalPatterns\LazyLoad\LazyLoadLibrary\LazyLoadLibrary.csproj" />
+		<ProjectReference Include="..\AdditionalPatterns\NullObject\NullObjectLibrary\NullObjectLibrary.csproj" />
+		<ProjectReference Include="..\AdditionalPatterns\Repository\OrderManagement\OrderManagement.csproj" />
+		<ProjectReference Include="..\AdditionalPatterns\Rules\RulesLibrary\RulesLibrary.csproj" />
+		<ProjectReference Include="..\AdditionalPatterns\ServiceLocator\OrderProcessing\OrderProcessing.csproj" />
+		<ProjectReference Include="..\AdditionalPatterns\Specification\ProductSpecification\ProductSpecification.csproj" />
+		<ProjectReference Include="..\AdditionalPatterns\UnitOfWork\UnitOfWorkLibrary\UnitOfWorkLibrary.csproj" />
+		<ProjectReference Include="..\BehavioralPatterns\ChainOfResponsibility\ChainOfResponsibilityLibrary\ChainOfResponsibilityLibrary.csproj" />
+		<ProjectReference Include="..\BehavioralPatterns\Command\CommandLibrary\CommandLibrary.csproj" />
+		<ProjectReference Include="..\BehavioralPatterns\Iterator\IteratorLibrary\IteratorLibrary.csproj" />
+		<ProjectReference Include="..\BehavioralPatterns\Mediator\MediatorLibrary\MediatorLibrary.csproj" />
+		<ProjectReference Include="..\BehavioralPatterns\Memento\MementoLibrary\MementoLibrary.csproj" />
+		<ProjectReference Include="..\BehavioralPatterns\Observer\ObserverLibrary\ObserverLibrary.csproj" />
+		<ProjectReference Include="..\BehavioralPatterns\State\StateLibrary\StateLibrary.csproj" />
+		<ProjectReference Include="..\BehavioralPatterns\Strategy\StrategyLibrary\StrategyLibrary.csproj" />
+		<ProjectReference Include="..\BehavioralPatterns\TemplateMethod\TemplateMethodLibrary\TemplateMethodLibrary.csproj" />
+		<ProjectReference Include="..\BehavioralPatterns\Visitor\VisitorLibrary\VisitorLibrary.csproj" />
+		<ProjectReference Include="..\CreationalPatterns\AbstractFactory\MealSimpleFactory\MealSimpleFactory.csproj" />
+		<ProjectReference Include="..\CreationalPatterns\AbstractFactory\RestaurantAbstractFactory\RestaurantAbstractFactory.csproj" />
+		<ProjectReference Include="..\CreationalPatterns\Builder\CustomSandwichBuilder\CustomSandwichBuilder.csproj" />
+		<ProjectReference Include="..\CreationalPatterns\FactoryMethod\RestaurantManagement\RestaurantManagement.csproj" />
+		<ProjectReference Include="..\CreationalPatterns\Prototype\PrototypeLibrary\PrototypeLibrary.csproj" />
+		<ProjectReference Include="..\CreationalPatterns\Singleton\Greeter\Greeter.csproj" />
+		<ProjectReference Include="..\StructuralPatterns\Adapter\AdapterLibrary\AdapterLibrary.csproj" />
+		<ProjectReference Include="..\StructuralPatterns\Bridge\BridgeLibrary\BridgeLibrary.csproj" />
+		<ProjectReference Include="..\StructuralPatterns\Composite\CompositeLibrary\CompositeLibrary.csproj" />
+		<ProjectReference Include="..\StructuralPatterns\Decorator\DecoratorLibrary\DecoratorLibrary.csproj" />
+		<ProjectReference Include="..\StructuralPatterns\Facade\FacadeLibrary\FacadeLibrary.csproj" />
+		<ProjectReference Include="..\StructuralPatterns\Flyweight\FlyweightLibrary\FlyweightLibrary.csproj" />
+		<ProjectReference Include="..\StructuralPatterns\Proxy\ProxyLibrary\ProxyLibrary.csproj" />
+	</ItemGroup>
 
 </Project>

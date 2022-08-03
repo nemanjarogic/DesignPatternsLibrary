@@ -1,5 +1,4 @@
-﻿using System;
-using RestaurantManagement.Meals.Common;
+﻿using RestaurantManagement.Meals.Common;
 
 namespace RestaurantManagement.Meals;
 

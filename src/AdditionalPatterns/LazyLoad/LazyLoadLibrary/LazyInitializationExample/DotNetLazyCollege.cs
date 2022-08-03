@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LazyLoadLibrary.LazyInitializationExample;
+﻿namespace LazyLoadLibrary.LazyInitializationExample;
 
 public class DotNetLazyCollege
 {

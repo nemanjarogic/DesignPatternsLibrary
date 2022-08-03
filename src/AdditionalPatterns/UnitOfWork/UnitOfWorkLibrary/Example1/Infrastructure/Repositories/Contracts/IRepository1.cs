@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using UnitOfWorkLibrary.Domain;
 
 namespace UnitOfWorkLibrary.Example1.Infrastructure.Repositories.Contracts;

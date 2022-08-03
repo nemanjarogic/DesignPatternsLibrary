@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PrototypeLibrary.WebPageScraperExample;
+﻿namespace PrototypeLibrary.WebPageScraperExample;
 
 public class WebPageScraper : ICloneable
 {

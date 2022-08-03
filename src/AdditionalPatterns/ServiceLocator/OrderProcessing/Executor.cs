@@ -1,5 +1,4 @@
-﻿using System;
-using DesignPatternsLibrary.PatternExecutors;
+﻿using DesignPatternsLibrary.PatternExecutors;
 
 namespace OrderProcessing;
 

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using ProductSpecification.Domain;
+﻿using ProductSpecification.Domain;
 using ProductSpecification.Specifications.Common;
 
 namespace ProductSpecification.Infrastructure;

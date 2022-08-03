@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using VisitorLibrary.CompanyExample.Elements.Common;
+﻿using VisitorLibrary.CompanyExample.Elements.Common;
 using VisitorLibrary.CompanyExample.Visitors.Common;
 
 namespace VisitorLibrary.CompanyExample;

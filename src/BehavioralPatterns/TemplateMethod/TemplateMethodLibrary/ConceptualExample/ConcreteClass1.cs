@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TemplateMethodLibrary.ConceptualExample;
+﻿namespace TemplateMethodLibrary.ConceptualExample;
 
 /// <summary>
 /// Concrete classes have to implement all abstract operations of the base class.

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ObserverLibrary.StockExample.Examples.EventAndDelegate.Publishers;
+﻿namespace ObserverLibrary.StockExample.Examples.EventAndDelegate.Publishers;
 
 public class StockTicker
 {

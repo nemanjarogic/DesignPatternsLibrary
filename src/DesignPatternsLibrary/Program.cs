@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using DesignPatternsLibrary.PatternExecutors;
+﻿using DesignPatternsLibrary.PatternExecutors;
 
 namespace DesignPatternsLibrary;
 

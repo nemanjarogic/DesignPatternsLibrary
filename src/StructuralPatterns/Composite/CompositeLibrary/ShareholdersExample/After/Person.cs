@@ -1,5 +1,4 @@
-﻿using System;
-using CompositeLibrary.ShareholdersExample.After.Common;
+﻿using CompositeLibrary.ShareholdersExample.After.Common;
 
 namespace CompositeLibrary.ShareholdersExample.After;
 

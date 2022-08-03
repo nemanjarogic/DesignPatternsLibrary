@@ -1,5 +1,4 @@
-﻿using System;
-using NullObjectLibrary.ApplicationExample.Applications.Common;
+﻿using NullObjectLibrary.ApplicationExample.Applications.Common;
 
 namespace NullObjectLibrary.SmartphoneApplicationExample.Applications;
 

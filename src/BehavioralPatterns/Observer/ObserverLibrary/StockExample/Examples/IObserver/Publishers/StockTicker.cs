@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using ObserverLibrary.StockExample.Examples.IObserver.Subscribers;
+﻿using ObserverLibrary.StockExample.Examples.IObserver.Subscribers;
 
 namespace ObserverLibrary.StockExample.Examples.IObserver.Publishers;
 

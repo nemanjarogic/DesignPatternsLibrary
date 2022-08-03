@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using DecoratorLibrary.PancakeExample.Components;
 using DecoratorLibrary.PancakeExample.Components.Common;
 using DecoratorLibrary.PancakeExample.Decorators;

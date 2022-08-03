@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using VisitorLibrary.PersonExample.Elements.Common;
+﻿using VisitorLibrary.PersonExample.Elements.Common;
 using VisitorLibrary.PersonExample.Visitors.Common;
 
 namespace VisitorLibrary.PersonExample;

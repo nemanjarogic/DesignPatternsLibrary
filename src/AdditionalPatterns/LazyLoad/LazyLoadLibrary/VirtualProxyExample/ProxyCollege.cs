@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LazyLoadLibrary.VirtualProxyExample;
+﻿namespace LazyLoadLibrary.VirtualProxyExample;
 
 public class ProxyCollege : College
 {

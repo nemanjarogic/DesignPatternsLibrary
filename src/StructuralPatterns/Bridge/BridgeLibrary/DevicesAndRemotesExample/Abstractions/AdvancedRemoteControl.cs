@@ -1,5 +1,4 @@
-﻿using System;
-using BridgeLibrary.DevicesAndRemotesExample.Abstractions.Common;
+﻿using BridgeLibrary.DevicesAndRemotesExample.Abstractions.Common;
 using BridgeLibrary.DevicesAndRemotesExample.Implementations.Common;
 
 namespace BridgeLibrary.DevicesAndRemotesExample.Abstractions;

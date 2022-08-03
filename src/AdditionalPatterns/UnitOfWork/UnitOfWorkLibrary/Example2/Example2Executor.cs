@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using UnitOfWorkLibrary.Domain;
 using UnitOfWorkLibrary.Example2.Controllers;
 using UnitOfWorkLibrary.Example2.Infrastructure;

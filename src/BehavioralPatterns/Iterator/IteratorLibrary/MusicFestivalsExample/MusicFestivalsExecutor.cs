@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using IteratorLibrary.MusicFestivalsExample.Collections;
 using IteratorLibrary.MusicFestivalsExample.Iterators.Common;
 

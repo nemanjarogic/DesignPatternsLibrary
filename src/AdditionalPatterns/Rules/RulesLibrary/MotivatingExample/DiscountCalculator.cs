@@ -1,5 +1,4 @@
-﻿using System;
-using RulesLibrary.Common;
+﻿using RulesLibrary.Common;
 
 namespace RulesLibrary.MotivatingExample;
 

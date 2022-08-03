@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace MementoLibrary.FoodSupplierExample;
+﻿namespace MementoLibrary.FoodSupplierExample;
 
 /// <summary>
 /// A caretaker can keep track of the originator’s history by storing a stack of mementos.

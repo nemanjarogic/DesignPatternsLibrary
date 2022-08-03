@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using OrderManagement.Domain;
+﻿using OrderManagement.Domain;
 using OrderManagement.Infrastructure.Repositories.Contracts;
 
 namespace OrderManagement.Controllers;

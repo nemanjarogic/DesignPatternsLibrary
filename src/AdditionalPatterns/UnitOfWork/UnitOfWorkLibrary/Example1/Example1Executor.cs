@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using UnitOfWorkLibrary.Domain;
 using UnitOfWorkLibrary.Example1.Controllers;
 using UnitOfWorkLibrary.Example1.Infrastructure;

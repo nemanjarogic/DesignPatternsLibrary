@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace RulesLibrary.Common;
+﻿namespace RulesLibrary.Common;
 
 public class Customer
 {

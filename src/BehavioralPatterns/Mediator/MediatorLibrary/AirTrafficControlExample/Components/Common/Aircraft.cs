@@ -1,5 +1,4 @@
-﻿using System;
-using MediatorLibrary.AirTrafficControlExample.Mediators.Common;
+﻿using MediatorLibrary.AirTrafficControlExample.Mediators.Common;
 
 namespace MediatorLibrary.AirTrafficControlExample.Components.Common;
 

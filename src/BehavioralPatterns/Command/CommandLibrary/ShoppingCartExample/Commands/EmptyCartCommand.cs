@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using CommandLibrary.ShoppingCartExample.Commands.Common;
+﻿using CommandLibrary.ShoppingCartExample.Commands.Common;
 using CommandLibrary.ShoppingCartExample.Repositories.Common;
 
 namespace CommandLibrary.ShoppingCartExample.Commands;

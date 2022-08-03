@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using NullObjectLibrary.ApplicationExample.Applications.Common;
+﻿using NullObjectLibrary.ApplicationExample.Applications.Common;
 using NullObjectLibrary.SmartphoneApplicationExample.Applications;
 
 namespace NullObjectLibrary.SmartphoneApplicationExample;

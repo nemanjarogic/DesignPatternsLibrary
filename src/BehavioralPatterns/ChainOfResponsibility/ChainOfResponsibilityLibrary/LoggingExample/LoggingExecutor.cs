@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using ChainOfResponsibilityLibrary.LoggingExample.Common;
 using ChainOfResponsibilityLibrary.LoggingExample.Loggers;
 

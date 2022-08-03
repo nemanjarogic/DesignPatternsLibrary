@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using UnitOfWorkLibrary.Domain;
 using UnitOfWorkLibrary.Example2.Infrastructure.Repositories.Contracts;
 

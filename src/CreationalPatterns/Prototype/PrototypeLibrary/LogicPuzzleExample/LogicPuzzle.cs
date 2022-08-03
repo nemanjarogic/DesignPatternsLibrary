@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PrototypeLibrary.LogicPuzzleExample;
+﻿namespace PrototypeLibrary.LogicPuzzleExample;
 
 public class LogicPuzzle : ICloneable
 {

@@ -1,5 +1,4 @@
-﻿using System;
-using BridgeLibrary.DevicesAndRemotesExample.Abstractions;
+﻿using BridgeLibrary.DevicesAndRemotesExample.Abstractions;
 using BridgeLibrary.DevicesAndRemotesExample.Implementations;
 using BuildingBlocks;
 

@@ -1,5 +1,4 @@
-﻿using System;
-using ChainOfResponsibilityLibrary.LoggingExample.Common;
+﻿using ChainOfResponsibilityLibrary.LoggingExample.Common;
 
 namespace ChainOfResponsibilityLibrary.LoggingExample.Loggers;
 

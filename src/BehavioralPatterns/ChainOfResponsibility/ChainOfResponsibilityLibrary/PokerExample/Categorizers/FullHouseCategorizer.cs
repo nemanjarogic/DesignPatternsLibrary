@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using ChainOfResponsibilityLibrary.PokerExample.Categorizers.Common;
+﻿using ChainOfResponsibilityLibrary.PokerExample.Categorizers.Common;
 using ChainOfResponsibilityLibrary.PokerExample.Models;
 using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 

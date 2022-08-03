@@ -1,5 +1,4 @@
-﻿using System;
-using CompositeLibrary.GiftExample.Common;
+﻿using CompositeLibrary.GiftExample.Common;
 
 namespace CompositeLibrary.GiftExample;
 

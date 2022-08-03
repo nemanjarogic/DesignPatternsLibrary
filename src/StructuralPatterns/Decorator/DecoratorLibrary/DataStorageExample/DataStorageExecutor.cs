@@ -1,6 +1,4 @@
-﻿using System;
-using BuildingBlocks;
-using DecoratorLibrary.DataStorageExample.Components;
+﻿using BuildingBlocks;
 using DecoratorLibrary.DataStorageExample.Components.Common;
 using DecoratorLibrary.DataStorageExample.Decorators;
 using File = DecoratorLibrary.DataStorageExample.Components.File;

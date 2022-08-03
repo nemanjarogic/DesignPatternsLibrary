@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TemplateMethodLibrary.ConceptualExample;
+﻿namespace TemplateMethodLibrary.ConceptualExample;
 
 /// <summary>
 /// Usually, concrete classes override only a fraction of base class' operations.

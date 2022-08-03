@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ObserverLibrary.StockExample.Examples.IObserver.Subscribers;
+﻿namespace ObserverLibrary.StockExample.Examples.IObserver.Subscribers;
 
 public class MicrosoftSubscriber : IObserver<Stock>
 {

@@ -1,5 +1,4 @@
-﻿using System;
-using EventAggregatorLibrary.Contracts;
+﻿using EventAggregatorLibrary.Contracts;
 using EventAggregatorLibrary.Events;
 
 namespace EventAggregatorLibrary.Components.Subscribers;

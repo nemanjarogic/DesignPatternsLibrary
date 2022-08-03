@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using VisitorLibrary.PersonDynamicProgrammingExample.Elements;
+﻿using VisitorLibrary.PersonDynamicProgrammingExample.Elements;
 using VisitorLibrary.PersonDynamicProgrammingExample.Elements.Common;
 
 namespace VisitorLibrary.PersonDynamicProgrammingExample.Visitors.Common;

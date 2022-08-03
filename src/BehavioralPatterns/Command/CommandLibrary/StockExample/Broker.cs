@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using CommandLibrary.StockExample.Commands.Common;
+﻿using CommandLibrary.StockExample.Commands.Common;
 
 namespace CommandLibrary.StockExample;
 

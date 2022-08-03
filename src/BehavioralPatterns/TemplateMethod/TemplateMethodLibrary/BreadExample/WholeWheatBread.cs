@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TemplateMethodLibrary.BreadExample;
+﻿namespace TemplateMethodLibrary.BreadExample;
 
 public class WholeWheatBread : Bread
 {

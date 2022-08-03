@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CommandLibrary.StockExample;
+﻿namespace CommandLibrary.StockExample;
 
 public class Stock
 {

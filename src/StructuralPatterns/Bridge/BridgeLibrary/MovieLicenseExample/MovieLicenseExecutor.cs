@@ -1,5 +1,4 @@
-﻿using System;
-using BridgeLibrary.MovieLicenseExample.Models;
+﻿using BridgeLibrary.MovieLicenseExample.Models;
 using BridgeLibrary.MovieLicenseExample.Models.Enums;
 using BuildingBlocks;
 

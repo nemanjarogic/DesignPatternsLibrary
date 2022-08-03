@@ -1,5 +1,4 @@
-﻿using System;
-using DesignPatternsLibrary.PatternExecutors;
+﻿using DesignPatternsLibrary.PatternExecutors;
 using EventAggregatorLibrary.Components;
 using EventAggregatorLibrary.Components.Publishers;
 using EventAggregatorLibrary.Components.Subscribers;

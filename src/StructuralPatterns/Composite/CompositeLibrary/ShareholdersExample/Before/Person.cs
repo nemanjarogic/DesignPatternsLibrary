@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CompositeLibrary.ShareholdersExample.Before;
+﻿namespace CompositeLibrary.ShareholdersExample.Before;
 
 public class Person
 {

@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using VisitorLibrary.PersonDynamicProgrammingExample.Elements;
 using VisitorLibrary.PersonDynamicProgrammingExample.Visitors;
 

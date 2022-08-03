@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using IteratorLibrary.MusicFestivalsExample.Collections.Common;
+﻿using IteratorLibrary.MusicFestivalsExample.Collections.Common;
 using IteratorLibrary.MusicFestivalsExample.Iterators;
 using IteratorLibrary.MusicFestivalsExample.Iterators.Common;
 

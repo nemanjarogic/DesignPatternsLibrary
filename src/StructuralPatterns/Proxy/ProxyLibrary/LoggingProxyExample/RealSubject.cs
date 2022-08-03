@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ProxyLibrary.LoggingProxyExample;
+﻿namespace ProxyLibrary.LoggingProxyExample;
 
 /// <summary>
 /// The RealSubject contains some core business logic.

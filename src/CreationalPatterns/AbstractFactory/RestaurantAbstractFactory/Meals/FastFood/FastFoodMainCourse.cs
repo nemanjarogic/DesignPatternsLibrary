@@ -1,5 +1,4 @@
-﻿using System;
-using RestaurantAbstractFactory.Meals.Common;
+﻿using RestaurantAbstractFactory.Meals.Common;
 
 namespace RestaurantAbstractFactory.Meals.FastFood;
 

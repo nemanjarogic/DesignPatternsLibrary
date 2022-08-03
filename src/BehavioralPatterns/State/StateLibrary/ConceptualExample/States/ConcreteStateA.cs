@@ -1,5 +1,4 @@
-﻿using System;
-using StateLibrary.ConceptualExample.States.Common;
+﻿using StateLibrary.ConceptualExample.States.Common;
 
 namespace StateLibrary.ConceptualExample.States;
 

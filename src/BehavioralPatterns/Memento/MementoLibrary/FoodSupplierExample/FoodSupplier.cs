@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MementoLibrary.FoodSupplierExample;
+﻿namespace MementoLibrary.FoodSupplierExample;
 
 public class FoodSupplier
 {

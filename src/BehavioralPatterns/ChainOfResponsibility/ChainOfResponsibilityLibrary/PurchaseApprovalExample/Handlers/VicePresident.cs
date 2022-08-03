@@ -1,5 +1,4 @@
-﻿using System;
-using ChainOfResponsibilityLibrary.PurchaseApprovalExample.Common;
+﻿using ChainOfResponsibilityLibrary.PurchaseApprovalExample.Common;
 
 namespace ChainOfResponsibilityLibrary.PurchaseApprovalExample.Handlers;
 

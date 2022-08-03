@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using InterpreterLibrary.SandwichExample.Expressions.NonTerminal;
 using InterpreterLibrary.SandwichExample.Expressions.Terminal.Breads;
 using InterpreterLibrary.SandwichExample.Expressions.Terminal.Condiments;

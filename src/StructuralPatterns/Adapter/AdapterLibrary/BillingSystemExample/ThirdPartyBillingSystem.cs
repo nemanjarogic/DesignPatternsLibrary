@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace AdapterLibrary.BillingSystemExample;
+﻿namespace AdapterLibrary.BillingSystemExample;
 
 /// <summary>
 /// The Service is some useful class (usually 3rd-party or legacy).

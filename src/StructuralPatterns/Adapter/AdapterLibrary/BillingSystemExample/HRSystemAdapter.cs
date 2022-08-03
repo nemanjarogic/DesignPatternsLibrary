@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace AdapterLibrary.BillingSystemExample;
+﻿namespace AdapterLibrary.BillingSystemExample;
 
 /// <summary>
 /// This is a class which makes two incompatible systems to work together.

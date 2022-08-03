@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace MementoLibrary.ConceptualExample;
+﻿namespace MementoLibrary.ConceptualExample;
 
 /// <summary>
 /// The Originator holds some important state that may change over time.

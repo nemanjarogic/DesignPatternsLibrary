@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using UnitOfWorkLibrary.Domain;
+﻿using UnitOfWorkLibrary.Domain;
 using UnitOfWorkLibrary.Example2.Infrastructure.Repositories.Contracts;
 
 namespace UnitOfWorkLibrary.Example2.Infrastructure.Repositories;

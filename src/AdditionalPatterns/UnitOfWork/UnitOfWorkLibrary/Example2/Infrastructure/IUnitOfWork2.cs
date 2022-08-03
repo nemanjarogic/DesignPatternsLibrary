@@ -1,8 +1,4 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace UnitOfWorkLibrary.Example2.Infrastructure;
+﻿namespace UnitOfWorkLibrary.Example2.Infrastructure;
 
 public interface IUnitOfWork2 : IDisposable
 {

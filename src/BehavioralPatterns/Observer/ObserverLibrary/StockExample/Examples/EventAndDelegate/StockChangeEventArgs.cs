@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ObserverLibrary.StockExample.Examples.EventAndDelegate;
+﻿namespace ObserverLibrary.StockExample.Examples.EventAndDelegate;
 
 public class StockChangeEventArgs : EventArgs
 {

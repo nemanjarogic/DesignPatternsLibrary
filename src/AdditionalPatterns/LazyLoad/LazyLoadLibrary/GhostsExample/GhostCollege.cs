@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LazyLoadLibrary.GhostsExample;
+﻿namespace LazyLoadLibrary.GhostsExample;
 
 /// <summary>
 /// A ghost is an object that is to be loaded in a partial state.

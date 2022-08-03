@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BridgeLibrary.DevicesAndRemotesExample.Implementations.Common;
+﻿namespace BridgeLibrary.DevicesAndRemotesExample.Implementations.Common;
 
 /// <summary>
 /// The "implementation" contract declares methods common to all concrete implementation classes.

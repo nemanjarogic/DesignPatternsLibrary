@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using MediatorLibrary.GroupChatExample.Components;
 using MediatorLibrary.GroupChatExample.Mediators;
 using MediatorLibrary.GroupChatExample.Mediators.Common;

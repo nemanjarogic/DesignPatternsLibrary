@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace OrderProcessing;
+﻿namespace OrderProcessing;
 
 /// <summary>
 /// The service locator plays the middleman and allow consumers

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AdapterLibrary.MovieBroadcasterExample;
+﻿namespace AdapterLibrary.MovieBroadcasterExample;
 
 public class Movie
 {

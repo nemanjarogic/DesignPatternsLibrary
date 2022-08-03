@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace ProxyLibrary.CachingProxyExample.Common;
+﻿namespace ProxyLibrary.CachingProxyExample.Common;
 
 /// <summary>
 /// The interface of a remote service.

@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using MediatorLibrary.AirTrafficControlExample.Components;
 using MediatorLibrary.AirTrafficControlExample.Mediators;
 

@@ -1,5 +1,4 @@
-﻿using System;
-using ObserverLibrary.StockExample.Examples.EventAndDelegate.Publishers;
+﻿using ObserverLibrary.StockExample.Examples.EventAndDelegate.Publishers;
 
 namespace ObserverLibrary.StockExample.Examples.EventAndDelegate.Subscribers;
 

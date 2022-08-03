@@ -1,5 +1,4 @@
-﻿using System;
-using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
+﻿using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 
 namespace ChainOfResponsibilityLibrary.PokerExample.Models;
 

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ProductSpecification.Domain;
+﻿namespace ProductSpecification.Domain;
 
 public class Product : Entity
 {

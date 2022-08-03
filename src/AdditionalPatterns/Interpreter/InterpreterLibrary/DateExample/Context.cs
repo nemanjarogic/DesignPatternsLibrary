@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace InterpreterLibrary.DateExample;
+﻿namespace InterpreterLibrary.DateExample;
 
 public class Context
 {

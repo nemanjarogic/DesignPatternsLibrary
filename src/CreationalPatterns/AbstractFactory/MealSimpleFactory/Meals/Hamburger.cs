@@ -1,5 +1,4 @@
-﻿using System;
-using MealSimpleFactory.Meals.Common;
+﻿using MealSimpleFactory.Meals.Common;
 
 namespace MealSimpleFactory.Meals;
 

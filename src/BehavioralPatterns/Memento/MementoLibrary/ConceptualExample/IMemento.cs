@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MementoLibrary.ConceptualExample;
+﻿namespace MementoLibrary.ConceptualExample;
 
 /// <summary>
 /// The Memento interface provides a way to retrieve the

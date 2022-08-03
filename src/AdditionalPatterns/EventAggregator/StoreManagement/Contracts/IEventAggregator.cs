@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EventAggregatorLibrary.Contracts;
+﻿namespace EventAggregatorLibrary.Contracts;
 
 public interface IEventAggregator : IObservable<IEvent>
 {

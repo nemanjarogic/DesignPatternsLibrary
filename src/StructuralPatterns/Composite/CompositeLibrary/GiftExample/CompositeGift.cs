@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using CompositeLibrary.GiftExample.Common;
+﻿using CompositeLibrary.GiftExample.Common;
 
 namespace CompositeLibrary.GiftExample;
 

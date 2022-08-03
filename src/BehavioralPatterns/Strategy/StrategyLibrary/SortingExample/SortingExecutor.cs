@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using StrategyLibrary.SortingExample.Strategies;
 using StrategyLibrary.SortingExample.Strategies.Common;
 

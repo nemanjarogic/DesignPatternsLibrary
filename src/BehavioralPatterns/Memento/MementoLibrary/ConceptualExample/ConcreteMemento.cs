@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MementoLibrary.ConceptualExample;
+﻿namespace MementoLibrary.ConceptualExample;
 
 /// <summary>
 /// The Concrete Memento contains the infrastructure for storing the Originator's state.

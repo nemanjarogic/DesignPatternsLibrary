@@ -1,6 +1,4 @@
 ﻿using CustomSandwichBuilder.Products.Enums;
-using System;
-using System.Collections.Generic;
 
 namespace CustomSandwichBuilder.Products;
 

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using PrototypeLibrary.ColorRegistryExample.Common;
+﻿using PrototypeLibrary.ColorRegistryExample.Common;
 
 namespace PrototypeLibrary.ColorRegistryExample;
 

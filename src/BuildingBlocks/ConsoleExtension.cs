@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BuildingBlocks;
+﻿namespace BuildingBlocks;
 
 public static class ConsoleExtension
 {

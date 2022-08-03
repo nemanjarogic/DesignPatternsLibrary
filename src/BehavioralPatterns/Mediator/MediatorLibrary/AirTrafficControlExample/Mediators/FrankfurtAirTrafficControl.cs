@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using MediatorLibrary.AirTrafficControlExample.Components.Common;
+﻿using MediatorLibrary.AirTrafficControlExample.Components.Common;
 using MediatorLibrary.AirTrafficControlExample.Mediators.Common;
 
 namespace MediatorLibrary.AirTrafficControlExample.Mediators;

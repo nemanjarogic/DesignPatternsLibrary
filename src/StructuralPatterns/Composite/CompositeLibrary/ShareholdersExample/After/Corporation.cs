@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using CompositeLibrary.ShareholdersExample.After.Common;
+﻿using CompositeLibrary.ShareholdersExample.After.Common;
 
 namespace CompositeLibrary.ShareholdersExample.After;
 

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using ProxyLibrary.CachingProxyExample.Common;
+﻿using ProxyLibrary.CachingProxyExample.Common;
 
 namespace ProxyLibrary.CachingProxyExample.ThirdParty;
 

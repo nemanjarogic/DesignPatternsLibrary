@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using BridgeLibrary.DocumentsAndFormattersExample.Formatters.Common;
+﻿using BridgeLibrary.DocumentsAndFormattersExample.Formatters.Common;
 
 namespace BridgeLibrary.DocumentsAndFormattersExample.Formatters;
 

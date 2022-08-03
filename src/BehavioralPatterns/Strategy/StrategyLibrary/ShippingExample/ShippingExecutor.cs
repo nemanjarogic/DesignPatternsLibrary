@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using StrategyLibrary.ShippingExample.ShippingProviders;
 using StrategyLibrary.ShippingExample.ShippingProviders.Common;
 

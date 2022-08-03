@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using OrderManagement.Domain;
+﻿using OrderManagement.Domain;
 using OrderManagement.Infrastructure.Repositories.Contracts;
 
 namespace OrderManagement.Infrastructure.Repositories;

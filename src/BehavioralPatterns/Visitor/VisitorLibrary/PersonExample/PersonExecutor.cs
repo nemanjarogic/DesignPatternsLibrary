@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using VisitorLibrary.PersonExample.Elements;
 using VisitorLibrary.PersonExample.Visitors;
 

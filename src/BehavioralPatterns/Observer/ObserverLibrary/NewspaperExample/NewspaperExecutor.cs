@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using ObserverLibrary.NewspaperExample.Publishers;
 using ObserverLibrary.NewspaperExample.Subscribers;
 

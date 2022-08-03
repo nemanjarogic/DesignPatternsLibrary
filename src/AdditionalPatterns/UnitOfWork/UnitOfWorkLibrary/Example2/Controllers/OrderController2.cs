@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using UnitOfWorkLibrary.Domain;
+﻿using UnitOfWorkLibrary.Domain;
 using UnitOfWorkLibrary.Example2.Infrastructure.Repositories.Contracts;
 
 namespace UnitOfWorkLibrary.Example2.Controllers;

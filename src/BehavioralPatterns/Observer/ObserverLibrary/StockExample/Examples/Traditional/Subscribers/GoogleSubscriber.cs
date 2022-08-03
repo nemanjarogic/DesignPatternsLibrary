@@ -1,5 +1,4 @@
-﻿using System;
-using ObserverLibrary.StockExample.Examples.Traditional.Publishers;
+﻿using ObserverLibrary.StockExample.Examples.Traditional.Publishers;
 using ObserverLibrary.StockExample.Examples.Traditional.Subscribers.Common;
 
 namespace ObserverLibrary.StockExample.Examples.Traditional.Subscribers;

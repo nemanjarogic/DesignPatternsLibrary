@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ObserverLibrary.StockExample.Examples.IObserver.Subscribers;
+﻿namespace ObserverLibrary.StockExample.Examples.IObserver.Subscribers;
 
 public class DisposableSubscriber : IDisposable
 {

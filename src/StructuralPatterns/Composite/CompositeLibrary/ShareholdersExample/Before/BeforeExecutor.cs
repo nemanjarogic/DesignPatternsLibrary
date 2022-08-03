@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 
 namespace CompositeLibrary.ShareholdersExample.Before;
 

@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using FacadeLibrary.WeatherServiceExample.Service;
 
 namespace FacadeLibrary.WeatherServiceExample.Before;

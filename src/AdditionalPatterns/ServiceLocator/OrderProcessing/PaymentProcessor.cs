@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace OrderProcessing;
+﻿namespace OrderProcessing;
 
 public class PaymentProcessor
 {

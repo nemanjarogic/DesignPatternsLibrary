@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using ObserverLibrary.NewspaperExample.Subscribers.Common;
+﻿using ObserverLibrary.NewspaperExample.Subscribers.Common;
 
 namespace ObserverLibrary.NewspaperExample.Publishers.Common;
 

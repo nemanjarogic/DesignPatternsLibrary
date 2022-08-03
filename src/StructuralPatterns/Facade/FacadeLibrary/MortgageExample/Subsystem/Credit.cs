@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FacadeLibrary.MortgageExample.Subsystem;
+﻿namespace FacadeLibrary.MortgageExample.Subsystem;
 
 public class Credit
 {

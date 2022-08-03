@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using CommandLibrary.ShoppingCartExample.Models;
+﻿using CommandLibrary.ShoppingCartExample.Models;
 
 namespace CommandLibrary.ShoppingCartExample.Repositories.Common;
 

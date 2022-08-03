@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace ObserverLibrary.StockExample.Examples;
+﻿namespace ObserverLibrary.StockExample.Examples;
 
 public class StockRepository
 {

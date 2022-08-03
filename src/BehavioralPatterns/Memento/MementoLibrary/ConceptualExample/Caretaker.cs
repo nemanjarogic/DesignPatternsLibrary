@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace MementoLibrary.ConceptualExample;
+﻿namespace MementoLibrary.ConceptualExample;
 
 /// <summary>
 /// The Caretaker doesn't depend on the Concrete Memento class.

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PrototypeLibrary.ComplexUnstableObjectExample;
+﻿namespace PrototypeLibrary.ComplexUnstableObjectExample;
 
 /// <summary>
 /// This class kind of represents an object that you might create that is going to be unstable

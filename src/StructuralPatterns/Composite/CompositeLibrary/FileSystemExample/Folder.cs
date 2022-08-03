@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using CompositeLibrary.FileSystemExample.Common;
+﻿using CompositeLibrary.FileSystemExample.Common;
 
 namespace CompositeLibrary.FileSystemExample;
 

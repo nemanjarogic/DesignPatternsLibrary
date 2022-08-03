@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LazyLoadLibrary.ValueHolderExample;
+﻿namespace LazyLoadLibrary.ValueHolderExample;
 
 /// <summary>
 /// Value holder pattern is pretty much similar to <see cref="Lazy{T}"/>.

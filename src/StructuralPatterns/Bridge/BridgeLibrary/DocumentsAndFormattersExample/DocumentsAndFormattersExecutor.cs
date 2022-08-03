@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using BridgeLibrary.DocumentsAndFormattersExample.Formatters;
+﻿using BridgeLibrary.DocumentsAndFormattersExample.Formatters;
 using BridgeLibrary.DocumentsAndFormattersExample.Documents;
 using BridgeLibrary.DocumentsAndFormattersExample.Documents.Common;
 using BuildingBlocks;

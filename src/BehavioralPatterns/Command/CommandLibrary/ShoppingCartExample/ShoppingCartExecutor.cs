@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using CommandLibrary.ShoppingCartExample.Commands;
 using CommandLibrary.ShoppingCartExample.Models;
 using CommandLibrary.ShoppingCartExample.Repositories;

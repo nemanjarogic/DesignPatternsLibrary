@@ -1,5 +1,4 @@
-﻿using System;
-using ProxyLibrary.CachingProxyExample.Common;
+﻿using ProxyLibrary.CachingProxyExample.Common;
 
 namespace ProxyLibrary.CachingProxyExample;
 

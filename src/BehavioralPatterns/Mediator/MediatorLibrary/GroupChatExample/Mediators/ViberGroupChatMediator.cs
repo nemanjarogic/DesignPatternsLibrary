@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using MediatorLibrary.GroupChatExample.Components.Common;
+﻿using MediatorLibrary.GroupChatExample.Components.Common;
 using MediatorLibrary.GroupChatExample.Mediators.Common;
 
 namespace MediatorLibrary.GroupChatExample.Mediators;

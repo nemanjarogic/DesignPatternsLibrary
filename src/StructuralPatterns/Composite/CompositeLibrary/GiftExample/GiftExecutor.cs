@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 
 namespace CompositeLibrary.GiftExample;
 

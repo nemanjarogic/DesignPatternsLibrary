@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace StrategyLibrary.SortingExample.Strategies.Common;
+﻿namespace StrategyLibrary.SortingExample.Strategies.Common;
 
 public interface ISortStrategy
 {

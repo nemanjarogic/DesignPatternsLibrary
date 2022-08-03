@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using InterpreterLibrary.SandwichExample.Expressions.Common;
+﻿using InterpreterLibrary.SandwichExample.Expressions.Common;
 using InterpreterLibrary.SandwichExample.Expressions.Terminal.Ingredients.Common;
 
 namespace InterpreterLibrary.SandwichExample.Expressions.NonTerminal;

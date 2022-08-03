@@ -1,5 +1,4 @@
-﻿using System;
-using DecoratorLibrary.DataStorageExample.Components.Common;
+﻿using DecoratorLibrary.DataStorageExample.Components.Common;
 using DecoratorLibrary.DataStorageExample.Decorators.Common;
 
 namespace DecoratorLibrary.DataStorageExample.Decorators;

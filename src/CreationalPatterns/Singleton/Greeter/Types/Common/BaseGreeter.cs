@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Greeter.Types.Common;
+﻿namespace Greeter.Types.Common;
 
 public abstract class BaseGreeter
 {

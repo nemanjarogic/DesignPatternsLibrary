@@ -1,5 +1,4 @@
-﻿using System;
-using Greeter.Types.Common;
+﻿using Greeter.Types.Common;
 
 namespace Greeter.Types;
 

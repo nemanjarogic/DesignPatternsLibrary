@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using ObserverLibrary.StockExample.Examples.Traditional.Subscribers.Common;
+﻿using ObserverLibrary.StockExample.Examples.Traditional.Subscribers.Common;
 
 namespace ObserverLibrary.StockExample.Examples.Traditional.Publishers.Common;
 

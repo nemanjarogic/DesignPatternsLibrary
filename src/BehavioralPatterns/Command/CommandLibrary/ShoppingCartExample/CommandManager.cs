@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using CommandLibrary.ShoppingCartExample.Commands.Common;
+﻿using CommandLibrary.ShoppingCartExample.Commands.Common;
 
 namespace CommandLibrary.ShoppingCartExample;
 

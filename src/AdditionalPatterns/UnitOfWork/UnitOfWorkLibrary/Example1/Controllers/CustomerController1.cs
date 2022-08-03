@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnitOfWorkLibrary.Domain;
+﻿using UnitOfWorkLibrary.Domain;
 using UnitOfWorkLibrary.Example1.Infrastructure;
 
 namespace UnitOfWorkLibrary.Example1.Controllers;

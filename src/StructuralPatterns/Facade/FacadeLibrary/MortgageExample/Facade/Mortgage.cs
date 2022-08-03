@@ -1,5 +1,4 @@
-﻿using System;
-using FacadeLibrary.MortgageExample.Subsystem;
+﻿using FacadeLibrary.MortgageExample.Subsystem;
 
 namespace FacadeLibrary.MortgageExample.Facade;
 

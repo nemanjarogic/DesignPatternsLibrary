@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using RulesLibrary.Common;
+﻿using RulesLibrary.Common;
 using RulesLibrary.RulesExample.Rules;
 using RulesLibrary.RulesExample.Rules.Common;
 

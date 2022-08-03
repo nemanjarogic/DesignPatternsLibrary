@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LazyLoadLibrary;
+﻿namespace LazyLoadLibrary;
 
 public class Library
 {

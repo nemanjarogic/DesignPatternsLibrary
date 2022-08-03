@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ProxyLibrary.ProtectionProxyExample;
+﻿namespace ProxyLibrary.ProtectionProxyExample;
 
 public class SharedFolder : ISharedFolder
 {

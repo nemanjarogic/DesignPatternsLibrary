@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ProxyLibrary.LoggingProxyExample;
+﻿namespace ProxyLibrary.LoggingProxyExample;
 
 /// <summary>
 /// The Proxy has an interface identical to the RealSubject.

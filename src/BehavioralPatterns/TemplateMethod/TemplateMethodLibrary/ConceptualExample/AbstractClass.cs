@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TemplateMethodLibrary.ConceptualExample;
+﻿namespace TemplateMethodLibrary.ConceptualExample;
 
 /// <summary>
 /// The Abstract Class defines a template method that contains a skeleton of

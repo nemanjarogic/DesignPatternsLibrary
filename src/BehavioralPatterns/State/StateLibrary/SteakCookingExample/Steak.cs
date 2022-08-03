@@ -1,5 +1,4 @@
-﻿using System;
-using StateLibrary.SteakCookingExample.States;
+﻿using StateLibrary.SteakCookingExample.States;
 using StateLibrary.SteakCookingExample.States.Common;
 
 namespace StateLibrary.SteakCookingExample;

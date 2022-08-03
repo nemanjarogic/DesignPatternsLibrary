@@ -1,5 +1,4 @@
-﻿using System;
-using BuildingBlocks;
+﻿using BuildingBlocks;
 using RulesLibrary.Common;
 
 namespace RulesLibrary.MotivatingExample;

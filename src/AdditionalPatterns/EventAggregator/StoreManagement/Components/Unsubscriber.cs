@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EventAggregatorLibrary.Components;
+﻿namespace EventAggregatorLibrary.Components;
 
 /// <summary>
 /// Enables a subscriber to unsubscribe from further events.

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CommandLibrary.EmailExample;
+﻿namespace CommandLibrary.EmailExample;
 
 public class Email
 {

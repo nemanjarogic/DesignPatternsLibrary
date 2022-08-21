@@ -10,15 +10,11 @@ namespace CustomSandwichBuilder.Builders;
 /// </summary>
 public class CheapSandwichBuilder : SandwichBuilder
 {
-    public override void CreateNewSandwich()
-    {
+    public override void CreateNewSandwich() =>
         _sandwich = new Sandwich("Cheap sandwich");
-    }
 
-    public override void AddCondiments()
-    {
+    public override void AddCondiments() =>
         _sandwich.HasMayonnaise = true;
-    }
 
     public override void ApplyMeatAndCheese()
     {
@@ -26,13 +22,9 @@ public class CheapSandwichBuilder : SandwichBuilder
         _sandwich.CheeseType = CheeseType.Cheddar;
     }
 
-    public override void ApplyVegetables()
-    {
+    public override void ApplyVegetables() =>
         _sandwich.Vegetables = new List<string> { "Tomato" };
-    }
 
-    public override void PrepareBread()
-    {
+    public override void PrepareBread() =>
         _sandwich.BreadType = BreadType.White;
-    }
 }

@@ -13,6 +13,11 @@ public class Sandwich
         Name = name;
     }
 
+    public Sandwich()
+    {
+        Name = "Unknown";
+    }
+
     public string Name { get; init; }
 
     public BreadType BreadType { get; set; }
@@ -29,7 +34,7 @@ public class Sandwich
 
     public bool HasKetchup { get; set; }
 
-    public List<string> Vegetables { get; set; }
+    public List<string> Vegetables { get; set; } = new();
 
     public void Display()
     {
@@ -40,22 +45,32 @@ public class Sandwich
         Console.WriteLine($"Sandwich on {BreadType} bread");
 
         if (IsToasted)
+        {
             Console.WriteLine("Toasted");
+        }
 
         if (HasMayonnaise)
+        {
             Console.WriteLine("With Mayonnaise");
+        }
 
         if (HasMustard)
+        {
             Console.WriteLine("With Mustard");
+        }
 
         if (HasKetchup)
+        {
             Console.WriteLine("With Ketchup");
+        }
 
         Console.WriteLine($"Meat: {MeatType}", MeatType);
         Console.WriteLine($"Cheese: {CheeseType}", CheeseType);
 
         Console.WriteLine($"Veggies:");
         foreach (var vegetable in Vegetables)
+        {
             Console.WriteLine($"   {vegetable}");
+        }
     }
 }

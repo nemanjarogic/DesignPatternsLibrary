@@ -10,10 +10,8 @@ namespace CustomSandwichBuilder.Builders;
 /// </summary>
 public class PremiumSandwichBuilder : SandwichBuilder
 {
-    public override void CreateNewSandwich()
-    {
+    public override void CreateNewSandwich() =>
         _sandwich = new Sandwich("Premium sandwich");
-    }
 
     public override void AddCondiments()
     {
@@ -28,13 +26,9 @@ public class PremiumSandwichBuilder : SandwichBuilder
         _sandwich.CheeseType = CheeseType.Pule;
     }
 
-    public override void ApplyVegetables()
-    {
+    public override void ApplyVegetables() =>
         _sandwich.Vegetables = new List<string> { "Tomato", "Onion", "Lettuce" };
-    }
 
-    public override void PrepareBread()
-    {
+    public override void PrepareBread() =>
         _sandwich.BreadType = BreadType.WholeGrain;
-    }
 }

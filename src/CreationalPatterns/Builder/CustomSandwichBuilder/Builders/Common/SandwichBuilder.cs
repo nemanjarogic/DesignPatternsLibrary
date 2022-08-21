@@ -8,7 +8,7 @@ namespace CustomSandwichBuilder.Builders.Common;
 /// </summary>
 public abstract class SandwichBuilder
 {
-    protected Sandwich _sandwich;
+    protected Sandwich _sandwich = new();
 
     /// <summary>
     /// Get prepared sandwich.
@@ -16,10 +16,7 @@ public abstract class SandwichBuilder
     /// this method must be moved to the concrete builder's class.
     /// </summary>
     /// <returns>Sandwich.</returns>
-    public Sandwich GetSandwich()
-    {
-        return _sandwich;
-    }
+    public Sandwich GetSandwich() => _sandwich;
 
     public abstract void CreateNewSandwich();
 

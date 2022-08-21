@@ -22,20 +22,18 @@ public class Executor : PatternExecutor
         var premiumSandwichBuilder = new PremiumSandwichBuilder();
 
         var director = new SandwichDirector(cheapSandwichBuilder);
-
         MakeAndDisplaySandwich(director);
 
         // This is not common to see, but it is possible to change builder if necessary.
         director.ChangeBuilder(premiumSandwichBuilder);
-
         MakeAndDisplaySandwich(director);
     }
 
-    private void MakeAndDisplaySandwich(SandwichDirector director)
+    private static void MakeAndDisplaySandwich(SandwichDirector director)
     {
         director.MakeSandwich();
 
-        var sandwich = director.GetSandwhich();
+        var sandwich = director.GetSandwich();
         sandwich.Display();
     }
 }

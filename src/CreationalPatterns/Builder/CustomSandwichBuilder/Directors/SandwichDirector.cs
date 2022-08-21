@@ -16,10 +16,8 @@ public class SandwichDirector
         _builder = builder;
     }
 
-    public void ChangeBuilder(SandwichBuilder newBuilder)
-    {
+    public void ChangeBuilder(SandwichBuilder newBuilder) =>
         _builder = newBuilder;
-    }
 
     public void MakeSandwich()
     {
@@ -30,8 +28,6 @@ public class SandwichDirector
         _builder.AddCondiments();
     }
 
-    public Sandwich GetSandwhich()
-    {
-        return _builder.GetSandwich();
-    }
+    public Sandwich GetSandwich() =>
+        _builder.GetSandwich();
 }

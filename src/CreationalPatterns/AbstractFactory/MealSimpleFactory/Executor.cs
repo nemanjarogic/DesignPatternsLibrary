@@ -1,5 +1,6 @@
 ﻿using DesignPatternsLibrary.PatternExecutors;
 using MealSimpleFactory.Factories;
+using MealSimpleFactory.Meals;
 using MealSimpleFactory.Meals.Common;
 
 namespace MealSimpleFactory;
@@ -10,12 +11,19 @@ public class Executor : PatternExecutor
 
     public override void Execute()
     {
-        Console.WriteLine("Please enter desired meal name (green salad/hamburger): ");
-        string mealName = Console.ReadLine();
+        var response = string.Empty;
+        while (response is not "1" and not "2")
+        {
+            Console.WriteLine("Please choose the desired meal name (enter the number): ");
+            Console.WriteLine("1. Green salad");
+            Console.WriteLine("2. Hamburger");
+            response = Console.ReadLine()!;
+        }
 
-        MealFactory factory = new MealFactory();
+        var mealName = response == "1" ? nameof(GreenSalad) : nameof(Hamburger);
+        var factory = new MealFactory();
+
         IMeal meal = factory.CreateMeal(mealName);
-
         meal.ShowDescription();
         meal.ShowAmountOfCalories();
     }

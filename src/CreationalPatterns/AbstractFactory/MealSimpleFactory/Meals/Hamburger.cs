@@ -4,13 +4,9 @@ namespace MealSimpleFactory.Meals;
 
 public class Hamburger : IMeal
 {
-    public void ShowAmountOfCalories()
-    {
+    public void ShowAmountOfCalories() =>
         Console.WriteLine("Calories: 450 kcal");
-    }
 
-    public void ShowDescription()
-    {
+    public void ShowDescription() =>
         Console.WriteLine("Hamburger: beef meat, Worcestershire sauce and cheese.");
-    }
 }

@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Globalization;
+using System.Reflection;
 using MealSimpleFactory.Meals;
 using MealSimpleFactory.Meals.Common;
 
@@ -10,7 +11,7 @@ namespace MealSimpleFactory.Factories;
 /// </summary>
 public class MealFactory
 {
-    private Dictionary<string, Type> _meals;
+    private readonly Dictionary<string, Type> _meals = new();
 
     public MealFactory()
     {
@@ -25,18 +26,11 @@ public class MealFactory
             return new NullMeal();
         }
 
-        return Activator.CreateInstance(type) as IMeal;
+        return (Activator.CreateInstance(type) as IMeal)!;
     }
 
-    private Type GetTypeForCreation(string mealName)
-    {
-        if (!_meals.TryGetValue(mealName, out Type type))
-        {
-            return null;
-        }
-
-        return type;
-    }
+    private Type? GetTypeForCreation(string mealName) =>
+        _meals.TryGetValue(mealName, out var type) ? type : null;
 
     /// <summary>
     /// Load available meal types.
@@ -45,15 +39,13 @@ public class MealFactory
     /// </summary>
     private void LoadAvailableMealTypes()
     {
-        _meals = new Dictionary<string, Type>();
-
         Type[] assemblyTypes = Assembly.GetExecutingAssembly().GetTypes();
 
         foreach (Type type in assemblyTypes)
         {
             if (type.GetInterface(typeof(IMeal).ToString()) != null)
             {
-                _meals.Add(type.Name.ToLower(), type);
+                _meals.Add(type.Name, type);
             }
         }
     }

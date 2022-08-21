@@ -26,8 +26,7 @@ public class Color : IColorPrototype
 
     public IColorPrototype Clone()
     {
-        Console.WriteLine($"Cloning color RGB: {Red},{Green},{Blue}");
-
-        return MemberwiseClone() as IColorPrototype;
+        Console.WriteLine($"\nCloning color RGB: {Red},{Green},{Blue}");
+        return (MemberwiseClone() as IColorPrototype)!;
     }
 }

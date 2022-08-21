@@ -17,7 +17,7 @@ public static class WebPageScraperExecutor
 
         // After implementing of ICloneable, we can call Clone().
         // This is basically prototype pattern.
-        var scraper3 = scraper.Clone() as WebPageScraper;
+        var scraper3 = (scraper.Clone() as WebPageScraper)!;
         scraper3.PrintPageContent();
     }
 }

@@ -30,8 +30,5 @@ public class ComplexUnstableObject : ICloneable
     {
     }
 
-    public object Clone()
-    {
-        return MemberwiseClone();
-    }
+    public object Clone() => MemberwiseClone();
 }

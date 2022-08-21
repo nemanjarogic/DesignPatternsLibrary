@@ -72,8 +72,5 @@ public class LogicPuzzle : ICloneable
         Console.WriteLine($"Move count: {_moveCount}");
     }
 
-    public object Clone()
-    {
-        return MemberwiseClone();
-    }
+    public object Clone() => MemberwiseClone();
 }

@@ -16,13 +16,15 @@ public static class LogicPuzzleExecutor
         puzzle.ToggleSmallToggle();
         puzzle.SwitchRedSwitch();
 
+        Console.WriteLine("\nState of the original puzzle...");
         puzzle.PrintState();
 
-        // What if we need copy of the object now? We don't want to call all methods again.
-        // Object had complex state, and prototype pattern can be really useful.
-        var puzzle2 = puzzle.Clone() as LogicPuzzle;
+        // What if we need copy of the object now?
+        // We don't want to call all methods that are executed until this point again.
+        // The object has a complex state and prototype pattern can be really useful.
+        var puzzle2 = (puzzle.Clone() as LogicPuzzle)!;
 
-        Console.WriteLine("\nCopy puzzle");
+        Console.WriteLine("\nState of the copied puzzle...");
         puzzle2.PrintState();
     }
 }

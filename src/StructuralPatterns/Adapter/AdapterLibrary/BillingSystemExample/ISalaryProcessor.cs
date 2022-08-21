@@ -5,5 +5,5 @@
 /// </summary>
 public interface ISalaryProcessor
 {
-    void ProcessSalaries(string[,] employees);
+    void ProcessSalaries(string[,] rawEmployees);
 }

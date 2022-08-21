@@ -10,18 +10,14 @@ public class MovieRegistry
     /// and that movies will always be returned in the XML format.
     /// </summary>
     /// <returns>Movies in the XML format.</returns>
-    public XDocument GetAll()
-    {
-        return GetAllFromDatabase();
-    }
+    public XDocument GetAll() => GetAllFromDatabase();
 
     private XDocument GetAllFromDatabase()
     {
         var xDocument = new XDocument();
-
         var xMoviesElement = new XElement("Movies");
 
-        var xMovieCollection = GetRegistredMovies()
+        var xMovieCollection = GetRegisteredMovies()
             .Select(movie => new XElement(
                 "Movie",
                 new XAttribute("Name", movie.Name),
@@ -34,34 +30,32 @@ public class MovieRegistry
         return xDocument;
     }
 
-    private List<Movie> GetRegistredMovies()
-    {
-        return new List<Movie>
+    private IEnumerable<Movie> GetRegisteredMovies() =>
+        new List<Movie>()
         {
-            new Movie
+            new()
             {
                 Name = "Grave of the Fireflies",
                 ReleaseDate = new DateTime(1988, 4, 16),
                 Rating = 8.5,
             },
-            new Movie
+            new()
             {
                 Name = "Tae Guk Gi: The Brotherhood of War",
                 ReleaseDate = new DateTime(2004, 2, 6),
                 Rating = 8.1,
             },
-            new Movie
+            new()
             {
                 Name = "The Man from Earth",
                 ReleaseDate = new DateTime(2007, 11, 13),
                 Rating = 7.9,
             },
-            new Movie
+            new()
             {
                 Name = "Incendies ",
                 ReleaseDate = new DateTime(2010, 1, 12),
                 Rating = 8.3,
             },
         };
-    }
 }

@@ -1,4 +1,6 @@
-﻿namespace AdapterLibrary.BillingSystemExample;
+﻿using System.Globalization;
+
+namespace AdapterLibrary.BillingSystemExample;
 
 /// <summary>
 /// This is a class which makes two incompatible systems to work together.
@@ -19,7 +21,6 @@ public class HRSystemAdapter : ISalaryProcessor
     public void ProcessSalaries(string[,] rawEmployees)
     {
         var employeesForProcessing = PrepareEmployeesForSalaryProcessing(rawEmployees);
-
         _thirdPartyBillingSystem.ProcessSalary(employeesForProcessing);
     }
 
@@ -27,35 +28,34 @@ public class HRSystemAdapter : ISalaryProcessor
     {
         var employeesForProcessing = new List<Employee>();
 
-        for (int i = 0; i < rawEmployees.GetLength(0); i++)
+        for (var i = 0; i < rawEmployees.GetLength(0); i++)
         {
-            string id = null;
-            string name = null;
-            string salary = null;
+            var id = string.Empty;
+            var name = string.Empty;
+            var salary = string.Empty;
 
-            for (int j = 0; j < rawEmployees.GetLength(1); j++)
+            for (var j = 0; j < rawEmployees.GetLength(1); j++)
             {
-                if (j == 0)
+                switch (j)
                 {
-                    id = rawEmployees[i, j];
-                }
-                else if (j == 1)
-                {
-                    name = rawEmployees[i, j];
-                }
-                else
-                {
-                    salary = rawEmployees[i, j];
+                    case 0:
+                        id = rawEmployees[i, j];
+                        break;
+                    case 1:
+                        name = rawEmployees[i, j];
+                        break;
+                    default:
+                        salary = rawEmployees[i, j];
+                        break;
                 }
             }
 
             var employee = new Employee
             {
-                Id = Convert.ToInt32(id),
+                Id = Convert.ToInt32(id, CultureInfo.InvariantCulture),
                 Name = name,
-                Salary = Convert.ToDecimal(salary),
+                Salary = Convert.ToDecimal(salary, CultureInfo.InvariantCulture),
             };
-
             employeesForProcessing.Add(employee);
         }
 

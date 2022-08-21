@@ -8,9 +8,9 @@ public static class MovieBroadcasterExecutor
     {
         ConsoleExtension.WriteSeparator("Movie broadcaster example");
 
-        MovieRegistry registry = new MovieRegistry();
-        IBroadcaster adapter = new BroadcastAdapter(registry);
+        var registry = new MovieRegistry();
 
+        IBroadcaster adapter = new BroadcastAdapter(registry);
         adapter.BroadcastToExternalPartners();
     }
 }

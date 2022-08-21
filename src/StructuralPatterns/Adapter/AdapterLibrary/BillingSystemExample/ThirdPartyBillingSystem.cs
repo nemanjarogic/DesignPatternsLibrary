@@ -8,7 +8,7 @@ public class ThirdPartyBillingSystem
 {
     public void ProcessSalary(List<Employee> employees)
     {
-        foreach (Employee employee in employees)
+        foreach (var employee in employees)
         {
             Console.WriteLine($"EUR {employee.Salary} salary credited to {employee.Name}'s account.");
         }

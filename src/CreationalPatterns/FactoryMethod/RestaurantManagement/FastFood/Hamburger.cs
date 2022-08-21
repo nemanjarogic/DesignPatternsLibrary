@@ -1,14 +1,12 @@
-﻿using RestaurantManagement.Meals.Common;
+﻿using RestaurantManagement.Common;
 
-namespace RestaurantManagement.Meals;
+namespace RestaurantManagement.FastFood;
 
 /// <summary>
 /// Concrete products are different implementations of the product interface <see cref="IMeal"/>.
 /// </summary>
 public class Hamburger : IMeal
 {
-    public void ShowDescription()
-    {
+    public void ShowDescription() =>
         Console.WriteLine("Hamburger - with beef meat, Worcestershire sauce and cheese.");
-    }
 }

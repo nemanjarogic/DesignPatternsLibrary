@@ -1,6 +1,4 @@
-﻿using RestaurantManagement.Meals.Common;
-
-namespace RestaurantManagement.Restaurants.Common;
+﻿namespace RestaurantManagement.Common;
 
 /// <summary>
 /// The Creator class declares the factory method that returns new product objects.

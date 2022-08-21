@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using DesignPatternsLibrary.PatternExecutors;
-using RestaurantManagement.Restaurants;
-using RestaurantManagement.Restaurants.Common;
+using RestaurantManagement.Common;
+using RestaurantManagement.FastFood;
 
 namespace RestaurantManagement;
 
@@ -11,16 +11,17 @@ public class Executor : PatternExecutor
 
     public override void Execute()
     {
-        Restaurant restaurant = InitializeRestaurant();
-
+        var restaurant = InitializeRestaurant();
         restaurant.OrderDailySpecial();
     }
 
-    private Restaurant InitializeRestaurant()
+    private static Restaurant InitializeRestaurant()
     {
-        // This is usually stored within some configuration
-        var choosenType = typeof(FastFoodRestaurant).FullName;
+        // Choose between FastFoodRestaurant and VegetarianRestaurant.
+        // The choice is hardcoded here, but it's usually made through some configuration.
+        var chosenType = typeof(FastFoodRestaurant).FullName!;
 
-        return Assembly.GetExecutingAssembly().CreateInstance(choosenType) as Restaurant;
+        var restaurant = Assembly.GetExecutingAssembly().CreateInstance(chosenType) as Restaurant;
+        return restaurant!;
     }
 }

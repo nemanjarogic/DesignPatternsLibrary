@@ -1,7 +1,7 @@
 ﻿namespace PrototypeLibrary.WebPageScraperExample;
 
 #pragma warning disable IDE0060 // Remove unused parameter
-public class WebPageScraper : ICloneable
+public class WebPageScraper : ICustomCloneable
 {
     private string _title = string.Empty;
     private int _numberOfHeaders;
@@ -20,10 +20,10 @@ public class WebPageScraper : ICloneable
             $"Number of headers: {_numberOfHeaders}, " +
             $"Number of pictures: {_numberOfPictures} ");
 
-    public object Clone() =>
+    public WebPageScraper Clone() =>
         // If we have complex data type MemberwiseClone call wouldn't be enough.
         // MemberwiseClone creates a shallow copy of the current object (it goes just one level in the depth).
-        MemberwiseClone();
+        (MemberwiseClone() as WebPageScraper)!;
 
     private void Scrape(string page)
     {

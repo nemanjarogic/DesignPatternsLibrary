@@ -1,4 +1,4 @@
-﻿namespace RestaurantAbstractFactory.Meals.Common;
+﻿namespace RestaurantAbstractFactory.Common.Products;
 
 public interface IMainCourse : IMeal
 {

@@ -1,7 +1,7 @@
 ﻿using DesignPatternsLibrary.PatternExecutors;
-using RestaurantAbstractFactory.Factories;
-using RestaurantAbstractFactory.Factories.Common;
-using RestaurantAbstractFactory.Meals.Common;
+using RestaurantAbstractFactory.Common.Factories;
+using RestaurantAbstractFactory.Common.Products;
+using RestaurantAbstractFactory.Vegetarian;
 
 namespace RestaurantAbstractFactory;
 
@@ -24,9 +24,7 @@ public class Executor : PatternExecutor
         dessert.ShowSugarAmount();
     }
 
-    private IRestaurantFactory LoadFactory()
-    {
-        // The factory is usually chosen based on some value from the configuration
-        return new VegetarianRestaurantFactory();
-    }
+    // The factory is hardcoded in this example, but it's usually resolved from a configuration.
+    private static IRestaurantFactory LoadFactory() =>
+        new VegetarianRestaurantFactory();
 }

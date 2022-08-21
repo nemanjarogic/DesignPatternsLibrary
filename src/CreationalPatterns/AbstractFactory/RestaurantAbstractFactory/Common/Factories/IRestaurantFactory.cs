@@ -1,6 +1,6 @@
-﻿using RestaurantAbstractFactory.Meals.Common;
+﻿using RestaurantAbstractFactory.Common.Products;
 
-namespace RestaurantAbstractFactory.Factories.Common;
+namespace RestaurantAbstractFactory.Common.Factories;
 
 /// <summary>
 /// The Abstract Factory interface declares a set of methods for creating each of the abstract products.

@@ -12,13 +12,7 @@ public class LocklessFullyLazyGreeter : BaseGreeter
     {
     }
 
-    public static LocklessFullyLazyGreeter Instance
-    {
-        get
-        {
-            return Nested.Instance;
-        }
-    }
+    public static LocklessFullyLazyGreeter Instance => Nested.Instance;
 
     private class Nested
     {
@@ -26,7 +20,7 @@ public class LocklessFullyLazyGreeter : BaseGreeter
         /// Although nested classes have access to the enclosing class's private members,
         /// the reverse is not true, hence the need for instance to be internal here.
         /// </summary>
-        internal static readonly LocklessFullyLazyGreeter Instance = new LocklessFullyLazyGreeter();
+        internal static readonly LocklessFullyLazyGreeter Instance = new();
 
         // Explicit static constructor to tell C# compiler not to mark as BeforeFieldInit.
         // http://csharpindepth.com/Articles/General/Singleton.aspx

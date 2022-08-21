@@ -11,17 +11,11 @@ namespace Greeter.Types;
 /// </summary>
 public class DotNetLazyGreeter : BaseGreeter
 {
-    private static readonly Lazy<DotNetLazyGreeter> Lazy = new Lazy<DotNetLazyGreeter>(() => new DotNetLazyGreeter());
+    private static readonly Lazy<DotNetLazyGreeter> Lazy = new(() => new DotNetLazyGreeter());
 
     private DotNetLazyGreeter()
     {
     }
 
-    public static DotNetLazyGreeter Instance
-    {
-        get
-        {
-            return Lazy.Value;
-        }
-    }
+    public static DotNetLazyGreeter Instance => Lazy.Value;
 }

@@ -18,7 +18,7 @@ public class Executor : PatternExecutor
         Greet();
     }
 
-    private void Greet()
+    private static void Greet()
     {
         SimpleGreeter.Instance.Greet();
         SimpleThreadSafetyGreeter.Instance.Greet();

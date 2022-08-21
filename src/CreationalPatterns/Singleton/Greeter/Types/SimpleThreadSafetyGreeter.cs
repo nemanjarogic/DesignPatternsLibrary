@@ -4,15 +4,15 @@ namespace Greeter.Types;
 
 /// <summary>
 /// This implementation is thread-safe.
-/// The thread takes out a lock on a shared object, and then checks whether or not the instance
-/// has been created before retreiving the instance.
+/// The thread takes out a lock on a shared object, and then checks whether
+/// or not the instance has been created before retrieving the instance.
 /// Unfortunately, performance suffers as a lock is acquired every time the instance is requested.
 /// </summary>
 public class SimpleThreadSafetyGreeter : BaseGreeter
 {
-    private static readonly object Padlock = new object();
+    private static readonly object Padlock = new();
 
-    private static SimpleThreadSafetyGreeter _instance;
+    private static SimpleThreadSafetyGreeter? _instance;
 
     private SimpleThreadSafetyGreeter()
     {

@@ -18,7 +18,7 @@ public static class FileSystemExecutor
         cSharpFolder.Add(new File("C#_8.0_in_a_nutshell.pdf", 11.1));
         cSharpFolder.Add(new File("C#_in_depth.pdf", 4.9));
 
-        designPatternsFolder.Add(new File("Head_first_design_patterns.pdf", 27.0));
+        designPatternsFolder.Add(new File("Head_first_design_patterns.pdf", 20.0));
 
         Console.WriteLine($"Total size of 'Books' folder: {booksFolder.GetSizeInMB()} MB");
         Console.WriteLine($"Total size of 'C#' folder: {cSharpFolder.GetSizeInMB()} MB");

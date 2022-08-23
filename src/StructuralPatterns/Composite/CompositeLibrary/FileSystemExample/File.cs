@@ -12,8 +12,5 @@ public class File : FileSystemEntry
 
     public double Size { get; }
 
-    public override double GetSizeInMB()
-    {
-        return Size;
-    }
+    public override double GetSizeInMB() => Size;
 }

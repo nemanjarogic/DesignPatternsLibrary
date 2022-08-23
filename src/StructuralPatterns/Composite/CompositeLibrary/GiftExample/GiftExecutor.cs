@@ -18,11 +18,8 @@ public static class GiftExecutor
         var dadsGift = new SimpleGift("Fishing rod", 50);
         var momsGift = new SimpleGift("Necklace", 80);
         var childrenGift = new CompositeGift("Children gift");
-        var soldierToy = new SimpleGift("Soldier toy", 40);
-        var barbieToy = new SimpleGift("Barbie toy", 50);
-
-        childrenGift.Add(soldierToy);
-        childrenGift.Add(barbieToy);
+        childrenGift.Add(new SimpleGift("Soldier toy", 40));
+        childrenGift.Add(new SimpleGift("Barbie toy", 50));
 
         familyGift.Add(dadsGift);
         familyGift.Add(momsGift);

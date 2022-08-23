@@ -4,7 +4,7 @@ namespace CompositeLibrary.FileSystemExample;
 
 public class Folder : FileSystemEntry
 {
-    private List<FileSystemEntry> _items;
+    private readonly List<FileSystemEntry> _items;
 
     public Folder(string name)
         : base(name)
@@ -12,18 +12,9 @@ public class Folder : FileSystemEntry
         _items = new List<FileSystemEntry>();
     }
 
-    public void Add(FileSystemEntry entry)
-    {
-        _items.Add(entry);
-    }
+    public void Add(FileSystemEntry entry) => _items.Add(entry);
 
-    public void Remove(FileSystemEntry entry)
-    {
-        _items.Remove(entry);
-    }
+    public void Remove(FileSystemEntry entry) => _items.Remove(entry);
 
-    public override double GetSizeInMB()
-    {
-        return _items.Sum(item => item.GetSizeInMB());
-    }
+    public override double GetSizeInMB() => _items.Sum(item => item.GetSizeInMB());
 }

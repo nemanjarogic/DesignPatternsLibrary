@@ -8,7 +8,7 @@ public static class BeforeExecutor
     {
         ConsoleExtension.WriteSeparator("Shareholders example - before");
 
-        int totalNumberOfShares = 1000;
+        var totalNumberOfShares = 1000;
         Console.WriteLine($"Total number of shares is: {totalNumberOfShares}!");
 
         var james = new Person { Name = "James" };

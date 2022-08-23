@@ -2,12 +2,6 @@
 
 public class Corporation
 {
-    public Corporation()
-    {
-        Shareholders = new List<Person>();
-    }
-
-    public string Name { get; set; }
-
-    public List<Person> Shareholders { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public List<Person> Shareholders { get; set; } = new();
 }

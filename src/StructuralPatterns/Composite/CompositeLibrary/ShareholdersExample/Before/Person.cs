@@ -2,12 +2,9 @@
 
 public class Person
 {
-    public string Name { get; set; }
-
+    public string Name { get; set; } = string.Empty;
     public int NumberOfShares { get; set; }
 
-    public void PrintReport()
-    {
+    public void PrintReport() =>
         Console.WriteLine($"{Name} has {NumberOfShares} shares of the share capital.");
-    }
 }

@@ -2,7 +2,7 @@
 
 public abstract class FileSystemEntry
 {
-    public FileSystemEntry(string name)
+    protected FileSystemEntry(string name)
     {
         Name = name;
     }

@@ -7,7 +7,7 @@ public class CompositeGift : Gift, IGiftOperations
     /// <summary>
     /// This collection can store simple as well as composite gifts.
     /// </summary>
-    private List<Gift> _gifts;
+    private readonly List<Gift> _gifts;
 
     public CompositeGift(string description)
         : base(description, 0)
@@ -15,27 +15,18 @@ public class CompositeGift : Gift, IGiftOperations
         _gifts = new List<Gift>();
     }
 
-    public void Add(Gift gift)
-    {
+    public void Add(Gift gift) =>
         _gifts.Add(gift);
-    }
 
-    public void Remove(Gift gift)
-    {
-        // Consider using HashSet or Dictionary if you need remove item from a collection.
+    public void Remove(Gift gift) =>
+        // Consider using HashSet or Dictionary if you need remove an item from a collection.
         _gifts.Remove(gift);
-    }
 
     public override decimal CalculatePrice()
     {
-        decimal totalPrice = 0;
-
         Console.WriteLine($"'{_description}' contains the following products with prices:");
-        foreach (var gift in _gifts)
-        {
-            totalPrice += gift.CalculatePrice();
-        }
+        _price = _gifts.Sum(gift => gift.CalculatePrice());
 
-        return totalPrice;
+        return _price;
     }
 }

@@ -4,14 +4,11 @@ namespace CompositeLibrary.ShareholdersExample.After;
 
 public class Corporation : Shareholder
 {
-    public List<Shareholder> Shareholders { get; set; } = new List<Shareholder>();
+    public List<Shareholder> Shareholders { get; set; } = new();
 
     public override int NumberOfShares
     {
-        get
-        {
-            return Shareholders.Sum(shareholder => shareholder.NumberOfShares);
-        }
+        get => Shareholders.Sum(shareholder => shareholder.NumberOfShares);
         set
         {
             var sharesForEachShareholder = value / Shareholders.Count;

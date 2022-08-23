@@ -5,9 +5,7 @@
 /// </summary>
 public interface IDataSource
 {
-    string Read();
-
     void Write(string data);
-
+    string Read();
     void ClearContent();
 }

@@ -11,8 +11,5 @@ public class WhippedCream : PancakeDecorator
         Description = "Whipped cream";
     }
 
-    public override double CalculatePrice()
-    {
-        return base.CalculatePrice() + 0.4;
-    }
+    public override double CalculatePrice() => base.CalculatePrice() + 0.4;
 }

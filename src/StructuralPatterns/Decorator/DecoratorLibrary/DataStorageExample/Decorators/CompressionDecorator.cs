@@ -10,20 +10,12 @@ namespace DecoratorLibrary.DataStorageExample.Decorators;
 /// </summary>
 public class CompressionDecorator : DataSourceDecorator
 {
-    private readonly IDataSource _wrapee;
     private readonly string _compressionBlock;
 
     public CompressionDecorator(IDataSource wrapee)
         : base(wrapee)
     {
-        _wrapee = wrapee;
         _compressionBlock = "--COMPRESSED--";
-    }
-
-    public override string Read()
-    {
-        var compressedData = _wrapee.Read();
-        return Decompress(compressedData);
     }
 
     public override void Write(string data)
@@ -34,13 +26,15 @@ public class CompressionDecorator : DataSourceDecorator
         _wrapee.Write(compressedData);
     }
 
-    private string Decompress(string data)
+    public override string Read()
     {
-        return data.Replace(_compressionBlock, string.Empty);
+        var compressedData = _wrapee.Read();
+        return Decompress(compressedData);
     }
 
-    private string Compress(string data)
-    {
-        return $"{_compressionBlock}{data}{_compressionBlock}";
-    }
+    private string Compress(string data) =>
+        $"{_compressionBlock}{data}{_compressionBlock}";
+
+    private string Decompress(string data) =>
+        data.Replace(_compressionBlock, string.Empty, StringComparison.InvariantCulture);
 }

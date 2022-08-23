@@ -10,30 +10,23 @@ namespace DecoratorLibrary.DataStorageExample.Decorators.Common;
 /// </summary>
 public abstract class DataSourceDecorator : IDataSource
 {
-    private readonly IDataSource _wrapee;
+    protected readonly IDataSource _wrapee;
 
-    public DataSourceDecorator(IDataSource dataSource)
+    protected DataSourceDecorator(IDataSource dataSource)
     {
         _wrapee = dataSource;
     }
 
-    public void ClearContent()
-    {
-        _wrapee.ClearContent();
-    }
-
-    public virtual string Read()
-    {
-        // Concrete decorators may call the parent implementation of the operation
-        // instead of calling the wrapped object directly.
-        // This approach simplifies extension of decorator classes.
-        return _wrapee.Read();
-    }
-
-    public virtual void Write(string data)
-    {
-        // The base decorator simply delegates all work to the wrapped component.
-        // Extra behaviors can be added in concrete decorators.
+    // The base decorator simply delegates all work to the wrapped component.
+    // Extra behaviors can be added in concrete decorators.
+    public virtual void Write(string data) =>
         _wrapee.Write(data);
-    }
+
+    // With this approach, concrete decorators can call the parent implementation of the operation
+    // instead of calling the wrapped object directly.
+    // That simplifies extension of decorator classes.
+    public virtual string Read() =>
+        _wrapee.Read();
+
+    public void ClearContent() => _wrapee.ClearContent();
 }

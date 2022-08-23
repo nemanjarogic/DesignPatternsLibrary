@@ -3,13 +3,13 @@ using DecoratorLibrary.PancakeExample.Decorators.Common;
 
 namespace DecoratorLibrary.PancakeExample.Decorators;
 
-public class Nutella : PancakeDecorator
+public class MapleSyrup : PancakeDecorator
 {
-    public Nutella(Pancake pancake)
+    public MapleSyrup(Pancake pancake)
         : base(pancake)
     {
-        Description = "Nutella";
+        Description = "Maple syrup";
     }
 
-    public override double CalculatePrice() => base.CalculatePrice() + 0.7;
+    public override double CalculatePrice() => base.CalculatePrice() + 1.0;
 }

@@ -14,9 +14,9 @@ public static class PancakeExecutor
         Pancake pancake = new BigPancake();
         pancake = new WhippedCream(pancake);
         pancake = new MixedBerries(pancake);
-        pancake = new MappleSyrup(pancake);
+        pancake = new MapleSyrup(pancake);
 
-        Console.WriteLine(pancake.GetDescriptionAndAddIns());
-        Console.WriteLine("{0:C2}", pancake.CalculatePrice());
+        Console.WriteLine($"Order: {pancake.GetDescriptionAndAddIns()}");
+        Console.WriteLine($"Price: {pancake.CalculatePrice():C2}");
     }
 }

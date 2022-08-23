@@ -11,8 +11,5 @@ public class MixedBerries : PancakeDecorator
         Description = "Mixed berries";
     }
 
-    public override double CalculatePrice()
-    {
-        return base.CalculatePrice() + 2.0;
-    }
+    public override double CalculatePrice() => base.CalculatePrice() + 2.0;
 }

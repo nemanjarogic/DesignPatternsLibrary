@@ -10,20 +10,12 @@ namespace DecoratorLibrary.DataStorageExample.Decorators;
 /// </summary>
 public class EncryptionDecorator : DataSourceDecorator
 {
-    private readonly IDataSource _wrapee;
     private readonly string _encryptionBlock;
 
     public EncryptionDecorator(IDataSource wrapee)
         : base(wrapee)
     {
-        _wrapee = wrapee;
         _encryptionBlock = "##3NCRYPT3D##";
-    }
-
-    public override string Read()
-    {
-        var encryptedData = _wrapee.Read();
-        return Decrypt(encryptedData);
     }
 
     public override void Write(string data)
@@ -34,13 +26,15 @@ public class EncryptionDecorator : DataSourceDecorator
         _wrapee.Write(encryptedData);
     }
 
-    private string Decrypt(string data)
+    public override string Read()
     {
-        return data.Replace(_encryptionBlock, string.Empty);
+        var encryptedData = _wrapee.Read();
+        return Decrypt(encryptedData);
     }
 
-    private string Encrypt(string data)
-    {
-        return $"{_encryptionBlock}{data}{_encryptionBlock}";
-    }
+    private string Encrypt(string data) =>
+        $"{_encryptionBlock}{data}{_encryptionBlock}";
+
+    private string Decrypt(string data) =>
+        data.Replace(_encryptionBlock, string.Empty, StringComparison.InvariantCulture);
 }

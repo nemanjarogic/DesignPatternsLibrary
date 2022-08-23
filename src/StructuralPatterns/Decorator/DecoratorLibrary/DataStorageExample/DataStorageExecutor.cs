@@ -20,8 +20,7 @@ public static class DataStorageExecutor
     {
         IDataSource source = new File("file.dat");
 
-        source.Write("Hello world");
-        Console.WriteLine($"Read: {source.Read()}\n");
+        WriteAndRead(source);
     }
 
     private static void ProcessFileWithCompressedData()
@@ -29,8 +28,7 @@ public static class DataStorageExecutor
         IDataSource source = new File("file.dat");
         source = new CompressionDecorator(source);
 
-        source.Write("Hello world");
-        Console.WriteLine($"Read: {source.Read()}\n");
+        WriteAndRead(source);
     }
 
     private static void ProcessFileWithCompressedAndEncryptedData()
@@ -39,6 +37,11 @@ public static class DataStorageExecutor
         source = new EncryptionDecorator(source);
         source = new CompressionDecorator(source);
 
+        WriteAndRead(source);
+    }
+
+    private static void WriteAndRead(IDataSource source)
+    {
         source.Write("Hello world");
         Console.WriteLine($"Read: {source.Read()}\n");
     }

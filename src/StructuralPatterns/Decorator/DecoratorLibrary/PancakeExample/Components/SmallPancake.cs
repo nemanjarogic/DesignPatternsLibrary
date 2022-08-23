@@ -9,8 +9,5 @@ public class SmallPancake : Pancake
         Description = "Small pancake";
     }
 
-    public override double CalculatePrice()
-    {
-        return 6.0;
-    }
+    public override double CalculatePrice() => 6.0;
 }

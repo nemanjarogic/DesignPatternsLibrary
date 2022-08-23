@@ -11,13 +11,7 @@ public class PancakeDecorator : Pancake
         _pancake = pancake;
     }
 
-    public override double CalculatePrice()
-    {
-        return _pancake.CalculatePrice();
-    }
+    public override double CalculatePrice() => _pancake.CalculatePrice();
 
-    public override string GetDescriptionAndAddIns()
-    {
-        return $"{_pancake.GetDescriptionAndAddIns()}, {Description}";
-    }
+    public override string GetDescriptionAndAddIns() => $"{_pancake.GetDescriptionAndAddIns()}, {Description}";
 }

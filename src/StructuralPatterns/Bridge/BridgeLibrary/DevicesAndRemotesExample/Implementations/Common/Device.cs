@@ -12,7 +12,7 @@ public abstract class Device
     private int _volume;
     private int _channel;
 
-    public Device()
+    protected Device()
     {
         Console.WriteLine("Device turning on process started...");
 
@@ -24,10 +24,7 @@ public abstract class Device
 
     public int Volume
     {
-        get
-        {
-            return _volume;
-        }
+        get => _volume;
         set
         {
             _volume = value;
@@ -37,10 +34,7 @@ public abstract class Device
 
     public int Channel
     {
-        get
-        {
-            return _channel;
-        }
+        get => _channel;
         set
         {
             _channel = value;
@@ -52,13 +46,9 @@ public abstract class Device
 
     public bool IsTurnedOn { get; private set; }
 
-    public virtual void TurnOn()
-    {
+    public virtual void TurnOn() =>
         IsTurnedOn = true;
-    }
 
-    public virtual void TurnOff()
-    {
+    public virtual void TurnOff() =>
         IsTurnedOn = false;
-    }
 }

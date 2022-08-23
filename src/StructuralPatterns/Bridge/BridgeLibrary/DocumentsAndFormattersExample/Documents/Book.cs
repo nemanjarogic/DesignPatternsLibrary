@@ -10,17 +10,15 @@ public class Book : Document
     {
     }
 
-    public string Title { get; set; }
-
-    public string Author { get; set; }
-
-    public string Text { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Author { get; set; } = string.Empty;
+    public string Text { get; set; } = string.Empty;
 
     public override void Print()
     {
-        Console.WriteLine(formatter.Format("Title", Title));
-        Console.WriteLine(formatter.Format("Author", Author));
-        Console.WriteLine(formatter.Format("Text", Text));
+        Console.WriteLine(_formatter.Format("Title", Title));
+        Console.WriteLine(_formatter.Format("Author", Author));
+        Console.WriteLine(_formatter.Format("Text", Text));
         Console.WriteLine();
     }
 }

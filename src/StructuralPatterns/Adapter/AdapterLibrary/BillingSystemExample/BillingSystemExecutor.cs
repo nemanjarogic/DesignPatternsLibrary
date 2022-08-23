@@ -21,6 +21,8 @@ public static class BillingSystemExecutor
         // but since it isn't compatible with the 3rd party billing system interface we must use adapter.
         // The 3rd party billing system expects List<Employee>, but the current HR system works only with string[,].
         // Hide that using adapter design pattern (note that the client is not aware of what's happening under the hood).
+        // The client code doesn't get coupled to the concrete adapter class as long as it works with the adapter via the interface.
+        // In this case the client is coupled with the concrete adapter class only because we don't use dependency injection for demo purposes.
         ISalaryProcessor salaryProcessor = new HRSystemAdapter();
         salaryProcessor.ProcessSalaries(employeesInfo);
     }

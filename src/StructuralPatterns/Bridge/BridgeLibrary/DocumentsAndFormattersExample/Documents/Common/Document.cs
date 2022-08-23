@@ -4,11 +4,11 @@ namespace BridgeLibrary.DocumentsAndFormattersExample.Documents.Common;
 
 public abstract class Document
 {
-    protected readonly IFormatter formatter;
+    protected readonly IFormatter _formatter;
 
-    public Document(IFormatter formatter)
+    protected Document(IFormatter formatter)
     {
-        this.formatter = formatter;
+        _formatter = formatter;
     }
 
     public abstract void Print();

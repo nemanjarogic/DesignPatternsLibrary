@@ -12,7 +12,7 @@ public abstract class RemoteControl
     protected readonly Device _device;
     protected readonly int _volumeChangeStep;
 
-    public RemoteControl(Device device)
+    protected RemoteControl(Device device)
     {
         _device = device;
         _volumeChangeStep = 5;

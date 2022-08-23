@@ -10,20 +10,17 @@ public class TermPaper : Document
     {
     }
 
-    public string Class { get; set; }
-
-    public string Student { get; set; }
-
-    public string Text { get; set; }
-
-    public string References { get; set; }
+    public string Class { get; set; } = string.Empty;
+    public string Student { get; set; } = string.Empty;
+    public string Text { get; set; } = string.Empty;
+    public string References { get; set; } = string.Empty;
 
     public override void Print()
     {
-        Console.WriteLine(formatter.Format("Class", Class));
-        Console.WriteLine(formatter.Format("Student", Student));
-        Console.WriteLine(formatter.Format("Text", Text));
-        Console.WriteLine(formatter.Format("References", References));
+        Console.WriteLine(_formatter.Format("Class", Class));
+        Console.WriteLine(_formatter.Format("Student", Student));
+        Console.WriteLine(_formatter.Format("Text", Text));
+        Console.WriteLine(_formatter.Format("References", References));
         Console.WriteLine();
     }
 }

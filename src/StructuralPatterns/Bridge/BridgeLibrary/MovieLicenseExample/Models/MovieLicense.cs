@@ -10,89 +10,97 @@ namespace BridgeLibrary.MovieLicenseExample.Models;
 public class MovieLicense
 {
     private readonly Discount _discount;
-    private readonly LicenceType _licenceType;
+    private readonly LicenseType _licenseType;
     private readonly SpecialOffer _specialOffer;
 
     public MovieLicense(
         string movie,
         DateTime purchaseTime,
         Discount discount,
-        LicenceType licenceType,
+        LicenseType licenseType,
         SpecialOffer specialOffer = SpecialOffer.None)
     {
         Movie = movie;
         PurchaseTime = purchaseTime;
 
         _discount = discount;
-        _licenceType = licenceType;
+        _licenseType = licenseType;
         _specialOffer = specialOffer;
     }
 
     public string Movie { get; }
-
     public DateTime PurchaseTime { get; }
 
-    public decimal GetPrice()
+    public void Print()
     {
-        int discount = GetDiscount();
-        decimal multiplier = 1 - (discount / 100m);
+        Console.WriteLine($"Movie: {Movie}");
+        Console.WriteLine($"Price: ${GetPrice():0.00}");
+        Console.WriteLine($"Valid for: {GetValidFor()}");
+
+        Console.WriteLine();
+    }
+
+    private decimal GetPrice()
+    {
+        var discountPercentage = GetDiscountPercentage();
+        var multiplier = 1 - (discountPercentage / 100m);
 
         return GetBasePrice() * multiplier;
     }
 
-    public DateTime? GetExpirationDate()
-    {
-        DateTime? expirationDate = GetBaseExpirationDate();
-        TimeSpan extension = GetSpecialOfferExtension();
-
-        return expirationDate?.Add(extension);
-    }
-
-    private int GetDiscount()
-    {
-        return _discount switch
+    private int GetDiscountPercentage() =>
+        _discount switch
         {
             Discount.None => 0,
             Discount.EarlyPayment => 10,
             Discount.Senior => 20,
-
             _ => throw new ArgumentOutOfRangeException(),
         };
-    }
 
-    private decimal GetBasePrice()
-    {
-        return _licenceType switch
+    private decimal GetBasePrice() =>
+        _licenseType switch
         {
-            LicenceType.OneDay => 10,
-            LicenceType.SevenDays => 60,
-            LicenceType.LifeLong => 150,
-
+            LicenseType.OneDay => 10,
+            LicenseType.SevenDays => 60,
+            LicenseType.LifeLong => 150,
             _ => throw new ArgumentOutOfRangeException(),
         };
+
+    private string GetValidFor()
+    {
+        var expirationDate = GetExpirationDate();
+        if (expirationDate == null)
+        {
+            return "Forever";
+        }
+
+        var timeSpan = expirationDate.Value - DateTime.Now;
+        return $"{timeSpan.Days}d {timeSpan.Hours}h {timeSpan.Minutes}m";
     }
 
-    private TimeSpan GetSpecialOfferExtension()
+    public DateTime? GetExpirationDate()
     {
-        return _specialOffer switch
+        var expirationDate = GetBaseExpirationDate();
+        var extensionPeriod = GetSpecialOfferExtension();
+
+        return expirationDate?.Add(extensionPeriod);
+    }
+
+    private DateTime? GetBaseExpirationDate() =>
+        _licenseType switch
+        {
+            LicenseType.OneDay => PurchaseTime.AddDays(1),
+            LicenseType.SevenDays => PurchaseTime.AddDays(7),
+            LicenseType.LifeLong => null,
+            _ => throw new ArgumentOutOfRangeException(),
+        };
+
+    private TimeSpan GetSpecialOfferExtension() =>
+        _specialOffer switch
         {
             SpecialOffer.None => TimeSpan.Zero,
             SpecialOffer.OneDayExtension => TimeSpan.FromDays(1),
             SpecialOffer.SevenDaysExtension => TimeSpan.FromDays(7),
-
             _ => throw new ArgumentOutOfRangeException(),
         };
-    }
-
-    private DateTime? GetBaseExpirationDate()
-    {
-        return _licenceType switch
-        {
-            LicenceType.OneDay => PurchaseTime.AddDays(1) as DateTime?,
-            LicenceType.SevenDays => PurchaseTime.AddDays(7) as DateTime?,
-            LicenceType.LifeLong => null,
-
-            _ => throw new ArgumentOutOfRangeException(),
-        };
-    }
 }

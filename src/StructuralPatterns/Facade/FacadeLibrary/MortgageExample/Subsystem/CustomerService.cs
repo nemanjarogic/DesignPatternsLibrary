@@ -2,11 +2,9 @@
 
 public class CustomerService
 {
-    public Customer Find(string name)
-    {
-        // Naive implementation.
-        // In real life scenario we would need some customer registry.
-        // There may be multiple customers with the same name.
-        return new Customer { Name = name };
-    }
+    // Naive implementation.
+    // In a real life scenario we would need some customer registry.
+    // There may be multiple customers with the same name.
+    public Customer Find(string name) =>
+        new() { Name = name };
 }

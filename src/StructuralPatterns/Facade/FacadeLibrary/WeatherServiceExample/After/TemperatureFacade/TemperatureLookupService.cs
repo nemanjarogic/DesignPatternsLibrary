@@ -32,7 +32,7 @@ public class TemperatureLookupService
         var fahrenheitDegrees = _weatherService.GetTemperatureFahrenheit(coords.Latitude, coords.Longitude);
         var celsiusDegrees = _temperatureConverter.ConvertFahrenheitToCelsius(fahrenheitDegrees);
 
-        return new LocalTemperature()
+        return new LocalTemperature
         {
             Fahrenheit = fahrenheitDegrees,
             Celsius = celsiusDegrees,

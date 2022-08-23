@@ -2,8 +2,5 @@
 
 public class WeatherService
 {
-    public double GetTemperatureFahrenheit(double latitude, double longitude)
-    {
-        return 86.5;
-    }
+    public double GetTemperatureFahrenheit(double latitude, double longitude) => 86.5;
 }

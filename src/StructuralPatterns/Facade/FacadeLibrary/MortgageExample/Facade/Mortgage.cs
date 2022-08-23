@@ -19,7 +19,7 @@ public class Mortgage
 
     public bool IsEligible(string customerName, decimal loanAmount)
     {
-        Console.WriteLine($"Customer {customerName} wants to apply for {loanAmount:C} loan.\n");
+        Console.WriteLine($"The customer {customerName} wants to apply for {loanAmount:C} loan.\n");
 
         var customer = _customerService.Find(customerName);
 

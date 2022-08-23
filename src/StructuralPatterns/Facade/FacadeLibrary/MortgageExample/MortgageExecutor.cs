@@ -10,10 +10,10 @@ public static class MortgageExecutor
         ConsoleExtension.WriteSeparator("Mortgage example");
 
         var mortgage = new Mortgage();
-        var customerName = "Mario Balotelli";
+        const string customerName = "Mario Balotelli";
 
         // Evaluate mortgage eligibility for the customer.
-        bool isEligible = mortgage.IsEligible(customerName, 125000);
+        var isEligible = mortgage.IsEligible(customerName, 125000);
 
         var status = isEligible ? "approved" : "rejected";
         Console.WriteLine($"Mortgage for {customerName} has been {status}.");

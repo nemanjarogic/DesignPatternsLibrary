@@ -4,7 +4,7 @@ public class Loan
 {
     public bool HasBadLoans(Customer customer)
     {
-        Console.WriteLine($"Check loans for customer: {customer.Name}");
+        Console.WriteLine($"Check loans for the customer: {customer.Name}");
 
         return false;
     }

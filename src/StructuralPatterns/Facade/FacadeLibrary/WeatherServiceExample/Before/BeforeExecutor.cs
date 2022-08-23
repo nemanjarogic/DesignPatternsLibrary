@@ -1,4 +1,5 @@
-﻿using BuildingBlocks;
+﻿using System.Globalization;
+using BuildingBlocks;
 using FacadeLibrary.WeatherServiceExample.Service;
 
 namespace FacadeLibrary.WeatherServiceExample.Before;
@@ -9,7 +10,7 @@ public static class BeforeExecutor
     {
         ConsoleExtension.WriteSeparator("Weather service example - before");
 
-        var zipCode = "83714";
+        const string zipCode = "83714";
         var geoLookupService = new GeoLookupService();
 
         var city = geoLookupService.FindCity(zipCode);
@@ -24,8 +25,8 @@ public static class BeforeExecutor
 
         Console.WriteLine(
             "The current temperature is {0}F/{1}C in {2}, {3}",
-            fahrenheitDegrees.ToString("F1"),
-            celsiusDegrees.ToString("F1"),
+            fahrenheitDegrees.ToString("F1", CultureInfo.InvariantCulture),
+            celsiusDegrees.ToString("F1", CultureInfo.InvariantCulture),
             city,
             state);
     }

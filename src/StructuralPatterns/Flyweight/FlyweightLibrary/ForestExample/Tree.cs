@@ -13,8 +13,5 @@ public class Tree
         _treeType = treeType;
     }
 
-    public void Render()
-    {
-        _treeType.Render(_latitude, _longitude);
-    }
+    public void Render() => _treeType.Render(_latitude, _longitude);
 }

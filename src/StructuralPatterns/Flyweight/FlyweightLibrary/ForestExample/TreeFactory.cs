@@ -18,19 +18,18 @@ public class TreeFactory
     {
         var key = GetTreeTypeKey(name, color, texture);
 
-        if (!_treeTypes.TryGetValue(key, out TreeType treeType))
+        if (_treeTypes.TryGetValue(key, out var treeType))
         {
-            treeType = new TreeType(name, color, texture);
-            _treeTypes.Add(key, treeType);
-
-            Console.WriteLine($"Registered new type: {name} tree with {color} color and {texture}");
+            Console.WriteLine($"Returning already initialized {name} tree with {color} color and {texture} from the tree factory...");
+            return treeType;
         }
+
+        treeType = new TreeType(name, color, texture);
+        _treeTypes.Add(key, treeType);
+        Console.WriteLine($"Registered new type: {name} tree with {color} color and {texture}");
 
         return treeType;
     }
 
-    private string GetTreeTypeKey(string name, KnownColor color, string texture)
-    {
-        return $"{name}-{color}-{texture}";
-    }
+    private static string GetTreeTypeKey(string name, KnownColor color, string texture) => $"{name}-{color}-{texture}";
 }

@@ -29,13 +29,13 @@ public static class DotNetStringExecutor
         Console.WriteLine($"s1 == s3 -> {ReferenceEquals(s1, s3)}");
 
         // We can make use of Console.ReadLine to accept a string at runtime, and assign it to s4.
-        // And a surprise, the output it false! By default .NET runtime doesn't replace runtime strings,
-        // which are instances.
+        // If you enter 'flyweight' after running the app, the output will be false!
+        // By default .NET runtime doesn't replace runtime strings, which are instances.
         // OUTPUT: false (if you enter 'flyweight')
         Console.WriteLine($"s1 == s4 -> {ReferenceEquals(s1, s4)}");
 
-        // While .NET runtime by default doesn't replace runtime strings, which are instances, we can still
-        // check if your string is present inside  the shared string pool by using string.Intern method.
+        // While .NET runtime by default doesn't replace runtime strings, we can still
+        // check if a runtime string is present inside the shared string pool by using string.Intern method.
         // Intern method is like the FlyweightFactory.
         // It returns a reference to an existing string if it is part of the pool.
         // OUTPUT: true (if you enter 'flyweight')

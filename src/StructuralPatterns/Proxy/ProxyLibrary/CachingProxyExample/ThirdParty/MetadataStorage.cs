@@ -18,19 +18,19 @@ public class MetadataStorage
 
     public IEnumerable<VideoMetadata> GetAll()
     {
-        Console.WriteLine("Get metadata for all videos from the metadata storage...");
+        Console.WriteLine("Getting metadata for all videos from the metadata storage...");
         return _videos.Values;
     }
 
     public VideoMetadata GetById(int id)
     {
-        Console.WriteLine($"Get metadata for video with ID: {id} from the metadata storage...");
+        Console.WriteLine($"Getting metadata for the video with ID: {id} from the metadata storage...");
 
-        if (!_videos.TryGetValue(id, out VideoMetadata video))
+        if (!_videos.TryGetValue(id, out var videoMetadata))
         {
             throw new Exception($"ID: {id} is unknown to metadata storage.");
         }
 
-        return video;
+        return videoMetadata;
     }
 }

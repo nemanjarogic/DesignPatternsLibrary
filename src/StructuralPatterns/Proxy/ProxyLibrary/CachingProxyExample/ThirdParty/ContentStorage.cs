@@ -18,13 +18,13 @@ public class ContentStorage
 
     public Video GetById(int id)
     {
-        Console.WriteLine($"Get content for video with ID: {id} from the content storage...");
+        Console.WriteLine($"Getting content for the video with ID: {id} from the content storage...");
 
-        if (!_videos.TryGetValue(id, out Video content))
+        if (!_videos.TryGetValue(id, out var video))
         {
             throw new Exception($"ID: {id} is unknown to content storage.");
         }
 
-        return content;
+        return video;
     }
 }

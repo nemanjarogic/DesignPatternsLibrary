@@ -8,8 +8,5 @@
 /// </summary>
 public class Client
 {
-    public void PerformOperation(ISubject subject)
-    {
-        subject.Request();
-    }
+    public void PerformOperation(ISubject subject) => subject.Request();
 }

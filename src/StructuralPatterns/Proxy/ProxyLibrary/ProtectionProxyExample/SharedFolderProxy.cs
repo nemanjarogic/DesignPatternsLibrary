@@ -13,12 +13,12 @@ public class SharedFolderProxy : ISharedFolder
 
     public void Access()
     {
-        if (_employee.Role == Role.Manager || _employee.Role == Role.CEO)
+        if (_employee.Role is Role.Manager or Role.CEO)
         {
             _sharedFolder.Access();
             return;
         }
 
-        Console.WriteLine($"Employee with role: {_employee.Role} doesn't have access to the shared folder");
+        Console.WriteLine($"The employee with the role '{_employee.Role}' doesn't have access to the shared folder");
     }
 }

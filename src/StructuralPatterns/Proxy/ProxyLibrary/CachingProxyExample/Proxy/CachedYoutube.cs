@@ -26,7 +26,7 @@ public class CachedYoutube : IYoutubeOperations
 
     public Video DownloadVideo(int id)
     {
-        if (!_contentCache.TryGetValue(id, out Video video))
+        if (!_contentCache.TryGetValue(id, out var video))
         {
             video = _youtubeService.DownloadVideo(id);
             _contentCache.Add(video.Id, video);
@@ -37,7 +37,7 @@ public class CachedYoutube : IYoutubeOperations
 
     public VideoMetadata GetVideoMetadata(int id)
     {
-        if (!_metadataCache.TryGetValue(id, out VideoMetadata metadata))
+        if (!_metadataCache.TryGetValue(id, out var metadata))
         {
             metadata = _youtubeService.GetVideoMetadata(id);
             _metadataCache.Add(metadata.Id, metadata);
@@ -48,18 +48,20 @@ public class CachedYoutube : IYoutubeOperations
 
     public IEnumerable<VideoMetadata> ShowHomepage()
     {
-        // Naive logic - prepare homepage using only cached data
-        IEnumerable<VideoMetadata> videosMetadataForHomepage = _metadataCache.Values;
+        // Naive logic - prepare the homepage using only cached data.
+        IEnumerable<VideoMetadata> metadataForHomepage = _metadataCache.Values;
 
-        if (!videosMetadataForHomepage.Any())
+        if (!metadataForHomepage.Any())
         {
-            videosMetadataForHomepage = _youtubeService.ShowHomepage();
-            foreach (var videoMetadata in videosMetadataForHomepage)
+            // Nothing is cached on our side yet.
+            // Send a network request to the Youtube in order to get enough information for showing the homepage.
+            metadataForHomepage = _youtubeService.ShowHomepage();
+            foreach (var videoMetadata in metadataForHomepage)
             {
                 _metadataCache.Add(videoMetadata.Id, videoMetadata);
             }
         }
 
-        return videosMetadataForHomepage;
+        return metadataForHomepage;
     }
 }

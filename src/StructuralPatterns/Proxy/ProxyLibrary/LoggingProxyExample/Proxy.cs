@@ -29,7 +29,7 @@ public class Proxy : ISubject
         LogAccess();
     }
 
-    public bool CheckAccess()
+    private bool CheckAccess()
     {
         // Some real checks should go here.
         Console.WriteLine("Proxy: Checking access prior to firing a real request.");
@@ -37,8 +37,5 @@ public class Proxy : ISubject
         return true;
     }
 
-    public void LogAccess()
-    {
-        Console.WriteLine($"Proxy: Request is issued at {DateTime.Now}");
-    }
+    private void LogAccess() => Console.WriteLine($"Proxy: Request is issued at {DateTime.Now}");
 }

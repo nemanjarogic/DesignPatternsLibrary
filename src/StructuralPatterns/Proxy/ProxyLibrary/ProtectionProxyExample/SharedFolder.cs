@@ -2,8 +2,5 @@
 
 public class SharedFolder : ISharedFolder
 {
-    public void Access()
-    {
-        Console.WriteLine("Accessing to the shared folder...");
-    }
+    public void Access() => Console.WriteLine("The shared folder is opened.");
 }

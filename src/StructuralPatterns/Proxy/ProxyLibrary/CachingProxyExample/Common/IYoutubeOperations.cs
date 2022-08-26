@@ -6,8 +6,6 @@
 public interface IYoutubeOperations
 {
     VideoMetadata GetVideoMetadata(int id);
-
     Video DownloadVideo(int id);
-
     IEnumerable<VideoMetadata> ShowHomepage();
 }

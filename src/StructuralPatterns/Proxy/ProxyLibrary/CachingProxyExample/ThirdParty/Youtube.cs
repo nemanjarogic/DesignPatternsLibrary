@@ -11,21 +11,12 @@ namespace ProxyLibrary.CachingProxyExample.ThirdParty;
 /// </summary>
 public class Youtube : IYoutubeOperations
 {
-    private readonly ContentStorage _contentStorage = new ContentStorage();
-    private readonly MetadataStorage _metadataStorage = new MetadataStorage();
+    private readonly ContentStorage _contentStorage = new();
+    private readonly MetadataStorage _metadataStorage = new();
 
-    public Video DownloadVideo(int id)
-    {
-        return _contentStorage.GetById(id);
-    }
+    public Video DownloadVideo(int id) => _contentStorage.GetById(id);
 
-    public VideoMetadata GetVideoMetadata(int id)
-    {
-        return _metadataStorage.GetById(id);
-    }
+    public VideoMetadata GetVideoMetadata(int id) => _metadataStorage.GetById(id);
 
-    public IEnumerable<VideoMetadata> ShowHomepage()
-    {
-        return _metadataStorage.GetAll();
-    }
+    public IEnumerable<VideoMetadata> ShowHomepage() => _metadataStorage.GetAll();
 }

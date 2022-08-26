@@ -8,15 +8,15 @@ public static class ProtectionProxyExecutor
     {
         ConsoleExtension.WriteSeparator("Protection proxy example");
 
-        TryToAccessToTheSharedFolder("johndoe", "password", Role.Worker);
-        TryToAccessToTheSharedFolder("elonmusk", "password", Role.CEO);
+        TryToAccessTheSharedFolder("johndoe", "password", Role.Worker);
+        TryToAccessTheSharedFolder("elonmusk", "password", Role.CEO);
     }
 
-    private static void TryToAccessToTheSharedFolder(string username, string password, Role role)
+    private static void TryToAccessTheSharedFolder(string username, string password, Role role)
     {
         Console.WriteLine(
-            $"\nEmployee with username: {username} and role {role} " +
-            $"is trying to access to the shared folder...");
+            $"\nThe employee with the username '{username}' and the role '{role}' " +
+            $"is trying to access the shared folder...");
 
         var employee = new Employee(username, password, role);
         var sharedFolder = new SharedFolder();

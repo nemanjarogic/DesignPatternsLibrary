@@ -1,4 +1,5 @@
 ﻿using BuildingBlocks;
+using ProxyLibrary.CachingProxyExample.Manager;
 using ProxyLibrary.CachingProxyExample.Proxy;
 using ProxyLibrary.CachingProxyExample.ThirdParty;
 
@@ -19,7 +20,7 @@ public static class CachingProxyExecutor
         youtubeManager.PlayVideo(2);
 
         // Video 1 should be cached.
-        // Request to third party service will not be issued.
+        // Therefore, a request to the third party service shouldn't be issued.
         youtubeManager.PlayVideo(1);
     }
 }

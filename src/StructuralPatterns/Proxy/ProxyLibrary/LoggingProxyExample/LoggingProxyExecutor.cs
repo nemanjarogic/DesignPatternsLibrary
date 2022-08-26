@@ -8,14 +8,14 @@ public static class LoggingProxyExecutor
     {
         ConsoleExtension.WriteSeparator("Logging proxy example");
 
-        Client client = new Client();
+        var client = new Client();
 
         Console.WriteLine("Client: Executing the client code with a real subject:");
-        RealSubject realSubject = new RealSubject();
+        var realSubject = new RealSubject();
         client.PerformOperation(realSubject);
 
         Console.WriteLine("\nClient: Executing the same client code with a proxy:");
-        Proxy proxy = new Proxy(realSubject);
+        var proxy = new Proxy(realSubject);
         client.PerformOperation(proxy);
     }
 }

@@ -7,24 +7,14 @@ namespace ChainOfResponsibilityLibrary.PurchaseApprovalExample.Handlers;
 /// </summary>
 public class ExecutiveMeeting : Approver
 {
-    private static readonly ExecutiveMeeting _instance = new ExecutiveMeeting();
+    public static readonly ExecutiveMeeting Instance = new();
 
     private ExecutiveMeeting()
     {
     }
 
-    public static ExecutiveMeeting Instance
-    {
-        get
-        {
-            return _instance;
-        }
-    }
-
-    public override void Approve(Purchase purchase)
-    {
+    public override void Approve(Purchase purchase) =>
         Console.WriteLine(
-            $"Purchase #{purchase.Number} that cost {purchase.Cost:C} requires " +
-            $"an executive meeting in order to be approved.");
-    }
+            $"The purchase #{purchase.Number} which cost {purchase.Cost:C} requires " +
+            "an executive meeting in order to be approved.");
 }

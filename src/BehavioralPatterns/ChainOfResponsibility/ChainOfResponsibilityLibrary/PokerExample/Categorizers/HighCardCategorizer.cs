@@ -4,10 +4,7 @@ using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 
 namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers;
 
-public class HighCardCategorizer : HandCatagorizer
+public class HighCardCategorizer : HandCategorizer
 {
-    public override HandRanking Catagorize(Hand hand)
-    {
-        return HandRanking.HighCard;
-    }
+    public override HandRanking Categorize(Hand hand) => HandRanking.HighCard;
 }

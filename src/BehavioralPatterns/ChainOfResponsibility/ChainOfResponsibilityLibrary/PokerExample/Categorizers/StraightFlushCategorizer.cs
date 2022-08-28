@@ -4,15 +4,15 @@ using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 
 namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers;
 
-public class StraightFlushCategorizer : HandCatagorizer
+public class StraightFlushCategorizer : HandCategorizer
 {
-    public override HandRanking Catagorize(Hand hand)
+    public override HandRanking Categorize(Hand hand)
     {
         if (HasFlush(hand) && HasStraight(hand))
         {
             return HandRanking.StraightFlush;
         }
 
-        return Next.Catagorize(hand);
+        return CheckNextCategorizer(hand);
     }
 }

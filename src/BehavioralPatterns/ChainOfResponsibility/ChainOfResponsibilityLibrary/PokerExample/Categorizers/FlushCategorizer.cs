@@ -4,15 +4,15 @@ using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 
 namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers;
 
-public class FlushCategorizer : HandCatagorizer
+public class FlushCategorizer : HandCategorizer
 {
-    public override HandRanking Catagorize(Hand hand)
+    public override HandRanking Categorize(Hand hand)
     {
         if (HasFlush(hand))
         {
             return HandRanking.Flush;
         }
 
-        return Next.Catagorize(hand);
+        return CheckNextCategorizer(hand);
     }
 }

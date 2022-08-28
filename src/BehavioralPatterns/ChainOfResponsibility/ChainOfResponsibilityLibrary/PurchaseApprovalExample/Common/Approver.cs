@@ -2,7 +2,7 @@
 
 public abstract class Approver
 {
-    protected Approver Next { get; private set; }
+    protected Approver? Next { get; private set; }
 
     public Approver RegisterNext(Approver next)
     {

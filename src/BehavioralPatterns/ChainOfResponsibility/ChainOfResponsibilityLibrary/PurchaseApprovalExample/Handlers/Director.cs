@@ -8,7 +8,7 @@ public class Director : Approver
     {
         if (purchase.Cost < 1000)
         {
-            Console.WriteLine($"Director approved purchase #{purchase.Number} that cost {purchase.Cost:C}");
+            Console.WriteLine($"The director approved the purchase #{purchase.Number} which cost {purchase.Cost:C}");
             return;
         }
 

@@ -5,8 +5,7 @@ namespace ChainOfResponsibilityLibrary.PokerExample.Models;
 
 public class Hand
 {
-    private readonly List<Card> _cards = new List<Card>();
-    private HandRanking _rank = HandRanking.Unknown;
+    private readonly List<Card> _cards = new();
 
     public Card HighCard
     {
@@ -22,26 +21,13 @@ public class Hand
         }
     }
 
-    public IEnumerable<Card> Cards
-    {
-        get
-        {
-            return _cards;
-        }
-    }
-
-    public HandRanking Rank
-    {
-        get
-        {
-            return _rank;
-        }
-    }
+    public IEnumerable<Card> Cards => _cards;
+    public HandRanking Rank { get; private set; } = HandRanking.Unknown;
 
     public override string ToString()
     {
         var builder = new StringBuilder();
-        foreach (Card card in _cards)
+        foreach (var card in _cards)
         {
             builder.AppendFormat($"{card} ");
         }
@@ -60,7 +46,7 @@ public class Hand
 
         if (_cards.Count == 5)
         {
-            _rank = HandCategorizerChain.GetRank(this);
+            Rank = HandCategorizerChain.GetRank(this);
         }
     }
 }

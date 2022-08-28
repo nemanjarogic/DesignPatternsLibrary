@@ -4,15 +4,15 @@ using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 
 namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers;
 
-public class FourOfAKindCategorizer : HandCatagorizer
+public class FourOfAKindCategorizer : HandCategorizer
 {
-    public override HandRanking Catagorize(Hand hand)
+    public override HandRanking Categorize(Hand hand)
     {
         if (HasNOfKind(4, hand))
         {
             return HandRanking.FourOfAKind;
         }
 
-        return Next.Catagorize(hand);
+        return CheckNextCategorizer(hand);
     }
 }

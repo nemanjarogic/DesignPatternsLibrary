@@ -1,6 +1,6 @@
-﻿using ChainOfResponsibilityLibrary.ApprovalExample;
-using ChainOfResponsibilityLibrary.LoggingExample;
+﻿using ChainOfResponsibilityLibrary.LoggingExample;
 using ChainOfResponsibilityLibrary.PokerExample;
+using ChainOfResponsibilityLibrary.PurchaseApprovalExample;
 using DesignPatternsLibrary.PatternExecutors;
 
 namespace ChainOfResponsibilityLibrary;

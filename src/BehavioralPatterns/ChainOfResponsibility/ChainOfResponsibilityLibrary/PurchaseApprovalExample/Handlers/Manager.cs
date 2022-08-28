@@ -8,7 +8,7 @@ public class Manager : Approver
     {
         if (purchase.Cost < 500)
         {
-            Console.WriteLine($"Manager approved purchase #{purchase.Number} that cost {purchase.Cost:C}");
+            Console.WriteLine($"The manager approved the purchase #{purchase.Number} which cost {purchase.Cost:C}");
             return;
         }
 

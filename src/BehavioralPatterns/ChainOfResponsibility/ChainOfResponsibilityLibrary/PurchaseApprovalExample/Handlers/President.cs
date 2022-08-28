@@ -8,7 +8,7 @@ public class President : Approver
     {
         if (purchase.Cost < 5000)
         {
-            Console.WriteLine($"President approved purchase #{purchase.Number} that cost {purchase.Cost:C}");
+            Console.WriteLine($"The president approved the purchase #{purchase.Number} which cost {purchase.Cost:C}");
             return;
         }
 

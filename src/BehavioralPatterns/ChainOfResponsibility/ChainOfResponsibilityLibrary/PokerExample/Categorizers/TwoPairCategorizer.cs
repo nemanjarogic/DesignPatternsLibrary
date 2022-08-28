@@ -4,13 +4,13 @@ using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 
 namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers;
 
-public class TwoPairCategorizer : HandCatagorizer
+public class TwoPairCategorizer : HandCategorizer
 {
-    public override HandRanking Catagorize(Hand hand)
+    public override HandRanking Categorize(Hand hand)
     {
         var seen = new Dictionary<Value, int>();
 
-        foreach (Card card in hand.Cards)
+        foreach (var card in hand.Cards)
         {
             if (seen.ContainsKey(card.Value))
             {
@@ -24,30 +24,27 @@ public class TwoPairCategorizer : HandCatagorizer
 
         if (seen.Count == 3)
         {
-            int oneSeen = 0;
-            int twoSeen = 0;
+            var numberOfSingleCards = 0;
+            var numberOfPairs = 0;
 
-            foreach (int cardValueNumberOfRepetitions in seen.Values)
+            foreach (var cardFrequency in seen.Values)
             {
-                switch (cardValueNumberOfRepetitions)
+                if (cardFrequency == 1)
                 {
-                    case 1:
-                        oneSeen++;
-                        break;
-                    case 2:
-                        twoSeen++;
-                        break;
-                    default:
-                        break;
+                    numberOfSingleCards++;
+                }
+                else if (cardFrequency == 2)
+                {
+                    numberOfPairs++;
                 }
             }
 
-            if (oneSeen == 1 && twoSeen == 2)
+            if (numberOfSingleCards == 1 && numberOfPairs == 2)
             {
                 return HandRanking.TwoPair;
             }
         }
 
-        return Next.Catagorize(hand);
+        return CheckNextCategorizer(hand);
     }
 }

@@ -2,7 +2,7 @@
 using ChainOfResponsibilityLibrary.PurchaseApprovalExample.Common;
 using ChainOfResponsibilityLibrary.PurchaseApprovalExample.Handlers;
 
-namespace ChainOfResponsibilityLibrary.ApprovalExample;
+namespace ChainOfResponsibilityLibrary.PurchaseApprovalExample;
 
 public static class PurchaseApprovalExecutor
 {

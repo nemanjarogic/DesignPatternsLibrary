@@ -9,8 +9,5 @@ public class PriorityLogger : Logger
     {
     }
 
-    protected override void Write(string message)
-    {
-        Console.WriteLine($"Priority monitoring logger:: {message}");
-    }
+    protected override void Write(string message) => Console.WriteLine($"Priority monitoring logger:: {message}");
 }

@@ -12,17 +12,13 @@ public static class LoggingExecutor
 
         Logger loggerChain = InitializeLoggerChain();
 
-        var infoMessage = "This is information.";
-        var debugMessage = "This is debug level information.";
-        var errorMessage = "This is error information.";
-
-        loggerChain.Log(LogLevel.Info, infoMessage);
+        loggerChain.Log(LogLevel.Info, "This is information.");
         Console.WriteLine();
 
-        loggerChain.Log(LogLevel.Debug, debugMessage);
+        loggerChain.Log(LogLevel.Debug, "This is debug level information.");
         Console.WriteLine();
 
-        loggerChain.Log(LogLevel.Error, errorMessage);
+        loggerChain.Log(LogLevel.Error, "This is error information.");
         Console.WriteLine();
     }
 

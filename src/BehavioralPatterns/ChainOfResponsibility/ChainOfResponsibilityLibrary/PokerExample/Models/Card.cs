@@ -10,30 +10,23 @@ public class Card
         Value = value;
     }
 
-    public Suit Suit { get; private set; }
+    public Suit Suit { get; }
+    public Value Value { get; }
 
-    public Value Value { get; private set; }
+    public override string ToString() => ValueToString() + SuitToString();
 
-    public override string ToString()
-    {
-        return ValueToString() + SuitToString();
-    }
-
-    private string SuitToString()
-    {
-        return Suit switch
+    private string SuitToString() =>
+        Suit switch
         {
             Suit.Club => "C",
             Suit.Heart => "H",
             Suit.Diamond => "D",
             Suit.Spade => "S",
-            _ => throw new NotImplementedException(),
+            _ => throw new NotSupportedException(),
         };
-    }
 
-    private string ValueToString()
-    {
-        return Value switch
+    private string ValueToString() =>
+        Value switch
         {
             Value.Two => "2",
             Value.Three => "3",
@@ -48,7 +41,6 @@ public class Card
             Value.Queen => "Q",
             Value.King => "K",
             Value.Ace => "A",
-            _ => throw new NotImplementedException(),
+            _ => throw new NotSupportedException(),
         };
-    }
 }

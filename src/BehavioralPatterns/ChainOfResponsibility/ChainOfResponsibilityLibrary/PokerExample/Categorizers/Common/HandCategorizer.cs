@@ -3,23 +3,25 @@ using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 
 namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers.Common;
 
-public abstract class HandCatagorizer
+public abstract class HandCategorizer
 {
-    protected HandCatagorizer Next { get; private set; }
+    protected HandCategorizer? Next { get; private set; }
 
-    public HandCatagorizer RegisterNext(HandCatagorizer next)
+    public HandCategorizer RegisterNext(HandCategorizer next)
     {
         Next = next;
         return Next;
     }
 
-    public abstract HandRanking Catagorize(Hand hand);
+    public abstract HandRanking Categorize(Hand hand);
+
+    protected HandRanking CheckNextCategorizer(Hand hand) => Next?.Categorize(hand) ?? HandRanking.HighCard;
 
     protected static bool HasNOfKind(int n, Hand hand)
     {
-        Dictionary<Value, int> seen = new Dictionary<Value, int>();
+        var seen = new Dictionary<Value, int>();
 
-        foreach (Card card in hand.Cards)
+        foreach (var card in hand.Cards)
         {
             if (seen.ContainsKey(card.Value))
             {
@@ -31,20 +33,12 @@ public abstract class HandCatagorizer
             }
         }
 
-        foreach (int count in seen.Values)
-        {
-            if (count == n)
-            {
-                return true;
-            }
-        }
-
-        return false;
+        return seen.Values.Any(count => count == n);
     }
 
     protected static bool HasStraight(Hand hand)
     {
-        List<Value> values = hand.Cards.Select(card => card.Value).ToList();
+        var values = hand.Cards.Select(card => card.Value).ToList();
         values.Sort();
 
         var expectedValue = (int)values.First();
@@ -64,11 +58,10 @@ public abstract class HandCatagorizer
 
     protected static bool HasFlush(Hand hand)
     {
-        List<Suit> suits = hand.Cards.Select(card => card.Suit).ToList();
+        var suits = hand.Cards.Select(card => card.Suit).ToList();
         suits.Sort();
 
-        Suit expectedSuit = suits.First();
-
+        var expectedSuit = suits.First();
         return suits.All(suit => suit == expectedSuit);
     }
 }

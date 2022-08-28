@@ -10,36 +10,29 @@ public class Deck
     {
         _cards = new Queue<Card>();
 
-        var suitMin = (int)Suit.Diamond;
-        var suitMax = (int)Suit.Spade;
+        const int suitMin = (int)Suit.Diamond;
+        const int suitMax = (int)Suit.Spade;
+        const int valueMin = (int)Value.Two;
+        const int valueMax = (int)Value.Ace;
 
-        var valueMin = (int)Value.Two;
-        var valueMax = (int)Value.Ace;
-
-        for (int suit = suitMin; suit <= suitMax; suit++)
+        for (var suit = suitMin; suit <= suitMax; suit++)
         {
-            for (int value = valueMin; value <= valueMax; value++)
+            for (var value = valueMin; value <= valueMax; value++)
             {
                 _cards.Enqueue(new Card((Suit)suit, (Value)value));
             }
         }
     }
 
-    public Card Deal()
-    {
-        return _cards.Dequeue();
-    }
+    public Card Deal() => _cards.Dequeue();
 
-    public void Shuffle()
-    {
-        Shuffle(7);
-    }
+    public void Shuffle() => Shuffle(7);
 
-    public void Shuffle(int numberOfShufflesToRandomizeDeck)
+    private void Shuffle(int numberOfShufflesToRandomizeDeck)
     {
-        for (int index = 0; index < numberOfShufflesToRandomizeDeck; index++)
+        for (var index = 0; index < numberOfShufflesToRandomizeDeck; index++)
         {
-            Queue<Card> newDeck = new Queue<Card>(_cards.OrderBy(_ => Guid.NewGuid()));
+            var newDeck = new Queue<Card>(_cards.OrderBy(_ => Guid.NewGuid()));
             _cards = newDeck;
         }
     }

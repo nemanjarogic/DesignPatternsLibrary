@@ -9,27 +9,53 @@ public static class PokerExecutor
     {
         ConsoleExtension.WriteSeparator("Poker example");
 
-        Deck deck = new Deck();
+        var deck = InitializeDeck();
+        var handsOfPlayers = PlacePlayersAtTheTable();
+        DealCards(deck, handsOfPlayers);
+        ShowFinalScores(handsOfPlayers);
+    }
+
+    private static Deck InitializeDeck()
+    {
+        var deck = new Deck();
         deck.Shuffle();
 
-        var hands = new Hand[10];
-        for (var index = 0; index < hands.Length; index++)
+        return deck;
+    }
+
+    // Each player that wants to play poker will have a hand.
+    private static Hand[] PlacePlayersAtTheTable()
+    {
+        const int numberOfPlayers = 8;
+        var handsOfPlayers = new Hand[numberOfPlayers];
+
+        for (var index = 0; index < handsOfPlayers.Length; index++)
         {
-            hands[index] = new Hand();
+            handsOfPlayers[index] = new Hand();
         }
 
-        var numberOfCardsInHand = 5;
-        for (int dealingRound = 0; dealingRound < numberOfCardsInHand; dealingRound++)
+        return handsOfPlayers;
+    }
+
+    private static void DealCards(Deck deck, Hand[] handsOfPlayers)
+    {
+        const int numberOfCardsInHand = 5;
+
+        for (var dealingRound = 0; dealingRound < numberOfCardsInHand; dealingRound++)
         {
-            foreach (Hand hand in hands)
+            foreach (var hand in handsOfPlayers)
             {
                 hand.Add(deck.Deal());
             }
         }
+    }
 
-        foreach (Hand hand in hands)
+    private static void ShowFinalScores(Hand[] handsOfPlayers)
+    {
+        for (var i = 0; i < handsOfPlayers.Length; i++)
         {
-            Console.WriteLine($"{hand.Rank} ({hand})");
+            var hand = handsOfPlayers[i];
+            Console.WriteLine($"Player #{i + 1}: {hand.Rank} ({hand})");
         }
     }
 }

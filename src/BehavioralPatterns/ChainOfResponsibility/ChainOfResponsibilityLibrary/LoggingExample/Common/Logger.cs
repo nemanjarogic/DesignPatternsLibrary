@@ -3,9 +3,9 @@
 public abstract class Logger
 {
     protected readonly LogLevel _loggerLevel;
-    protected Logger _next;
+    protected Logger? _next;
 
-    public Logger(LogLevel loggerLevel)
+    protected Logger(LogLevel loggerLevel)
     {
         _loggerLevel = loggerLevel;
     }

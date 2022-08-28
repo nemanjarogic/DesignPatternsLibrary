@@ -4,13 +4,13 @@ using ChainOfResponsibilityLibrary.PokerExample.Models.Enums;
 
 namespace ChainOfResponsibilityLibrary.PokerExample.Categorizers;
 
-public class FullHouseCategorizer : HandCatagorizer
+public class FullHouseCategorizer : HandCategorizer
 {
-    public override HandRanking Catagorize(Hand hand)
+    public override HandRanking Categorize(Hand hand)
     {
         var seen = new Dictionary<Value, int>();
 
-        foreach (Card card in hand.Cards)
+        foreach (var card in hand.Cards)
         {
             if (seen.ContainsKey(card.Value))
             {
@@ -30,6 +30,6 @@ public class FullHouseCategorizer : HandCatagorizer
             }
         }
 
-        return Next.Catagorize(hand);
+        return CheckNextCategorizer(hand);
     }
 }

@@ -9,8 +9,5 @@ public class ConsoleLogger : Logger
     {
     }
 
-    protected override void Write(string message)
-    {
-        Console.WriteLine($"Console:: {message}");
-    }
+    protected override void Write(string message) => Console.WriteLine($"Console:: {message}");
 }

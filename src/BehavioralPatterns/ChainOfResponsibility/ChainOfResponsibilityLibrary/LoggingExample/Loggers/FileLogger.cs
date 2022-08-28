@@ -9,8 +9,5 @@ public class FileLogger : Logger
     {
     }
 
-    protected override void Write(string message)
-    {
-        Console.WriteLine($"File:: {message}");
-    }
+    protected override void Write(string message) => Console.WriteLine($"File:: {message}");
 }

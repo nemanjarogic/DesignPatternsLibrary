@@ -11,13 +11,7 @@ public class Stock
         _quantity = quantity;
     }
 
-    public void Buy()
-    {
-        Console.WriteLine($"Stock [ Name: {_name}, Quantity: {_quantity} ] is bought.");
-    }
+    public void Buy() => Console.WriteLine($"Stock [ Name: {_name}, Quantity: {_quantity} ] is bought.");
 
-    public void Sell()
-    {
-        Console.WriteLine($"Stock [ Name: {_name}, Quantity: {_quantity} ] is sold.");
-    }
+    public void Sell() => Console.WriteLine($"Stock [ Name: {_name}, Quantity: {_quantity} ] is sold.");
 }

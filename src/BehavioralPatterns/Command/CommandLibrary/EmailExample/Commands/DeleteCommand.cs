@@ -11,8 +11,5 @@ public class DeleteCommand : ICommand
         _email = email;
     }
 
-    public void Execute()
-    {
-        _email.Delete();
-    }
+    public void Execute() => _email.Delete();
 }

@@ -15,18 +15,9 @@ public class Toolbar
         _deleteCommand = deleteCommand;
     }
 
-    public void ReadEmail()
-    {
-        _readCommand.Execute();
-    }
+    public void ReadEmail() => _readCommand.Execute();
 
-    public void ForwardEmail()
-    {
-        _forwardCommand.Execute();
-    }
+    public void ForwardEmail() => _forwardCommand.Execute();
 
-    public void DeleteEmail()
-    {
-        _deleteCommand.Execute();
-    }
+    public void DeleteEmail() => _deleteCommand.Execute();
 }

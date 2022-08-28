@@ -18,34 +18,18 @@ public class ProductRepository : IProductRepository
         AddToWarehouse(new Product("SN-XPERIA5", "Sony Xperia 5 II", 950), 10);
     }
 
-    public IEnumerable<Product> GetAll()
-    {
-        return _products.Select(product => product.Value.Product);
-    }
+    public IEnumerable<Product> GetAll() =>
+        _products.Select(product => product.Value.Product);
 
-    public Product GetById(string productId)
-    {
-        if (_products.TryGetValue(productId, out (Product Product, int Stock) productInfo))
-        {
-            return productInfo.Product;
-        }
+    public Product? GetById(string productId) =>
+        _products.TryGetValue(productId, out var productInfo) ? productInfo.Product : null;
 
-        return default;
-    }
-
-    public int GetStock(string productId)
-    {
-        if (_products.TryGetValue(productId, out (Product Product, int Stock) productInfo))
-        {
-            return productInfo.Stock;
-        }
-
-        return 0;
-    }
+    public int GetStock(string productId) =>
+        _products.TryGetValue(productId, out var productInfo) ? productInfo.Stock : 0;
 
     public void IncreaseStock(string productId, int amount)
     {
-        if (!_products.TryGetValue(productId, out (Product Product, int Stock) productInfo))
+        if (!_products.TryGetValue(productId, out var productInfo))
         {
             throw new KeyNotFoundException($"Product with ID {productId} isn't in the warehouse.");
         }
@@ -55,7 +39,7 @@ public class ProductRepository : IProductRepository
 
     public void DecreaseStock(string productId, int amount)
     {
-        if (!_products.TryGetValue(productId, out (Product Product, int Stock) productInfo))
+        if (!_products.TryGetValue(productId, out var productInfo))
         {
             throw new KeyNotFoundException($"Product with ID {productId} isn't in the warehouse.");
         }
@@ -63,8 +47,6 @@ public class ProductRepository : IProductRepository
         _products[productId] = (productInfo.Product, productInfo.Stock - amount);
     }
 
-    private void AddToWarehouse(Product product, int stock)
-    {
+    private void AddToWarehouse(Product product, int stock) =>
         _products[product.ProductId] = (product, stock);
-    }
 }

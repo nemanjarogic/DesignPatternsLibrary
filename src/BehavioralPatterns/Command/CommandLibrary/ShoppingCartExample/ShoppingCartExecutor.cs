@@ -15,7 +15,13 @@ public static class ShoppingCartExecutor
         var productRepository = new ProductRepository();
         var shoppingCartRepository = new ShoppingCartRepository();
 
-        var product = productRepository.GetById("XI-NOTE10");
+        const string productId = "XI-NOTE10";
+        var product = productRepository.GetById(productId);
+        if (product == null)
+        {
+            Console.WriteLine($"The product with the ID {productId} can't be found.");
+            return;
+        }
 
         var addToCartCommand = new AddToCartCommand(
             product,
@@ -36,9 +42,7 @@ public static class ShoppingCartExecutor
         manager.Invoke(increaseQuantityCommand);
 
         PrintCart(shoppingCartRepository);
-
         manager.Undo();
-
         PrintCart(shoppingCartRepository);
     }
 

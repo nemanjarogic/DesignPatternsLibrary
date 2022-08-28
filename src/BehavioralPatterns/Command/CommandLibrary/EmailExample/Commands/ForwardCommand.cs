@@ -11,8 +11,5 @@ public class ForwardCommand : ICommand
         _email = email;
     }
 
-    public void Execute()
-    {
-        _email.Forward();
-    }
+    public void Execute() => _email.Forward();
 }

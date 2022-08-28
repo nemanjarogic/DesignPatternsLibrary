@@ -12,25 +12,20 @@ public class ShoppingCartRepository : IShoppingCartRepository
         _lineItems = new Dictionary<string, (Product Product, int Quantity)>();
     }
 
-    public IEnumerable<(Product Product, int Quantity)> GetAll()
-    {
-        return _lineItems.Values;
-    }
+    public IEnumerable<(Product Product, int Quantity)> GetAll() => _lineItems.Values.ToList();
 
     public (Product Product, int Quantity) GetById(string productId)
     {
-        if (_lineItems.TryGetValue(productId, out (Product Product, int Quantity) lineItem))
+        if (!_lineItems.TryGetValue(productId, out var lineItem))
         {
-            return lineItem;
+            throw new KeyNotFoundException($"Product with ID {productId} isn't in cart, please add it first");
         }
 
-        return (default, default);
+        return lineItem;
+
     }
 
-    public bool IsEmpty()
-    {
-        return _lineItems.Count == 0;
-    }
+    public bool IsEmpty() => !_lineItems.Any();
 
     public void Add(Product product)
     {
@@ -55,7 +50,7 @@ public class ShoppingCartRepository : IShoppingCartRepository
 
     public void IncreaseQuantity(string productId)
     {
-        if (!_lineItems.TryGetValue(productId, out (Product Product, int Quantity) lineItem))
+        if (!_lineItems.TryGetValue(productId, out var lineItem))
         {
             throw new KeyNotFoundException($"Product with ID {productId} isn't in cart, please add it first");
         }
@@ -63,9 +58,9 @@ public class ShoppingCartRepository : IShoppingCartRepository
         _lineItems[productId] = (lineItem.Product, lineItem.Quantity + 1);
     }
 
-    public void DecraseQuantity(string productId)
+    public void DecreaseQuantity(string productId)
     {
-        if (!_lineItems.TryGetValue(productId, out (Product Product, int Quantity) lineItem))
+        if (!_lineItems.TryGetValue(productId, out var lineItem))
         {
             throw new KeyNotFoundException($"Product with ID {productId} isn't in cart, please add it first");
         }

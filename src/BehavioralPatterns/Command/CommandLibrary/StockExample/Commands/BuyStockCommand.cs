@@ -11,8 +11,5 @@ public class BuyStockCommand : IOrderCommand
         _stock = stock;
     }
 
-    public void Execute()
-    {
-        _stock.Buy();
-    }
+    public void Execute() => _stock.Buy();
 }

@@ -11,8 +11,5 @@ public class ReadCommand : ICommand
         _email = email;
     }
 
-    public void Execute()
-    {
-        _email.Read();
-    }
+    public void Execute() => _email.Read();
 }

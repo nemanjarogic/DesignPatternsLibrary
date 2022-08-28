@@ -20,15 +20,7 @@ public class RemoveFromCartCommand : ICommand
         _shoppingCartRepository = shoppingCartRepository;
     }
 
-    public bool CanExecute()
-    {
-        if (_product == null)
-        {
-            return false;
-        }
-
-        return _shoppingCartRepository.GetById(_product.ProductId).Quantity > 0;
-    }
+    public bool CanExecute() => _shoppingCartRepository.GetById(_product.ProductId).Quantity > 0;
 
     public void Execute()
     {

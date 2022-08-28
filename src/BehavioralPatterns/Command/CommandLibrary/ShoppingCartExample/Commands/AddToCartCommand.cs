@@ -20,15 +20,7 @@ public class AddToCartCommand : ICommand
         _shoppingCartRepository = shoppingCartRepository;
     }
 
-    public bool CanExecute()
-    {
-        if (_product == null)
-        {
-            return false;
-        }
-
-        return _productRepository.GetStock(_product.ProductId) > 0;
-    }
+    public bool CanExecute() => _productRepository.GetStock(_product.ProductId) > 0;
 
     public void Execute()
     {

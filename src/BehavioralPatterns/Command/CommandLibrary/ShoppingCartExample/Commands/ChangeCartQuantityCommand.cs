@@ -23,15 +23,13 @@ public class ChangeCartQuantityCommand : ICommand
         _shoppingCartRepository = shoppingCartRepository;
     }
 
-    public bool CanExecute()
-    {
-        return _operation switch
+    public bool CanExecute() =>
+        _operation switch
         {
-            ChangeCartQuantityOperation.Increase => (_productRepository.GetStock(_product.ProductId) - 1) >= 0,
-            ChangeCartQuantityOperation.Decrease => _shoppingCartRepository.GetById(_product.ProductId).Quantity != 0,
+            ChangeCartQuantityOperation.Increase => (_productRepository.GetStock(_product.ProductId) - 1) <= Product.ProductPurchaseLimit,
+            ChangeCartQuantityOperation.Decrease => _shoppingCartRepository.GetById(_product.ProductId).Quantity > 0,
             _ => false,
         };
-    }
 
     public void Execute()
     {
@@ -43,7 +41,7 @@ public class ChangeCartQuantityCommand : ICommand
                 break;
             case ChangeCartQuantityOperation.Decrease:
                 _productRepository.IncreaseStock(_product.ProductId, 1);
-                _shoppingCartRepository.DecraseQuantity(_product.ProductId);
+                _shoppingCartRepository.DecreaseQuantity(_product.ProductId);
                 break;
         }
     }
@@ -54,7 +52,7 @@ public class ChangeCartQuantityCommand : ICommand
         {
             case ChangeCartQuantityOperation.Increase:
                 _productRepository.IncreaseStock(_product.ProductId, 1);
-                _shoppingCartRepository.DecraseQuantity(_product.ProductId);
+                _shoppingCartRepository.DecreaseQuantity(_product.ProductId);
                 break;
             case ChangeCartQuantityOperation.Decrease:
                 _productRepository.DecreaseStock(_product.ProductId, 1);

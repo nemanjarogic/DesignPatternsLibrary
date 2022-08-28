@@ -2,6 +2,8 @@
 
 public class Product
 {
+    public static int ProductPurchaseLimit = 10;
+
     public Product(string productId, string name, decimal price)
     {
         ProductId = productId;
@@ -10,8 +12,6 @@ public class Product
     }
 
     public string ProductId { get; set; }
-
     public string Name { get; set; }
-
     public decimal Price { get; set; }
 }

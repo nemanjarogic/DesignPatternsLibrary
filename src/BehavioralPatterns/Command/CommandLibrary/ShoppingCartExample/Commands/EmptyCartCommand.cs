@@ -16,24 +16,22 @@ public class EmptyCartCommand : ICommand
         _shoppingCartRepository = shoppingCartRepository;
     }
 
-    public bool CanExecute()
-    {
-        return !_shoppingCartRepository.IsEmpty();
-    }
+    public bool CanExecute() => !_shoppingCartRepository.IsEmpty();
 
     public void Execute()
     {
-        var items = _shoppingCartRepository.GetAll().ToArray();
+        var items = _shoppingCartRepository.GetAll();
 
-        foreach (var (Product, Quantity) in items)
+        foreach (var (product, quantity) in items)
         {
-            _productRepository.IncreaseStock(Product.ProductId, Quantity);
-            _shoppingCartRepository.Remove(Product.ProductId);
+            // An alternative approach would be to call RemoveFromCartCommand instead of doing the work manually.
+            _productRepository.IncreaseStock(product.ProductId, quantity);
+            _shoppingCartRepository.Remove(product.ProductId);
         }
     }
 
     public void Undo()
     {
-        // Not implemented
+        // Not implemented.
     }
 }

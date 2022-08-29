@@ -16,14 +16,18 @@ public class FestivalIterator : IIterator
         _step = 1;
     }
 
+    // It's probably more logical to have a method for changing the step.
+    // However, for demo purposes the idea was to show that iterator interface can contain properties too.
     public int Step
     {
-        get
-        {
-            return _step;
-        }
+        get => _step;
         set
         {
+            if (value <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value), "The step can be only positive value. The current iterator doesn't support going backward.");
+            }
+
             _step = value;
         }
     }
@@ -34,14 +38,11 @@ public class FestivalIterator : IIterator
         return Current();
     }
 
-    public MusicFestival Current()
-    {
-        return _collection.Get(_position);
-    }
+    public MusicFestival Current() => _collection.Get(_position);
 
     public bool MoveNext()
     {
-        int updatedPosition = _position + _step;
+        var updatedPosition = _position + _step;
 
         if (updatedPosition < _collection.Count)
         {
@@ -52,8 +53,5 @@ public class FestivalIterator : IIterator
         return false;
     }
 
-    public void Reset()
-    {
-        _position = -1;
-    }
+    public void Reset() => _position = -1;
 }

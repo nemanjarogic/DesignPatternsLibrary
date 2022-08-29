@@ -26,7 +26,7 @@ public static class MusicFestivalsExecutor
         iterator.Reset();
         iterator.Step = 2;
 
-        Console.WriteLine("\nSecond traversal that should skip every other element.");
+        Console.WriteLine("\nThe second traversal that should skip every other element.");
         Traverse(iterator);
     }
 
@@ -34,7 +34,7 @@ public static class MusicFestivalsExecutor
     {
         while (iterator.MoveNext())
         {
-            MusicFestival festival = iterator.Current();
+            var festival = iterator.Current();
             Console.WriteLine($"Music festival {festival.Name} takes place in {festival.Country}.");
         }
     }

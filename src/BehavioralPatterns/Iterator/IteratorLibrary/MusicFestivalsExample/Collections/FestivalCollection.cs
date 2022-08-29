@@ -6,25 +6,13 @@ namespace IteratorLibrary.MusicFestivalsExample.Collections;
 
 public class FestivalCollection : IIterableCollection
 {
-    private readonly List<MusicFestival> _festivals = new List<MusicFestival>();
+    private readonly List<MusicFestival> _festivals = new();
 
-    public int Count
-    {
-        get { return _festivals.Count; }
-    }
+    public int Count => _festivals.Count;
 
-    public void Add(MusicFestival festival)
-    {
-        _festivals.Add(festival);
-    }
+    public void Add(MusicFestival festival) => _festivals.Add(festival);
 
-    public MusicFestival Get(int index)
-    {
-        return _festivals[index];
-    }
+    public MusicFestival Get(int index) => _festivals[index];
 
-    public IIterator CreateIterator()
-    {
-        return new FestivalIterator(this);
-    }
+    public IIterator CreateIterator() => new FestivalIterator(this);
 }

@@ -10,14 +10,14 @@ namespace IteratorLibrary.ConceptualExample.Iterators;
 public class AlphabeticalOrderIterator : Iterator
 {
     /// <summary>
-    /// Stores the current traversal position. An iterator may have a lot of
-    /// other fields for storing iteration state, especially when it is
-    /// supposed to work with a particular kind of collection.
+    /// Stores the current traversal position.
+    /// An iterator may have a lot of other fields for storing iteration state,
+    /// especially when it is supposed to work with a particular kind of collection.
     /// </summary>
     private int _position = -1;
 
     private readonly WordsCollection _collection;
-    private readonly bool _isDirectionReversed = false;
+    private readonly bool _isDirectionReversed;
 
     public AlphabeticalOrderIterator(WordsCollection collection, bool isDirectionReversed = false)
     {
@@ -30,14 +30,11 @@ public class AlphabeticalOrderIterator : Iterator
         }
     }
 
-    public override object Current()
-    {
-        return _collection.GetItems()[_position];
-    }
+    public override object Current() => _collection[_position];
 
     public override bool MoveNext()
     {
-        int updatedPosition = _position + (_isDirectionReversed ? -1 : 1);
+        var updatedPosition = _position + (_isDirectionReversed ? -1 : 1);
 
         if (updatedPosition >= 0 && updatedPosition < _collection.Count)
         {
@@ -48,8 +45,5 @@ public class AlphabeticalOrderIterator : Iterator
         return false;
     }
 
-    public override void Reset()
-    {
-        _position = _isDirectionReversed ? _collection.Count : -1;
-    }
+    public override void Reset() => _position = _isDirectionReversed ? _collection.Count : -1;
 }

@@ -5,7 +5,7 @@ namespace MediatorLibrary.GroupChatExample.Mediators;
 
 public class ViberGroupChatMediator : IGroupChatMediator
 {
-    private readonly List<User> _chatParticipants = new List<User>();
+    private readonly List<User> _chatParticipants = new();
 
     public ViberGroupChatMediator(params User[] users)
     {
@@ -27,13 +27,9 @@ public class ViberGroupChatMediator : IGroupChatMediator
 
     public void SendMessage(string message, User sender)
     {
-        foreach (var user in _chatParticipants)
+        foreach (var user in _chatParticipants.Where(user => user != sender))
         {
-            // Message should not be received by the user sending it
-            if (user != sender)
-            {
-                user.Receive(message);
-            }
+            user.Receive(message);
         }
     }
 }

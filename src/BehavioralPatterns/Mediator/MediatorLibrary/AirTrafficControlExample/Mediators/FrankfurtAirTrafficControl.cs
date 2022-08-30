@@ -5,27 +5,32 @@ namespace MediatorLibrary.AirTrafficControlExample.Mediators;
 
 public class FrankfurtAirTrafficControl : IAirTrafficControl
 {
-    private readonly IList<Aircraft> _aircraftsUnderGuidance = new List<Aircraft>();
+    private readonly Dictionary<string, Aircraft> _aircraftUnderGuidance = new();
 
     public void ReceiveAircraftLocation(Aircraft reportingAircraft)
     {
-        foreach (var currentAircraft in _aircraftsUnderGuidance.Where(x => x != reportingAircraft))
-        {
-            if (Math.Abs(currentAircraft.Altitude - reportingAircraft.Altitude) < 1000)
-            {
-                Console.WriteLine($"\nAir traffic control will issue request to {reportingAircraft.CallSign} to change altitude.");
+        var potentiallyAffectedAircraft = _aircraftUnderGuidance
+            .Values
+            .Where(a => a.CallSign != reportingAircraft.CallSign);
 
-                currentAircraft.WarnOfAirspaceIntrusionBy(reportingAircraft);
-                reportingAircraft.Climb(1000);
+        foreach (var currentAircraft in potentiallyAffectedAircraft)
+        {
+            if (Math.Abs(currentAircraft.Altitude - reportingAircraft.Altitude) >= 1000)
+            {
+                continue;
             }
+
+            Console.WriteLine($"\nAir traffic control will issue a warning to {reportingAircraft.CallSign} aircraft about airspace intrusion.");
+            currentAircraft.WarnOfAirspaceIntrusionBy(reportingAircraft);
+            reportingAircraft.Climb(1000);
         }
     }
 
     public void RegisterAircraftUnderGuidance(Aircraft aircraft)
     {
-        if (!_aircraftsUnderGuidance.Contains(aircraft))
+        if (!_aircraftUnderGuidance.ContainsKey(aircraft.CallSign))
         {
-            _aircraftsUnderGuidance.Add(aircraft);
+            _aircraftUnderGuidance.Add(aircraft.CallSign, aircraft);
         }
     }
 }

@@ -10,11 +10,5 @@ public class AirbusA320 : Aircraft
     {
     }
 
-    public override int SeatingCapacity
-    {
-        get
-        {
-            return 180;
-        }
-    }
+    public override int SeatingCapacity => 180;
 }

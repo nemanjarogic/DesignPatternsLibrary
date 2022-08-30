@@ -10,11 +10,5 @@ public class Boeing737 : Aircraft
     {
     }
 
-    public override int SeatingCapacity
-    {
-        get
-        {
-            return 143;
-        }
-    }
+    public override int SeatingCapacity => 143;
 }

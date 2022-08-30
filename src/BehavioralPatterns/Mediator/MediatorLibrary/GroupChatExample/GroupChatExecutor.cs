@@ -14,22 +14,18 @@ public static class GroupChatExecutor
         var mark = new ViberUser("Mark");
         var jane = new ViberUser("Jane");
         var emily = new ViberUser("Emily");
-        var anna = new ViberUser("Anna");
-
-        IGroupChatMediator mediator = new ViberGroupChatMediator(
-            mark,
-            jane,
-            emily);
+        IGroupChatMediator mediator = new ViberGroupChatMediator(mark, jane, emily);
 
         mark.Send("Is anyone there?");
-
         Console.WriteLine();
+
+        var anna = new ViberUser("Anna");
         mediator.AddParticipant(anna);
 
         emily.Send("We are here.");
 
-        // You can see an alternative approach how to setup mediator and components
-        // Third approach can be seen in air trafic control example
+        // Take a look below for an alternative approach how to setup mediator and components.
+        // Third approach can be seen in air traffic control example.
 
         // var mark = new ViberUser("Mark", mediator);
         // IGroupChatMediator mediator = new ViberGroupChatMediator();

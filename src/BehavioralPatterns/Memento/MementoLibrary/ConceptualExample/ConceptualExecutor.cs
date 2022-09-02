@@ -8,8 +8,8 @@ public static class ConceptualExecutor
     {
         ConsoleExtension.WriteSeparator("Conceptual example");
 
-        Originator originator = new Originator("Initial state.");
-        Caretaker caretaker = new Caretaker(originator);
+        var originator = new Originator("Initial state.");
+        var caretaker = new Caretaker(originator);
         caretaker.Backup();
 
         originator.DoSomething();
@@ -25,7 +25,7 @@ public static class ConceptualExecutor
         Console.WriteLine("\nClient: Now, let's rollback!\n");
         caretaker.Undo();
 
-        Console.WriteLine("\nClient: Once more!\n");
+        Console.WriteLine("\n\nClient: Rollback once more!\n");
         caretaker.Undo();
     }
 }

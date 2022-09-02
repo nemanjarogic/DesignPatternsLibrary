@@ -11,8 +11,7 @@ public class Originator
     /// For the sake of simplicity, the originator's state is stored inside a single variable.
     /// </summary>
     private string _state;
-
-    private static readonly Random random = new Random();
+    private static readonly Random Random = new();
 
     public Originator(string state)
     {
@@ -28,9 +27,7 @@ public class Originator
     public void DoSomething()
     {
         Console.WriteLine("\nOriginator: I'm doing something important.");
-
         _state = GenerateRandomString(30);
-
         Console.WriteLine($"Originator: and my state has changed to: {_state}");
     }
 
@@ -38,10 +35,7 @@ public class Originator
     /// Saves the current state inside a memento.
     /// </summary>
     /// <returns>Memento.</returns>
-    public IMemento Save()
-    {
-        return new ConcreteMemento(_state);
-    }
+    public IMemento Save() => new ConcreteMemento(_state);
 
     /// <summary>
     /// Restores the Originator's state from a memento object.
@@ -51,19 +45,20 @@ public class Originator
     {
         if (memento is not ConcreteMemento concreteMemento)
         {
-            throw new Exception($"Unknown memento: {memento}");
+            throw new ArgumentException($"Unknown memento: {memento}");
         }
 
         _state = concreteMemento.GetState();
         Console.Write($"Originator: My state has changed to: {_state}");
     }
 
-    private string GenerateRandomString(int length = 10)
+    private static string GenerateRandomString(int length = 10)
     {
-        string characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const string characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-        var randomCharacters = Enumerable.Repeat(characters, length)
-            .Select(s => s[random.Next(s.Length)])
+        var randomCharacters = Enumerable
+            .Repeat(characters, length)
+            .Select(s => s[Random.Next(s.Length)])
             .ToArray();
 
         return new string(randomCharacters);

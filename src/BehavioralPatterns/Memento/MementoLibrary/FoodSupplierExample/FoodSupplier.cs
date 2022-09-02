@@ -2,16 +2,13 @@
 
 public class FoodSupplier
 {
-    private string _name;
-    private string _phone;
-    private string _address;
+    private string _name = string.Empty;
+    private string _phone = string.Empty;
+    private string _address = string.Empty;
 
     public string Name
     {
-        get
-        {
-            return _name;
-        }
+        get => _name;
         set
         {
             _name = value;
@@ -21,10 +18,7 @@ public class FoodSupplier
 
     public string Phone
     {
-        get
-        {
-            return _phone;
-        }
+        get => _phone;
         set
         {
             _phone = value;
@@ -34,10 +28,7 @@ public class FoodSupplier
 
     public string Address
     {
-        get
-        {
-            return _address;
-        }
+        get => _address;
         set
         {
             _address = value;
@@ -64,7 +55,7 @@ public class FoodSupplier
 
         if (memento is not FoodSupplierMemento foodSupplierMemento)
         {
-            throw new Exception($"Unknown memento: {memento}");
+            throw new ArgumentException($"Unknown memento: {memento}");
         }
 
         var redoMemento = new FoodSupplierMemento(_name, _phone, _address);

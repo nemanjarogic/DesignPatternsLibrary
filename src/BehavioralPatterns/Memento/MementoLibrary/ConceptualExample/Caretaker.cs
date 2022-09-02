@@ -32,15 +32,7 @@ public class Caretaker
 
         var memento = _mementos.Pop();
         Console.WriteLine($"Caretaker: Restoring state to: {memento.GetName()}");
-
-        try
-        {
-            _originator.Restore(memento);
-        }
-        catch (Exception)
-        {
-            Undo();
-        }
+        _originator.Restore(memento);
     }
 
     public void ShowHistory()

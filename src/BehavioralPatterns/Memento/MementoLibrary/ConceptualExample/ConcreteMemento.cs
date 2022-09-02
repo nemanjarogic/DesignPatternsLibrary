@@ -21,26 +21,17 @@ public class ConcreteMemento : IMemento
     /// The Originator uses this method when restoring its state.
     /// </summary>
     /// <returns>State.</returns>
-    public string GetState()
-    {
-        return _state;
-    }
+    public string GetState() => _state;
 
     /// <summary>
     /// Used by the Caretaker to display metadata.
     /// </summary>
     /// <returns>Name.</returns>
-    public string GetName()
-    {
-        return $"{_creationDate.ToString("MM/dd/yyyy hh:mm:ss.fff tt")} / ({_state.Substring(0, 9)})...";
-    }
+    public string GetName() => $"{_creationDate:MM/dd/yyyy hh:mm:ss.fff tt} / ({_state[..9]})...";
 
     /// <summary>
     /// Used by the Caretaker to display metadata.
     /// </summary>
     /// <returns>Creation date.</returns>
-    public DateTime GetCreationDate()
-    {
-        return _creationDate;
-    }
+    public DateTime GetCreationDate() => _creationDate;
 }

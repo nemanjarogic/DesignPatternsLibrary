@@ -8,6 +8,5 @@
 public interface IMemento
 {
     DateTime GetCreationDate();
-
     string GetName();
 }

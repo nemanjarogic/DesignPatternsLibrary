@@ -14,19 +14,13 @@ public class SortablePersons
 
     public ISortStrategy SortStrategy { get; set; }
 
-    public void Add(Person person)
-    {
-        _persons.Add(person);
-    }
+    public void Add(Person person) => _persons.Add(person);
 
-    public void Clear()
-    {
-        _persons.Clear();
-    }
+    public void Clear() => _persons.Clear();
 
-    public List<Person> Sort()
+    public IReadOnlyCollection<Person> Sort()
     {
-        List<Person> sortedPersons = SortStrategy.Sort(_persons);
+        var sortedPersons = SortStrategy.Sort(_persons);
         return sortedPersons;
     }
 }

@@ -2,5 +2,5 @@
 
 public interface ISortStrategy
 {
-    List<Person> Sort(List<Person> persons);
+    IReadOnlyCollection<Person> Sort(IReadOnlyCollection<Person> persons);
 }

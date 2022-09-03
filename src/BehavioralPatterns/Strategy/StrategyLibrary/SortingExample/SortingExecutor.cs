@@ -21,15 +21,16 @@ public static class SortingExecutor
         sortablePersons.Add(new Person("Bjarne", "Stroustrup", 1950));
 
         Console.WriteLine("Sorting persons by first name.");
-        foreach (Person person in sortablePersons.Sort())
-        {
-            Console.WriteLine(person.ToString());
-        }
+        SortAndDisplay(sortablePersons);
 
         sortablePersons.SortStrategy = new SortByYearOfBirth();
-
         Console.WriteLine("\nSorting persons by year of birth.");
-        foreach (Person person in sortablePersons.Sort())
+        SortAndDisplay(sortablePersons);
+    }
+
+    private static void SortAndDisplay(SortablePersons sortablePersons)
+    {
+        foreach (var person in sortablePersons.Sort())
         {
             Console.WriteLine(person.ToString());
         }

@@ -2,9 +2,14 @@
 
 public class Order
 {
-    public string Description { get; set; }
+    public Order(string description, Address origin, Address destination)
+    {
+        Description = description;
+        Origin = origin;
+        Destination = destination;
+    }
 
-    public Address Origin { get; set; }
-
-    public Address Destination { get; set; }
+    public string Description { get; }
+    public Address Origin { get; }
+    public Address Destination { get; }
 }

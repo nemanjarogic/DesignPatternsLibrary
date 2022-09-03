@@ -4,8 +4,5 @@ namespace StrategyLibrary.ShippingExample.ShippingProviders;
 
 public class FedEx : IShippingProvider
 {
-    public decimal CalculateCost(Order order)
-    {
-        return 10;
-    }
+    public decimal CalculateCost(Order order) => 10;
 }

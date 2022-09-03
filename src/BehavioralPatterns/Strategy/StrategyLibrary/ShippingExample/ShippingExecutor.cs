@@ -32,13 +32,7 @@ public static class ShippingExecutor
             PostalCode = "02367",
         };
 
-        var order = new Order
-        {
-            Origin = originAddress,
-            Destination = destinationAddress,
-            Description = "Xiaomi Mi 10T Pro",
-        };
-
+        var order = new Order("Xiaomi Mi 10T Pro", originAddress, destinationAddress);
         IShippingProvider fedEx = new FedEx();
         var shippingCostCalculationService = new ShippingCostCalculationService(fedEx);
 

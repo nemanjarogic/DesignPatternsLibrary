@@ -4,7 +4,7 @@ namespace StrategyLibrary.SortingExample.Strategies;
 
 public class SortByLastName : ISortStrategy
 {
-    public List<Person> Sort(List<Person> persons)
+    public IReadOnlyCollection<Person> Sort(IReadOnlyCollection<Person> persons)
     {
         var sortedPersons = new List<Person>(persons);
         sortedPersons.Sort((x, y) => x.LastName.CompareTo(y.LastName));

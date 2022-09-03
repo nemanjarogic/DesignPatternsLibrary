@@ -11,8 +11,6 @@ public class ShippingCostCalculationService
         _shippingProvider = shippingCostStrategy;
     }
 
-    public decimal Calculate(Order order)
-    {
-        return _shippingProvider.CalculateCost(order);
-    }
+    public decimal Calculate(Order order) =>
+        _shippingProvider.CalculateCost(order);
 }

@@ -1,8 +1,7 @@
 ﻿using BuildingBlocks;
-using StateLibrary.ConceptualExample;
 using StateLibrary.ConceptualExample.States;
 
-namespace ObserverLibrary.StockExample;
+namespace StateLibrary.ConceptualExample;
 
 public static class ConceptualExecutor
 {

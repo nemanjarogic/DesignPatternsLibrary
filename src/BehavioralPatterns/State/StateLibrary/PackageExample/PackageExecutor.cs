@@ -8,7 +8,7 @@ public static class PackageExecutor
     {
         ConsoleExtension.WriteSeparator("Package example");
 
-        Package package = new Package();
+        var package = new Package();
         package.PrintStatus();
 
         package.Proceed();

@@ -8,7 +8,7 @@ public static class SteakCookingExecutor
     {
         ConsoleExtension.WriteSeparator("Steak cooking example");
 
-        Steak steak = new Steak("T-Bone", 48);
+        var steak = new Steak("T-Bone", 48);
 
         steak.IncreaseTemperature();
         steak.IncreaseTemperature();

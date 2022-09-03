@@ -12,10 +12,11 @@ public class Context
     /// <summary>
     /// A reference to the current state of the Context.
     /// </summary>
-    private State _state = null;
+    private State _state;
 
     public Context(State state)
     {
+        _state = state;
         TransitionTo(state);
     }
 
@@ -33,13 +34,7 @@ public class Context
     /// <summary>
     /// The Context delegates part of its behavior to the current State object.
     /// </summary>
-    public void Request1()
-    {
-        _state.Handle1();
-    }
+    public void Request1() => _state.Handle1();
 
-    public void Request2()
-    {
-        _state.Handle2();
-    }
+    public void Request2() => _state.Handle2();
 }

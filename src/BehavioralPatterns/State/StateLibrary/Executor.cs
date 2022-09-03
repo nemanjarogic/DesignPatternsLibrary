@@ -1,5 +1,5 @@
 ﻿using DesignPatternsLibrary.PatternExecutors;
-using ObserverLibrary.StockExample;
+using StateLibrary.ConceptualExample;
 using StateLibrary.PackageExample;
 using StateLibrary.SteakCookingExample;
 

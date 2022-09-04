@@ -3,16 +3,16 @@ using VisitorLibrary.PersonDynamicProgrammingExample.Visitors.Common;
 
 namespace VisitorLibrary.PersonDynamicProgrammingExample.Visitors;
 
-public class NetWorthVisitor : AssetVisitor
+public class MonthlyIncomeVisitor : AssetVisitor
 {
-    public int Total { get; private set; }
+    public double Amount { get; private set; }
 
     protected override void Visit(RealEstate realEstate) =>
-        Total += realEstate.EstimatedValue;
+        Amount += realEstate.MonthlyIncomeFromRenting;
 
     protected override void Visit(BankSavingsAccount bankSavingsAccount) =>
-        Total += bankSavingsAccount.Amount;
+        Amount += bankSavingsAccount.Amount * bankSavingsAccount.MonthlyInterest;
 
     protected override void Visit(Loan loan) =>
-        Total -= loan.Owed;
+        Amount -= loan.MonthlyPayment;
 }

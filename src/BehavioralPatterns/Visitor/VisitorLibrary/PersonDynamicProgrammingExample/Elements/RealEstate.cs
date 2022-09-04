@@ -5,6 +5,5 @@ namespace VisitorLibrary.PersonDynamicProgrammingExample.Elements;
 public class RealEstate : IAsset
 {
     public int EstimatedValue { get; set; }
-
-    public int MonthlyRent { get; set; }
+    public int MonthlyIncomeFromRenting { get; set; }
 }

@@ -3,16 +3,16 @@ using VisitorLibrary.PersonExample.Visitors.Common;
 
 namespace VisitorLibrary.PersonExample.Visitors;
 
-public class NetWorthVisitor : IVisitor
+public class MonthlyIncomeVisitor : IVisitor
 {
-    public int Total { get; private set; }
+    public double Amount { get; private set; }
 
     public void Visit(RealEstate realEstate) =>
-        Total += realEstate.EstimatedValue;
+        Amount += realEstate.MonthlyIncomeFromRenting;
 
     public void Visit(BankSavingsAccount bankSavingsAccount) =>
-        Total += bankSavingsAccount.Amount;
+        Amount += bankSavingsAccount.Amount * bankSavingsAccount.MonthlyInterest;
 
     public void Visit(Loan loan) =>
-        Total -= loan.Owed;
+        Amount -= loan.MonthlyPayment;
 }

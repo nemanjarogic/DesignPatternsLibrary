@@ -5,21 +5,17 @@ namespace VisitorLibrary.CompanyExample;
 
 public class Company
 {
-    private readonly List<Employee> _employees = new List<Employee>();
+    private readonly List<Employee> _employees = new();
 
-    public void Hire(Employee employee)
-    {
+    public void Hire(Employee employee) =>
         _employees.Add(employee);
-    }
 
-    public void LayOff(Employee employee)
-    {
+    public void LayOff(Employee employee) =>
         _employees.Remove(employee);
-    }
 
     public void ReviewEmployeesAtEndOfTheYear(IPerformanceReview performanceReview)
     {
-        foreach (Employee employee in _employees)
+        foreach (var employee in _employees)
         {
             employee.Evaluate(performanceReview);
         }

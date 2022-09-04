@@ -7,7 +7,10 @@ public class IncomeRegulation : IPerformanceReview
 {
     public void Appraise(IEmployeeEvaluation employeeEvaluation)
     {
-        var employee = employeeEvaluation as Employee;
+        if (employeeEvaluation is not Employee employee)
+        {
+            throw new ArgumentException("Appraise method works only with Employee objects");
+        }
 
         // We've had a great year, so 10% pay raises for everyone!
         // In case that we need different rules for pay raise, we would change IPerformanceReview interface

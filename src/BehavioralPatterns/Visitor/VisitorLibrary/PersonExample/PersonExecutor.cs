@@ -11,18 +11,17 @@ public static class PersonExecutor
         ConsoleExtension.WriteSeparator("Person example");
 
         var person = new Person();
-        person.Assets.Add(new BankAccount { Amount = 1000, MonthlyInterest = 0.01 });
-        person.Assets.Add(new BankAccount { Amount = 2000, MonthlyInterest = 0.02 });
-        person.Assets.Add(new RealEstate { EstimatedValue = 77000, MonthlyRent = 500 });
-        person.Assets.Add(new Loan { Owed = 40000, MonthlyPayment = 400 });
+        person.RegisterNewAsset(new BankSavingsAccount { Amount = 1000, MonthlyInterest = 0.01 });
+        person.RegisterNewAsset(new BankSavingsAccount { Amount = 2000, MonthlyInterest = 0.02 });
+        person.RegisterNewAsset(new RealEstate { EstimatedValue = 87000, MonthlyIncomeFromRenting = 500 });
+        person.RegisterNewAsset(new Loan { Owed = 40000, MonthlyPayment = 400 });
 
         var netWorthVisitor = new NetWorthVisitor();
-        var incomeVisitor = new IncomeVisitor();
-
         person.InspectAssets(netWorthVisitor);
         Console.WriteLine($"Person's net worth is {netWorthVisitor.Total:C}");
 
-        person.InspectAssets(incomeVisitor);
-        Console.WriteLine($"Person's monthly income is {incomeVisitor.Amount:C}");
+        var monthlyIncomeVisitor = new MonthlyIncomeVisitor();
+        person.InspectAssets(monthlyIncomeVisitor);
+        Console.WriteLine($"Person's monthly income is {monthlyIncomeVisitor.Amount:C}");
     }
 }

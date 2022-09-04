@@ -15,10 +15,12 @@ public static class CompanyExecutor
         company.Hire(new ProductOwner());
         company.Hire(new ProjectManager());
 
+        Console.WriteLine("\nIt's time for annual performance reviews...\n");
+
+        Console.WriteLine("\nStarting review for the income regulation...\n");
         company.ReviewEmployeesAtEndOfTheYear(new IncomeRegulation());
 
-        Console.WriteLine("\nStarting second phase of performance review...\n");
-
+        Console.WriteLine("\nStarting review for the vacation regulation...\n");
         company.ReviewEmployeesAtEndOfTheYear(new VacationRegulation());
     }
 }

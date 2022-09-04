@@ -10,8 +10,6 @@ namespace VisitorLibrary.PersonExample.Visitors.Common;
 public interface IVisitor
 {
     void Visit(RealEstate realEstate);
-
-    void Visit(BankAccount bankAccount);
-
+    void Visit(BankSavingsAccount bankSavingsAccount);
     void Visit(Loan loan);
 }

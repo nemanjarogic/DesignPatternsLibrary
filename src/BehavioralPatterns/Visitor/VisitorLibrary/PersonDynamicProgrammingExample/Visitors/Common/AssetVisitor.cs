@@ -7,7 +7,7 @@ public abstract class AssetVisitor
 {
     public void Visit(IEnumerable<IAsset> assets)
     {
-        foreach (IAsset asset in assets)
+        foreach (var asset in assets)
         {
             DynamicVisit(asset);
         }
@@ -19,13 +19,11 @@ public abstract class AssetVisitor
     /// Depending on the use-case this we can restrict access modifiers as appropriate.
     /// </summary>
     /// <param name="asset">Asset.</param>
-    public void DynamicVisit(IAsset asset)
-    {
+    public void DynamicVisit(IAsset asset) =>
         Visit((dynamic)asset);
-    }
 
     // Visit methods are defined as before, but they are no longer public.
-    protected abstract void Visit(BankAccount bankAccount);
+    protected abstract void Visit(BankSavingsAccount bankSavingsAccount);
 
     protected abstract void Visit(Loan loan);
 

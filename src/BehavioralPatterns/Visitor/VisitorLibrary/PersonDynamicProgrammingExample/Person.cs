@@ -5,16 +5,16 @@ namespace VisitorLibrary.PersonDynamicProgrammingExample;
 
 public class Person
 {
-    public List<IAsset> Assets { get; set; } = new List<IAsset>();
+    private readonly List<IAsset> _assets = new();
 
-    public void InspectAssets(AssetVisitor visitor)
-    {
-        visitor.Visit(Assets);
+    public void RegisterNewAsset(IAsset asset) =>
+        _assets.Add(asset);
 
-        // It is possible to use this approach too.
-        // foreach (var asset in Assets)
-        // {
-        //     visitor.DynamicVisit(asset);
-        // }
-    }
+    public void InspectAssets(AssetVisitor visitor) =>
+        visitor.Visit(_assets);
+    // It is possible to use this approach too.
+    // foreach (var asset in Assets)
+    // {
+    //     visitor.DynamicVisit(asset);
+    // }
 }

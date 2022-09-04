@@ -5,11 +5,14 @@ namespace VisitorLibrary.PersonExample;
 
 public class Person
 {
-    public List<IAsset> Assets { get; set; } = new List<IAsset>();
+    private readonly List<IAsset> _assets = new();
+
+    public void RegisterNewAsset(IAsset asset) =>
+        _assets.Add(asset);
 
     public void InspectAssets(IVisitor visitor)
     {
-        foreach (var asset in Assets)
+        foreach (var asset in _assets)
         {
             asset.Accept(visitor);
         }

@@ -10,7 +10,7 @@ public static class EventAndDelegateExecutor
     {
         ConsoleExtension.WriteSeparator("Stock - event and delegate example");
 
-        // Monitor a stock ticker, when particular events occur, react
+        // Monitor a stock ticker, and react when particular events occur.
         var stockTicker = new StockTicker();
 
         // Create new subscribers to listen to the stock ticker
@@ -20,7 +20,7 @@ public static class EventAndDelegateExecutor
         // Load the sample stock data
         foreach (Stock stock in StockRepository.GetData())
         {
-            stockTicker.Stock = stock;
+            stockTicker.ProcessNewStockChange(stock);
         }
     }
 }

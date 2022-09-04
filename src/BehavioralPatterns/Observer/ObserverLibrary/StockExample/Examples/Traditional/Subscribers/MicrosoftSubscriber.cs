@@ -5,22 +5,23 @@ namespace ObserverLibrary.StockExample.Examples.Traditional.Subscribers;
 
 public class MicrosoftSubscriber : Subscriber
 {
+    private const decimal StockTargetPrice = 230.0m;
     private readonly StockTicker _stockTicker;
 
     public MicrosoftSubscriber(StockTicker stockTicker)
     {
-        stockTicker.Subscribe(this);
         _stockTicker = stockTicker;
+        _stockTicker.Subscribe(this);
     }
 
     public override void Update()
     {
-        decimal price = _stockTicker.Stock.Price;
-        string symbol = _stockTicker.Stock.Symbol;
+        decimal price = _stockTicker.LastChangedStock.Price;
+        string symbol = _stockTicker.LastChangedStock.Symbol;
 
-        if (symbol == "MSFT" && price > 230.00m)
+        if (symbol == "MSFT" && price >= StockTargetPrice)
         {
-            Console.WriteLine($"Microsoft has reached the target price: {price:C}");
+            Console.WriteLine($"Microsoft's stock price has met or exceeded the target price of {StockTargetPrice:C}. The new price is: {price:C}");
         }
     }
 }

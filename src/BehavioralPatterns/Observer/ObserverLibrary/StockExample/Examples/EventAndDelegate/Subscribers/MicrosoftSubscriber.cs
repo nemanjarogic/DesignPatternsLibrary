@@ -4,9 +4,11 @@ namespace ObserverLibrary.StockExample.Examples.EventAndDelegate.Subscribers;
 
 public class MicrosoftSubscriber
 {
+    private const decimal StockTargetPrice = 230.0m;
+
     public MicrosoftSubscriber(StockTicker stockTicker)
     {
-        stockTicker.StockChange += new EventHandler<StockChangeEventArgs>(CheckFilterWhenStockChanged);
+        stockTicker.StockChange += CheckFilterWhenStockChanged;
     }
 
     private void CheckFilterWhenStockChanged(object sender, StockChangeEventArgs e)
@@ -14,9 +16,9 @@ public class MicrosoftSubscriber
         var symbol = e.Stock.Symbol;
         var price = e.Stock.Price;
 
-        if (symbol == "MSFT" && price > 230.00m)
+        if (symbol == "MSFT" && price >= StockTargetPrice)
         {
-            Console.WriteLine($"Microsoft has reached the target price: {price:C}");
+            Console.WriteLine($"Microsoft's stock price has met or exceeded the target price of {StockTargetPrice:C}. The new price is: {price:C}");
         }
     }
 }

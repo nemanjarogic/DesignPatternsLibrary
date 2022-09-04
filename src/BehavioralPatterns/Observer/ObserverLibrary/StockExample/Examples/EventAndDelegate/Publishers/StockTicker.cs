@@ -2,25 +2,15 @@
 
 public class StockTicker
 {
-    private Stock _stock;
+    private Stock _lastChangedStock = Stock.Default();
+    public event EventHandler<StockChangeEventArgs>? StockChange;
 
-    public event EventHandler<StockChangeEventArgs> StockChange;
-
-    public Stock Stock
+    public void ProcessNewStockChange(Stock stock)
     {
-        get
-        {
-            return _stock;
-        }
-        set
-        {
-            _stock = value;
-            OnStockChange(new StockChangeEventArgs(_stock));
-        }
+        _lastChangedStock = stock;
+        OnStockChange(new StockChangeEventArgs(_lastChangedStock));
     }
 
-    private void OnStockChange(StockChangeEventArgs e)
-    {
+    private void OnStockChange(StockChangeEventArgs e) =>
         StockChange?.Invoke(this, e);
-    }
 }

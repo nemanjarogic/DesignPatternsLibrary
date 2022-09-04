@@ -4,18 +4,11 @@ namespace ObserverLibrary.StockExample.Examples.Traditional.Publishers;
 
 public class StockTicker : Publisher
 {
-    private Stock stock;
+    public Stock LastChangedStock { get; private set; } = Stock.Default();
 
-    public Stock Stock
+    public void ProcessNewStockChange(Stock stock)
     {
-        get
-        {
-            return stock;
-        }
-        set
-        {
-            stock = value;
-            Notify();
-        }
+        LastChangedStock = stock;
+        NotifySubscribers();
     }
 }

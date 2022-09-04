@@ -4,19 +4,15 @@ namespace ObserverLibrary.StockExample.Examples.Traditional.Publishers.Common;
 
 public abstract class Publisher
 {
-    private readonly List<Subscriber> _subscribers = new List<Subscriber>();
+    private readonly List<Subscriber> _subscribers = new();
 
-    public void Subscribe(Subscriber subscriber)
-    {
+    public void Subscribe(Subscriber subscriber) =>
         _subscribers.Add(subscriber);
-    }
 
-    public void Unsubscribe(Subscriber subscriber)
-    {
+    public void Unsubscribe(Subscriber subscriber) =>
         _subscribers.Remove(subscriber);
-    }
 
-    public void Notify()
+    public void NotifySubscribers()
     {
         foreach (var subscriber in _subscribers)
         {

@@ -6,7 +6,7 @@ public class GoogleSubscriber
 {
     public GoogleSubscriber(StockTicker stockTicker)
     {
-        stockTicker.StockChange += new EventHandler<StockChangeEventArgs>(CheckFilterWhenStockChanged);
+        stockTicker.StockChange += CheckFilterWhenStockChanged;
     }
 
     private void CheckFilterWhenStockChanged(object sender, StockChangeEventArgs e)
@@ -16,7 +16,7 @@ public class GoogleSubscriber
 
         if (symbol == "GOOG")
         {
-            Console.WriteLine($"Google's new price is: {price:C}");
+            Console.WriteLine($"Google's stock price has changed. The new price is: {price:C}");
         }
     }
 }

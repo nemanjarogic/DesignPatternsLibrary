@@ -4,20 +4,14 @@ namespace ObserverLibrary.StockExample.Examples.IObserver.Publishers;
 
 public class StockTicker : IObservable<Stock>
 {
-    private readonly List<IObserver<Stock>> _subscribers = new List<IObserver<Stock>>();
-    private Stock _stock;
+    private readonly List<IObserver<Stock>> _subscribers = new();
+    private Stock _lastChangedStock = Stock.Default();
 
-    public Stock Stock
+    public void ProcessNewStockChange(Stock stock)
     {
-        get
-        {
-            return _stock;
-        }
-        set
-        {
-            _stock = value;
-            Notify(_stock);
-        }
+        _lastChangedStock = stock;
+        Notify(_lastChangedStock);
+
     }
 
     public IDisposable Subscribe(IObserver<Stock> subscriber)
@@ -32,11 +26,13 @@ public class StockTicker : IObservable<Stock>
 
     private void Notify(Stock stock)
     {
+        var isReportWithBadData = string.IsNullOrWhiteSpace(stock.Symbol) || stock.Price < 0;
+
         foreach (var subscriber in _subscribers)
         {
-            if (stock.Symbol == null || stock.Price < 0)
+            if (isReportWithBadData)
             {
-                subscriber.OnError(new Exception("Bad stock data"));
+                subscriber.OnError(new ArgumentException("Bad stock data"));
                 continue;
             }
 

@@ -9,18 +9,18 @@ public class GoogleSubscriber : Subscriber
 
     public GoogleSubscriber(StockTicker stockTicker)
     {
-        stockTicker.Subscribe(this);
         _stockTicker = stockTicker;
+        _stockTicker.Subscribe(this);
     }
 
     public override void Update()
     {
-        decimal price = _stockTicker.Stock.Price;
-        string symbol = _stockTicker.Stock.Symbol;
+        decimal price = _stockTicker.LastChangedStock.Price;
+        string symbol = _stockTicker.LastChangedStock.Symbol;
 
         if (symbol == "GOOG")
         {
-            Console.WriteLine($"Google's new price is: {price:C}");
+            Console.WriteLine($"Google's stock price has changed. The new price is: {price:C}");
         }
     }
 }

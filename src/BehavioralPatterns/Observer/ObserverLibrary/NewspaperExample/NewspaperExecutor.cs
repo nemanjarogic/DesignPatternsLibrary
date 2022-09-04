@@ -11,9 +11,9 @@ public static class NewspaperExecutor
         ConsoleExtension.WriteSeparator("Newspaper example");
 
         var dailyMail = new DailyMail();
-        dailyMail.Subscribe(new User("Emma Davis", 5));
-        dailyMail.Subscribe(new User("Mary Miller", 10));
-        dailyMail.Subscribe(new User("Ube Miller", 6));
+        dailyMail.Subscribe(new User("Emma Davis", "emma", 5));
+        dailyMail.Subscribe(new User("Mary Miller", "marry", 10));
+        dailyMail.Subscribe(new User("Ube Miller", "ube", 6));
 
         Console.WriteLine();
         dailyMail.MonthlyPrice = 6;

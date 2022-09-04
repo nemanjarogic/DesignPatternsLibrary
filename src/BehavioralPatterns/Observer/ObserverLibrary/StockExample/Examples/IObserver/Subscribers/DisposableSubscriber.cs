@@ -1,6 +1,6 @@
 ﻿namespace ObserverLibrary.StockExample.Examples.IObserver.Subscribers;
 
-public class DisposableSubscriber : IDisposable
+public sealed class DisposableSubscriber : IDisposable
 {
     private readonly List<IObserver<Stock>> _subscribers;
     private readonly IObserver<Stock> _currentSubscriber;
@@ -13,7 +13,7 @@ public class DisposableSubscriber : IDisposable
 
     public void Dispose()
     {
-        if (_currentSubscriber != null && _subscribers.Contains(_currentSubscriber))
+        if (_subscribers.Contains(_currentSubscriber))
         {
             _subscribers.Remove(_currentSubscriber);
         }

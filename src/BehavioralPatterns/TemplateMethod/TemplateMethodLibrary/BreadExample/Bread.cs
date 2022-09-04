@@ -16,8 +16,6 @@ public abstract class Bread
 
     protected abstract void Bake();
 
-    protected virtual void Slice()
-    {
+    protected virtual void Slice() =>
         Console.WriteLine($"Slicing the {GetType().Name}!");
-    }
 }

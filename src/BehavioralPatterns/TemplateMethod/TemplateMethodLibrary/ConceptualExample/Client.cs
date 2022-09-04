@@ -8,10 +8,8 @@ public class Client
     /// as long as it works with objects through the interface of their base class.
     /// </summary>
     /// <param name="abstractClass">Abstract class.</param>
-    public static void ProcessSomething(AbstractClass abstractClass)
-    {
+    public static void ProcessSomething(AbstractClass abstractClass) =>
         // Initial operations
         abstractClass.TemplateMethod();
-        // Additional operations
-    }
+    // Additional operations
 }

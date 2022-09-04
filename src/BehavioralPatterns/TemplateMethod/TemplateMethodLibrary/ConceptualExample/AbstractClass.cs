@@ -25,20 +25,14 @@ public abstract class AbstractClass
     /// <summary>
     /// These operations already have implementations.
     /// </summary>
-    protected virtual void BaseOperation1()
-    {
+    protected virtual void BaseOperation1() =>
         Console.WriteLine("AbstractClass says: I am doing the bulk of the work");
-    }
 
-    protected virtual void BaseOperation2()
-    {
+    protected virtual void BaseOperation2() =>
         Console.WriteLine("AbstractClass says: But I let subclasses override some operations");
-    }
 
-    protected virtual void BaseOperation3()
-    {
+    protected virtual void BaseOperation3() =>
         Console.WriteLine("AbstractClass says: But I am doing the bulk of the work anyway");
-    }
 
     /// <summary>
     /// These operations have to be implemented in subclasses.

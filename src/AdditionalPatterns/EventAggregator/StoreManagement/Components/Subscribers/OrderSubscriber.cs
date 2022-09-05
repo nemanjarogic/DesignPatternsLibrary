@@ -8,13 +8,11 @@ namespace StoreManagement.Components.Subscribers;
 /// </summary>
 public class OrderSubscriber : ICustomObserver<OrderCreatedEvent>
 {
-    private readonly IEventAggregator _eventAggregator;
     private readonly IDisposable _unsubscriber;
 
     public OrderSubscriber(IEventAggregator eventAggregator)
     {
-        _eventAggregator = eventAggregator;
-        _unsubscriber = _eventAggregator.Subscribe(this);
+        _unsubscriber = eventAggregator.Subscribe(this);
     }
 
     public void OnNext(IEvent @event) =>

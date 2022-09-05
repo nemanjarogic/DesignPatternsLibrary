@@ -21,7 +21,6 @@ public class Unsubscriber<T> : IDisposable
         GC.SuppressFinalize(this);
     }
 
-    // The bulk of the clean-up code is implemented in Dispose(bool)
     protected virtual void Dispose(bool disposing)
     {
         if (_isDisposed)

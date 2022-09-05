@@ -7,13 +7,11 @@ namespace StoreManagement.Components.Subscribers;
 /// </summary>
 public class BusinessTrackingSubscriber : ICustomObserver<IEvent>
 {
-    private readonly IEventAggregator _eventAggregator;
     private readonly IDisposable _unsubscriber;
 
     public BusinessTrackingSubscriber(IEventAggregator eventAggregator)
     {
-        _eventAggregator = eventAggregator;
-        _unsubscriber = _eventAggregator.Subscribe(this);
+        _unsubscriber = eventAggregator.Subscribe(this);
     }
 
     public void OnNext(IEvent @event)

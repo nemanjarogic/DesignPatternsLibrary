@@ -33,5 +33,11 @@ public class Executor : PatternExecutor
 
         Console.WriteLine("\nPreparing order 3...");
         orderPublisher.Publish("Order 3");
+
+        businessTrackingSubscriber.Unsubscribe();
+
+        // This event won't be handled, because there are no subscribers anymore.
+        Console.WriteLine("\nPreparing order 4...");
+        orderPublisher.Publish("Order 4");
     }
 }

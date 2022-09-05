@@ -68,7 +68,8 @@ public class EventAggregator : IEventAggregator
     {
         if (!_typedObservers.TryGetValue(typeof(T), out List<IObserver<IEvent>> observers))
         {
-            observers = _typedObservers[typeof(T)] = new List<IObserver<IEvent>>();
+            observers = new List<IObserver<IEvent>>();
+            _typedObservers[typeof(T)] = observers;
         }
 
         return SubscribeAndSendEvents(observers, newObserver, _events.Where(evt => evt is T));

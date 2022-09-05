@@ -22,13 +22,9 @@ public abstract class Specification<T>
         return predicate(entity);
     }
 
-    public Specification<T> And(Specification<T> specification)
-    {
-        return new AndSpecification<T>(this, specification);
-    }
+    public Specification<T> And(Specification<T> specification) =>
+        new AndSpecification<T>(this, specification);
 
-    public Specification<T> Or(Specification<T> specification)
-    {
-        return new OrSpecification<T>(this, specification);
-    }
+    public Specification<T> Or(Specification<T> specification) =>
+        new OrSpecification<T>(this, specification);
 }

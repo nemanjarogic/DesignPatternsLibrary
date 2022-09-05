@@ -11,8 +11,5 @@ public class UnitOfWork : IUnitOfWork
         _context = context;
     }
 
-    public void Commit()
-    {
-        _context.SaveChanges();
-    }
+    public void Commit() => _context.SaveChanges();
 }

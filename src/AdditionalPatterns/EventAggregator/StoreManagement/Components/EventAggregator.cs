@@ -46,20 +46,16 @@ public class EventAggregator : IEventAggregator
     /// </summary>
     /// <param name="observer">The subscriber.</param>
     /// <returns>An unsubscriber to allow unsubscribing from events.</returns>
-    public IDisposable Subscribe(IObserver<IEvent> observer)
-    {
-        return SubscribeToAllEvents(observer);
-    }
+    public IDisposable Subscribe(IObserver<IEvent> observer) =>
+        SubscribeToAllEvents(observer);
 
     /// <summary>
     /// Subscribe to all events.
     /// </summary>
     /// <param name="observer">The subscriber.</param>
     /// <returns>An unsubscriber to allow unsubscribing from events.</returns>
-    public IDisposable Subscribe(ICustomObserver<IEvent> observer)
-    {
-        return SubscribeToAllEvents(observer);
-    }
+    public IDisposable Subscribe(ICustomObserver<IEvent> observer) =>
+        SubscribeToAllEvents(observer);
 
     /// <summary>
     /// Subscribe to a specific event type.
@@ -78,10 +74,8 @@ public class EventAggregator : IEventAggregator
         return SubscribeAndSendEvents(observers, newObserver, _events.Where(evt => evt is T));
     }
 
-    private IDisposable SubscribeToAllEvents(IObserver<IEvent> newObserver)
-    {
-        return SubscribeAndSendEvents(_observers, newObserver, _events);
-    }
+    private IDisposable SubscribeToAllEvents(IObserver<IEvent> newObserver) =>
+        SubscribeAndSendEvents(_observers, newObserver, _events);
 
     private IDisposable SubscribeAndSendEvents(
         List<IObserver<IEvent>> currentObservers,

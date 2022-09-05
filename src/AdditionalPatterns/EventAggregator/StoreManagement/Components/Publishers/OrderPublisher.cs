@@ -12,8 +12,6 @@ public class OrderPublisher : IPublisher
         _eventAggregator = eventAggregator;
     }
 
-    public void Publish(string payload)
-    {
+    public void Publish(string payload) =>
         _eventAggregator.Publish(new OrderCreatedEvent(payload));
-    }
 }

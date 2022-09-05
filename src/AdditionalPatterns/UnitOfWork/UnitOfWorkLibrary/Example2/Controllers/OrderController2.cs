@@ -29,13 +29,7 @@ public class OrderController2
         return newOrder;
     }
 
-    public IEnumerable<Order> GetAll()
-    {
-        return _orderRepository.GetAll();
-    }
+    public IEnumerable<Order> GetAll() => _orderRepository.GetAll();
 
-    public Order GetTheMostExpensive()
-    {
-        return _orderRepository.GetTheMostExpensive();
-    }
+    public Order GetTheMostExpensive() => _orderRepository.GetTheMostExpensive();
 }

@@ -17,8 +17,6 @@ public class OrderManagementContext2 : DbContext, IUnitOfWork2
         return writtenEntries > 0;
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
         optionsBuilder.UseSqlite("Data Source=storage2.db");
-    }
 }

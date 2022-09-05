@@ -12,8 +12,6 @@ public class WarehousePublisher : IPublisher
         _eventAggregator = eventAggregator;
     }
 
-    public void Publish(string payload)
-    {
+    public void Publish(string payload) =>
         _eventAggregator.Publish(new WarehouseReceivedNewSuppliesEvent(payload));
-    }
 }

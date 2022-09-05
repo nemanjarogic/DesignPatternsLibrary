@@ -48,8 +48,5 @@ public class UnitOfWork1 : IUnitOfWork1
         }
     }
 
-    public void SaveChanges()
-    {
-        _context.SaveChanges();
-    }
+    public void SaveChanges() => _context.SaveChanges();
 }

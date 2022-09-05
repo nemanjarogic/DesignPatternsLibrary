@@ -13,13 +13,9 @@ public abstract class Application
 
     public Guid ProcessId { get; }
 
-    public virtual void Open()
-    {
+    public virtual void Open() =>
         Console.WriteLine($"{Name} opened.");
-    }
 
-    public virtual void Close()
-    {
+    public virtual void Close() =>
         Console.WriteLine($"{Name} closed.");
-    }
 }

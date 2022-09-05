@@ -11,19 +11,11 @@ public class DotNetLazyCollege
         _library = new Lazy<Library>(() => new Library());
     }
 
-    public Library Library
-    {
-        get
-        {
-            return _library.Value;
-        }
-    }
+    public Library Library => _library.Value;
 
-    public void ShowDetails()
-    {
+    public void ShowDetails() =>
         // We can access to data through property or via field.Value
         Console.WriteLine(
             $"College library with {Library.NumberOfBooks} books " +
             $"was established on {_library.Value.EstablishmentDate.ToShortDateString()}.");
-    }
 }

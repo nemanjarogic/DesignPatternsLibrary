@@ -24,10 +24,7 @@ public abstract class Entity
         return a.Equals(b);
     }
 
-    public static bool operator !=(Entity a, Entity b)
-    {
-        return !(a == b);
-    }
+    public static bool operator !=(Entity a, Entity b) => !(a == b);
 
     public override bool Equals(object obj)
     {
@@ -51,8 +48,5 @@ public abstract class Entity
         return Id == other.Id;
     }
 
-    public override int GetHashCode()
-    {
-        return Id.GetHashCode() ^ 31;
-    }
+    public override int GetHashCode() => Id.GetHashCode() ^ 31;
 }

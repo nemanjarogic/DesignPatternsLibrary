@@ -6,10 +6,8 @@ public class College
 
     public virtual Library Library { get; set; }
 
-    public void ShowDetails()
-    {
+    public void ShowDetails() =>
         Console.WriteLine(
             $"College library with {Library.NumberOfBooks} books " +
             $"was established on {Library.EstablishmentDate.ToShortDateString()}.");
-    }
 }

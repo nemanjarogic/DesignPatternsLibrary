@@ -12,8 +12,5 @@ public class CustomerController2
         _customerRepository = customerRepository;
     }
 
-    public IEnumerable<Customer> GetAll()
-    {
-        return _customerRepository.GetAll();
-    }
+    public IEnumerable<Customer> GetAll() => _customerRepository.GetAll();
 }

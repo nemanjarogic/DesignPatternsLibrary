@@ -1,6 +1,6 @@
-﻿using System.Linq.Expressions;
-using ProductSpecification.Domain;
+﻿using ProductSpecification.Domain;
 using ProductSpecification.Specifications.Common;
+using System.Linq.Expressions;
 
 namespace ProductSpecification.Specifications;
 
@@ -11,8 +11,6 @@ public class CheapProductSpecification : Specification<Product>
 {
     private const decimal PriceThreshold = 10;
 
-    public override Expression<Func<Product, bool>> ToExpression()
-    {
-        return product => product.Price < PriceThreshold;
-    }
+    public override Expression<Func<Product, bool>> ToExpression() =>
+        product => product.Price < PriceThreshold;
 }

@@ -34,8 +34,5 @@ public class OrderController1
         return newOrder;
     }
 
-    public IEnumerable<Order> GetAll()
-    {
-        return _unitOfWork.OrderRepository.GetAll();
-    }
+    public IEnumerable<Order> GetAll() => _unitOfWork.OrderRepository.GetAll();
 }

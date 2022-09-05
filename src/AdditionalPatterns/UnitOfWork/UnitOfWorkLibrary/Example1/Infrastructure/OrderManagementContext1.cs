@@ -9,8 +9,6 @@ public class OrderManagementContext1 : DbContext
 
     public DbSet<Order> Orders { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
         optionsBuilder.UseSqlite("Data Source=storage1.db");
-    }
 }

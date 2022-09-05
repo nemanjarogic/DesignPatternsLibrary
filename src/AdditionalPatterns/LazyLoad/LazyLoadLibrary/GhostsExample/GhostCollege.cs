@@ -28,10 +28,7 @@ public class GhostCollege : DomainObject
             LoadIfNecessary();
             return _missionStatement;
         }
-        set
-        {
-            _missionStatement = value;
-        }
+        set => _missionStatement = value;
     }
 
     public int NumberOfStudents
@@ -41,10 +38,7 @@ public class GhostCollege : DomainObject
             LoadIfNecessary();
             return _numberOfStudents;
         }
-        set
-        {
-            _numberOfStudents = value;
-        }
+        set => _numberOfStudents = value;
     }
 
     public Library Library
@@ -54,29 +48,22 @@ public class GhostCollege : DomainObject
             LoadIfNecessary();
             return _library;
         }
-        set
-        {
-            _library = value;
-        }
+        set => _library = value;
     }
 
-    public void ShowDetails()
-    {
+    public void ShowDetails() =>
         Console.WriteLine(
             $"College mission statement is: '{MissionStatement}'.\n" +
             $"The college owns library with {Library.NumberOfBooks} books that " +
             $"was established on {Library.EstablishmentDate.ToShortDateString()}.");
-    }
 
-    protected override object[] FetchData()
-    {
-        return new object[3]
+    protected override object[] FetchData() =>
+        new object[3]
         {
             "Learn, Discover, Heal, Create, and Make the World Ever Better",
             850,
             new Library(),
         };
-    }
 
     protected override void ApplyLoadedData(object[] dataRow)
     {

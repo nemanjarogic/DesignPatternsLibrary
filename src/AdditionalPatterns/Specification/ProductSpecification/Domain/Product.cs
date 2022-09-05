@@ -27,8 +27,6 @@ public class Product : Entity
 
     public DateTime LaunchDate { get; set; }
 
-    public override string ToString()
-    {
-        return $"{Title} - Rating: {Rating} - Price: {Price:C} - Launched on: {LaunchDate.ToShortDateString()}";
-    }
+    public override string ToString() =>
+        $"{Title} - Rating: {Rating} - Price: {Price:C} - Launched on: {LaunchDate.ToShortDateString()}";
 }

@@ -25,25 +25,17 @@ public class ServiceLocator : IServiceLocator
         };
     }
 
-    public void AddService<T>(T service)
-    {
+    public void AddService<T>(T service) =>
         _services.Add(typeof(T).Name, service);
-    }
 
-    public void AddService<T>(string serviceName, T service)
-    {
+    public void AddService<T>(string serviceName, T service) =>
         _services.Add(serviceName, service);
-    }
 
-    public T GetService<T>()
-    {
-        return (T)_services[typeof(T).Name];
-    }
+    public T GetService<T>() =>
+        (T)_services[typeof(T).Name];
 
-    public object GetService<T>(string serviceName)
-    {
-        return (T)_services[serviceName];
-    }
+    public object GetService<T>(string serviceName) =>
+        (T)_services[serviceName];
 
     /*public void AddService(string serviceName)
     {

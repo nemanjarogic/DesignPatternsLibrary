@@ -23,41 +23,25 @@ public abstract class Repository2<T> : IRepository2<T>
         _context = context;
     }
 
-    public IUnitOfWork2 UnitOfWork
-    {
-        get
-        {
-            return _context;
-        }
-    }
+    public IUnitOfWork2 UnitOfWork => _context;
 
-    public virtual T Add(T entity)
-    {
-        return _context
+    public virtual T Add(T entity) =>
+        _context
             .Add(entity)
             .Entity;
-    }
 
-    public virtual IEnumerable<T> GetAll()
-    {
-        return _context.Set<T>().ToList();
-    }
+    public virtual IEnumerable<T> GetAll() =>
+        _context.Set<T>().ToList();
 
-    public virtual IEnumerable<T> Get(Expression<Func<T, bool>> predicate)
-    {
-        return _context.Set<T>()
+    public virtual IEnumerable<T> Get(Expression<Func<T, bool>> predicate) =>
+        _context.Set<T>()
             .AsQueryable()
             .Where(predicate)
             .ToList();
-    }
 
-    public virtual T GetById(int id)
-    {
-        return _context.Find<T>(id);
-    }
+    public virtual T GetById(int id) =>
+        _context.Find<T>(id);
 
-    public virtual void Delete(T entity)
-    {
+    public virtual void Delete(T entity) =>
         _context.Remove(entity);
-    }
 }

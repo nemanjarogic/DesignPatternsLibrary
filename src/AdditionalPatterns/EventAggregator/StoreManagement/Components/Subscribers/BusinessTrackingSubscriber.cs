@@ -22,20 +22,14 @@ public class BusinessTrackingSubscriber : ICustomObserver<IEvent>
         Console.WriteLine($"{GetType().Name}: event record is available for various reports.");
     }
 
-    public void OnCompleted()
-    {
+    public void OnCompleted() =>
         Console.WriteLine($"{GetType().Name}: finished event processing.");
-    }
 
-    public void OnError(Exception error)
-    {
+    public void OnError(Exception error) =>
         Console.WriteLine($"{GetType().Name}: experienced error condition.");
-    }
 
-    public void Unsubscribe()
-    {
+    public void Unsubscribe() =>
         // If subscribe method needs to be called multiple times unsubscribe
         // mechanism must be changed in order to support such functionality.
         _unsubscriber.Dispose();
-    }
 }

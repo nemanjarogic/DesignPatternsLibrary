@@ -2,8 +2,5 @@
 
 public class CollegeFactory
 {
-    public ValueHolderCollege CreateFromId(int id)
-    {
-        return new ValueHolderCollege(id);
-    }
+    public ValueHolderCollege CreateFromId(int id) => new(id);
 }

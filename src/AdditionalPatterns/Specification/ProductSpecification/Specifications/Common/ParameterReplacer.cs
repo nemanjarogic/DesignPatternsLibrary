@@ -11,8 +11,6 @@ internal class ParameterReplacer : ExpressionVisitor
         _parameter = parameter;
     }
 
-    protected override Expression VisitParameter(ParameterExpression node)
-    {
-        return base.VisitParameter(_parameter);
-    }
+    protected override Expression VisitParameter(ParameterExpression node) =>
+        base.VisitParameter(_parameter);
 }

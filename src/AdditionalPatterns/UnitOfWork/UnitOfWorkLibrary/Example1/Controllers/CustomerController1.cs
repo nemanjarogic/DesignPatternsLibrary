@@ -12,8 +12,5 @@ public class CustomerController1
         _unitOfWork = unitOfWork;
     }
 
-    public IEnumerable<Customer> GetAll()
-    {
-        return _unitOfWork.CustomerRepository.GetAll();
-    }
+    public IEnumerable<Customer> GetAll() => _unitOfWork.CustomerRepository.GetAll();
 }

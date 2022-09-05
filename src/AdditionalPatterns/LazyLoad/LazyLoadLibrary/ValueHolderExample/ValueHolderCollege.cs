@@ -19,18 +19,10 @@ public class ValueHolderCollege
 
     public int Id { get; set; }
 
-    public Library Library
-    {
-        get
-        {
-            return _library.Value;
-        }
-    }
+    public Library Library => _library.Value;
 
-    public void ShowDetails()
-    {
+    public void ShowDetails() =>
         Console.WriteLine(
             $"College library with {Library.NumberOfBooks} books " +
             $"was established on {Library.EstablishmentDate.ToShortDateString()}.");
-    }
 }

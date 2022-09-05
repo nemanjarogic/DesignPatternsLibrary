@@ -17,23 +17,15 @@ public class OrderSubscriber : ICustomObserver<OrderCreatedEvent>
         _unsubscriber = _eventAggregator.Subscribe(this);
     }
 
-    public void OnNext(IEvent @event)
-    {
+    public void OnNext(IEvent @event) =>
         Console.WriteLine($"{GetType().Name}: processing event with description '{@event.Description}'.");
-    }
 
-    public void OnCompleted()
-    {
+    public void OnCompleted() =>
         Console.WriteLine($"{GetType().Name}: finished event processing.");
-    }
 
-    public void OnError(Exception error)
-    {
+    public void OnError(Exception error) =>
         Console.WriteLine($"{GetType().Name}: experienced error condition.");
-    }
 
-    public void Unsubscribe()
-    {
+    public void Unsubscribe() =>
         _unsubscriber.Dispose();
-    }
 }

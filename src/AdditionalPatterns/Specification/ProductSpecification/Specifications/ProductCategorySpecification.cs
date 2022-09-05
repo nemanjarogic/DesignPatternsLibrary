@@ -1,6 +1,6 @@
-﻿using System.Linq.Expressions;
-using ProductSpecification.Domain;
+﻿using ProductSpecification.Domain;
 using ProductSpecification.Specifications.Common;
+using System.Linq.Expressions;
 
 namespace ProductSpecification.Specifications;
 
@@ -13,8 +13,6 @@ public class ProductCategorySpecification : Specification<Product>
         _category = category;
     }
 
-    public override Expression<Func<Product, bool>> ToExpression()
-    {
-        return product => product.Category == _category;
-    }
+    public override Expression<Func<Product, bool>> ToExpression() =>
+        product => product.Category == _category;
 }

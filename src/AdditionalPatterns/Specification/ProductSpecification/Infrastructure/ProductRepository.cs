@@ -19,12 +19,10 @@ public class ProductRepository
         };
     }
 
-    public IReadOnlyList<Product> Find(Specification<Product> specification, int page = 0, int pageSize = 100)
-    {
-        return _products.AsQueryable()
+    public IReadOnlyList<Product> Find(Specification<Product> specification, int page = 0, int pageSize = 100) =>
+        _products.AsQueryable()
             .Where(specification.ToExpression())
             .Skip(page * pageSize)
             .Take(pageSize)
             .ToList();
-    }
 }

@@ -18,11 +18,9 @@ public class LazyCollege
         }
     }
 
-    public void ShowDetails()
-    {
+    public void ShowDetails() =>
         // We must access library via property.
         Console.WriteLine(
             $"College library with {Library.NumberOfBooks} books " +
             $"was established on {Library.EstablishmentDate.ToShortDateString()}.");
-    }
 }

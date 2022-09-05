@@ -19,10 +19,7 @@ public class ProxyCollege : College
 
             return base.Library;
         }
-        set
-        {
-            base.Library = value;
-        }
+        set => base.Library = value;
     }
 
     public override bool Equals(object obj)
@@ -35,8 +32,5 @@ public class ProxyCollege : College
         return college.Id == Id;
     }
 
-    public override int GetHashCode()
-    {
-        return Id.GetHashCode();
-    }
+    public override int GetHashCode() => Id.GetHashCode();
 }

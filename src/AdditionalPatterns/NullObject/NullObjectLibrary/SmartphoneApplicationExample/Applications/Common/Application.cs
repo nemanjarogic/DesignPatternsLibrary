@@ -1,23 +1,13 @@
-﻿using NullObjectLibrary.SmartphoneApplicationExample.Applications;
-
-namespace NullObjectLibrary.ApplicationExample.Applications.Common;
+﻿namespace NullObjectLibrary.SmartphoneApplicationExample.Applications.Common;
 
 public abstract class Application
 {
-    private static readonly NullApplication NullApplication = new NullApplication();
-
-    public Application(Guid processId)
+    protected Application(Guid processId)
     {
         ProcessId = processId;
     }
 
-    public static NullApplication Default
-    {
-        get
-        {
-            return NullApplication;
-        }
-    }
+    public static NullApplication Default { get; } = new();
 
     public abstract string Name { get; }
 

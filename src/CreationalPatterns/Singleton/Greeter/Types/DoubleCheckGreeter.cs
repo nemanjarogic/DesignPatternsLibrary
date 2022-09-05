@@ -1,4 +1,5 @@
 ﻿using Greeter.Types.Common;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Greeter.Types;
 
@@ -17,10 +18,13 @@ public class DoubleCheckGreeter : BaseGreeter
     {
     }
 
+
     /// <summary>
     /// Gets instance in a way to support multi-threaded applications through 'double checked locking'
     /// pattern which (once the instance exists) avoids locking each time the method is invoked.
     /// </summary>
+    [SuppressMessage("Maintainability", "CA1508:Avoid dead conditional code",
+        Justification = "If the first check determines that instance is null, that might not be the case for the second check in multi-threaded scenarios.")]
     public static DoubleCheckGreeter Instance
     {
         get

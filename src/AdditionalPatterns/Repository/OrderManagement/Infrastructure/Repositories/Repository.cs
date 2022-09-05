@@ -1,6 +1,6 @@
-﻿using System.Linq.Expressions;
-using OrderManagement.Domain;
+﻿using OrderManagement.Domain;
 using OrderManagement.Infrastructure.Repositories.Contracts;
+using System.Linq.Expressions;
 
 namespace OrderManagement.Infrastructure.Repositories;
 
@@ -18,7 +18,7 @@ public abstract class Repository<T> : IRepository<T>
 {
     protected OrderManagementContext _context;
 
-    public Repository(OrderManagementContext context)
+    protected Repository(OrderManagementContext context)
     {
         _context = context;
     }

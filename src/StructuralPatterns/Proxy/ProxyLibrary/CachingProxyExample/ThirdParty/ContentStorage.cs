@@ -22,7 +22,7 @@ public class ContentStorage
 
         if (!_videos.TryGetValue(id, out var video))
         {
-            throw new Exception($"ID: {id} is unknown to content storage.");
+            throw new ArgumentException($"ID: {id} is unknown to content storage.");
         }
 
         return video;

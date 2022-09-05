@@ -1,4 +1,4 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 using ProductSpecification.Infrastructure;
 using ProductSpecification.Specifications;
 

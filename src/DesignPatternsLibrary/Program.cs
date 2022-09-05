@@ -1,15 +1,16 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 
 namespace DesignPatternsLibrary;
 
+#nullable enable
 public class Program
 {
-    private static readonly string ExitCode = "q";
+    private const string ExitCode = "q";
     private static readonly SortedDictionary<int, PatternExecutor> Executors = PatternExecutorsRegistry.Instance.GetAll();
 
     private static void Main(string[] args)
     {
-        while (IsChoiceDifferentFromExitCode(out string choice))
+        while (!IsTerminationRequested(out string? choice))
         {
             if (IsChoiceUnsupported(choice, out int choiceKey))
             {
@@ -24,12 +25,12 @@ public class Program
         Console.ReadLine();
     }
 
-    private static bool IsChoiceDifferentFromExitCode(out string choice)
+    private static bool IsTerminationRequested(out string? choice)
     {
         ShowAvailableMenuOptions();
         choice = ChooseOneOptionFromMenu();
 
-        return !choice.Equals(ExitCode);
+        return choice is ExitCode;
     }
 
     private static void ShowAvailableMenuOptions()
@@ -45,7 +46,7 @@ public class Program
         Console.WriteLine($"{ExitCode}. Quit");
     }
 
-    private static string ChooseOneOptionFromMenu()
+    private static string? ChooseOneOptionFromMenu()
     {
         Console.ForegroundColor = ConsoleColor.DarkGray;
         Console.WriteLine("\nYour choice: ");
@@ -57,9 +58,9 @@ public class Program
         return choice;
     }
 
-    private static bool IsChoiceUnsupported(string choice, out int choiceKey)
+    private static bool IsChoiceUnsupported(string? choice, out int choiceKey)
     {
-        if (!int.TryParse(choice, out int key) || !Executors.ContainsKey(key))
+        if (choice == null || !int.TryParse(choice, out int key) || !Executors.ContainsKey(key))
         {
             choiceKey = -1;
             return true;

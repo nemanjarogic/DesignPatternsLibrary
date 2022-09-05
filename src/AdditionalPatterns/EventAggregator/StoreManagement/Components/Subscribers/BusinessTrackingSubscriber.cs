@@ -1,6 +1,6 @@
-﻿using EventAggregatorLibrary.Contracts;
+﻿using StoreManagement.Contracts;
 
-namespace EventAggregatorLibrary.Components.Subscribers;
+namespace StoreManagement.Components.Subscribers;
 
 /// <summary>
 /// Business tracking subscriber tracks all events in the system.

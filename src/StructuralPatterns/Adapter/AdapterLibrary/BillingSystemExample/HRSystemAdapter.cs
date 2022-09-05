@@ -24,7 +24,7 @@ public class HRSystemAdapter : ISalaryProcessor
         _thirdPartyBillingSystem.ProcessSalary(employeesForProcessing);
     }
 
-    private List<Employee> PrepareEmployeesForSalaryProcessing(string[,] rawEmployees)
+    private static List<Employee> PrepareEmployeesForSalaryProcessing(string[,] rawEmployees)
     {
         var employeesForProcessing = new List<Employee>();
 

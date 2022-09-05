@@ -1,4 +1,4 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 using OrderManagement.Controllers;
 using OrderManagement.Domain;
 using OrderManagement.Infrastructure;
@@ -6,30 +6,20 @@ using OrderManagement.Infrastructure.Repositories;
 
 namespace OrderManagement;
 
-public class Executor : PatternExecutor
+public class Executor : PatternExecutor, IDisposable
 {
-    private OrderManagementContext _context;
-    private CustomerRepository _customerRepository;
-    private OrderRepository _orderRepository;
-    private UnitOfWork _unitOfWork;
+    private readonly OrderManagementContext _context;
+    private readonly CustomerRepository _customerRepository;
+    private readonly OrderRepository _orderRepository;
+    private readonly UnitOfWork _unitOfWork;
+    private readonly CustomerController _customerController;
+    private readonly OrderController _orderController;
 
-    private CustomerController _customerController;
-    private OrderController _orderController;
+    private bool _isDisposed;
 
     public override string Name => "Repository - Data Access Pattern";
 
-    public override void Execute()
-    {
-        ConfigureDependencies();
-        InitializeDatabase();
-
-        ShowAllCustomers();
-        ShowAllOrders();
-        CreateNewOrder();
-        ShowAllOrders();
-    }
-
-    private void ConfigureDependencies()
+    public Executor()
     {
         _context = new OrderManagementContext();
         _customerRepository = new CustomerRepository(_context);
@@ -38,6 +28,16 @@ public class Executor : PatternExecutor
 
         _customerController = new CustomerController(_customerRepository);
         _orderController = new OrderController(_orderRepository, _unitOfWork);
+    }
+
+    public override void Execute()
+    {
+        InitializeDatabase();
+
+        ShowAllCustomers();
+        ShowAllOrders();
+        CreateNewOrder();
+        ShowAllOrders();
     }
 
     private void InitializeDatabase()
@@ -56,7 +56,7 @@ public class Executor : PatternExecutor
 
         _orderRepository.Add(camera);
         _orderRepository.Add(wallet);
-            
+
         _unitOfWork.Commit();
     }
 
@@ -82,5 +82,26 @@ public class Executor : PatternExecutor
     {
         Console.WriteLine("\nCreating new order...");
         _orderController.Create(3, "PlayStation 5", "Address 3", 600);
+    }
+
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (_isDisposed)
+        {
+            return;
+        }
+
+        if (disposing)
+        {
+            _context.Dispose();
+        }
+
+        _isDisposed = true;
     }
 }

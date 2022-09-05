@@ -1,4 +1,4 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 using ObserverLibrary.NewspaperExample;
 using ObserverLibrary.StockExample;
 

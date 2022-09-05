@@ -1,4 +1,4 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 using FacadeLibrary.MortgageExample;
 using FacadeLibrary.WeatherServiceExample;
 

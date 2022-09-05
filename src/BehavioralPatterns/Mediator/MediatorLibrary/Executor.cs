@@ -1,4 +1,4 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 using MediatorLibrary.AirTrafficControlExample;
 using MediatorLibrary.GroupChatExample;
 

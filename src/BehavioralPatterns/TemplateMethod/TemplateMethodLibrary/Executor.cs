@@ -1,4 +1,4 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 using TemplateMethodLibrary.BreadExample;
 using TemplateMethodLibrary.ConceptualExample;
 

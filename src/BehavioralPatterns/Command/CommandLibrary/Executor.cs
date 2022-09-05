@@ -1,7 +1,7 @@
-﻿using CommandLibrary.EmailExample;
+﻿using BuildingBlocks;
+using CommandLibrary.EmailExample;
 using CommandLibrary.ShoppingCartExample;
 using CommandLibrary.StockExample;
-using DesignPatternsLibrary.PatternExecutors;
 
 namespace CommandLibrary;
 

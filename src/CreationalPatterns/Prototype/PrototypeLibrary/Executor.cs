@@ -1,4 +1,4 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 using PrototypeLibrary.ColorRegistryExample;
 using PrototypeLibrary.ComplexUnstableObjectExample;
 using PrototypeLibrary.DeepCloneExample;

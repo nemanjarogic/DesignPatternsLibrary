@@ -1,6 +1,6 @@
-﻿using EventAggregatorLibrary.Contracts;
+﻿using StoreManagement.Contracts;
 
-namespace EventAggregatorLibrary.Events;
+namespace StoreManagement.Events;
 
 public class WarehouseReceivedNewSuppliesEvent : IEvent
 {

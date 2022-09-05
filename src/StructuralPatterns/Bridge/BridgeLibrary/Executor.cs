@@ -1,7 +1,7 @@
 ﻿using BridgeLibrary.DevicesAndRemotesExample;
 using BridgeLibrary.DocumentsAndFormattersExample;
 using BridgeLibrary.MovieLicenseExample;
-using DesignPatternsLibrary.PatternExecutors;
+using BuildingBlocks;
 
 namespace BridgeLibrary;
 

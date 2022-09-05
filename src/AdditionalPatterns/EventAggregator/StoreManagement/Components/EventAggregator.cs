@@ -1,6 +1,6 @@
-﻿using EventAggregatorLibrary.Contracts;
+﻿using StoreManagement.Contracts;
 
-namespace EventAggregatorLibrary.Components;
+namespace StoreManagement.Components;
 
 public class EventAggregator : IEventAggregator
 {
@@ -29,7 +29,7 @@ public class EventAggregator : IEventAggregator
             observer.OnNext(@event);
         }
 
-        if (!_typedObservers.TryGetValue(@event.GetType(), out List<IObserver<IEvent>> typedObservers))
+        if (!_typedObservers.TryGetValue(@event.GetType(), out var typedObservers))
         {
             return;
         }
@@ -75,15 +75,15 @@ public class EventAggregator : IEventAggregator
             observers = _typedObservers[typeof(T)] = new List<IObserver<IEvent>>();
         }
 
-        return SubsribeAndSendEvents(observers, newObserver, _events.Where(evt => evt is T));
+        return SubscribeAndSendEvents(observers, newObserver, _events.Where(evt => evt is T));
     }
 
     private IDisposable SubscribeToAllEvents(IObserver<IEvent> newObserver)
     {
-        return SubsribeAndSendEvents(_observers, newObserver, _events);
+        return SubscribeAndSendEvents(_observers, newObserver, _events);
     }
 
-    private IDisposable SubsribeAndSendEvents(
+    private IDisposable SubscribeAndSendEvents(
         List<IObserver<IEvent>> currentObservers,
         IObserver<IEvent> newObserver,
         IEnumerable<IEvent> events)

@@ -2,7 +2,7 @@
 using UnitOfWorkLibrary.Domain;
 using UnitOfWorkLibrary.Example1.Infrastructure.Repositories.Contracts;
 
-namespace UnitOfWorkLibrary.Example1.Infrastructure;
+namespace UnitOfWorkLibrary.Example1.Infrastructure.Repositories;
 
 /// <summary>
 /// Repositories completely encapsulates all the minutiae of data access.

@@ -1,4 +1,4 @@
-﻿namespace EventAggregatorLibrary.Contracts;
+﻿namespace StoreManagement.Contracts;
 
 public interface IPublisher
 {

@@ -1,6 +1,6 @@
 ﻿using AdapterLibrary.BillingSystemExample;
 using AdapterLibrary.MovieBroadcasterExample;
-using DesignPatternsLibrary.PatternExecutors;
+using BuildingBlocks;
 
 namespace AdapterLibrary;
 

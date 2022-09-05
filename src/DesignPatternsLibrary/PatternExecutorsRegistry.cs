@@ -1,10 +1,11 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 
 namespace DesignPatternsLibrary;
 
+#nullable enable
 public class PatternExecutorsRegistry
 {
-    private static PatternExecutorsRegistry _instance;
+    private static PatternExecutorsRegistry? _instance;
     private readonly SortedDictionary<int, PatternExecutor> _executors;
 
     private PatternExecutorsRegistry()
@@ -34,7 +35,7 @@ public class PatternExecutorsRegistry
             new StrategyLibrary.Executor(),
             new TemplateMethodLibrary.Executor(),
             new VisitorLibrary.Executor(),
-            new EventAggregatorLibrary.Executor(),
+            new StoreManagement.Executor(),
             new InterpreterLibrary.Executor(),
             new LazyLoadLibrary.Executor(),
             new NullObjectLibrary.Executor(),
@@ -54,21 +55,7 @@ public class PatternExecutorsRegistry
         }
     }
 
-    public static PatternExecutorsRegistry Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = new PatternExecutorsRegistry();
-            }
+    public static PatternExecutorsRegistry Instance => _instance ??= new PatternExecutorsRegistry();
 
-            return _instance;
-        }
-    }
-
-    public SortedDictionary<int, PatternExecutor> GetAll()
-    {
-        return _executors;
-    }
+    public SortedDictionary<int, PatternExecutor> GetAll() => _executors;
 }

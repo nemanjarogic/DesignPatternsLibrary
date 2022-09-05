@@ -1,4 +1,4 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 using ProxyLibrary.CachingProxyExample;
 using ProxyLibrary.LoggingProxyExample;
 using ProxyLibrary.ProtectionProxyExample;

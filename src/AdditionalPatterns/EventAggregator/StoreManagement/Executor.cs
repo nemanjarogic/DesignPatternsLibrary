@@ -1,9 +1,9 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
-using EventAggregatorLibrary.Components;
-using EventAggregatorLibrary.Components.Publishers;
-using EventAggregatorLibrary.Components.Subscribers;
+﻿using BuildingBlocks;
+using StoreManagement.Components;
+using StoreManagement.Components.Publishers;
+using StoreManagement.Components.Subscribers;
 
-namespace EventAggregatorLibrary;
+namespace StoreManagement;
 
 public class Executor : PatternExecutor
 {

@@ -28,7 +28,7 @@ public class MetadataStorage
 
         if (!_videos.TryGetValue(id, out var videoMetadata))
         {
-            throw new Exception($"ID: {id} is unknown to metadata storage.");
+            throw new ArgumentException($"ID: {id} is unknown to metadata storage.");
         }
 
         return videoMetadata;

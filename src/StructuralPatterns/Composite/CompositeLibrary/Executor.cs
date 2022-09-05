@@ -1,7 +1,7 @@
-﻿using CompositeLibrary.FileSystemExample;
+﻿using BuildingBlocks;
+using CompositeLibrary.FileSystemExample;
 using CompositeLibrary.GiftExample;
 using CompositeLibrary.ShareholdersExample;
-using DesignPatternsLibrary.PatternExecutors;
 
 namespace CompositeLibrary;
 

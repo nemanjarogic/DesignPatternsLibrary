@@ -1,7 +1,7 @@
-﻿using EventAggregatorLibrary.Contracts;
-using EventAggregatorLibrary.Events;
+﻿using StoreManagement.Contracts;
+using StoreManagement.Events;
 
-namespace EventAggregatorLibrary.Components.Subscribers;
+namespace StoreManagement.Components.Subscribers;
 
 /// <summary>
 /// Order subscriber tracks only order created event.

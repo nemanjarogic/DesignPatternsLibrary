@@ -2,7 +2,7 @@
 
 public class Product
 {
-    public static int ProductPurchaseLimit = 10;
+    public const int ProductPurchaseLimit = 10;
 
     public Product(string productId, string name, decimal price)
     {

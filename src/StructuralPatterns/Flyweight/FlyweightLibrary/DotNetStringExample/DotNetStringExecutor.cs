@@ -2,6 +2,7 @@
 
 namespace FlyweightLibrary.DotNetStringExample;
 
+#pragma warning disable CA1508 // Avoid dead conditional code
 public static class DotNetStringExecutor
 {
     public static void Execute()
@@ -42,3 +43,4 @@ public static class DotNetStringExecutor
         Console.WriteLine($"s1 == s5 -> {ReferenceEquals(s1, s5)}");
     }
 }
+#pragma warning restore CA1508 // Avoid dead conditional code

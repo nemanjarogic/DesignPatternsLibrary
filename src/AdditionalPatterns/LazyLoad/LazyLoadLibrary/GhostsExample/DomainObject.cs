@@ -4,7 +4,7 @@ public abstract class DomainObject
 {
     private LoadStatus _status;
 
-    public DomainObject(int id)
+    protected DomainObject(int id)
     {
         Id = id;
     }

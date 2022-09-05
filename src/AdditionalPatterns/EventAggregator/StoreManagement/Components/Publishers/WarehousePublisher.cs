@@ -1,7 +1,7 @@
-﻿using EventAggregatorLibrary.Contracts;
-using EventAggregatorLibrary.Events;
+﻿using StoreManagement.Contracts;
+using StoreManagement.Events;
 
-namespace EventAggregatorLibrary.Components.Publishers;
+namespace StoreManagement.Components.Publishers;
 
 public class WarehousePublisher : IPublisher
 {

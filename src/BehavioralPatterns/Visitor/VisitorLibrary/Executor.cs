@@ -1,4 +1,4 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 using VisitorLibrary.CompanyExample;
 using VisitorLibrary.PersonDynamicProgrammingExample;
 using VisitorLibrary.PersonExample;

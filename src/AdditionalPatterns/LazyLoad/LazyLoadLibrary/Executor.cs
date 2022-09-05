@@ -1,4 +1,4 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 using LazyLoadLibrary.GhostsExample;
 using LazyLoadLibrary.LazyInitializationExample;
 using LazyLoadLibrary.ValueHolderExample;

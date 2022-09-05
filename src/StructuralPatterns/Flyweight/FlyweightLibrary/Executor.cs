@@ -1,4 +1,4 @@
-﻿using DesignPatternsLibrary.PatternExecutors;
+﻿using BuildingBlocks;
 using FlyweightLibrary.DotNetStringExample;
 using FlyweightLibrary.ForestExample;
 

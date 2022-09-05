@@ -1,4 +1,4 @@
-﻿namespace DesignPatternsLibrary.PatternExecutors;
+﻿namespace BuildingBlocks;
 
 /// <summary>
 /// Every design pattern example should have an executor class

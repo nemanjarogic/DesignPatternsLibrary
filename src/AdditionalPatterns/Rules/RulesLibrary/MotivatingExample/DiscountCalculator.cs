@@ -12,7 +12,7 @@ public class DiscountCalculator
     public decimal Calculate(Customer customer)
     {
         decimal discount = 0;
-        DateTime currentDate = DateTime.Now;
+        var currentDate = DateTime.Now;
 
         if (customer.DateOfBirth < currentDate.AddYears(-65))
         {

@@ -1,4 +1,5 @@
 ﻿using UnitOfWorkLibrary.Domain;
+using UnitOfWorkLibrary.Example1.Infrastructure.Repositories;
 using UnitOfWorkLibrary.Example1.Infrastructure.Repositories.Contracts;
 
 namespace UnitOfWorkLibrary.Example1.Infrastructure;

@@ -18,7 +18,7 @@ public abstract class Repository2<T> : IRepository2<T>
 {
     protected OrderManagementContext2 _context;
 
-    public Repository2(OrderManagementContext2 context)
+    protected Repository2(OrderManagementContext2 context)
     {
         _context = context;
     }

@@ -77,7 +77,7 @@ Run the solution and you will get a menu from which you can choose a design patt
 Compare the output from the console with the code for the chosen design pattern.\
 Repeat!
 
-The solution can be run using either `.NET 5` or `.NET 6`.
+The solution can be run using either `.NET 5` (choose .NET 5 [branch](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/dotnet-5) or [release](https://github.com/nemanjarogic/DesignPatternsLibrary/releases/tag/v5.0.0)) or `.NET 6` (the default option).
 
 ### Afterword
 

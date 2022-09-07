@@ -2,9 +2,7 @@
 
 public class Order : Entity
 {
-    public string Description { get; set; }
-
-    public string DeliveryAddress { get; set; }
-
+    public string Description { get; set; } = string.Empty;
+    public string DeliveryAddress { get; set; } = string.Empty;
     public decimal Price { get; set; }
 }

@@ -24,9 +24,7 @@ public abstract class Repository<T> : IRepository<T>
     }
 
     public virtual T Add(T entity) =>
-        _context
-            .Add(entity)
-            .Entity;
+        _context.Add(entity).Entity;
 
     public virtual IEnumerable<T> GetAll() =>
         _context.Set<T>().ToList();
@@ -37,8 +35,11 @@ public abstract class Repository<T> : IRepository<T>
             .Where(predicate)
             .ToList();
 
-    public virtual T GetById(int id) =>
-        _context.Find<T>(id);
+    public virtual T GetById(int id)
+    {
+        var entity = _context.Find<T>(id);
+        return entity ?? throw new ArgumentException($"Entity with {id} doesn't exists");
+    }
 
     public virtual void Delete(T entity) =>
         _context.Remove(entity);

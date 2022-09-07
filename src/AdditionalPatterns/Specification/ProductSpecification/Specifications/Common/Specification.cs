@@ -7,8 +7,8 @@ namespace ProductSpecification.Specifications.Common;
 /// into a single unit - specification, and reuse it in different parts of the code base.
 /// There are 3 main use cases for the specification pattern:
 /// 1) Looking up data in the database - finding records that match arbitrary specification.
-/// 2) Validating objects in the memory - checking whether object we retrieved or created fits arbitrary specification.
-/// 3) Creating a new instance that matches the criteria.
+/// 2) Validating objects in the memory - checking whether an object we retrieved or created fits arbitrary specification.
+/// 3) Creating a new instance that matches a criteria.
 /// For more details see: https://enterprisecraftsmanship.com/posts/specification-pattern-c-implementation/
 /// </summary>
 /// <typeparam name="T">Entity type.</typeparam>

@@ -7,9 +7,9 @@ public abstract class Entity
         Id = Guid.NewGuid();
     }
 
-    public Guid Id { get; protected set; }
+    public Guid Id { get; init; }
 
-    public static bool operator ==(Entity a, Entity b)
+    public static bool operator ==(Entity? a, Entity? b)
     {
         if (a is null && b is null)
         {
@@ -28,9 +28,7 @@ public abstract class Entity
 
     public override bool Equals(object obj)
     {
-        var other = obj as Entity;
-
-        if (other is null)
+        if (obj is not Entity other)
         {
             return false;
         }

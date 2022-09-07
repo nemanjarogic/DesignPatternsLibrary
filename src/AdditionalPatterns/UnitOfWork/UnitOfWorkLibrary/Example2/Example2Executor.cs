@@ -59,26 +59,24 @@ public static class Example2Executor
 
     private static async Task InitializeDatabaseAsync()
     {
-        using (var context = new OrderManagementContext2())
-        {
-            context.Database.EnsureDeleted();
-            context.Database.EnsureCreated();
+        using var context = new OrderManagementContext2();
+        context.Database.EnsureDeleted();
+        context.Database.EnsureCreated();
 
-            var emma = new Customer { Id = 1, FirstName = "Emma", LastName = "Johnson" };
-            var marc = new Customer { Id = 2, FirstName = "Marc", LastName = "Milston" };
+        var emma = new Customer { Id = 1, FirstName = "Emma", LastName = "Johnson" };
+        var marc = new Customer { Id = 2, FirstName = "Marc", LastName = "Milston" };
 
-            var camera = new Order { Id = 1, Description = "Camera", DeliveryAddress = "Address 1", Price = 550 };
-            var wallet = new Order { Id = 2, Description = "Wallet", DeliveryAddress = "Address 2", Price = 10 };
+        var camera = new Order { Id = 1, Description = "Camera", DeliveryAddress = "Address 1", Price = 550 };
+        var wallet = new Order { Id = 2, Description = "Wallet", DeliveryAddress = "Address 2", Price = 10 };
 
-            var customerRepository = new CustomerRepository(context);
-            var orderRepository = new OrderRepository(context);
+        var customerRepository = new CustomerRepository(context);
+        var orderRepository = new OrderRepository(context);
 
-            customerRepository.Add(emma);
-            customerRepository.Add(marc);
-            orderRepository.Add(camera);
-            orderRepository.Add(wallet);
+        customerRepository.Add(emma);
+        customerRepository.Add(marc);
+        orderRepository.Add(camera);
+        orderRepository.Add(wallet);
 
-            await orderRepository.UnitOfWork.SaveChangesAndDispatchDomainEventsAsync();
-        }
+        await orderRepository.UnitOfWork.SaveChangesAndDispatchDomainEventsAsync();
     }
 }

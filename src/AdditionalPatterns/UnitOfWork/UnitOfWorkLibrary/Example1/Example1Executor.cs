@@ -56,25 +56,23 @@ public static class Example1Executor
 
     private static void InitializeDatabase()
     {
-        using (var context = new OrderManagementContext1())
-        {
-            context.Database.EnsureDeleted();
-            context.Database.EnsureCreated();
+        using var context = new OrderManagementContext1();
+        context.Database.EnsureDeleted();
+        context.Database.EnsureCreated();
 
-            var emma = new Customer { Id = 1, FirstName = "Emma", LastName = "Johnson" };
-            var marc = new Customer { Id = 2, FirstName = "Marc", LastName = "Milston" };
+        var emma = new Customer { Id = 1, FirstName = "Emma", LastName = "Johnson" };
+        var marc = new Customer { Id = 2, FirstName = "Marc", LastName = "Milston" };
 
-            var camera = new Order { Id = 1, Description = "Camera", DeliveryAddress = "Address 1", Price = 550 };
-            var wallet = new Order { Id = 2, Description = "Wallet", DeliveryAddress = "Address 2", Price = 10 };
+        var camera = new Order { Id = 1, Description = "Camera", DeliveryAddress = "Address 1", Price = 550 };
+        var wallet = new Order { Id = 2, Description = "Wallet", DeliveryAddress = "Address 2", Price = 10 };
 
-            var unitOfWork = new UnitOfWork1(context);
+        var unitOfWork = new UnitOfWork1(context);
 
-            unitOfWork.CustomerRepository.Add(emma);
-            unitOfWork.CustomerRepository.Add(marc);
-            unitOfWork.OrderRepository.Add(camera);
-            unitOfWork.OrderRepository.Add(wallet);
+        unitOfWork.CustomerRepository.Add(emma);
+        unitOfWork.CustomerRepository.Add(marc);
+        unitOfWork.OrderRepository.Add(camera);
+        unitOfWork.OrderRepository.Add(wallet);
 
-            unitOfWork.SaveChanges();
-        }
+        unitOfWork.SaveChanges();
     }
 }

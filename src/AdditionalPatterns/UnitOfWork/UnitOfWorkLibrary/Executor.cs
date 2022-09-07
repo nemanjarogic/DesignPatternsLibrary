@@ -12,5 +12,6 @@ public class Executor : PatternExecutor
     {
         Example1Executor.Execute();
         Example2Executor.ExecuteAsync().Wait();
+        // The third example can be found within the code for the Repository pattern.
     }
 }

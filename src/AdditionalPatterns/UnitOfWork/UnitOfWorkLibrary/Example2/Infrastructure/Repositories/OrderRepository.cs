@@ -10,7 +10,7 @@ public class OrderRepository : Repository2<Order>, IOrderRepository
     {
     }
 
-    public Order GetTheMostExpensive() =>
+    public Order? GetTheMostExpensive() =>
         _context.Orders
             .OrderByDescending(order => order.Price)
             .FirstOrDefault();

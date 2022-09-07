@@ -7,14 +7,9 @@ public interface IRepository2<T>
     where T : Entity
 {
     IUnitOfWork2 UnitOfWork { get; }
-
     T Add(T entity);
-
     IEnumerable<T> GetAll();
-
     IEnumerable<T> Get(Expression<Func<T, bool>> predicate);
-
     T GetById(int id);
-
     void Delete(T entity);
 }

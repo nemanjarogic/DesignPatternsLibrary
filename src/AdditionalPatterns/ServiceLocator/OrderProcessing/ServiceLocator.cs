@@ -4,7 +4,7 @@
 /// The service locator plays the middleman and allow consumers
 /// to find and connect with various services.
 /// Possible improvements:
-/// 1) The service locator itself might be a singleton. There usually is no need to have two instances of a service locator.
+/// 1) The service locator itself might be a singleton. Usually, there is no need to have two instances of a service locator.
 /// 2) Lazy initialization of services might be considered.
 ///    In the example above, the constructor creates new instances for all possible services.
 ///    Initialization might be deferred until some client actually requests a particular service.
@@ -20,8 +20,8 @@ public class ServiceLocator : IServiceLocator
         // Services can be pre-populated, but users could add them dynamically too.
         _services = new Dictionary<string, object>()
         {
-            { typeof(PaymentProcessor).Name, new PaymentProcessor() },
-            { typeof(NotificationManager).Name, new NotificationManager() },
+            { nameof(PaymentProcessor), new PaymentProcessor() },
+            { nameof(NotificationManager), new NotificationManager() },
         };
     }
 

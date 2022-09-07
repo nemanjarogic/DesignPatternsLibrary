@@ -2,9 +2,7 @@
 
 public class Order
 {
-    public Guid ProductId { get; set; }
-
-    public decimal UnitPrice { get; set; }
-
-    public int Quantity { get; set; }
+    public Guid ProductId { get; init; }
+    public decimal UnitPrice { get; init; }
+    public int Quantity { get; init; }
 }

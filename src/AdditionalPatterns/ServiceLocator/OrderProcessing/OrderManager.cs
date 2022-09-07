@@ -15,10 +15,10 @@ public class OrderManager
     {
         _logger.Log("Processing new order...");
 
-        decimal totalPrice = order.UnitPrice * order.Quantity;
+        var totalPrice = order.UnitPrice * order.Quantity;
 
         var paymentProcessor = _serviceLocator.GetService<PaymentProcessor>();
-        bool isPaymentSuccessful = paymentProcessor.ProcessPayment(totalPrice);
+        var isPaymentSuccessful = paymentProcessor.ProcessPayment(totalPrice);
 
         NotifyCustomer(isPaymentSuccessful);
     }

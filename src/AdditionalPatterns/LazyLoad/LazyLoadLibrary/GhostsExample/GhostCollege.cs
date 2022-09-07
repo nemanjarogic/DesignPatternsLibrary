@@ -10,9 +10,9 @@
 /// </summary>
 public class GhostCollege : DomainObject
 {
-    private string _missionStatement;
-    private int _numberOfStudents;
-    private Library _library;
+    private string? _missionStatement;
+    private int? _numberOfStudents;
+    private Library? _library;
 
     public GhostCollege(int id)
         : base(id)
@@ -26,7 +26,7 @@ public class GhostCollege : DomainObject
         get
         {
             LoadIfNecessary();
-            return _missionStatement;
+            return _missionStatement!;
         }
         set => _missionStatement = value;
     }
@@ -36,7 +36,7 @@ public class GhostCollege : DomainObject
         get
         {
             LoadIfNecessary();
-            return _numberOfStudents;
+            return _numberOfStudents!.Value;
         }
         set => _numberOfStudents = value;
     }
@@ -46,7 +46,7 @@ public class GhostCollege : DomainObject
         get
         {
             LoadIfNecessary();
-            return _library;
+            return _library!;
         }
         set => _library = value;
     }

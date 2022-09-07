@@ -17,8 +17,7 @@ public class ValueHolderCollege
         Console.WriteLine("College initialization completed.");
     }
 
-    public int Id { get; set; }
-
+    public int Id { get; init; }
     public Library Library => _library.Value;
 
     public void ShowDetails() =>

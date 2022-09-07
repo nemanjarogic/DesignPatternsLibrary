@@ -2,7 +2,7 @@
 
 public class LazyCollege
 {
-    private Library _library;
+    private Library? _library;
 
     public Library Library
     {

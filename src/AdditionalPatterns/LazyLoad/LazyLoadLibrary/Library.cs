@@ -12,11 +12,8 @@ public class Library
         NumberOfBooks = 10000;
     }
 
-    public string Name { get; set; }
-
-    public DateTime EstablishmentDate { get; set; }
-
-    public string Address { get; set; }
-
-    public int NumberOfBooks { get; set; }
+    public string Name { get; }
+    public DateTime EstablishmentDate { get; }
+    public string Address { get; }
+    public int NumberOfBooks { get; }
 }

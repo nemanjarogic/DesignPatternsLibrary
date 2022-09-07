@@ -8,7 +8,7 @@ public class ProxyCollege : College
         Console.WriteLine("College initialization completed.");
     }
 
-    public override Library Library
+    public override Library? Library
     {
         get
         {
@@ -22,7 +22,7 @@ public class ProxyCollege : College
         set => base.Library = value;
     }
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         if (obj is not College college)
         {

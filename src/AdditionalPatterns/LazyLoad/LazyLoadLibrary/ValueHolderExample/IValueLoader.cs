@@ -1,6 +1,6 @@
 ﻿namespace LazyLoadLibrary.ValueHolderExample;
 
-public interface IValueLoader<T>
+public interface IValueLoader<out T>
 {
     T Load();
 }

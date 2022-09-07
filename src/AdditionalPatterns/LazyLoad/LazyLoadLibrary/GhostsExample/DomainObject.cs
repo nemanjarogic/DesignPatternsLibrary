@@ -9,10 +9,8 @@ public abstract class DomainObject
         Id = id;
     }
 
-    public int Id { get; set; }
-
+    public int Id { get; init; }
     public bool IsGhost => _status == LoadStatus.Unloaded;
-
     public bool IsLoaded => _status == LoadStatus.Loaded;
 
     /// <summary>

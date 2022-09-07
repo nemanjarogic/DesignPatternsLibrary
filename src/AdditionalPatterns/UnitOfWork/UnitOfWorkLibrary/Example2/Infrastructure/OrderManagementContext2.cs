@@ -5,8 +5,8 @@ namespace UnitOfWorkLibrary.Example2.Infrastructure;
 
 public class OrderManagementContext2 : DbContext, IUnitOfWork2
 {
-    public DbSet<Customer> Customers { get; set; }
-    public DbSet<Order> Orders { get; set; }
+    public DbSet<Customer> Customers => Set<Customer>();
+    public DbSet<Order> Orders => Set<Order>();
 
     public async Task<bool> SaveChangesAndDispatchDomainEventsAsync(CancellationToken cancellationToken = default)
     {

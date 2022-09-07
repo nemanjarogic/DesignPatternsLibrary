@@ -25,16 +25,16 @@ public class ServiceLocator : IServiceLocator
         };
     }
 
-    public void AddService<T>(T service) =>
+    public void AddService<T>(T service) where T : notnull =>
         _services.Add(typeof(T).Name, service);
 
-    public void AddService<T>(string serviceName, T service) =>
+    public void AddService<T>(string serviceName, T service) where T : notnull =>
         _services.Add(serviceName, service);
 
-    public T GetService<T>() =>
+    public T GetService<T>() where T : notnull =>
         (T)_services[typeof(T).Name];
 
-    public object GetService<T>(string serviceName) =>
+    public object GetService<T>(string serviceName) where T : notnull =>
         (T)_services[serviceName];
 
     /*public void AddService(string serviceName)

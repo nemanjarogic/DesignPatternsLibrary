@@ -6,7 +6,7 @@ public class GoogleSubscriber
 {
     public GoogleSubscriber(StockTicker stockTicker)
     {
-        stockTicker.StockChange += CheckFilterWhenStockChanged;
+        stockTicker.StockChange += CheckFilterWhenStockChanged!;
     }
 
     private void CheckFilterWhenStockChanged(object sender, StockChangeEventArgs e)

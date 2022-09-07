@@ -14,10 +14,10 @@ public static class DotNetStringExecutor
         string s3 = s1;
 
         Console.WriteLine("Enter s4: ");
-        string s4 = Console.ReadLine();
+        string s4 = Console.ReadLine()!;
 
         Console.WriteLine("Enter s5: ");
-        string s5 = string.Intern(Console.ReadLine());
+        string s5 = string.Intern(Console.ReadLine()!);
 
         // In this case, s1 and s2 are two separate strings, and hence the output should be false.
         // Surprisingly, the output is true! This is because .NET runtime in order to save space,

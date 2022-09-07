@@ -5,10 +5,9 @@ namespace StateLibrary.SteakCookingExample.States;
 public class Uncooked : Doneness
 {
     public Uncooked(Steak steak, double currentTemperature)
+        : base(steak)
     {
-        _steak = steak;
         _currentTemperature = currentTemperature;
-
         _lowerTemperature = 0;
         _upperTemperature = 49;
         _isSafeToEat = false;

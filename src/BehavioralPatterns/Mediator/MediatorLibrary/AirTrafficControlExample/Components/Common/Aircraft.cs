@@ -38,14 +38,13 @@ public abstract class Aircraft
 
     public void Climb(int heightToClimb) => Altitude += heightToClimb;
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
-        if (obj.GetType() != GetType())
+        if (obj is not Aircraft incoming)
         {
             return false;
         }
 
-        var incoming = (Aircraft)obj;
         return CallSign.Equals(incoming.CallSign, StringComparison.Ordinal);
     }
 

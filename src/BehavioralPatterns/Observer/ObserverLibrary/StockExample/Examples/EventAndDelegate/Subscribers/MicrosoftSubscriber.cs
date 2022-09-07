@@ -8,7 +8,7 @@ public class MicrosoftSubscriber
 
     public MicrosoftSubscriber(StockTicker stockTicker)
     {
-        stockTicker.StockChange += CheckFilterWhenStockChanged;
+        stockTicker.StockChange += CheckFilterWhenStockChanged!;
     }
 
     private void CheckFilterWhenStockChanged(object sender, StockChangeEventArgs e)

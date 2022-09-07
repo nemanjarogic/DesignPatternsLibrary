@@ -26,7 +26,7 @@ public abstract class Entity
 
     public static bool operator !=(Entity a, Entity b) => !(a == b);
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         if (obj is not Entity other)
         {

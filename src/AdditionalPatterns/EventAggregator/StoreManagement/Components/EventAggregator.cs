@@ -66,7 +66,7 @@ public class EventAggregator : IEventAggregator
     public IDisposable Subscribe<T>(ICustomObserver<T> newObserver)
         where T : IEvent
     {
-        if (!_typedObservers.TryGetValue(typeof(T), out List<IObserver<IEvent>> observers))
+        if (!_typedObservers.TryGetValue(typeof(T), out var observers))
         {
             observers = new List<IObserver<IEvent>>();
             _typedObservers[typeof(T)] = observers;

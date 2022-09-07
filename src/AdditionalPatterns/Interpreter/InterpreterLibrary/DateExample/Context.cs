@@ -9,6 +9,5 @@ public class Context
     }
 
     public DateTime Date { get; set; }
-
     public string Expression { get; set; }
 }

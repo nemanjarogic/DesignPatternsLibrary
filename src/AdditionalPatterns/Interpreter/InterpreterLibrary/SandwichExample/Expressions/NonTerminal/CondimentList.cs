@@ -4,9 +4,9 @@ namespace InterpreterLibrary.SandwichExample.Expressions.NonTerminal;
 
 public class CondimentList
 {
-    private readonly List<ICondiment> _condiments;
+    private readonly IEnumerable<ICondiment> _condiments;
 
-    public CondimentList(List<ICondiment> condiments)
+    public CondimentList(IEnumerable<ICondiment> condiments)
     {
         _condiments = condiments;
     }

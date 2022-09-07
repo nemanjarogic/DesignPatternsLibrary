@@ -12,7 +12,6 @@
 
 	<ItemGroup>
 		<Folder Include="Assets\" />
-		<Folder Include="DateExample\Expressions\NonTerminal\" />
 	</ItemGroup>
 
 </Project>

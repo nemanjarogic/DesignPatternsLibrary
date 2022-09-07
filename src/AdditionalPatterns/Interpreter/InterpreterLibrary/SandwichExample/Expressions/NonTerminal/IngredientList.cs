@@ -5,9 +5,9 @@ namespace InterpreterLibrary.SandwichExample.Expressions.NonTerminal;
 
 public class IngredientList : IExpression
 {
-    private readonly List<IIngredient> _ingredients;
+    private readonly IEnumerable<IIngredient> _ingredients;
 
-    public IngredientList(List<IIngredient> ingredients)
+    public IngredientList(IEnumerable<IIngredient> ingredients)
     {
         _ingredients = ingredients;
     }

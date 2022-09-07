@@ -14,13 +14,19 @@ public static class SandwichExecutor
     {
         ConsoleExtension.WriteSeparator("Sandwich example");
 
-        var sandwhich = new Sandwich(
-            new WheatBread(),
-            new CondimentList(new List<ICondiment> { new MayoCondiment(), new MustardCondiment() }),
-            new IngredientList(new List<IIngredient> { new LettuceIngredient(), new ChickenIngredient() }),
-            new CondimentList(new List<ICondiment> { new KetchupCondiment() }),
-            new WheatBread());
+        var topBread = new WheatBread();
+        var topCondiments = new CondimentList(new List<ICondiment> { new MayoCondiment(), new MustardCondiment() });
+        var ingredients = new IngredientList(new List<IIngredient> { new LettuceIngredient(), new ChickenIngredient() });
+        var bottomCondiments = new CondimentList(new List<ICondiment> { new KetchupCondiment() });
+        var bottomBread = new WheatBread();
 
-        sandwhich.Interpret(new Context());
+        var sandwich = new Sandwich(
+            topBread,
+            topCondiments,
+            ingredients,
+            bottomCondiments,
+            bottomBread);
+
+        sandwich.Interpret(new Context());
     }
 }

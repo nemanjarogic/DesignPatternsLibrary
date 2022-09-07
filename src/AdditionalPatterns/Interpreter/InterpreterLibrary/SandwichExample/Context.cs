@@ -2,5 +2,5 @@
 
 public class Context
 {
-    public string Output { get; set; }
+    public string Output { get; set; } = string.Empty;
 }

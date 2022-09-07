@@ -66,8 +66,23 @@ This repository contains a comprehensive design patterns library implemented in 
 | [Specification](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/Specification/ProductSpecification) | Architectural | Separates the statement of how to match a candidate, from the candidate object that it is matched against. Specification design pattern allows us to check whether our objects meet certain requirements. Through this design pattern, we can reuse expression specifications and combine those specifications to easily question whether more complex requirements are satisfied or not.|
 | [Unit Of Work](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/UnitOfWork/UnitOfWorkLibrary) | Data Access | Maintains a list of objects affected by a business transaction and coordinates the writing out of changes.|
 
-I want to give credit to [Refactoring.Guru](https://refactoring.guru/) for amazing content about design patterns.
-I highly recommend checking it for more details on design patterns theory.
 
-The examples that are used to demonstrate design patterns usage are a mix of my own ideas and ideas adapted from various resources.
-If you prefer learning by watching courses great content can be found at Pluralsight.
+### How to run
+The solution contains one executable project called `DesignPatternsLibrary`.\
+Run the solution and you will get a menu from which you can choose a design pattern.
+
+<img src="assets/images/console-menu.png" width="600"/>
+
+
+Compare the output from the console with the code for the chosen design pattern.\
+Repeat!
+
+### Afterword
+
+For learning more about design patterns, I highly recommend:
+- Visiting [Refactoring.Guru](https://refactoring.guru/) website for amazing content about design patterns
+- Reading the `Head First Design Patterns: A Brain-Friendly Guide` book
+- Watching courses about design patterns available on various learning platforms. The idea for this repository has been born after watching [Design Patterns Library course](https://www.pluralsight.com/courses/patterns-library) created by `Steve Smith, Robert Horvick, Brian Lagunas, David Starr, Keith Sparkjoy, Niraj Bhatt, Glenn Block, Scott Allen, John Brown and Donald Belcham`.
+- Visiting blogs like [ExceptionNotFound](https://exceptionnotfound.net/), [Ardalis](https://ardalis.com/blog) or [Enterprise Craftsmanship](https://enterprisecraftsmanship.com/posts)
+
+The examples that are used to demonstrate design patterns usage are a mix of my own ideas and ideas adapted from various resources (some of them are mentioned above).

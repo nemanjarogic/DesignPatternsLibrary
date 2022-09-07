@@ -77,6 +77,8 @@ Run the solution and you will get a menu from which you can choose a design patt
 Compare the output from the console with the code for the chosen design pattern.\
 Repeat!
 
+The solution can be run using either `.NET 5` or `.NET 6`.
+
 ### Afterword
 
 For learning more about design patterns, I highly recommend:

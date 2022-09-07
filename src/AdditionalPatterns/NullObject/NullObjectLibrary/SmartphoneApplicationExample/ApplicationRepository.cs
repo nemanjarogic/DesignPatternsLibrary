@@ -21,13 +21,8 @@ public class ApplicationRepository
         };
     }
 
-    public Application Find(Guid processId)
-    {
-        if (_installedApplications.TryGetValue(processId, out Application application))
-        {
-            return application;
-        }
-
-        return Application.Default;
-    }
+    public Application Find(Guid processId) =>
+        _installedApplications.TryGetValue(processId, out var application)
+            ? application
+            : Application.Default;
 }

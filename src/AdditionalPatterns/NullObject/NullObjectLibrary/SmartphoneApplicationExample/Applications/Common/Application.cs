@@ -10,7 +10,6 @@ public abstract class Application
     public static NullApplication Default { get; } = new();
 
     public abstract string Name { get; }
-
     public Guid ProcessId { get; }
 
     public virtual void Open() =>

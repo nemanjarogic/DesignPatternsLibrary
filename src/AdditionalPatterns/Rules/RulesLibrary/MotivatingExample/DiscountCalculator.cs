@@ -11,12 +11,12 @@ public class DiscountCalculator
 {
     public decimal Calculate(Customer customer)
     {
-        decimal discount = 0;
+        var discount = 0m;
         var currentDate = DateTime.Now;
 
         if (customer.DateOfBirth < currentDate.AddYears(-65))
         {
-            // Senior discount of 5%
+            // Senior discount of 5%.
             discount = 0.05m;
         }
 
@@ -24,15 +24,15 @@ public class DiscountCalculator
         {
             if (customer.DateOfFirstPurchase.Value < currentDate.AddYears(-1))
             {
-                // After 1 year, loyal customers get 10% discount
+                // After 1 year, loyal customers get 10% discount.
                 discount = Math.Max(discount, 0.10m);
                 if (customer.DateOfFirstPurchase.Value < currentDate.AddYears(-5))
                 {
-                    // After 5 years, loyal customers get 12% discount
+                    // After 5 years, loyal customers get 12% discount.
                     discount = Math.Max(discount, 0.12m);
                     if (customer.DateOfFirstPurchase.Value < currentDate.AddYears(-10))
                     {
-                        // After 10 years, loyal customers get 20% discount
+                        // After 10 years, loyal customers get 20% discount.
                         discount = Math.Max(discount, 0.20m);
                     }
                 }
@@ -41,20 +41,20 @@ public class DiscountCalculator
                     customer.DateOfBirth.Day == DateTime.Today.Day)
                 {
                     // Loyal customers can get an additional 10% discount
-                    // if they purchase a product on their birthday
+                    // if they purchase a product on their birthday.
                     discount += 0.10m;
                 }
             }
         }
         else
         {
-            // First time purchase discount of 15%
+            // First time purchase discount of 15%.
             discount = Math.Max(discount, 0.15m);
         }
 
         if (customer.IsVeteran)
         {
-            // Veterans get 10% discount
+            // Veterans get 10% discount.
             discount = Math.Max(discount, 0.10m);
         }
 

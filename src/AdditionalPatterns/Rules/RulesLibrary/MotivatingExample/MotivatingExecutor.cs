@@ -9,17 +9,14 @@ public static class MotivatingExecutor
     {
         ConsoleExtension.WriteSeparator("Motivating example");
 
-        var customer = new Customer()
-        {
-            DateOfBirth = DateTime.Now.AddYears(-70),
-            DateOfFirstPurchase = DateTime.Today.AddYears(-6),
-            IsVeteran = false,
-        };
+        var customer = new Customer(
+            dateOfBirth: DateTime.Now.AddYears(-70),
+            dateOfFirstPurchase: DateTime.Today.AddYears(-6),
+            isVeteran: false);
 
         var discountCalculator = new DiscountCalculator();
-
         var discountPercentage = discountCalculator.Calculate(customer);
 
-        Console.WriteLine($"Customer can get a {discountPercentage:P2} discount on any product.");
+        Console.WriteLine($"The customer can get a {discountPercentage:P2} discount on any product.");
     }
 }

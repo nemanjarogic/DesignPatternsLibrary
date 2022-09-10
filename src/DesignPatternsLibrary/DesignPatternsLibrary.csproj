@@ -9,6 +9,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\AdditionalPatterns\EventAggregator\StoreManagement\StoreManagement.csproj" />
+		<ProjectReference Include="..\AdditionalPatterns\FluentInterface\FluentInterfaceLibrary\FluentInterfaceLibrary.csproj" />
 		<ProjectReference Include="..\AdditionalPatterns\Interpreter\InterpreterLibrary\InterpreterLibrary.csproj" />
 		<ProjectReference Include="..\AdditionalPatterns\LazyLoad\LazyLoadLibrary\LazyLoadLibrary.csproj" />
 		<ProjectReference Include="..\AdditionalPatterns\NullObject\NullObjectLibrary\NullObjectLibrary.csproj" />

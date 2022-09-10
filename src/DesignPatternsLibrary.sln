@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30711.63
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatternsLibrary", "DesignPatternsLibrary\DesignPatternsLibrary.csproj", "{60C3B7E4-E290-47F4-A3C0-4F9505DE926F}"
 EndProject
@@ -140,6 +140,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Specification", "Specification", "{F1704AAE-3951-43C1-85EC-16C4C52133F3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductSpecification", "AdditionalPatterns\Specification\ProductSpecification\ProductSpecification.csproj", "{82AC53EE-D473-4826-9443-133BED0C830C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FluentInterface", "FluentInterface", "{6CBEFB1A-4A1D-4F1E-8878-C6AE19444596}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentInterfaceLibrary", "AdditionalPatterns\FluentInterface\FluentInterfaceLibrary\FluentInterfaceLibrary.csproj", "{97D64ED5-9F0A-437A-A96C-D338D0CAE390}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -283,6 +287,10 @@ Global
 		{82AC53EE-D473-4826-9443-133BED0C830C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82AC53EE-D473-4826-9443-133BED0C830C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82AC53EE-D473-4826-9443-133BED0C830C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D64ED5-9F0A-437A-A96C-D338D0CAE390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D64ED5-9F0A-437A-A96C-D338D0CAE390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D64ED5-9F0A-437A-A96C-D338D0CAE390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D64ED5-9F0A-437A-A96C-D338D0CAE390}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -351,6 +359,8 @@ Global
 		{BBDF24BC-7D73-4A8F-B8B0-C649019E1B80} = {C8512694-34BF-4616-A82F-12D73DE8263A}
 		{F1704AAE-3951-43C1-85EC-16C4C52133F3} = {15B15698-CB27-4F30-884C-25C2C1D50202}
 		{82AC53EE-D473-4826-9443-133BED0C830C} = {F1704AAE-3951-43C1-85EC-16C4C52133F3}
+		{6CBEFB1A-4A1D-4F1E-8878-C6AE19444596} = {15B15698-CB27-4F30-884C-25C2C1D50202}
+		{97D64ED5-9F0A-437A-A96C-D338D0CAE390} = {6CBEFB1A-4A1D-4F1E-8878-C6AE19444596}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9238CD9-9068-4B63-8D9E-53684BA60A21}

@@ -1,6 +1,6 @@
 <h1 align="center">Design Patterns Library</h1>
 <p align="center">
- 32 Design Patterns • 65 moderately realistic examples
+ 33 Design Patterns • 73 moderately realistic examples
 </p>
 
 ## What are Design Patterns?
@@ -57,6 +57,7 @@ This repository contains a comprehensive design patterns library implemented in 
 | Design Pattern        | Type           | Description  |
 | ------------- |:-------------:| -----|
 | [Event Aggregator](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/EventAggregator/StoreManagement) | Behavioral | Channel events from multiple objects into a single object to simplify registration for clients.|
+| [Fluent Interface](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/FluentInterface/FluentInterfaceLibrary) | Creational | Provides an easy-readable, flowing interface, that often mimics a domain specific language. Using this pattern results in code that can be read nearly as human language.|
 | [Interpreter](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/Interpreter/InterpreterLibrary) | Behavioral | Defines a grammatical representation for a language and provides an interpreter to evaluate sentences in a language.|
 | [Lazy Load](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/LazyLoad/LazyLoadLibrary) | Data Access | Defers initialization of an object until the point at which it is needed. It can contribute to efficiency in the program's operation if properly and appropriately used.|
 | [Null Object](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/main/src/AdditionalPatterns/NullObject/NullObjectLibrary) | Behavioral | Encapsulates the absence of an object by providing a substitutable alternative that offers suitable default do nothing behavior.|

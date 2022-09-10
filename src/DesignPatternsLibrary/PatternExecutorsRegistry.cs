@@ -23,6 +23,7 @@ public class PatternExecutorsRegistry
             new CompositeLibrary.Executor(),
             new DecoratorLibrary.Executor(),
             new FacadeLibrary.Executor(),
+            new FluentInterfaceLibrary.Executor(),
             new FlyweightLibrary.Executor(),
             new ProxyLibrary.Executor(),
             new ChainOfResponsibilityLibrary.Executor(),

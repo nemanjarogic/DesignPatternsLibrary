@@ -19,6 +19,7 @@ public class Program
             }
 
             Executors[choiceKey].Execute();
+            Console.ReadLine();
         }
 
         Console.WriteLine("Thank you!");

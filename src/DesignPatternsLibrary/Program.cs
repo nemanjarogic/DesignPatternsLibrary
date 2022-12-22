@@ -17,15 +17,21 @@ public class Program
                 Console.WriteLine("Please choose one of the following options!");
                 continue;
             }
-
             Executors[choiceKey].Execute();
-            Console.ReadLine();
+            WaitForContinuationSignal();
         }
 
         Console.WriteLine("Thank you!");
         Console.ReadLine();
     }
 
+    private static void WaitForContinuationSignal()
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+        Console.WriteLine("\n\nExecution results can be found above. Press ENTER to continue.");
+        Console.ReadLine();
+        Console.ResetColor();
+    }
     private static bool IsTerminationRequested(out string? choice)
     {
         ShowAvailableMenuOptions();

@@ -32,6 +32,7 @@ public class Program
         Console.ReadLine();
         Console.ResetColor();
     }
+
     private static bool IsTerminationRequested(out string? choice)
     {
         ShowAvailableMenuOptions();

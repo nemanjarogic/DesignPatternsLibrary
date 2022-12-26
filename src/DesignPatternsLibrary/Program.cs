@@ -19,6 +19,7 @@ public class Program
             }
 
             Executors[choiceKey].Execute();
+            WaitForContinuationSignal();
         }
 
         Console.WriteLine("Thank you!");
@@ -68,5 +69,13 @@ public class Program
 
         choiceKey = key;
         return false;
+    }
+
+    private static void WaitForContinuationSignal()
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+        Console.WriteLine("\n\nExecution results can be found above. Press ENTER to continue.");
+        Console.ReadLine();
+        Console.ResetColor();
     }
 }

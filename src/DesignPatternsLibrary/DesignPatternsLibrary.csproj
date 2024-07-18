@@ -5,7 +5,12 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\AdditionalPatterns\EventAggregator\StoreManagement\StoreManagement.csproj" />
@@ -28,6 +33,7 @@
 		<ProjectReference Include="..\BehavioralPatterns\Strategy\StrategyLibrary\StrategyLibrary.csproj" />
 		<ProjectReference Include="..\BehavioralPatterns\TemplateMethod\TemplateMethodLibrary\TemplateMethodLibrary.csproj" />
 		<ProjectReference Include="..\BehavioralPatterns\Visitor\VisitorLibrary\VisitorLibrary.csproj" />
+		<ProjectReference Include="..\BuildingBlocks\BuildingBlocks.csproj" />
 		<ProjectReference Include="..\CreationalPatterns\AbstractFactory\MealSimpleFactory\MealSimpleFactory.csproj" />
 		<ProjectReference Include="..\CreationalPatterns\AbstractFactory\RestaurantAbstractFactory\RestaurantAbstractFactory.csproj" />
 		<ProjectReference Include="..\CreationalPatterns\Builder\CustomSandwichBuilder\CustomSandwichBuilder.csproj" />

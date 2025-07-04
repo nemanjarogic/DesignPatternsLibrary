@@ -4,13 +4,13 @@
 </p>
 
 ## What are Design Patterns?
-In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem in software design.
+In software engineering, a design pattern is a general, repeatable solution to a commonly occurring problem in software design.
 A design pattern isn't a finished design that can be transformed directly into code.
 It is a description or template for how to solve a problem that can be used in many different situations.
-In addition, design patterns allow developers to communicate using well-known, well understood names for software interactions.
+In addition, design patterns allow developers to communicate using well-known, well-understood names for software interactions.
 
 Know when to use a certain design pattern, and when not to.
-No design pattern is a 42 - the answer to life, the universe and everything. There are situations in which every design pattern easily becomes an antipattern.
+No design pattern is a 42 - the answer to life, the universe, and everything. There are situations in which every design pattern easily becomes an antipattern.
 
 ## Design Pattern Types
 Design patterns can be separated into three main categories:
@@ -23,7 +23,7 @@ Design patterns can be separated into three main categories:
 * Behavioral
 > Behavioral patterns are concerned with algorithms and the assignment of responsibilities between objects. Behavioral patterns describe not just the patterns of objects or classes but also the patterns of communication between them.
 
-## What this repository contains?
+## What does this repository contain?
 This repository contains a comprehensive design patterns library implemented in C#, which covers various design patterns from the most commonly used ones (Gang of Four) to the lesser-known ones. It enables you to get familiar with and learn design patterns through moderately realistic examples.
 
 | Design Pattern        | Type           | Description  | Introduction  |
@@ -70,7 +70,7 @@ This repository contains a comprehensive design patterns library implemented in 
 
 ### How to run
 The solution contains one executable project called `DesignPatternsLibrary`.\
-Run the solution and you will get a menu from which you can choose a design pattern.
+You can just run the solution, and you will be presented with a menu from which you can choose a design pattern.
 
 <img src="assets/images/console-menu.png" width="600"/>
 
@@ -78,14 +78,14 @@ Run the solution and you will get a menu from which you can choose a design patt
 Compare the output from the console with the code for the chosen design pattern.\
 Repeat!
 
-The solution can be run using either `.NET 5` (choose .NET 5 [branch](https://github.com/nemanjarogic/DesignPatternsLibrary/tree/dotnet-5) or [release](https://github.com/nemanjarogic/DesignPatternsLibrary/releases/tag/v5.0.0)) or `.NET 6` (the default option).
+The solution is configured to use `.NET 8` as the default option. However, if for some reason you want to use older versions, `.NET 5` and `.NET 6` are supported via branches or releases.
 
 ### Afterword
 
 For learning more about design patterns, I highly recommend:
 - Visiting [Refactoring.Guru](https://refactoring.guru/) website for amazing content about design patterns
 - Reading the `Head First Design Patterns: A Brain-Friendly Guide` book
-- Watching courses about design patterns available on various learning platforms. The idea for this repository has been born after watching [Design Patterns Library course](https://www.pluralsight.com/courses/patterns-library) created by `Steve Smith, Robert Horvick, Brian Lagunas, David Starr, Keith Sparkjoy, Niraj Bhatt, Glenn Block, Scott Allen, John Brown and Donald Belcham`.
+- Watching courses about design patterns available on various learning platforms. The idea for this repository was born after watching [Design Patterns Library course](https://www.pluralsight.com/courses/patterns-library) created by `Steve Smith, Robert Horvick, Brian Lagunas, David Starr, Keith Sparkjoy, Niraj Bhatt, Glenn Block, Scott Allen, John Brown and Donald Belcham`.
 - Visiting blogs like [ExceptionNotFound](https://exceptionnotfound.net/), [Ardalis](https://ardalis.com/blog) or [Enterprise Craftsmanship](https://enterprisecraftsmanship.com/posts)
 
-The examples that are used to demonstrate design patterns usage are a mix of my own ideas and ideas adapted from various resources (some of them are mentioned above).
+The examples that are used to demonstrate design patterns usage are a mix of my ideas and ideas adapted from various resources (some of them are mentioned above).
